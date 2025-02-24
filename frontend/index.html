@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UpToCure.ai</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <header>
+            <img src="./images/logo.png" alt="Logo" class="logo">
             <h1>UpToCure</h1>
-            <p class="disclaimer">Advancing healthcare through innovative solutions</p>
         </header>
+        <p class="disclaimer">Advancing healthcare through innovative solutions</p>
         
         <div class="carousel-container">
+            <div class="tile-select-container">
+                <select class="tile-select" id="tileSelect">
+                    <option value="" disabled selected>Jump to a tile...</option>
+                    <!-- Options will be dynamically inserted here -->
+                </select>
+            </div>
             <div class="carousel">
                 <!-- Tiles will be dynamically inserted here -->
             </div>
@@ -23,6 +31,13 @@
             </div>
         </div>
     </div>
+    <footer>
+        <p>Copyright © Yannis Tevissen 2025</p>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="list-reports.js"></script>
+    <script src="markdown-parser.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

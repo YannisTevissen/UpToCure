@@ -1,6 +1,8 @@
 :root {
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.199);
+    --glass-border: rgba(255, 255, 255, 0.093);
+    --text-color: #001c1e;  
+    --primary: #00eaff;  /* Primary color for arrows */
 }
 
 * {
@@ -13,7 +15,7 @@ body {
     font-family: 'Arial', sans-serif;
     position: relative;
     min-height: 100vh;
-    color: #1a365d;  /* Dark blue text for better contrast */
+    color: var(--text-color);  
 }
 
 body::before {
@@ -23,10 +25,10 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('./images/bg.jpeg') no-repeat center center fixed; 
+    background: url('./images/bg.jpg') no-repeat center center fixed; 
     background-size: cover;
     filter: blur(5px);
-    opacity: 0.7;
+    opacity: 0.6;
     z-index: -1;
 }
 
@@ -35,27 +37,88 @@ body::before {
 }
 
 header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 4rem;
 }
 
+.logo {
+    width: 100px;  /* Increase size */
+    height: auto;
+    margin-right: 1rem;
+}
+
 h1 {
+    color: var(--text-color);
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
 }
 
 .disclaimer {
-    font-size: 1.2rem;
-    opacity: 0.8;
+    color: var(--text-color);
+    font-size: 1rem;  /* Make smaller */
+    font-style: italic;  /* Italic style */
+    text-align: center;  /* Center the text */
+    opacity: 0.9;
+    margin-bottom: 2rem;  /* Add margin for spacing */
 }
 
 .carousel-container {
     overflow: hidden;
     position: relative;
-    height: 400px;
+    height: 500px; /* Increase container height to allow for taller tiles */
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.tile-select-container {
+    width: 30%;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.tile-select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 6px rgba(255, 255, 255, 0.1),
+        0 1px 3px rgba(255, 255, 255, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.tile-select:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.tile-select:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 
+        0 4px 6px rgba(255, 255, 255, 0.15),
+        0 1px 3px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.tile-select-container::after {
+    display: none;
+}
+
+.tile-select option {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-color);
+    padding: 1rem;
 }
 
 .carousel {
@@ -68,37 +131,74 @@ h1 {
 }
 
 .tile {
-    min-width: 70%;
-    height: 350px;
+    width: 85%;
+    height: 450px; /* Fixed height instead of min-height */
+    max-height: 90vh;
     margin: 0 1rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.85);  /* More opaque white background */
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     border-radius: 15px;
     transition: all 0.3s ease;
+    overflow-y: scroll; /* Always show scrollbar for testing */
     position: absolute;
     left: 50%;
-    transform: translateX(-50%) scale(0.8);  /* Add scale down for inactive tiles */
+    transform: translateX(-50%) scale(0.8);
     opacity: 0;
     pointer-events: none;
-    z-index: 1;  /* Base z-index for all tiles */
+    z-index: 2;
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        0 4px 8px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 234, 255, 0.3) transparent; /* Slightly visible by default */
+}
+
+.tile:hover {
+    scrollbar-color: rgba(0, 234, 255, 0.7) transparent; /* More visible on hover */
+}
+
+.tile::-webkit-scrollbar {
+    width: 8px; /* Slightly wider scrollbar */
+}
+
+.tile::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tile::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 234, 255, 0.3); /* Slightly visible by default */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tile:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 234, 255, 0.7); /* More visible on hover */
 }
 
 .tile h2 {
-    color: #2c5282;  /* Darker blue for headings */
+    color: var(--primary);
     margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px var(--text-color);
 }
 
 .tile p {
-    color: #2d3748;  /* Dark gray for content */
+    color: var(--text-color);
     line-height: 1.6;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
 .tile small {
-    color: #4a5568;  /* Medium gray for dates */
+    color: var(--text-color);
     display: block;
     margin-top: 1rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
 }
 
 .tile.active {
@@ -117,10 +217,12 @@ h1 {
     justify-content: center;
     gap: 2rem;
     margin-top: 1rem;
+    position: relative;  /* Position relative to carousel */
+    z-index: 3;  /* Ensure arrows are on top */
 }
 
 .nav-arrow {
-    background: rgba(44, 82, 130, 0.8);  /* Darker blue background */
+    background: var(--primary);  /* Use primary color for background */
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
     width: 40px;
@@ -136,7 +238,17 @@ h1 {
 }
 
 .nav-arrow:hover {
-    background: rgba(44, 82, 130, 1);  /* Solid blue on hover */
+    background: rgba(0, 234, 255, 0.8);  /* Slightly darker on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    position: fixed;  /* Fix to bottom */
+    bottom: 0;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -151,4 +263,37 @@ h1 {
     .disclaimer {
         font-size: 1rem;
     }
+    
+    .tile-select-container {
+        width: 50%;
+    }
+}
+
+/* Styles for markdown content */
+.tile-content {
+    margin: 1rem 0;
+}
+
+.tile-content ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.tile-content li {
+    margin-bottom: 0.5rem;
+}
+
+.tile-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.tile-content strong {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.tile-content em {
+    font-style: italic;
+    opacity: 0.9;
 } 
