@@ -62,23 +62,43 @@ h1 {
     text-align: center;  /* Center the text */
     opacity: 0.9;
     margin-bottom: 2rem;  /* Add margin for spacing */
+    line-height: 1.5;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.methodology-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-bottom: 1px dotted var(--primary);
+}
+
+.methodology-link:hover {
+    opacity: 0.8;
+    border-bottom: 1px solid var(--primary);
 }
 
 .carousel-container {
     overflow: hidden;
     position: relative;
-    height: 500px; /* Increase container height to allow for taller tiles */
-    min-height: 500px;
+    height: 600px; /* Increased from 500px to allow more space */
+    min-height: 600px; /* Increased to match height */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem; /* Added margin to ensure navigation arrows don't overlap with content */
 }
 
 .tile-select-container {
-    width: 30%;
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
     position: relative;
+    width: 300px;
+    margin-bottom: 2rem;
 }
 
 .tile-select {
@@ -97,6 +117,34 @@ h1 {
         0 4px 6px rgba(255, 255, 255, 0.1),
         0 1px 3px rgba(255, 255, 255, 0.08),
         inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Animation pour le défilement du texte */
+@keyframes textScroll {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
+
+/* Animation du texte dans le select lorsqu'il est trop long */
+.tile-select.overflow:hover {
+    text-overflow: clip;
+}
+
+.tile-select.overflow:hover span {
+    display: inline-block;
+    animation: textScroll 6s linear infinite; /* Adjust animation to scroll continuously from right to left */
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
 }
 
 .tile-select:hover {
@@ -112,13 +160,60 @@ h1 {
 }
 
 .tile-select-container::after {
-    display: none;
+    content: none; /* Remove the arrow */
 }
 
 .tile-select option {
     background: rgba(255, 255, 255, 0.95);
     color: var(--text-color);
     padding: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Styles pour le dropdown personnalisé */
+.custom-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 12px 12px;
+    transition: max-height 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+}
+
+.tile-select-container.open .custom-dropdown {
+    max-height: 200px;
+    opacity: 1;
+    overflow-y: auto;
+}
+
+.dropdown-option {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-option:hover {
+    background: rgba(0, 234, 255, 0.1);
+}
+
+.dropdown-option.overflow:hover {
+    text-overflow: clip;
+}
+
+.dropdown-option.overflow:hover span {
+    display: inline-block;
+    animation: textScroll 6s linear infinite; /* Adjust animation to scroll continuously from right to left */
+    white-space: nowrap;
 }
 
 .carousel {
@@ -132,8 +227,8 @@ h1 {
 
 .tile {
     width: 85%;
-    height: 450px; /* Fixed height instead of min-height */
-    max-height: 90vh;
+    height: 500px; /* Increased from 450px */
+    max-height: 95vh; /* Increased from 90vh */
     margin: 0 1rem;
     padding: 2rem;
     background: var(--glass-bg);
@@ -141,7 +236,7 @@ h1 {
     border: 1px solid var(--glass-border);
     border-radius: 15px;
     transition: all 0.3s ease;
-    overflow-y: scroll; /* Always show scrollbar for testing */
+    overflow-y: auto; /* Changed from scroll to auto to only show scrollbar when needed */
     position: absolute;
     left: 50%;
     transform: translateX(-50%) scale(0.8);
@@ -213,7 +308,7 @@ h1 {
 }
 
 .navigation-arrows {
-    display: flex;
+    display: none; /* Hide navigation arrows */
     justify-content: center;
     gap: 2rem;
     margin-top: 1rem;
@@ -266,6 +361,29 @@ footer {
     
     .tile-select-container {
         width: 50%;
+    }
+    
+    .tile.active::before {
+        content: none;
+    }
+    
+    .tile.active::after {
+        content: none;
+    }
+    
+    @keyframes swipeHint {
+        0% {
+            left: 10px;
+            opacity: 0.2;
+        }
+        50% {
+            left: calc(100% - 40px);
+            opacity: 0.4;
+        }
+        100% {
+            left: 10px;
+            opacity: 0.2;
+        }
     }
 }
 

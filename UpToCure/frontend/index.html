@@ -13,14 +13,14 @@
             <img src="./images/logo.png" alt="Logo" class="logo">
             <h1>UpToCure</h1>
         </header>
-        <p class="disclaimer">Advancing healthcare through innovative solutions</p>
+        <p class="disclaimer">UpToCure provides up-to-date reports on ongoing research efforts to cure rare disease. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please report to the resources provided in the reports. <a href="./methodology.html" class="methodology-link">Our methodology is detailed here</a></p>
         
         <div class="carousel-container">
             <div class="tile-select-container">
-                <select class="tile-select" id="tileSelect">
-                    <option value="" disabled selected>Jump to a tile...</option>
-                    <!-- Options will be dynamically inserted here -->
-                </select>
+                <div class="tile-select" id="tileSelect">
+                    <span>Choose a report...</span>
+                </div>
+                <!-- Le dropdown personnalisé sera inséré ici par JavaScript -->
             </div>
             <div class="carousel">
                 <!-- Tiles will be dynamically inserted here -->
@@ -36,8 +36,6 @@
     </footer>
     
     <!-- Scripts -->
-    <script src="list-reports.js"></script>
-    <script src="markdown-parser.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

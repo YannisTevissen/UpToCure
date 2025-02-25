@@ -1,0 +1,12 @@
+{
+  "error": false,
+  "message": "Fallback report data for development environments",
+  "reports": [
+    {
+      "title": "Sample Report: Introduction to UpToCure",
+      "content": "<h2>Sample Report: Introduction to UpToCure</h2><p>Welcome to UpToCure! This is a sample report to demonstrate the markdown parsing capabilities.</p><p><strong>Key Features:</strong></p><ul><li>Parses markdown to HTML</li><li>Extracts metadata like title and date</li><li>Displays content in a responsive carousel</li></ul><h3>Getting Started</h3><p>To add your own reports, simply create markdown files in the <code>reports</code> directory.</p><p><em>Last updated: April 15, 2025</em></p>",
+      "date": "April 15, 2025",
+      "filename": "sample-report.md"
+    }
+  ]
+} 

@@ -1,4 +1,4 @@
-# Gaucher's Disease
+# GD test
 
 Gaucher's disease is a rare genetic disorder that results in the harmful buildup of fatty substances in certain organs, particularly the spleen, liver, and bone marrow. These fatty substances prevent cells and organs from working properly.
 

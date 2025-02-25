@@ -1,14 +1,12 @@
 [project]
 name = "uptocure"
 version = "0.1.0"
-description = "Default template for PDM package"
+description = "UpToCure - Medical research reports viewer"
 authors = [
     {name = "Yannis Tevissen", email = "contact@yannistevissen.fr"},
 ]
 dependencies = [
     "uvicorn==0.15.0",
-    "sqlalchemy==1.4.23",
-    "python-dotenv==0.19.0",
     "fastapi<0.100.0",
     "pydantic<2.0.0",
 ]
@@ -21,4 +19,5 @@ license = {text = "MIT"}
 distribution = false
 
 [tool.pdm.scripts]
-run-backend = "uvicorn app:app --reload"
+run = "python scripts/run.py"
+run-backend = "uvicorn src.app:app --reload"
