@@ -8,10 +8,7 @@ class Carousel {
         this.init();
         
         // Log that carousel is being initialized
-        console.log('UpToCure Carousel initialized, setting up auto-refresh...');
-        
-        // Setup auto-refresh to check for new reports (every 30 seconds)
-        this.autoRefreshInterval = setInterval(() => this.fetchParsedReports(), 30000);
+        console.log('UpToCure Carousel initialized');
     }
 
     async init() {

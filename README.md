@@ -17,10 +17,12 @@ UpToCure leverages artificial intelligence to generate comprehensive reports abo
 - 🔄 Auto-refresh capability to display the latest reports
 - 🔧 Development tools for testing and extending functionality
 - 🎨 Clean, accessible user interface for medical information
+- 🤖 Advanced AI research agent for gathering the latest scientific information
 
 ## System Requirements
 
-- Python 3.11 or higher
+- Python 3.11 or higher (for the main application)
+- Python 3.12 for the reports generator
 - PDM (Python Dependency Manager)
 - Modern web browser
 
@@ -39,16 +41,39 @@ This will:
 4. Start the FastAPI server
 5. Open your browser to view the application
 
+## Reports Generator
+
+UpToCure includes a separate `reports_generator` module that uses advanced AI techniques to automatically generate comprehensive research reports on rare diseases. The generator:
+
+1. Uses the SmolAgents deep research agent to search and gather information from the web
+2. Processes medical literature to extract relevant research data
+3. Generates formatted markdown reports with proper citations
+4. Outputs reports directly to the `reports` directory for immediate viewing in the application
+
+To generate a new report:
+
+```bash
+cd reports_generator
+pdm run report
+```
+
+This requires API keys for the AI services used (Claude or OpenAI) and search APIs, which should be set in the `.env` file.
+
 ## Adding Your Own Reports
 
-To add your own reports:
+You can add reports in two ways:
 
-1. Create a markdown (.md) file in the `reports` directory
-2. Format your markdown file with:
-   - A title (using # at the beginning)
-   - Content about rare disease research (any markdown is supported)
-   - Optional date (using *Last updated: DATE* format)
-   - References to original research sources
+### 1. Using the AI Reports Generator
+
+Use the reports_generator module to automatically create comprehensive reports on specified rare diseases.
+
+### 2. Manual Creation
+
+Create a markdown (.md) file in the `reports` directory and format it with:
+- A title (using # at the beginning)
+- Content about rare disease research (any markdown is supported)
+- Optional date (using *Last updated: DATE* format)
+- References to original research sources
 
 Example:
 ```markdown
@@ -84,6 +109,14 @@ UpToCure/
 ├── reports/                # Markdown reports on rare diseases
 ├── pyproject.toml          # PDM project configuration
 └── README.md               # This file
+
+reports_generator/          # AI-powered reports generation module
+├── reporter.py             # Main script for generating reports
+├── smolagents_repo/        # Deep research agent framework
+│   └── examples/
+│       └── open_deep_research/ # Web research capabilities
+├── downloads_folder/       # Temporary storage for research content
+└── pyproject.toml          # Dependencies for the generator
 ```
 
 ## API Endpoints
@@ -117,6 +150,7 @@ There are two ways to test the API:
 - **No reports showing up?** Check that your markdown files are in the `reports` directory and formatted correctly.
 - **Server won't start?** Ensure you have Python 3.11+ and PDM installed.
 - **API errors?** Check the server logs for detailed error messages.
+- **Reports generator errors?** Check API keys in the `.env` file and ensure Python 3.12 is installed.
 
 ## Disclaimer
 
@@ -131,4 +165,5 @@ This project is open-source.
 Built with:
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Uvicorn](https://www.uvicorn.org/)
-- [PDM](https://pdm.fming.dev/) 
+- [PDM](https://pdm.fming.dev/)
+- [SmolAgents](https://github.com/smol-ai/agent) - AI research agent framework 

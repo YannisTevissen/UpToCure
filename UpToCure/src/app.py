@@ -67,6 +67,10 @@ class MarkdownParser:
                 lines[i] = f"<p>{line}</p>"
         
         html = '\n'.join(lines)
+        
+        # Parse links
+        html = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href="\2">\1</a>', html)
+        
         return html
     
     def extract_metadata(self, markdown: str, filename: str) -> Dict[str, Any]:

@@ -68,6 +68,15 @@ h1 {
     margin-right: auto;
 }
 
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-bottom: 1px dotted var(--primary);
+    text-shadow: 1px 1px 2px var(--text-color);
+}
+
 .methodology-link {
     color: var(--primary);
     text-decoration: none;
@@ -390,6 +399,12 @@ footer {
 /* Styles for markdown content */
 .tile-content {
     margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.tile-content h4 {
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px var(--text-color);
 }
 
 .tile-content ul {
@@ -409,6 +424,7 @@ footer {
 .tile-content strong {
     font-weight: 600;
     color: var(--primary);
+    text-shadow: 1px 1px 2px var(--text-color);
 }
 
 .tile-content em {

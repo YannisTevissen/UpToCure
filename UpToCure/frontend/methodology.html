@@ -85,21 +85,53 @@
                 <li><strong>Citation Integration:</strong> All reports include references to original research sources.</li>
             </ul>
             
-            <h3>Limitations and Disclaimers</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.</p>
+            <h3>Deep Research Agent Architecture</h3>
+            <p>At the core of our methodology is a specialized AI research system built on the SmolAgents framework, which autonomously gathers and analyzes the latest scientific information on rare diseases. The system employs:</p>
             
-            <p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit.</p>
+            <ul>
+                <li><strong>Web Search Capabilities:</strong> Our deep research agent navigates the web to find the most relevant and recent scientific publications, clinical trials, and research updates.</li>
+                <li><strong>Document Analysis:</strong> The system can analyze PDFs, academic papers, and complex medical databases to extract pertinent information.</li>
+                <li><strong>Multi-Agent Collaboration:</strong> A manager agent coordinates with specialized search agents to efficiently gather comprehensive information about specific diseases.</li>
+                <li><strong>Medical Context Understanding:</strong> Fine-tuned language models help interpret complex medical terminology and research methodologies.</li>
+            </ul>
+            
+            <h3>Limitations and Disclaimers</h3>
+            <p>While our AI system produces valuable research summaries, users should be aware of important limitations:</p>
+            
+            <ul>
+                <li><strong>AI Hallucinations:</strong> Large language models can occasionally generate plausible-sounding but incorrect information, especially with complex medical topics.</li>
+                <li><strong>Verification Gaps:</strong> While we employ various techniques to verify information, not all content is expert-reviewed by medical professionals.</li>
+                <li><strong>Temporal Limitations:</strong> Research reports reflect information available at the time of generation and may not include very recent developments.</li>
+                <li><strong>Interpretation Challenges:</strong> AI systems may sometimes misinterpret nuanced medical findings or statistical significance in research papers.</li>
+            </ul>
             
             <h3>Information Processing Protocol</h3>
-            <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel justo. Maecenas semper suscipit nunc, sed aliquam sapien convallis eu. Nulla ut turpis in diam dapibus consequat.</p>
+            <p>Our reports generation follows a standardized workflow:</p>
+            
+            <ol>
+                <li><strong>Query Formulation:</strong> We begin with a specific rare disease and construct a comprehensive query to explore all therapeutic approaches and research directions.</li>
+                <li><strong>Multi-Source Exploration:</strong> The deep research agent searches across academic journals, clinical trial databases, research institutions, and medical foundations.</li>
+                <li><strong>Information Extraction:</strong> Relevant data is extracted, including research methodologies, trial outcomes, therapeutic approaches, and statistical findings.</li>
+                <li><strong>Synthesis:</strong> The collected information is organized into a coherent narrative that highlights key developments, emerging trends, and challenges.</li>
+                <li><strong>Citation and Source Linking:</strong> All information is linked to its original sources for verification and further exploration.</li>
+            </ol>
             
             <h3>Verification Process</h3>
             <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li>Nullam in dui mauris, ut auctor neque eu tellus rhoncus</li>
-                <li>Vivamus hendrerit arcu sed erat molestie vehicula</li>
-                <li>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor</li>
-                <li>Ut in nulla enim, non venenatis nisl tempor</li>
+                <li><strong>Algorithmic Consistency Checks:</strong> Automated systems compare extracted information against known medical facts and biological mechanisms.</li>
+                <li><strong>Source Credibility Assessment:</strong> Sources are evaluated based on reputation, peer-review status, and institutional affiliation.</li>
+                <li><strong>Cross-Reference Verification:</strong> Key findings are cross-referenced across multiple sources when possible.</li>
+                <li><strong>Uncertainty Flagging:</strong> Areas with limited or conflicting information are clearly indicated in the reports.</li>
+                <li><strong>Release Review:</strong> Final reports undergo a review process before being published to the platform.</li>
+            </ul>
+            
+            <h3>Technical Implementation</h3>
+            <p>The reports_generator module utilizes:</p>
+            <ul>
+                <li><strong>SmolAgents Framework:</strong> An open-source toolkit for building AI agents that can execute complex, multi-step tasks with web browsing capabilities.</li>
+                <li><strong>Advanced LLMs:</strong> Models like Claude or GPT-4 that provide reasoning capabilities tailored to scientific information extraction.</li>
+                <li><strong>SerpAPI:</strong> For structured web search results that help the agent find relevant research papers and clinical data.</li>
+                <li><strong>Text Processing Pipeline:</strong> Custom document processing tools to extract information from PDFs, academic papers, and medical databases.</li>
             </ul>
             
             <h3>Conclusion</h3>

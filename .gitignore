@@ -1,0 +1,6 @@
+# gitignore
+
+# Python
+__pycache__/
+reports_generator/.env
+UpToCure/.venv
