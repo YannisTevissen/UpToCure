@@ -76,7 +76,7 @@ class MarkdownParser:
         html = '\n'.join(lines)
         
         # Parse links
-        html = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href="\2">\1</a>', html)
+        html = re.sub(r'\[(.+?)\]\s*\((.+?)\)', r'<a href="\2">\1</a>', html)
         
         # Parse tables (more complex approach)
         # First, we need to detect and process multi-line tables

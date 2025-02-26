@@ -46,7 +46,8 @@ dependencies = [
     "SpeechRecognition>=3.14.1",
     "smolagents[dev]>=1.9.2",
     "serpapi>=0.1.5",
-    "sentencepiece>=0.2.0"
+    "sentencepiece>=0.2.0",
+    "deepl>=1.21.0"
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
