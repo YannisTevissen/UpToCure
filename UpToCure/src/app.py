@@ -44,6 +44,9 @@ class MarkdownParser:
         html = re.sub(r'^## (.+?)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
         html = re.sub(r'^### (.+?)$', r'<h4>\1</h4>', html, flags=re.MULTILINE)
         
+        # Parse h4 headers
+        html = re.sub(r'^#### (.+?)$', r'<h5>\1</h5>', html, flags=re.MULTILINE)
+        
         # Parse bold text
         html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
         
@@ -71,6 +74,97 @@ class MarkdownParser:
         # Parse links
         html = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href="\2">\1</a>', html)
         
+        # Parse tables (more complex approach)
+        # First, we need to detect and process multi-line tables
+        def process_table_content(table_content):
+            rows = table_content.strip().split('\n')
+            html_rows = []
+            header_processed = False
+            
+            # Clean up rows and remove empty ones
+            rows = [row.strip() for row in rows if row.strip()]
+            
+            # Identify if there are any separator rows (rows with mostly dashes)
+            separator_indices = []
+            for i, row in enumerate(rows):
+                # Check if this is a separator row (contains mainly dashes and pipes)
+                if re.match(r'^\|[\s\-|]+\|$', row) or re.search(r'\|[\s\-|]+\|', row):
+                    separator_indices.append(i)
+            
+            # Process rows
+            current_table_part = "header" if separator_indices else "body"
+            
+            for i, row in enumerate(rows):
+                # Skip separator rows
+                if i in separator_indices:
+                    # Switch from header to body after first separator
+                    if current_table_part == "header":
+                        current_table_part = "body"
+                    continue
+                
+                # Process cells
+                cells = []
+                # Split by pipe but keep empty cells
+                raw_cells = row.split('|')
+                # Remove first and last which are empty due to outer pipes
+                if raw_cells[0].strip() == '':
+                    raw_cells = raw_cells[1:]
+                if raw_cells and raw_cells[-1].strip() == '':
+                    raw_cells = raw_cells[:-1]
+                
+                for cell in raw_cells:
+                    cell_content = cell.strip()
+                    if current_table_part == "header" and i < separator_indices[0] if separator_indices else False:
+                        cells.append(f"<th>{cell_content}</th>")
+                    else:
+                        cells.append(f"<td>{cell_content}</td>")
+                
+                if cells:
+                    row_html = f"<tr>{''.join(cells)}</tr>"
+                    html_rows.append(row_html)
+                    if current_table_part == "header":
+                        header_processed = True
+            
+            # Build the final table
+            if separator_indices and header_processed:
+                # Table with header and body
+                header_end = separator_indices[0]
+                thead = f"<thead>{''.join(html_rows[:header_end])}</thead>"
+                tbody = f"<tbody>{''.join(html_rows[header_end:])}</tbody>"
+                return f"<table class='markdown-table'>{thead}{tbody}</table>"
+            else:
+                # Table with just a body
+                return f"<table class='markdown-table'><tbody>{''.join(html_rows)}</tbody></table>"
+        
+        # Find tables in content
+        # A table pattern is a series of lines that start with pipe and contain multiple pipes
+        table_pattern = re.compile(r'(\|[^\n]*\|[\r\n]+)+', re.MULTILINE)
+        
+        # Process all tables
+        def replace_table(match):
+            return process_table_content(match.group(0))
+            
+        html = table_pattern.sub(replace_table, html)
+        
+        # If any single-line table rows remain, wrap them in table tags
+        # But first, remove the already processed tables
+        html = re.sub(r'<table class=\'markdown-table\'>.*?</table>', '', html, flags=re.DOTALL)
+        
+        # Now process any single line tables or remaining table fragments
+        if '|' in html:
+            rows = html.split('\n')
+            for i, row in enumerate(rows):
+                if row.strip().startswith('|') and row.strip().endswith('|'):
+                    # It's a table row, convert it
+                    cells = []
+                    for cell in row.split('|')[1:-1]:  # Skip first and last empty cells
+                        cells.append(f"<td>{cell.strip()}</td>")
+                    
+                    if cells:
+                        rows[i] = f"<table class='simple-table'><tr>{''.join(cells)}</tr></table>"
+            
+            html = '\n'.join(rows)
+        
         return html
     
     def extract_metadata(self, markdown: str, filename: str) -> Dict[str, Any]:
@@ -80,23 +174,7 @@ class MarkdownParser:
         title = title_match.group(1) if title_match else "Untitled Document"
         
         # Find date using multiple patterns
-        date = None
-        date_patterns = [
-            r'\*(?:.*?updated|date):\s*(.+?)\*',  # *Last updated: March 10, 2025*
-            r'(?:Updated|Date):\s*([A-Za-z0-9, ]+)',  # Updated: March 10, 2025
-            r'([A-Za-z]+ \d{1,2},? \d{4})',  # March 10, 2025
-            r'(\d{1,2}[-/]\d{1,2}[-/]\d{2,4})'  # 10-03-2025 or 10/03/2025
-        ]
-        
-        for pattern in date_patterns:
-            date_match = re.search(pattern, markdown, re.IGNORECASE)
-            if date_match:
-                date = date_match.group(1).strip()
-                break
-        
-        # Use current date if no date found
-        if not date:
-            date = datetime.now().strftime("%B %d, %Y")
+        date = datetime.now().strftime("%B %d, %Y")
         
         # Parse content
         content = self.parse(markdown)
