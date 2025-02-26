@@ -6,6 +6,7 @@
     <title>UpToCure - Methodology</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
+    <script src="localization.js"></script>
     <style>
         .methodology-container {
             width: 80%;
@@ -61,88 +62,92 @@
         .back-button:hover {
             background: rgba(0, 234, 255, 0.8);
         }
+
+        /* Make sure translation indicator styles are consistent */
+        .translating-indicator {
+            position: absolute;
+            top: 10px;
+            right: 150px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: none;
+            animation: fade 1.5s infinite alternate;
+            z-index: 100;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.7; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="./images/logo.png" alt="Logo" class="logo">
-            <h1>UpToCure</h1>
+            <div class="brand">
+                <img src="./images/logo.png" alt="Logo" class="logo">
+                <h1>UpToCure</h1>
+            </div>
+            <!-- Language selector dropdown -->
+            <div class="language-selector">
+                <select id="languageSelect" aria-label="Select language">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                </select>
+            </div>
+            <div id="translatingIndicator" class="translating-indicator">Translating...</div>
         </header>
         
-        <a href="./index.html" class="back-button">← Back to Reports</a>
+        <a href="./index.html" class="back-button" data-i18n="backToReports">← Back to Reports</a>
         
         <div class="methodology-container">
-            <h2>Our Methodology</h2>
+            <h2 data-i18n="methodologyHeading">Our Methodology</h2>
             
-            <h3>AI-Assisted Research Report Generation</h3>
-            <p>UpToCure's reports on rare disease research are generated using advanced language models fine-tuned for medical content. Our process involves:</p>
-            
-            <ul>
-                <li><strong>Data Collection:</strong> Systematic review of peer-reviewed publications, clinical trial databases, and authoritative medical resources.</li>
-                <li><strong>Content Generation:</strong> AI-powered synthesis of research findings with specialized prompting to ensure medical accuracy.</li>
-                <li><strong>Expert Validation:</strong> Review process to check for hallucinations and factual errors, though this process is not exhaustive.</li>
-                <li><strong>Citation Integration:</strong> All reports include references to original research sources.</li>
-            </ul>
-            
-            <h3>Deep Research Agent Architecture</h3>
-            <p>At the core of our methodology is a specialized AI research system built on the SmolAgents framework, which autonomously gathers and analyzes the latest scientific information on rare diseases. The system employs:</p>
+            <h3 data-i18n="researchSectionTitle">AI-Assisted Research Report Generation</h3>
+            <p data-i18n="researchSectionContent">UpToCure's reports on rare disease research are generated using advanced language models fine-tuned for medical content. Our process involves:</p>
             
             <ul>
-                <li><strong>Web Search Capabilities:</strong> Our deep research agent navigates the web to find the most relevant and recent scientific publications, clinical trials, and research updates.</li>
-                <li><strong>Document Analysis:</strong> The system can analyze PDFs, academic papers, and complex medical databases to extract pertinent information.</li>
-                <li><strong>Multi-Agent Collaboration:</strong> A manager agent coordinates with specialized search agents to efficiently gather comprehensive information about specific diseases.</li>
-                <li><strong>Medical Context Understanding:</strong> Fine-tuned language models help interpret complex medical terminology and research methodologies.</li>
+                <li><strong data-i18n="dataCollection">Data Collection:</strong> <span data-i18n="dataCollectionDesc">Systematic review of peer-reviewed publications, clinical trial databases, and authoritative medical resources.</span></li>
+                <li><strong data-i18n="contentGeneration">Content Generation:</strong> <span data-i18n="contentGenerationDesc">AI-powered synthesis of research findings with specialized prompting to ensure medical accuracy.</span></li>
+                <li><strong data-i18n="expertValidation">Expert Validation:</strong> <span data-i18n="expertValidationDesc">Review process to check for hallucinations and factual errors, though this process is not exhaustive.</span></li>
+                <li><strong data-i18n="citationIntegration">Citation Integration:</strong> <span data-i18n="citationIntegrationDesc">All reports include references to original research sources.</span></li>
             </ul>
             
-            <h3>Limitations and Disclaimers</h3>
-            <p>While our AI system produces valuable research summaries, users should be aware of important limitations:</p>
+            <h3 data-i18n="agentArchTitle">Deep Research Agent Architecture</h3>
+            <p data-i18n="agentArchContent">At the core of our methodology is a specialized AI research system built on the SmolAgents framework, which autonomously gathers and analyzes the latest scientific information on rare diseases. The system employs:</p>
             
             <ul>
-                <li><strong>AI Hallucinations:</strong> Large language models can occasionally generate plausible-sounding but incorrect information, especially with complex medical topics.</li>
-                <li><strong>Verification Gaps:</strong> While we employ various techniques to verify information, not all content is expert-reviewed by medical professionals.</li>
-                <li><strong>Temporal Limitations:</strong> Research reports reflect information available at the time of generation and may not include very recent developments.</li>
-                <li><strong>Interpretation Challenges:</strong> AI systems may sometimes misinterpret nuanced medical findings or statistical significance in research papers.</li>
+                <li><strong data-i18n="webSearchCapabilities">Web Search Capabilities:</strong> Our deep research agent navigates the web to find the most relevant and recent scientific publications, clinical trials, and research updates.</li>
+                <li><strong data-i18n="documentAnalysis">Document Analysis:</strong> The system can analyze PDFs, academic papers, and complex medical databases to extract pertinent information.</li>
+                <li><strong data-i18n="multiAgentCollaboration">Multi-Agent Collaboration:</strong> A manager agent coordinates with specialized search agents to efficiently gather comprehensive information about specific diseases.</li>
+                <li><strong data-i18n="medicalContextUnderstanding">Medical Context Understanding:</strong> Fine-tuned language models help interpret complex medical terminology and research methodologies.</li>
             </ul>
             
-            <h3>Information Processing Protocol</h3>
-            <p>Our reports generation follows a standardized workflow:</p>
-            
-            <ol>
-                <li><strong>Query Formulation:</strong> We begin with a specific rare disease and construct a comprehensive query to explore all therapeutic approaches and research directions.</li>
-                <li><strong>Multi-Source Exploration:</strong> The deep research agent searches across academic journals, clinical trial databases, research institutions, and medical foundations.</li>
-                <li><strong>Information Extraction:</strong> Relevant data is extracted, including research methodologies, trial outcomes, therapeutic approaches, and statistical findings.</li>
-                <li><strong>Synthesis:</strong> The collected information is organized into a coherent narrative that highlights key developments, emerging trends, and challenges.</li>
-                <li><strong>Citation and Source Linking:</strong> All information is linked to its original sources for verification and further exploration.</li>
-            </ol>
-            
-            <h3>Verification Process</h3>
-            <ul>
-                <li><strong>Algorithmic Consistency Checks:</strong> Automated systems compare extracted information against known medical facts and biological mechanisms.</li>
-                <li><strong>Source Credibility Assessment:</strong> Sources are evaluated based on reputation, peer-review status, and institutional affiliation.</li>
-                <li><strong>Cross-Reference Verification:</strong> Key findings are cross-referenced across multiple sources when possible.</li>
-                <li><strong>Uncertainty Flagging:</strong> Areas with limited or conflicting information are clearly indicated in the reports.</li>
-                <li><strong>Release Review:</strong> Final reports undergo a review process before being published to the platform.</li>
-            </ul>
-            
-            <h3>Technical Implementation</h3>
-            <p>The reports_generator module utilizes:</p>
-            <ul>
-                <li><strong>SmolAgents Framework:</strong> An open-source toolkit for building AI agents that can execute complex, multi-step tasks with web browsing capabilities.</li>
-                <li><strong>Advanced LLMs:</strong> Models like Claude or GPT-4 that provide reasoning capabilities tailored to scientific information extraction.</li>
-                <li><strong>SerpAPI:</strong> For structured web search results that help the agent find relevant research papers and clinical data.</li>
-                <li><strong>Text Processing Pipeline:</strong> Custom document processing tools to extract information from PDFs, academic papers, and medical databases.</li>
-            </ul>
-            
-            <h3>Conclusion</h3>
-            <p>While we strive for accuracy, users should be aware that our AI-generated content may contain inaccuracies or outdated information. Always consult healthcare professionals for medical decisions and refer to the original research sources cited in our reports for comprehensive information about rare disease treatments and research developments.</p>
+            <h3 data-i18n="conclusionTitle">Conclusion</h3>
+            <p data-i18n="conclusionContent">While we strive for accuracy, users should be aware that our AI-generated content may contain inaccuracies or outdated information. Always consult healthcare professionals for medical decisions and refer to the original research sources cited in our reports for comprehensive information about rare disease treatments and research developments.</p>
         </div>
         
-        <a href="./index.html" class="back-button">← Back to Reports</a>
+        <a href="./index.html" class="back-button" data-i18n="backToReports">← Back to Reports</a>
     </div>
     
     <footer>
-        <p>Copyright © Yannis Tevissen 2025</p>
+        <p data-i18n="copyright">Copyright © Yannis Tevissen 2025</p>
     </footer>
+    
+    <!-- Modified script without transformers.js functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelect = document.getElementById('languageSelect');
+            const translatingIndicator = document.getElementById('translatingIndicator');
+            
+            // Always hide the translation indicator since functionality is disabled
+            if (translatingIndicator) {
+                translatingIndicator.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

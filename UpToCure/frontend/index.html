@@ -6,19 +6,32 @@
     <title>UpToCure.ai</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
+    <script src="localization.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="./images/logo.png" alt="Logo" class="logo">
-            <h1>UpToCure</h1>
+            <div class="brand">
+                <img src="./images/logo.png" alt="Logo" class="logo">
+                <h1>UpToCure</h1>
+            </div>
+            <div class="language-selector">
+                <select id="languageSelect" aria-label="Select language">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                </select>
+            </div>
+            <div id="translatingIndicator" class="translating-indicator">Translating...</div>
         </header>
-        <p class="disclaimer">UpToCure provides up-to-date reports on ongoing research efforts to cure rare disease. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please report to the resources provided in the reports. <a href="./methodology.html" class="methodology-link">Our methodology is detailed here</a></p>
+        <p class="disclaimer">
+            <span data-i18n="disclaimer">UpToCure provides up-to-date reports on ongoing research efforts to cure rare disease. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please report to the resources provided in the reports.</span>
+            <a href="./methodology.html" class="methodology-link" data-i18n="methodologyLink">Our methodology is detailed here</a>
+        </p>
         
         <div class="carousel-container">
             <div class="tile-select-container">
                 <div class="tile-select" id="tileSelect">
-                    <span>Choose a report...</span>
+                    <span data-i18n="chooseReport">Choose a report...</span>
                 </div>
                 <!-- Le dropdown personnalisé sera inséré ici par JavaScript -->
             </div>
@@ -32,7 +45,7 @@
         </div>
     </div>
     <footer>
-        <p>Copyright © Yannis Tevissen 2025</p>
+        <p data-i18n="copyright">Copyright © Yannis Tevissen 2025</p>
     </footer>
     
     <!-- Scripts -->

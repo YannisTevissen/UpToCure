@@ -6,9 +6,8 @@ authors = [
     {name = "Yannis Tevissen", email = "contact@yannistevissen.fr"},
 ]
 dependencies = [
-    "uvicorn==0.15.0",
-    "fastapi<0.100.0",
-    "pydantic<2.0.0",
+    "flask>=3.1.0",
+    "markdown>=3.7",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
@@ -19,5 +18,5 @@ license = {text = "MIT"}
 distribution = false
 
 [tool.pdm.scripts]
-run = "python scripts/run.py"
-run-backend = "uvicorn src.app:app --reload"
+run = "python run.py"
+run-backend = "python src/app.py"

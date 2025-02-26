@@ -45,8 +45,8 @@ dependencies = [
     "xlrd>=2.0.1",
     "SpeechRecognition>=3.14.1",
     "smolagents[dev]>=1.9.2",
-    "serpapi>=0.1.5"
-
+    "serpapi>=0.1.5",
+    "sentencepiece>=0.2.0"
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
@@ -54,6 +54,7 @@ license = {text = "MIT"}
 
 [tool.pdm.scripts]
 report = {call = "reporter:main", env_file = ".env"}
+translate = {call = "translator:main", env_file = ".env"}
 
 
 [tool.pdm]

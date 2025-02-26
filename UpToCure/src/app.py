@@ -7,18 +7,22 @@ import re
 import os
 import glob
 from pydantic import BaseModel
+import json
+from pathlib import Path
+import markdown
+from flask import Flask, jsonify, request, send_from_directory
 
-# Initialize FastAPI app
-app = FastAPI()
+# Initialize Flask app with frontend folder as static folder
+frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'frontend')
+app = Flask(__name__, static_folder=frontend_dir, static_url_path='')
 
-# Configure CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with your frontend URL
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# Enable CORS
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
+    return response
 
 # Model for our report
 class ReportModel(BaseModel):
@@ -33,9 +37,9 @@ class ReportsResponse(BaseModel):
     message: str
     reports: List[ReportModel]
 
-# Markdown Parser
+# Custom parser for Markdown content
 class MarkdownParser:
-    """Simple Markdown Parser that converts markdown to HTML"""
+    """Parser for Markdown content with metadata extraction."""
     
     def parse(self, markdown: str) -> str:
         """Converts markdown text to HTML"""
@@ -186,41 +190,64 @@ class MarkdownParser:
             'filename': filename
         }
 
-def process_reports() -> Dict[str, Any]:
-    """Process all markdown files in the reports directory"""
-    # Use absolute path to reports directory from the project root
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    reports_dir = os.path.join(base_dir, 'reports')
+def process_reports(reports_dir="reports", lang="en"):
+    """Process the markdown files in the specified language reports directory."""
+    # Update the reports directory to include the language
+    reports_dir = os.path.join(reports_dir, lang)
     
-    print(f"Looking for reports in: {reports_dir}")
+    # Ensure the language-specific directory exists
+    if not os.path.exists(reports_dir):
+        print(f"Creating directory for language: {lang}")
+        os.makedirs(reports_dir, exist_ok=True)
+        
+        # Create a sample report if the directory is empty
+        create_sample_report(reports_dir, lang)
     
-    parser = MarkdownParser()
+    markdown_files = glob.glob(os.path.join(reports_dir, "*.md"))
+    
+    if not markdown_files:
+        print(f"No markdown files found in {reports_dir}")
+        # Create a sample report if no files were found
+        create_sample_report(reports_dir, lang)
+        markdown_files = glob.glob(os.path.join(reports_dir, "*.md"))
+        
+        if not markdown_files:
+            return []
+    
     reports = []
     
-    # Create reports directory if it doesn't exist
-    if not os.path.isdir(reports_dir):
+    for file_path in markdown_files:
         try:
-            os.makedirs(reports_dir)
-            print(f"Created reports directory at {reports_dir}")
-        except Exception as e:
-            print(f"Error creating reports directory: {e}")
-            return {
-                'error': True,
-                'message': f"Reports directory not found and could not be created: {str(e)}",
-                'reports': []
+            with open(file_path, 'r', encoding='utf-8') as file:
+                content = file.read()
+                
+            report = {
+                "id": os.path.basename(file_path).replace('.md', ''),
+                "content": content
             }
+            
+            reports.append(report)
+            
+        except Exception as e:
+            print(f"Error processing {file_path}: {str(e)}")
     
-    # Get all files with .md extension
-    md_files = glob.glob(os.path.join(reports_dir, '*.md'))
+    return reports
+
+def create_sample_report(target_dir, language):
+    """Create a sample report in the specified language directory."""
+    sample_filename = "sample-report.md"
+    sample_path = os.path.join(target_dir, sample_filename)
     
-    print(f"Found {len(md_files)} markdown files")
+    # Check if sample already exists
+    if os.path.exists(sample_path):
+        print(f"Sample report already exists at {sample_path}")
+        return
     
-    if not md_files:
-        # Create a sample report if no files found
-        sample_path = os.path.join(reports_dir, 'sample-report.md')
-        try:
-            with open(sample_path, 'w') as f:
-                f.write("""# Sample Report: Introduction to UpToCure
+    print(f"Creating sample report in {language} at {sample_path}")
+    
+    # Sample reports in different languages
+    sample_reports = {
+        'en': """# Sample Report: Introduction to UpToCure
 
 Welcome to UpToCure! This is a sample report to demonstrate the markdown parsing capabilities.
 
@@ -234,59 +261,126 @@ Welcome to UpToCure! This is a sample report to demonstrate the markdown parsing
 To add your own reports, simply create markdown files in the `reports` directory.
 
 *Last updated: April 15, 2025*
-""")
-            print(f"Created sample report at {sample_path}")
-            md_files = [sample_path]  # Add the sample to our files list
-        except Exception as e:
-            print(f"Error creating sample report: {e}")
-            # Important: We're returning an empty array, not raising a 404
-            return {
-                'error': False,  # Changed to false since this isn't a critical error
-                'message': f"No markdown files found. Created a sample but encountered an error: {str(e)}",
-                'reports': []
-            }
-    
-    for file_path in md_files:
-        filename = os.path.basename(file_path)
-        try:
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
-            reports.append(parser.extract_metadata(content, filename))
-            print(f"Successfully processed: {filename}")
-        except Exception as e:
-            print(f"Error processing file {filename}: {str(e)}")
-            continue
-    
-    return {
-        'error': False,
-        'message': f"Successfully processed {len(reports)} reports",
-        'reports': reports
+""",
+        'fr': """# Exemple de rapport : Introduction à UpToCure
+
+Bienvenue sur UpToCure ! Ceci est un exemple de rapport pour démontrer les capacités d'analyse Markdown.
+
+**Fonctionnalités clés :**
+* Conversion du Markdown en HTML
+* Extraction de métadonnées comme le titre et la date
+* Affichage du contenu dans un carrousel responsive
+
+## Pour commencer
+
+Pour ajouter vos propres rapports, créez simplement des fichiers Markdown dans le répertoire `reports`.
+
+*Dernière mise à jour : 15 avril 2025*
+"""
     }
+    
+    # Use the specified language sample if available, otherwise use English
+    content = sample_reports.get(language, sample_reports['en'])
+    
+    try:
+        with open(sample_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Successfully created sample report at {sample_path}")
+        return True
+    except Exception as e:
+        print(f"Error creating sample report: {e}")
+        return False
 
-# API routes - define these before mounting static files
-@app.get("/api")
-def read_root():
-    return {"message": "Welcome to UpToCure API"}
+# Root API endpoint
+@app.route('/api')
+def api_root():
+    """Root API endpoint returning API info"""
+    return jsonify({"message": "Welcome to UpToCure API"})
 
-@app.get("/api/reports", response_model=ReportsResponse)
+# API endpoint for reports
+@app.route('/api/reports')
 def get_reports():
-    """Get all processed markdown reports"""
-    result = process_reports()
+    """Get all available parsed reports"""
+    # Get language parameter, default to English if not provided
+    lang = request.args.get('lang', 'en')
     
-    # Never return a 404 for empty reports, only for actual API errors
-    if result['error']:
-        # Check if this is a critical error that should result in a 404
-        if "could not be created" in result['message'].lower():
-            raise HTTPException(status_code=500, detail=result['message'])
-        # For non-critical errors, continue with the response
-    
-    # Return the result, even if reports is empty
-    return result
+    try:
+        print(f"Processing reports for language: {lang}")
+        # Get the base directory (where this file is located)
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        reports_base_dir = os.path.join(base_dir, 'reports')
+        
+        print(f"Reports directory: {reports_base_dir}")
+        print(f"Language-specific directory: {os.path.join(reports_base_dir, lang)}")
+        
+        # Process reports for the specified language
+        reports = process_reports(reports_base_dir, lang)
+        
+        print(f"Found {len(reports)} raw reports")
+        
+        # Format the response
+        parser = MarkdownParser()
+        formatted_reports = []
+        
+        for report in reports:
+            try:
+                # Extract metadata using the parser
+                report_data = parser.extract_metadata(
+                    report['content'], 
+                    report['id'] + '.md'  # Add .md extension back for the parser
+                )
+                formatted_reports.append(report_data)
+            except Exception as e:
+                print(f"Error parsing report {report['id']}: {str(e)}")
+        
+        print(f"Formatted {len(formatted_reports)} reports")
+        if formatted_reports:
+            print(f"First report title: {formatted_reports[0]['title']}")
+        
+        response = {
+            'error': False,
+            'message': f"Successfully processed {len(formatted_reports)} reports for language '{lang}'",
+            'reports': formatted_reports
+        }
+        
+        # Print the response size to check if it's too large
+        response_json = json.dumps(response)
+        print(f"Response size: {len(response_json)} bytes")
+        
+        return jsonify(response)
+    except Exception as e:
+        print(f"Error in get_reports: {str(e)}")
+        # Return a 500 error for critical issues
+        return jsonify({
+            'error': True,
+            'message': f"Error processing reports: {str(e)}",
+            'reports': []
+        }), 500
 
-# Mount the frontend static files - do this last to ensure API routes take precedence
-frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'frontend')
-if os.path.isdir(frontend_dir):
-    print(f"Mounting frontend from: {frontend_dir}")
-    app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
-else:
-    print(f"Warning: Frontend directory not found at {frontend_dir}") 
+# Default route to serve index.html
+@app.route('/')
+def index():
+    """Serve the index.html file"""
+    return app.send_static_file('index.html')
+
+# Routes for specific pages
+@app.route('/methodology.html')
+def methodology():
+    """Serve the methodology HTML page"""
+    return app.send_static_file('methodology.html')
+
+# Any other static files are served automatically by Flask
+
+# Main entry point
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Run the UpToCure API server")
+    parser.add_argument('--host', type=str, default='0.0.0.0', help='Host to bind the server to')
+    parser.add_argument('--port', type=int, default=8000, help='Port to bind the server to')
+    parser.add_argument('--debug', action='store_true', help='Run in debug mode')
+    
+    args = parser.parse_args()
+    
+    print(f"Starting UpToCure API server at http://{args.host}:{args.port}")
+    app.run(host=args.host, port=args.port, debug=args.debug) 

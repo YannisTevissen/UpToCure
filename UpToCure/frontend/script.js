@@ -1,272 +1,181 @@
 class Carousel {
     constructor() {
         this.container = document.querySelector('.carousel');
-        this.tileSelectContainer = document.querySelector('.tile-select-container');
-        this.tileSelect = document.querySelector('#tileSelect');
+        this.carouselContainer = document.querySelector('.carousel-container');
+        this.prevBtn = document.querySelector('.nav-arrow.prev');
+        this.nextBtn = document.querySelector('.nav-arrow.next');
+        this.tileSelect = document.getElementById('tileSelect');
         this.tiles = [];
-        this.currentIndex = 0;
-        this.init();
+        this.activeTileIndex = 0;
+        this.isLoading = false;
+        this.translatingIndicator = document.getElementById('translatingIndicator');
+        this.outsideClickHandler = null;
         
-        // Log that carousel is being initialized
-        console.log('UpToCure Carousel initialized');
-    }
-
-    async init() {
-        try {
-            console.log('Initializing carousel...');
-            await this.fetchParsedReports();
-            this.setupCarousel();
-            this.setupCustomDropdown();
-            this.setupNavigation();
-            console.log('Carousel initialized successfully with', this.tiles.length, 'tiles');
-        } catch (error) {
-            console.error('Failed to initialize carousel:', error);
-            // Add a default error tile
-            this.tiles = [{
-                title: "Error Initializing",
-                content: `<p>Failed to initialize content. Please reload the page.</p><p>Error: ${error.message}</p>`,
-                date: new Date(),
-                filename: "error.md"
-            }];
-            this.renderTiles();
-        }
-    }
-
-    async fetchParsedReports() {
-        try {
-            console.log('Fetching parsed reports from backend...');
-            
-            // Fetch all parsed reports from the Python backend endpoint
-            const apiUrl = window.location.origin + '/api/reports';
-            console.log('API URL:', apiUrl);
-            
-            const response = await fetch(apiUrl);
-            
-            if (!response.ok) {
-                const errorText = await response.text();
-                console.error('API error response:', errorText);
-                throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+        // Initialize
+        this.setupEventListeners();
+        this.setupLanguageSelector();
+        
+        // Set default language
+        this.currentLanguage = document.documentElement.lang || 'en';
+        console.log('Initial language set to:', this.currentLanguage);
+        
+        // Load reports for current language
+        this.loadReportsForLanguage(this.currentLanguage);
+        
+        // Add event listener for language changes
+        document.addEventListener('languageChanged', (event) => {
+            const newLanguage = event.detail.language;
+            console.log('Language changed event received:', newLanguage, 'current:', this.currentLanguage);
+            if (this.currentLanguage !== newLanguage) {
+                this.currentLanguage = newLanguage;
+                console.log('Loading reports for new language:', newLanguage);
+                this.loadReportsForLanguage(newLanguage);
             }
-            
-            const data = await response.json();
-            console.log('Raw API response:', data);
-            
-            // Check if response contains an error
-            if (data.error) {
-                throw new Error(data.message || 'Unknown error from server');
+        });
+        
+        // Also listen for languageSelected events (directly from the selector)
+        document.addEventListener('languageSelected', (event) => {
+            const newLanguage = event.detail.language;
+            console.log('Language selected event received:', newLanguage);
+            if (this.currentLanguage !== newLanguage) {
+                this.currentLanguage = newLanguage;
+                console.log('Loading reports for selected language:', newLanguage);
+                this.loadReportsForLanguage(newLanguage);
             }
-            
-            // Check if we have any reports
-            if (!data.reports || data.reports.length === 0) {
-                console.warn('Server returned no reports');
-                throw new Error('No reports available');
-            }
-            
-            console.log(`Received ${data.reports.length} parsed reports from server`);
-            
-            // Log the filenames of reports we received
-            console.log('Report filenames:', data.reports.map(r => r.filename).join(', '));
-            
-            // Process the reports
-            const processedReports = data.reports.map(report => ({
-                title: report.title,
-                content: report.content,
-                date: new Date(report.date), // Convert date string to Date object
-                filename: report.filename
-            }));
-            
-            // Update the tiles and render
-            this.tiles = processedReports;
-            this.renderTiles();
-            
-            return data.reports;
-        } catch (error) {
-            console.error('Error fetching parsed reports:', error);
-            
-            // If this is the first load (no tiles yet), show an error tile
-            if (this.tiles.length === 0) {
-                this.tiles = [{
-                    title: "Error Loading Reports",
-                    content: `<p>Could not load reports from the server.</p>
-                              <p>Error: ${error.message}</p>
-                              <p>Please check that the backend server is running at ${window.location.origin}/api/reports</p>`,
-                    date: new Date(),
-                    filename: "error.md"
-                }];
-                this.renderTiles();
-            }
-            
-            // Try fallback for development/testing environments
-            console.log('Trying fallback reports for development...');
-            await this.tryFallbackReportsForDevelopment();
-        }
+        });
     }
     
-    async tryFallbackReportsForDevelopment() {
-        // Only use fallback if we're in a development environment without backend
-        try {
-            console.log('Attempting to use fallback for development environment...');
-            
-            // Try to fetch the fallback JSON file
-            const fallbackResponse = await fetch('./reports-fallback.json');
-            
-            if (!fallbackResponse.ok) {
-                console.log('No fallback available');
-                return false;
-            }
-            
-            const fallbackData = await fallbackResponse.json();
-            console.log('Using fallback reports data', fallbackData);
-            
-            // Process the reports
-            if (fallbackData.reports && fallbackData.reports.length > 0) {
-                console.log(`Found ${fallbackData.reports.length} reports in fallback file`);
-                
-                this.tiles = fallbackData.reports.map(report => ({
-                    title: report.title,
-                    content: report.content,
-                    date: new Date(report.date),
-                    filename: report.filename
-                }));
-                this.renderTiles();
-                return true;
-            } else {
-                console.warn('Fallback file contains no reports');
-            }
-        } catch (error) {
-            console.warn('Fallback also failed:', error);
-        }
-        return false;
-    }
-
-    renderTiles() {
-        // Clear existing content
+    loadReportsForLanguage(language) {
+        console.log(`Loading reports for language: ${language}`);
+        
+        // Clear current tiles
+        this.tiles = [];
+        this.activeTileIndex = 0;
         this.container.innerHTML = '';
         
-        // Prepare for custom dropdown
-        this.tileSelect.innerHTML = '<span>Choose a report...</span>';
+        // Show loading state
+        this.isLoading = true;
+        this.updateNavigationState();
+        this.showLoadingIndicator();
         
-        // Create custom dropdown container
-        let customDropdown = document.querySelector('.custom-dropdown');
-        if (!customDropdown) {
-            customDropdown = document.createElement('div');
-            customDropdown.className = 'custom-dropdown';
-            this.tileSelectContainer.appendChild(customDropdown);
-        } else {
-            customDropdown.innerHTML = '';
+        // Fetch reports for the selected language
+        this.fetchParsedReports(language);
+    }
+
+    setupLanguageSelector() {
+        const languageSelect = document.getElementById('languageSelect');
+        if (!languageSelect) {
+            console.warn('Language selector not found');
+            return;
         }
         
-        console.log(`Rendering ${this.tiles.length} tiles...`);
+        console.log('Setting up language selector in Carousel');
         
+        // Set initial value based on current language
+        if (this.currentLanguage) {
+            languageSelect.value = this.currentLanguage;
+            console.log(`Set initial language selector value to: ${this.currentLanguage}`);
+        }
+        
+        // We now handle this in the document-level event listener in the constructor
+        // but we'll keep this as a backup
+        languageSelect.addEventListener('change', (event) => {
+            const selectedLanguage = event.target.value;
+            console.log(`Language selector changed (direct handler): ${selectedLanguage}`);
+            
+            if (this.currentLanguage !== selectedLanguage) {
+                this.currentLanguage = selectedLanguage;
+                console.log(`Loading reports for language: ${selectedLanguage} (direct handler)`);
+                this.loadReportsForLanguage(selectedLanguage);
+            }
+        });
+    }
+
+    updateActiveState() {
         this.tiles.forEach((tile, index) => {
-            // Create tile element
-            const tileElement = document.createElement('div');
-            tileElement.className = 'tile';
-            tileElement.innerHTML = `
-                <div class="tile-content">${tile.content}</div>
-                <small>${tile.date.toLocaleDateString()} | ${tile.filename}</small>
-            `;
-            this.container.appendChild(tileElement);
-
-            // Create dropdown option
-            this.addDropdownOption(customDropdown, tile.title, index);
-            
-            // Log each tile we've rendered
-            console.log(`Rendered tile ${index + 1}/${this.tiles.length}: ${tile.title} (${tile.filename})`);
-        });
-        
-        // Reset to first tile if current index is out of bounds
-        if (this.currentIndex >= this.tiles.length) {
-            this.currentIndex = 0;
-        }
-        
-        this.updateActiveState();
-    }
-
-    // Helper function to add options to custom dropdown
-    addDropdownOption(dropdownElement, text, value) {
-        const option = document.createElement('div');
-        option.className = 'dropdown-option';
-        option.dataset.value = value;
-        
-        // Check if text is likely to overflow
-        const isLong = text.length > 25;
-        if (isLong) {
-            option.classList.add('overflow');
-            option.innerHTML = `<span>${text}</span>`;
-        } else {
-            option.textContent = text;
-        }
-        
-        option.addEventListener('click', () => {
-            this.currentIndex = parseInt(value);
-            this.updateActiveState();
-            this.closeDropdown();
-            
-            // Update the select display text
-            const selectedText = this.tiles[this.currentIndex].title;
-            this.tileSelect.innerHTML = `<span>${selectedText}</span>`;
-            
-            // Check if selected text is likely to overflow
-            if (selectedText.length > 25) {
-                this.tileSelect.classList.add('overflow');
+            if (index === this.activeTileIndex) {
+                tile.classList.add('active');
             } else {
-                this.tileSelect.classList.remove('overflow');
+                tile.classList.remove('active');
             }
         });
-        
-        dropdownElement.appendChild(option);
     }
 
-    setupCustomDropdown() {
-        // Toggle dropdown on click
-        this.tileSelect.addEventListener('click', (e) => {
-            e.preventDefault();
-            this.toggleDropdown();
-        });
+    fetchParsedReports(language) {
+        this.isLoading = true;
         
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!this.tileSelectContainer.contains(e.target)) {
-                this.closeDropdown();
-            }
-        });
+        // Use correct API endpoint with language parameter
+        const apiUrl = `${window.location.origin}/api/reports?lang=${language}`;
         
-        // Set initial selected text
-        if (this.tiles.length > 0) {
-            const selectedText = this.tiles[this.currentIndex].title;
-            this.tileSelect.innerHTML = `<span>${selectedText}</span>`;
-            
-            // Check if selected text is likely to overflow
-            if (selectedText.length > 25) {
-                this.tileSelect.classList.add('overflow');
-            }
+        console.log(`Fetching reports for language: ${language}`);
+        console.log(`API URL: ${apiUrl}`);
+        console.log(`Current window location: ${window.location.href}`);
+        
+        fetch(apiUrl)
+            .then(response => {
+                console.log(`API response status for ${language}: ${response.status}`);
+                
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                this.hideLoadingIndicator();
+                
+                console.log(`API data received for ${language}:`, data);
+                
+                if (data.error) {
+                    console.error(`API returned an error for ${language}:`, data.message);
+                    throw new Error(data.message);
+                }
+                
+                if (!data.reports || data.reports.length === 0) {
+                    console.warn(`No reports found for language: ${language}`);
+                    this.showNoReportsMessage(language);
+                    return;
+                }
+                
+                console.log(`Processing ${data.reports.length} reports for ${language}`);
+                this.processReports(data.reports);
+            })
+            .catch(error => {
+                this.hideLoadingIndicator();
+                console.error(`Error fetching reports for ${language}:`, error);
+                this.showErrorMessage(`Failed to load reports for ${language}. Please try again later.`);
+            });
+    }
+    
+    showNoReportsMessage(language) {
+        this.hideLoadingIndicator();
+        this.isLoading = false;
+        
+        const langDisplay = language === 'en' ? 'English' : 'Français';
+        const messageElement = document.createElement('div');
+        messageElement.className = 'tile message-tile';
+        messageElement.innerHTML = `
+            <h3>No Reports Available</h3>
+            <p>There are currently no reports available in ${langDisplay}.</p>
+            <p>Please check back later or try a different language.</p>
+        `;
+        
+        this.container.appendChild(messageElement);
+        this.updateNavigationState();
+    }
+
+    setupEventListeners() {
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.navigate('prev'));
         }
-    }
-    
-    toggleDropdown() {
-        this.tileSelectContainer.classList.toggle('open');
-    }
-    
-    closeDropdown() {
-        this.tileSelectContainer.classList.remove('open');
-    }
-
-    setupCarousel() {
-        this.updateActiveState();
-    }
-
-    setupNavigation() {
-        const prevButton = document.querySelector('.nav-arrow.prev');
-        const nextButton = document.querySelector('.nav-arrow.next');
-
-        prevButton.addEventListener('click', () => this.navigate('prev'));
-        nextButton.addEventListener('click', () => this.navigate('next'));
+        
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.navigate('next'));
+        }
         
         // Add touch swipe functionality
         this.setupSwipeNavigation();
     }
-    
+
     setupSwipeNavigation() {
         // Variables to track touch position
         let touchStartX = 0;
@@ -276,61 +185,257 @@ class Carousel {
         console.log('Setting up swipe navigation for mobile devices');
         
         // Add event listeners to the carousel container
-        this.container.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        
-        this.container.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            this.handleSwipe();
-        }, { passive: true });
-        
-        // Add swipe for entire container for better mobile experience
-        document.querySelector('.carousel-container').addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        
-        document.querySelector('.carousel-container').addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            this.handleSwipe();
-        }, { passive: true });
-        
-        // Function to determine swipe direction and navigate
-        this.handleSwipe = () => {
-            const swipeDistance = touchEndX - touchStartX;
+        if (this.carouselContainer) {
+            this.carouselContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
             
-            if (Math.abs(swipeDistance) > minSwipeDistance) {
-                if (swipeDistance > 0) {
-                    // Swipe right - go to previous
-                    console.log('Swipe right detected - navigating to previous');
-                    this.navigate('prev');
-                } else {
-                    // Swipe left - go to next
-                    console.log('Swipe left detected - navigating to next');
-                    this.navigate('next');
+            this.carouselContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                this.handleSwipe();
+            }, { passive: true });
+            
+            // Function to determine swipe direction and navigate
+            this.handleSwipe = () => {
+                const swipeDistance = touchEndX - touchStartX;
+                
+                if (Math.abs(swipeDistance) > minSwipeDistance) {
+                    if (swipeDistance > 0) {
+                        // Swipe right - go to previous
+                        console.log('Swipe right detected - navigating to previous');
+                        this.navigate('prev');
+                    } else {
+                        // Swipe left - go to next
+                        console.log('Swipe left detected - navigating to next');
+                        this.navigate('next');
+                    }
                 }
-            }
-        };
+            };
+        }
     }
 
     navigate(direction) {
+        if (this.tiles.length <= 1) return;
+        
         if (direction === 'prev') {
-            this.currentIndex = (this.currentIndex - 1 + this.tiles.length) % this.tiles.length;
+            this.activeTileIndex = (this.activeTileIndex - 1 + this.tiles.length) % this.tiles.length;
         } else {
-            this.currentIndex = (this.currentIndex + 1) % this.tiles.length;
+            this.activeTileIndex = (this.activeTileIndex + 1) % this.tiles.length;
         }
         this.updateActiveState();
+        this.updateTileSelect();
     }
 
-    updateActiveState() {
-        const tiles = document.querySelectorAll('.tile');
-        tiles.forEach((tile, index) => {
-            tile.classList.toggle('active', index === this.currentIndex);
+    processReports(reports) {
+        console.log(`Processing ${reports.length} reports`);
+        
+        // Create tile elements
+        this.tiles = [];
+        reports.forEach((report, index) => {
+            const tileElement = document.createElement('div');
+            tileElement.className = 'tile';
+            tileElement.dataset.index = index;
+            tileElement.innerHTML = `
+                <div class="tile-content">${report.content}</div>
+                <small>${report.date} | ${report.filename}</small>
+            `;
+            this.container.appendChild(tileElement);
+            this.tiles.push(tileElement);
+            
+            console.log(`Added tile for report: ${report.title}`);
         });
+        
+        console.log('Updating dropdown options with new language reports');
+        // Update dropdown options
+        this.updateTileSelectOptions(reports);
+        
+        // Set first tile as active
+        this.activeTileIndex = 0;
+        this.updateActiveState();
+        
+        if (reports.length > 0) {
+            console.log(`Setting initial tile select title to: ${reports[0].title}`);
+            this.updateTileSelect(reports[0].title);
+        }
+        
+        // Not loading anymore
+        this.isLoading = false;
+        this.updateNavigationState();
+        console.log('Reports processing complete, UI updated');
+    }
+    
+    updateTileSelectOptions(reports) {
+        if (!this.tileSelect) return;
+        
+        // Clear existing dropdown
+        const existingDropdown = document.querySelector('.custom-dropdown');
+        if (existingDropdown) {
+            existingDropdown.remove();
+        }
+        
+        // Create new dropdown
+        const dropdown = document.createElement('div');
+        dropdown.className = 'custom-dropdown';
+        
+        // Add options
+        reports.forEach((report, index) => {
+            const option = document.createElement('div');
+            option.className = 'dropdown-option';
+            option.dataset.value = index;
+            
+            // Check if title is long
+            const isLong = report.title.length > 25;
+            if (isLong) {
+                option.classList.add('overflow');
+                option.innerHTML = `<span>${report.title}</span>`;
+            } else {
+                option.textContent = report.title;
+            }
+            
+            // Add click handler
+            option.addEventListener('click', () => {
+                this.activeTileIndex = index;
+                this.updateActiveState();
+                this.toggleDropdown();
+                this.updateTileSelect(report.title);
+            });
+            
+            dropdown.appendChild(option);
+        });
+        
+        // Add dropdown to DOM
+        this.tileSelect.parentNode.appendChild(dropdown);
+        
+        // Remove old click handlers by cloning and replacing the element
+        const oldTileSelect = this.tileSelect;
+        const newTileSelect = oldTileSelect.cloneNode(true);
+        oldTileSelect.parentNode.replaceChild(newTileSelect, oldTileSelect);
+        this.tileSelect = newTileSelect;
+        
+        // Add click handler to toggle dropdown
+        this.tileSelect.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Tile select clicked, toggling dropdown');
+            this.toggleDropdown();
+        });
+        
+        // Close dropdown when clicking outside
+        // First remove any existing document level click handlers for this purpose
+        if (this.outsideClickHandler) {
+            document.removeEventListener('click', this.outsideClickHandler);
+        }
+        
+        // Create and store a reference to the new handler
+        this.outsideClickHandler = (e) => {
+            if (!this.tileSelect.parentNode.contains(e.target)) {
+                this.closeDropdown();
+            }
+        };
+        
+        // Add the new handler
+        document.addEventListener('click', this.outsideClickHandler);
+    }
+    
+    updateTileSelect(title) {
+        if (!this.tileSelect) return;
+        
+        if (title) {
+            this.tileSelect.innerHTML = '';
+            const span = document.createElement('span');
+            span.textContent = title;
+            this.tileSelect.appendChild(span);
+            
+            // Check if text is likely to overflow
+            if (title.length > 25) {
+                this.tileSelect.classList.add('overflow');
+            } else {
+                this.tileSelect.classList.remove('overflow');
+            }
+        } else if (this.tiles.length > 0 && this.activeTileIndex < this.tiles.length) {
+            // Try to extract title from the active tile
+            const activeTitle = this.tiles[this.activeTileIndex].querySelector('h2, h3');
+            if (activeTitle) {
+                this.updateTileSelect(activeTitle.textContent);
+            }
+        }
+    }
+    
+    toggleDropdown() {
+        // Find the dropdown - we need to query each time in case it was recreated
+        const dropdown = document.querySelector('.custom-dropdown');
+        console.log('Toggle dropdown called', dropdown ? 'dropdown found' : 'dropdown not found');
+        
+        if (dropdown) {
+            // Toggle visibility classes
+            dropdown.classList.toggle('show');
+            this.tileSelect.classList.toggle('open');
+            this.tileSelect.parentNode.classList.toggle('open');
+            
+            const isOpen = dropdown.classList.contains('show');
+            console.log(`Dropdown ${isOpen ? 'opened' : 'closed'}`);
+        }
+    }
+    
+    closeDropdown() {
+        // Find the dropdown - we need to query each time in case it was recreated
+        const dropdown = document.querySelector('.custom-dropdown');
+        
+        if (dropdown) {
+            dropdown.classList.remove('show');
+            this.tileSelect.classList.remove('open');
+            this.tileSelect.parentNode.classList.remove('open');
+            console.log('Dropdown explicitly closed');
+        }
+    }
+
+    updateNavigationState() {
+        if (this.prevBtn && this.nextBtn) {
+            this.prevBtn.disabled = this.tiles.length <= 1 || this.activeTileIndex === 0;
+            this.nextBtn.disabled = this.tiles.length <= 1 || this.activeTileIndex === this.tiles.length - 1;
+        }
+    }
+
+    showLoadingIndicator() {
+        if (this.translatingIndicator) {
+            this.translatingIndicator.style.display = 'block';
+            this.translatingIndicator.textContent = 'Loading...';
+        }
+    }
+
+    hideLoadingIndicator() {
+        if (this.translatingIndicator) {
+            this.translatingIndicator.style.display = 'none';
+        }
+    }
+
+    showErrorMessage(message) {
+        const errorElement = document.createElement('div');
+        errorElement.className = 'tile error-tile';
+        errorElement.textContent = message;
+        
+        this.container.appendChild(errorElement);
+        this.updateNavigationState();
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Document loaded, initializing UpToCure carousel...');
-    new Carousel();
+document.addEventListener('DOMContentLoaded', function() {
+    // Log the DOMContentLoaded event
+    console.log('DOM content loaded, initializing application');
+    
+    // Initialize the localization system
+    if (typeof initializeLocalization === 'function') {
+        console.log('Initializing localization system');
+        initializeLocalization();
+    } else {
+        console.error('Localization system not available');
+    }
+    
+    // Setup carousel if we're on the index page
+    if (document.querySelector('.carousel-container')) {
+        console.log('Found carousel container, initializing carousel');
+        const carousel = new Carousel();
+        console.log('Carousel initialized');
+    } else {
+        console.warn('No carousel container found on page');
+    }
 }); 
