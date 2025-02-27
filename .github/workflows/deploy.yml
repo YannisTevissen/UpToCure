@@ -8,24 +8,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Deploy to EC2
-        env:
-          PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          HOST: ${{ secrets.EC2_HOST }}
-          USER: ubuntu
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up SSH
         run: |
-          cat <<EOF > private_key
-          $PRIVATE_KEY
-          EOF
-          chmod 600 private_key
-          eval "$(ssh-agent -s)"
-          ssh-add private_key
-          ssh -o StrictHostKeyChecking=no -i private_key $USER@$HOST << 'EOF'
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy UpToCure
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
             cd /home/ubuntu/UpToCure/UpToCure
             git pull origin main
             pdm install
