@@ -19,7 +19,9 @@ jobs:
           HOST: ${{ secrets.EC2_HOST }}
           USER: ubuntu
         run: |
-          echo "$PRIVATE_KEY" > private_key
+          cat <<EOF > private_key
+          $PRIVATE_KEY
+          EOF
           chmod 600 private_key
           eval "$(ssh-agent -s)"
           ssh-add private_key
