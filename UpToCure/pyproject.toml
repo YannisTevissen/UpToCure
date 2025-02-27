@@ -10,6 +10,7 @@ dependencies = [
     "markdown>=3.7",
     "python-dotenv>=1.0.0",
     "pydantic>=2.0.0",
+    "gunicorn>=20.1.0",
     "awscli>=1.38.2",
     # awsebcli is installed separately via pip
 ]
@@ -24,3 +25,4 @@ distribution = false
 [tool.pdm.scripts]
 run = "python run.py"
 run-backend = "python src/app.py"
+serve = "gunicorn --bind 0.0.0.0:8000 --workers 3 --access-logfile - 'src.app:app'"

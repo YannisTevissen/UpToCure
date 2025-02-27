@@ -22,6 +22,7 @@ UpToCure/
 │   ├── app.py           # Flask application
 │   └── parser.py        # Markdown parsing logic
 ├── requirements.txt     # Python dependencies
+├── pyproject.toml       # PDM project configuration
 └── run.py               # Main entry point to run the application
 ```
 
@@ -29,10 +30,37 @@ UpToCure/
 
 ### Prerequisites
 
-- Python 3.9+
-- Flask and other dependencies (listed in requirements.txt)
+- Python 3.11
+- PDM (Python Development Master) or pip
 
 ### Installation
+
+#### Using PDM (Recommended)
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/UpToCure.git
+   cd UpToCure
+   ```
+
+2. Install dependencies with PDM:
+   ```
+   pdm install
+   ```
+
+3. Run the application:
+   ```
+   pdm run run
+   ```
+
+4. For production deployment with Gunicorn:
+   ```
+   pdm run serve
+   ```
+
+5. Access the application in your browser at `http://localhost:8000`
+
+#### Using pip
 
 1. Clone the repository:
    ```
