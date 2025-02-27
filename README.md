@@ -1,84 +1,86 @@
 # UpToCure
 
-UpToCure is a platform for displaying and interacting with medical research reports in multiple languages.
+UpToCure is a platform designed to provide accessible information about rare diseases and medical research. It displays interactive medical research reports in multiple languages, making complex scientific information more accessible to the general public.
 
 ## Features
 
-- **Multi-language Support**: The platform supports multiple languages, including English and French.
-- **Responsive Design**: The interface is fully responsive and works on all devices.
-- **Interactive Reports**: Reports are displayed in an interactive carousel.
-- **Language-specific Reports**: Reports are organized by language and can be translated using NLLB (No Language Left Behind) AI model.
+- **Multi-language Support**: Reports available in English and French
+- **Responsive Design**: Works on various devices and screen sizes
+- **Interactive Reports**: Easy navigation and search capabilities
+- **Organization by Language**: Reports organized by language folders
 
 ## Project Structure
 
 ```
 UpToCure/
-├── frontend/          # Frontend HTML, CSS, and JavaScript
-├── reports/           # Markdown reports organized by language
-│   ├── en/            # English reports
-│   ├── fr/            # French reports
-│   └── ...            # Other language folders
-├── reports_generator/ # Tools for generating and translating reports
-├── src/               # Backend API code
-└── README.md          # This file
+├── frontend/            # Web interface files (HTML, CSS, JS)
+├── reports/             # Markdown reports organized by language
+│   ├── en/              # English reports
+│   └── fr/              # French reports
+├── reports_generator/   # Tools for generating and translating reports
+├── src/                 # Backend source code
+│   ├── app.py           # Flask application
+│   └── parser.py        # Markdown parsing logic
+├── requirements.txt     # Python dependencies
+└── run.py               # Main entry point to run the application
 ```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.7+
-- Web browser
+- Python 3.9+
+- Flask and other dependencies (listed in requirements.txt)
 
-### Running the Application
+### Installation
 
-1. Start the backend API server:
+1. Clone the repository:
    ```
-   cd UpToCure/src
-   python app.py
-   ```
-
-2. Open your browser and navigate to:
-   ```
-   http://localhost:8000
+   git clone https://github.com/yourusername/UpToCure.git
+   cd UpToCure
    ```
 
-### Adding Reports
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-Reports are stored as Markdown files in the `reports/<language_code>` directory. For example, English reports are stored in `reports/en/`.
+3. Run the application:
+   ```
+   python run.py
+   ```
 
-If a language directory is empty, a sample report will be automatically generated.
+4. Access the application in your browser at `http://localhost:8080`
 
-### Translating Reports
+## Adding Reports
 
-To translate reports from one language to another, use the translation tool:
+Reports are stored as Markdown files in the `reports` directory, organized by language:
 
-```
-cd reports_generator
-python translator.py --source-lang en --target-lang fr
-```
+1. Create a Markdown file in the appropriate language folder (e.g., `reports/en/` for English)
+2. Follow the template structure available in sample reports
+3. The application will automatically detect and display new reports
 
-See the [Translation Documentation](reports_generator/TRANSLATION.md) for more details.
+## Reports Generator
+
+The `reports_generator` directory contains tools for:
+- Generating new reports from research papers
+- Translating existing reports between languages
+- For more details, see the documentation in the reports_generator directory
 
 ## Development
 
 ### Frontend
 
-The frontend is built with HTML, CSS, and JavaScript. The main files are:
-
-- `frontend/index.html`: The main page
-- `frontend/methodology.html`: The methodology page
-- `frontend/style.css`: CSS styles
-- `frontend/script.js`: JavaScript code
-- `frontend/localization.js`: Localization strings
+- `frontend/styles.css`: Main stylesheet
+- `frontend/script.js`: JavaScript functionality
+- `frontend/localization.js`: Translation strings
+- HTML files: Various page templates
 
 ### Backend
 
-The backend is built with Python using Flask. The main files are:
-
-- `src/app.py`: The main API server
-- `src/parser.py`: Markdown parsing utilities
+- `src/app.py`: Flask application defining routes and API endpoints
+- `src/parser.py`: Logic for parsing and processing Markdown reports
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License.

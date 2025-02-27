@@ -8,6 +8,10 @@ authors = [
 dependencies = [
     "flask>=3.1.0",
     "markdown>=3.7",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "awscli>=1.38.2",
+    # awsebcli is installed separately via pip
 ]
 requires-python = "==3.11.*"
 readme = "README.md"

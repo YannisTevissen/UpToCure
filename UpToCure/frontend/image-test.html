@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .image-test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .image-test h3 {
+            margin-top: 0;
+        }
+        img {
+            max-width: 100%;
+            border: 1px dashed #999;
+            margin: 10px 0;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>UpToCure Image Test Page</h1>
+        <p>This page is used to test different ways of loading images from the server.</p>
+        
+        <div class="image-test">
+            <h3>Background Image Test</h3>
+            <div style="height: 200px; background: url('/images/bg.jpg') no-repeat center center; background-size: cover;"></div>
+            <p>CSS: <code>background: url('/images/bg.jpg') no-repeat center center;</code></p>
+        </div>
+        
+        <div class="image-test">
+            <h3>Direct Image Tag - Absolute Path</h3>
+            <img src="/images/logo.png" alt="Logo (absolute path)">
+            <p>HTML: <code>&lt;img src="/images/logo.png" alt="Logo"&gt;</code></p>
+        </div>
+        
+        <div class="image-test">
+            <h3>Direct Image Tag - Relative Path</h3>
+            <img src="images/logo.png" alt="Logo (relative path)">
+            <p>HTML: <code>&lt;img src="images/logo.png" alt="Logo"&gt;</code></p>
+        </div>
+        
+        <div class="image-test">
+            <h3>Alternative Path Test</h3>
+            <img src="/alt-images/logo.png" alt="Logo (alt-images path)">
+            <p>HTML: <code>&lt;img src="/alt-images/logo.png" alt="Logo"&gt;</code></p>
+        </div>
+        
+        <div class="image-test">
+            <h3>Static Path Test</h3>
+            <img src="/static/images/logo.png" alt="Logo (static/images path)">
+            <p>HTML: <code>&lt;img src="/static/images/logo.png" alt="Logo"&gt;</code></p>
+        </div>
+        
+        <h2>Background Image CSS Reference</h2>
+        <pre>
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
+}
+        </pre>
+        
+        <h2>Image List from Directory</h2>
+        <p>Testing if the images directory is accessible:</p>
+        <ul id="image-list">
+            <li>Loading directory listing...</li>
+        </ul>
+        
+        <script>
+            // Add a timestamp to avoid caching issues
+            function addTimestamp(url) {
+                return url + '?t=' + new Date().getTime();
+            }
+            
+            // Test image loading by creating an Image object
+            function testImageLoad(src, elementId) {
+                const img = new Image();
+                const statusElement = document.getElementById(elementId);
+                
+                img.onload = function() {
+                    statusElement.textContent = '✅ Loaded successfully';
+                    statusElement.className = 'success';
+                };
+                
+                img.onerror = function() {
+                    statusElement.textContent = '❌ Failed to load';
+                    statusElement.className = 'error';
+                };
+                
+                img.src = addTimestamp(src);
+            }
+            
+            // Update image status for all test images
+            window.onload = function() {
+                testImageLoad('/images/bg.jpg', 'bg-status');
+                testImageLoad('/images/logo.png', 'logo-status');
+                testImageLoad('/alt-images/logo.png', 'alt-logo-status');
+                testImageLoad('/static/images/logo.png', 'static-logo-status');
+                
+                // Try to fetch image list via the debug endpoint
+                fetch('/debug/paths')
+                    .then(response => response.json())
+                    .then(data => {
+                        const imageList = document.getElementById('image-list');
+                        imageList.innerHTML = '';
+                        
+                        if (data.files_in_images && data.files_in_images.length > 0) {
+                            data.files_in_images.forEach(file => {
+                                const li = document.createElement('li');
+                                li.textContent = file;
+                                imageList.appendChild(li);
+                            });
+                        } else {
+                            const li = document.createElement('li');
+                            li.textContent = 'No images found or could not access directory.';
+                            li.className = 'error';
+                            imageList.appendChild(li);
+                        }
+                    })
+                    .catch(error => {
+                        const imageList = document.getElementById('image-list');
+                        imageList.innerHTML = `<li class="error">Error fetching image list: ${error.message}</li>`;
+                    });
+            };
+        </script>
+    </div>
+</body>
+</html> 

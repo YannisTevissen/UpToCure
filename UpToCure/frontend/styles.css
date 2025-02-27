@@ -25,7 +25,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('./images/bg.jpg') no-repeat center center fixed; 
+    background: url('/images/bg.jpg') no-repeat center center fixed, url('images/bg.jpg') no-repeat center center fixed; 
     background-size: cover;
     filter: blur(5px);
     opacity: 0.6;
@@ -34,6 +34,7 @@ body::before {
 
 .container {
     padding: 2rem;
+    padding-bottom: 4rem; /* Add padding to bottom to prevent content from being hidden behind footer */
 }
 
 header {
@@ -176,7 +177,11 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem; /* Added margin to ensure navigation arrows don't overlap with content */
+    margin-bottom: 4rem; /* Increased margin to prevent overlap with footer */
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tile-select-container {
@@ -315,7 +320,7 @@ a {
 .tile {
     width: 85%;
     height: 500px; /* Increased from 450px */
-    max-height: 95vh; /* Increased from 90vh */
+    max-height: calc(95vh - 4rem); /* Adjusted to account for footer height */
     margin: 0 1rem;
     padding: 2rem;
     background: var(--glass-bg);
@@ -447,6 +452,7 @@ footer {
     position: fixed;  /* Fix to bottom */
     bottom: 0;
     width: 100%;
+    z-index: 10; /* Ensure footer is above other content */
 }
 
 @media (max-width: 768px) {
@@ -456,6 +462,10 @@ footer {
     
     h1 {
         font-size: 2.5rem;
+    }
+    
+    .container {
+        padding-bottom: 5rem; /* Increase padding on smaller screens */
     }
     
     .disclaimer {

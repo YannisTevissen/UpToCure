@@ -8,11 +8,22 @@
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
     <script src="localization.js"></script>
     <style>
+        /* Override container padding for methodology page */
+        .container {
+            padding-bottom: 4rem; /* Ensure enough space for footer */
+        }
+        
+        /* Ensure footer stays on top */
+        footer {
+            z-index: 10;
+        }
+        
         .methodology-container {
             width: 80%;
             max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
+            margin-bottom: 2rem; /* Add margin to prevent overlap with footer */
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -81,6 +92,22 @@
         @keyframes fade {
             from { opacity: 0.7; }
             to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .methodology-container {
+                width: 90%;
+                padding: 1.5rem;
+                margin-bottom: 5rem; /* Increase bottom margin on mobile */
+            }
+            
+            .back-button {
+                margin: 1.5rem 0;
+            }
+            
+            .container {
+                padding-bottom: 5rem; /* Increase padding on smaller screens */
+            }
         }
     </style>
 </head>
