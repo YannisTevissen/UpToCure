@@ -8,106 +8,30 @@
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
     <script src="localization.js"></script>
     <style>
-        /* Override container padding for methodology page */
-        .container {
-            padding-bottom: 4rem; /* Ensure enough space for footer */
+        /* Center the methodology tile */
+        .methodology-tile-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 2rem auto;
+            position: relative;
         }
         
-        /* Ensure footer stays on top */
-        footer {
-            z-index: 10;
-        }
-        
-        .methodology-container {
-            width: 80%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-            margin-bottom: 2rem; /* Add margin to prevent overlap with footer */
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-        
-        .methodology-container h2 {
-            color: #00eaff;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        
-        .methodology-container h3 {
-            color: #00bfcc;
-            margin: 1.5rem 0 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .methodology-container p {
-            line-height: 1.7;
-            margin-bottom: 1rem;
-            color: #001c1e;
-        }
-        
-        .methodology-container ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-        
-        .methodology-container li {
-            margin-bottom: 0.5rem;
-            color: #001c1e;
-        }
-        
+        /* Back button styling */
         .back-button {
             display: inline-block;
             margin: 2rem 0;
             padding: 0.5rem 1rem;
-            background: #00eaff;
+            background: var(--primary);
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
+            text-align: center;
         }
         
         .back-button:hover {
             background: rgba(0, 234, 255, 0.8);
-        }
-
-        /* Make sure translation indicator styles are consistent */
-        .translating-indicator {
-            position: absolute;
-            top: 10px;
-            right: 150px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            display: none;
-            animation: fade 1.5s infinite alternate;
-            z-index: 100;
-        }
-
-        @keyframes fade {
-            from { opacity: 0.7; }
-            to { opacity: 1; }
-        }
-
-        @media (max-width: 768px) {
-            .methodology-container {
-                width: 90%;
-                padding: 1.5rem;
-                margin-bottom: 5rem; /* Increase bottom margin on mobile */
-            }
-            
-            .back-button {
-                margin: 1.5rem 0;
-            }
-            
-            .container {
-                padding-bottom: 5rem; /* Increase padding on smaller screens */
-            }
         }
     </style>
 </head>
@@ -130,34 +54,39 @@
         
         <a href="./index.html" class="back-button" data-i18n="backToReports">← Back to Reports</a>
         
-        <div class="methodology-container">
-            <h2 data-i18n="methodologyHeading">Our Methodology</h2>
-            
-            <h3 data-i18n="researchSectionTitle">AI-Assisted Research Report Generation</h3>
-            <p data-i18n="researchSectionContent">UpToCure's reports on rare disease research are generated using advanced language models fine-tuned for medical content. Our process involves:</p>
-            
-            <ul>
-                <li><strong data-i18n="dataCollection">Data Collection:</strong> <span data-i18n="dataCollectionDesc">Systematic review of peer-reviewed publications, clinical trial databases, and authoritative medical resources.</span></li>
-                <li><strong data-i18n="contentGeneration">Content Generation:</strong> <span data-i18n="contentGenerationDesc">AI-powered synthesis of research findings with specialized prompting to ensure medical accuracy.</span></li>
-                <li><strong data-i18n="expertValidation">Expert Validation:</strong> <span data-i18n="expertValidationDesc">Review process to check for hallucinations and factual errors, though this process is not exhaustive.</span></li>
-                <li><strong data-i18n="citationIntegration">Citation Integration:</strong> <span data-i18n="citationIntegrationDesc">All reports include references to original research sources.</span></li>
-            </ul>
-            
-            <h3 data-i18n="agentArchTitle">Deep Research Agent Architecture</h3>
-            <p data-i18n="agentArchContent">At the core of our methodology is a specialized AI research system built on the SmolAgents framework, which autonomously gathers and analyzes the latest scientific information on rare diseases. The system employs:</p>
-            
-            <ul>
-                <li><strong data-i18n="webSearchCapabilities">Web Search Capabilities:</strong> Our deep research agent navigates the web to find the most relevant and recent scientific publications, clinical trials, and research updates.</li>
-                <li><strong data-i18n="documentAnalysis">Document Analysis:</strong> The system can analyze PDFs, academic papers, and complex medical databases to extract pertinent information.</li>
-                <li><strong data-i18n="multiAgentCollaboration">Multi-Agent Collaboration:</strong> A manager agent coordinates with specialized search agents to efficiently gather comprehensive information about specific diseases.</li>
-                <li><strong data-i18n="medicalContextUnderstanding">Medical Context Understanding:</strong> Fine-tuned language models help interpret complex medical terminology and research methodologies.</li>
-            </ul>
-            
-            <h3 data-i18n="conclusionTitle">Conclusion</h3>
-            <p data-i18n="conclusionContent">While we strive for accuracy, users should be aware that our AI-generated content may contain inaccuracies or outdated information. Always consult healthcare professionals for medical decisions and refer to the original research sources cited in our reports for comprehensive information about rare disease treatments and research developments.</p>
+        <div class="methodology-tile-wrapper">
+            <div class="tile active">
+                <h1 data-i18n="methodologyHeading">Our Methodology</h1>
+                
+                <h2 data-i18n="researchSectionTitle">AI-Assisted Research Report Generation</h2>
+                <p data-i18n="researchSectionContent">UpToCure's reports on rare disease research are generated using advanced language models fine-tuned for medical content. Our process involves:</p>
+                
+                <div class="tile-content">
+                    <ul>
+                        <li><strong data-i18n="dataCollection">Data Collection:</strong> <span data-i18n="dataCollectionDesc">Systematic review of peer-reviewed publications, clinical trial databases, and authoritative medical resources.</span></li>
+                        <li><strong data-i18n="contentGeneration">Content Generation:</strong> <span data-i18n="contentGenerationDesc">AI-powered synthesis of research findings with specialized prompting to ensure medical accuracy.</span></li>
+                        <li><strong data-i18n="expertValidation">Expert Validation:</strong> <span data-i18n="expertValidationDesc">Review process to check for hallucinations and factual errors, though this process is not exhaustive.</span></li>
+                        <li><strong data-i18n="citationIntegration">Citation Integration:</strong> <span data-i18n="citationIntegrationDesc">All reports include references to original research sources.</span></li>
+                    </ul>
+                </div>
+                
+                <h2 data-i18n="agentArchTitle">Deep Research Agent Architecture</h2>
+                <p data-i18n="agentArchContent">At the core of our methodology is a specialized AI research system built on the SmolAgents framework, which autonomously gathers and analyzes the latest scientific information on rare diseases. The system employs:</p>
+                
+                <div class="tile-content">
+                    <ul>
+                        <li><strong data-i18n="webSearchCapabilities">Web Search Capabilities:</strong> Our deep research agent navigates the web to find the most relevant and recent scientific publications, clinical trials, and research updates.</li>
+                        <li><strong data-i18n="documentAnalysis">Document Analysis:</strong> The system can analyze PDFs, academic papers, and complex medical databases to extract pertinent information.</li>
+                        <li><strong data-i18n="multiAgentCollaboration">Multi-Agent Collaboration:</strong> A manager agent coordinates with specialized search agents to efficiently gather comprehensive information about specific diseases.</li>
+                        <li><strong data-i18n="medicalContextUnderstanding">Medical Context Understanding:</strong> Fine-tuned language models help interpret complex medical terminology and research methodologies.</li>
+                    </ul>
+                </div>
+                
+                <h2 data-i18n="conclusionTitle">Conclusion</h2>
+                <p data-i18n="conclusionContent">While we strive for accuracy, users should be aware that our AI-generated content may contain inaccuracies or outdated information. Always consult healthcare professionals for medical decisions and refer to the original research sources cited in our reports for comprehensive information about rare disease treatments and research developments.</p>
+            </div>
         </div>
         
-        <a href="./index.html" class="back-button" data-i18n="backToReports">← Back to Reports</a>
     </div>
     
     <footer>
@@ -174,6 +103,9 @@
             if (translatingIndicator) {
                 translatingIndicator.style.display = 'none';
             }
+            
+            // Make footer visible on page load
+            document.querySelector('footer').classList.add('visible');
         });
     </script>
 </body>

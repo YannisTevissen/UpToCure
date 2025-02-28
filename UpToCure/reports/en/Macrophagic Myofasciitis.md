@@ -1,8 +1,7 @@
-
-# Myofasciitis à Macrophages
+# Macrophagic Myofasciitis 
 
 ## Introduction
-Myofasciitis à Macrophages, also termed Macrophagic Myofasciitis (MMF), is an uncommon and complex muscle and fascia inflammatory condition. It is primarily characterized by pathological accumulations of macrophages within muscle tissue, often in response to aluminum-containing vaccine adjuvants. Patients frequently present with chronic fatigue, persistent myalgias, and other systemic manifestations that can be difficult to treat. Because the condition is relatively rare, research on definitive cures or consistently effective treatments remains limited.
+Macrophagic Myofasciitis (MMF), is an uncommon and complex muscle and fascia inflammatory condition. It is primarily characterized by pathological accumulations of macrophages within muscle tissue, often in response to aluminum-containing vaccine adjuvants. Patients frequently present with chronic fatigue, persistent myalgias, and other systemic manifestations that can be difficult to treat. Because the condition is relatively rare, research on definitive cures or consistently effective treatments remains limited.
 
 ## Scope of Research
 Over the last few years (2020–2025), scientific and clinical interest in MMF has intensified. Recent research efforts include:

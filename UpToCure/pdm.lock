@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:ba240019ef087370001fbeeaff6d088652881b914b0a588bf3d0686441d2ab5e"
+content_hash = "sha256:08048d75709ac88806e230dc0cba0a89640f75ccc36b389cd2a4292ac3de4f29"
 
 [[metadata.targets]]
 requires_python = "==3.11.*"
@@ -41,6 +41,21 @@ dependencies = [
 files = [
     {file = "awscli-1.38.2-py3-none-any.whl", hash = "sha256:dc6a5876eaa0628109d877666b63f85f4e9c6c52a9d327f26400de7ecb4f3415"},
     {file = "awscli-1.38.2.tar.gz", hash = "sha256:075adac65d8082146ebc1c0cd1aecc4819162969b8364cbd772b5405ebc76f83"},
+]
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.13.3"
+requires_python = ">=3.7.0"
+summary = "Screen-scraping library"
+groups = ["default"]
+dependencies = [
+    "soupsieve>1.2",
+    "typing-extensions>=4.0.0",
+]
+files = [
+    {file = "beautifulsoup4-4.13.3-py3-none-any.whl", hash = "sha256:99045d7d3f08f91f0d656bc9b7efbae189426cd913d830294a15eefa0ea4df16"},
+    {file = "beautifulsoup4-4.13.3.tar.gz", hash = "sha256:1bd32405dacc920b42b83ba01644747ed77456a65760e285fbc47633ceddaf8b"},
 ]
 
 [[package]]
@@ -358,6 +373,17 @@ groups = ["default"]
 files = [
     {file = "six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"},
     {file = "six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"},
+]
+
+[[package]]
+name = "soupsieve"
+version = "2.6"
+requires_python = ">=3.8"
+summary = "A modern CSS selector implementation for Beautiful Soup."
+groups = ["default"]
+files = [
+    {file = "soupsieve-2.6-py3-none-any.whl", hash = "sha256:e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9"},
+    {file = "soupsieve-2.6.tar.gz", hash = "sha256:e2e68417777af359ec65daac1057404a3c8a5455bb8abc36f1a9866ab1a51abb"},
 ]
 
 [[package]]

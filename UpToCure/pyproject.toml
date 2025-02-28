@@ -13,6 +13,7 @@ dependencies = [
     "gunicorn>=20.1.0",
     "awscli>=1.38.2",
     # awsebcli is installed separately via pip
+    "beautifulsoup4>=4.13.3"
 ]
 requires-python = "==3.11.*"
 readme = "README.md"

@@ -12,7 +12,7 @@ from flask import Flask, jsonify, render_template, send_from_directory, request
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s [%(levelname)s] %(message)s',
     handlers=[
         logging.StreamHandler(sys.stdout)

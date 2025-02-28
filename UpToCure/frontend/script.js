@@ -249,13 +249,14 @@ class Carousel {
         // Update dropdown options
         this.updateTileSelectOptions(reports);
         
-        // Set first tile as active
-        this.activeTileIndex = 0;
+        // Set a random tile as active instead of the first one
+        const randomIndex = Math.floor(Math.random() * reports.length);
+        this.activeTileIndex = randomIndex;
         this.updateActiveState();
         
         if (reports.length > 0) {
-            console.log(`Setting initial tile select title to: ${reports[0].title}`);
-            this.updateTileSelect(reports[0].title);
+            console.log(`Setting initial tile select title to: ${reports[randomIndex].title}`);
+            this.updateTileSelect(reports[randomIndex].title);
         }
         
         // Not loading anymore
@@ -277,11 +278,18 @@ class Carousel {
         const dropdown = document.createElement('div');
         dropdown.className = 'custom-dropdown';
         
+        // Sort reports alphabetically by title
+        const sortedReports = [...reports].sort((a, b) => {
+            return a.title.localeCompare(b.title);
+        });
+        
         // Add options
-        reports.forEach((report, index) => {
+        sortedReports.forEach((report) => {
             const option = document.createElement('div');
             option.className = 'dropdown-option';
-            option.dataset.value = index;
+            // Find the original index of this report in the unsorted array
+            const originalIndex = reports.findIndex(r => r.title === report.title);
+            option.dataset.value = originalIndex;
             
             // Check if title is long
             const isLong = report.title.length > 25;
@@ -294,7 +302,7 @@ class Carousel {
             
             // Add click handler
             option.addEventListener('click', () => {
-                this.activeTileIndex = index;
+                this.activeTileIndex = originalIndex;
                 this.updateActiveState();
                 this.toggleDropdown();
                 this.updateTileSelect(report.title);
@@ -438,4 +446,50 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.warn('No carousel container found on page');
     }
+    
+    // Setup footer visibility on scroll
+    setupFooterScroll();
 }); 
+
+function setupFooterScroll() {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+    
+    // Variables to track scroll position
+    let lastScrollTop = 0;
+    const scrollThreshold = 20; // Reduced threshold - show footer after minimal scrolling
+    
+    // Function to handle scroll events
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        
+        // Check if scrolled at all OR near bottom of page
+        const hasScrolled = scrollTop > scrollThreshold;
+        const nearBottom = scrollTop + clientHeight > scrollHeight - 100;
+        
+        if (hasScrolled || nearBottom) {
+            footer.classList.add('visible');
+        } else {
+            footer.classList.remove('visible');
+        }
+        
+        // Update last scroll position
+        lastScrollTop = scrollTop;
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Also show footer after a delay even if no scrolling occurs
+    setTimeout(() => {
+        // Only show if user hasn't scrolled yet
+        if (window.pageYOffset === 0) {
+            footer.classList.add('visible');
+        }
+    }, 5000); // 5 seconds delay
+    
+    // Initial check
+    handleScroll();
+} 

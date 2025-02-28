@@ -33,8 +33,8 @@ body::before {
 }
 
 .container {
-    padding: 2rem;
-    padding-bottom: 4rem; /* Add padding to bottom to prevent content from being hidden behind footer */
+    padding: 1rem;
+    padding-bottom: 2rem; /* Add padding to bottom to prevent content from being hidden behind footer */
 }
 
 header {
@@ -365,24 +365,24 @@ a {
     background-color: rgba(0, 234, 255, 0.7); /* More visible on hover */
 }
 
-.tile h2 {
-    color: var(--primary);
+.tile h1 {
+    color: var(--text-color);
     margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: 600;
-    text-shadow: 1px 1px 2px var(--text-color);
+    text-align: left;
 }
 
-.tile h3 {
+.tile h2 {
     color: var(--primary);
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: 600;
-    text-shadow: 1px 1px 2px var(--text-color);
+    text-shadow: 1px 1px 1px var(--text-color);
 }
 
-.tile h4 {
+.tile h3 {
     color: var(--text-color);
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05); /* Subtle text-shadow */
     font-size: 1.2rem;
@@ -453,6 +453,12 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 10; /* Ensure footer is above other content */
+    opacity: 0;  /* Initially hidden */
+    transition: opacity 0.3s ease;  /* Smooth transition */
+}
+
+footer.visible {
+    opacity: 1;  /* Visible when this class is added */
 }
 
 @media (max-width: 768px) {
@@ -502,7 +508,6 @@ footer {
 
 /* Styles for markdown content */
 .tile-content {
-    margin: 1rem 0;
     color: var(--text-color);
 }
 
