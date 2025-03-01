@@ -8,14 +8,6 @@ UpToCure is a platform designed to provide accessible information about rare dis
 
 </div>
 
-## 🌟 Features
-
-- **Multi-language Support**: Reports available in English and French
-- **Responsive Design**: Works on various devices and screen sizes
-- **Interactive Reports**: Easy navigation and search capabilities
-- **Organization by Language**: Reports organized by language folders
-- **Report Generation**: Tools for creating new reports from research papers
-- **Translation Tools**: Automated translation capabilities for reports
 
 ## 📁 Project Structure
 
@@ -25,13 +17,13 @@ UpToCure/
 ├── reports/             # Markdown reports organized by language
 │   ├── en/              # English reports
 │   └── fr/              # French reports
-├── reports_generator/   # Tools for generating and translating reports
 ├── src/                 # Backend source code
 │   ├── app.py           # Flask application
 │   └── parser.py        # Markdown parsing logic
 ├── requirements.txt     # Python dependencies
 ├── pyproject.toml       # PDM project configuration
 └── run.py               # Main entry point to run the application
+reports_generator/       # Tools for generating and translating reports
 ```
 
 ## 🚀 Getting Started
@@ -68,25 +60,6 @@ UpToCure/
 
 5. Access the application in your browser at `http://localhost:8000`
 
-#### Using pip
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/UpToCure.git
-   cd UpToCure
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the application:
-   ```bash
-   python run.py
-   ```
-
-4. Access the application in your browser at `http://localhost:8080`
 
 ## 📝 Adding Reports
 
@@ -124,4 +97,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📬 Contact
 
-If you have any questions or suggestions, feel free to open an issue or contact the maintainers.
+If you have any questions or suggestions, feel free to open an issue or contact me. All my contact information is available on my [website](https://yannistevissen.fr).

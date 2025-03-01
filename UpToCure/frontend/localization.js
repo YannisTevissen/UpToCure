@@ -7,7 +7,7 @@ const translations = {
         
         // Index page
         "pageTitle": "UpToCure.ai",
-        "disclaimer": "UpToCure provides up-to-date reports on ongoing research efforts to cure rare disease. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please refer to the resources provided in the reports.",
+        "disclaimer": "UpToCure provides up-to-date reports on ongoing research efforts to cure rare diseases. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please refer to the resources provided in the reports.",
         "methodologyLink": "Our methodology is detailed here",
         "chooseReport": "Choose a report...",
         "backToReports": "← Back to Reports",
@@ -41,6 +41,9 @@ const translations = {
         "contactInfo": "For inquiries, contact me on: ",
         "limitationsTitle": "Limitations and Disclaimers",
         "limitationsContent": "While our AI system produces valuable research summaries, users should be aware of important limitations:",
+        "limitationHallucination": "Risk of hallucinations: Large language models used to generate reports may occasionally produce inaccurate or fabricated information. Always verify crucial details with the cited sources.",
+        "limitationRecentNews": "Recent research gaps: The system may miss very recent scientific developments that haven't yet been referenced widely on the web at the time of report generation.",
+        "limitationTranslation": "Translation accuracy: Reports are initially generated in English and then translated to other languages, which may introduce nuance or accuracy issues in the translated versions.",
         "conclusionTitle": "Conclusion",
         "conclusionContent": "While we strive for accuracy, users should be aware that our AI-generated content may contain inaccuracies or outdated information. Always consult healthcare professionals for medical decisions and refer to the original research sources cited in our reports for comprehensive information about rare disease treatments and research developments."
     },
@@ -52,7 +55,7 @@ const translations = {
         
         // Index page
         "pageTitle": "UpToCure.ai",
-        "disclaimer": "UpToCure fournit des rapports actualisés sur les efforts de recherche en cours pour guérir les maladies rares. Tous les rapports sont générés avec un agent IA qui peut parfois halluciner. Pour des informations précises, veuillez consulter les ressources fournies dans les rapports.",
+        "disclaimer": "UpToCure fournit des rapports actualisés sur les efforts de recherche en cours pour guérir les maladies rares. Tous les rapports sont générés avec un agent IA qui peut parfois halluciner. Pour des informations précises, veuillez consulter les ressources référencées dans les rapports.",
         "methodologyLink": "Notre méthodologie est détaillée ici",
         "chooseReport": "Choisir un rapport...",
         "backToReports": "← Retour aux rapports",
@@ -86,6 +89,9 @@ const translations = {
         "contactInfo": "Pour toute autre demande, contactez-moi via :",
         "limitationsTitle": "Limitations et avertissements",
         "limitationsContent": "Bien que notre système d'IA produise de précieux résumés de recherche, les utilisateurs doivent être conscients des limitations importantes :",
+        "limitationHallucination": "Risque d'hallucinations : Les grands modèles de langage utilisés pour générer les rapports peuvent occasionnellement produire des informations inexactes ou fabriquées. Vérifiez toujours les détails cruciaux avec les sources citées.",
+        "limitationRecentNews": "Lacunes dans la recherche récente : Le système peut manquer des développements scientifiques très récents qui n'ont pas encore été largement référencés sur le web au moment de la génération du rapport.",
+        "limitationTranslation": "Précision de la traduction : Les rapports sont initialement générés en anglais puis traduits vers d'autres langues, ce qui peut introduire des problèmes de nuance ou de précision dans les versions traduites.",
         "conclusionTitle": "Conclusion",
         "conclusionContent": "Bien que nous nous efforcions d'être précis, les utilisateurs doivent savoir que notre contenu généré par l'IA peut contenir des inexactitudes ou des informations obsolètes. Consultez toujours des professionnels de la santé pour les décisions médicales et référez-vous aux sources de recherche originales citées dans nos rapports pour des informations complètes sur les traitements des maladies rares et les développements de la recherche."
     }
