@@ -1,4 +1,4 @@
-# Atrophie musculaire spinale
+# Amyotrophie spinale
 
 L'amyotrophie spinale (SMA) est une maladie génétique principalement causée par des mutations du gène SMN1, qui entraînent une insuffisance de la protéine du motoneurone de survie (SMN) et une dégénérescence progressive des motoneurones. Cette maladie touche des individus d'âges divers et peut se manifester de manière infantile (type I) ou plus tardive (types II, III, IV). Au cours des dernières années, et plus particulièrement entre 2021 et 2025, la recherche s'est intensifiée dans le but de traiter et, à terme, de guérir la SMA.
 
