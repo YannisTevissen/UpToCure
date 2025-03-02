@@ -165,6 +165,7 @@ def extract_metadata(markdown_content, path, config=None):
     if config['open_links_in_new_tab']:
         extensions.append(NewTabLinksExtension())
     
+    markdown_content = markdown_content.replace("] (", "](")
     content = markdown.markdown(markdown_content, extensions=extensions)
     
     # Double-check all links with BeautifulSoup to ensure they have target="_blank" if configured

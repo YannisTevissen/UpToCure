@@ -184,8 +184,12 @@ class Carousel {
         
         console.log('Setting up swipe navigation for mobile devices');
         
+        // Check if we're in LinkedIn or other in-app browsers
+        const isInAppBrowser = detectInAppBrowser();
+        
         // Add event listeners to the carousel container
-        if (this.carouselContainer) {
+        if (this.carouselContainer && !isInAppBrowser) {
+            // Only add touch events for regular browsers
             this.carouselContainer.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
             }, { passive: true });
@@ -211,6 +215,9 @@ class Carousel {
                     }
                 }
             };
+        } else if (this.carouselContainer && isInAppBrowser) {
+            // For in-app browsers, provide alternate navigation without touch events
+            console.log('In-app browser detected, using alternate navigation');
         }
     }
 
@@ -231,6 +238,30 @@ class Carousel {
         
         // Create tile elements
         this.tiles = [];
+        this.container.innerHTML = ''; // Clear container first
+        
+        if (!reports || reports.length === 0) {
+            console.warn('No reports to process');
+            const noReportsElement = document.createElement('div');
+            noReportsElement.className = 'tile active';
+            noReportsElement.innerHTML = `
+                <div class="tile-content">
+                    <h2>No Reports Available</h2>
+                    <p>There are currently no reports available in this language.</p>
+                </div>
+            `;
+            this.container.appendChild(noReportsElement);
+            this.tiles.push(noReportsElement);
+            
+            if (this.tileSelect) {
+                this.tileSelect.innerHTML = '<span>No reports available</span>';
+            }
+            
+            this.isLoading = false;
+            this.updateNavigationState();
+            return;
+        }
+        
         reports.forEach((report, index) => {
             const tileElement = document.createElement('div');
             tileElement.className = 'tile';
@@ -255,8 +286,14 @@ class Carousel {
         this.updateActiveState();
         
         if (reports.length > 0) {
-            console.log(`Setting initial tile select title to: ${reports[randomIndex].title}`);
-            this.updateTileSelect(reports[randomIndex].title);
+            const selectedReport = reports[randomIndex];
+            console.log(`Setting initial tile select title to: ${selectedReport.title}`);
+            this.updateTileSelect(selectedReport.title);
+            
+            // Add a small delay to ensure dropdown is ready before updating the selection
+            setTimeout(() => {
+                this.updateTileSelect(selectedReport.title);
+            }, 100);
         }
         
         // Not loading anymore
@@ -266,7 +303,12 @@ class Carousel {
     }
     
     updateTileSelectOptions(reports) {
-        if (!this.tileSelect) return;
+        if (!this.tileSelect) {
+            console.warn('Tile select element not found');
+            return;
+        }
+        
+        console.log('Updating tile select options with', reports.length, 'reports');
         
         // Clear existing dropdown
         const existingDropdown = document.querySelector('.custom-dropdown');
@@ -301,10 +343,11 @@ class Carousel {
             }
             
             // Add click handler
-            option.addEventListener('click', () => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent event bubbling
                 this.activeTileIndex = originalIndex;
                 this.updateActiveState();
-                this.toggleDropdown();
+                this.toggleDropdown(false); // Close dropdown
                 this.updateTileSelect(report.title);
             });
             
@@ -314,18 +357,23 @@ class Carousel {
         // Add dropdown to DOM
         this.tileSelect.parentNode.appendChild(dropdown);
         
-        // Remove old click handlers by cloning and replacing the element
-        const oldTileSelect = this.tileSelect;
-        const newTileSelect = oldTileSelect.cloneNode(true);
-        oldTileSelect.parentNode.replaceChild(newTileSelect, oldTileSelect);
-        this.tileSelect = newTileSelect;
-        
-        // Add click handler to toggle dropdown
-        this.tileSelect.addEventListener('click', (e) => {
+        // IMPORTANT: Instead of cloning and replacing, just add a new click handler
+        // This was causing issues with the dropdown functionality
+        const tileSelectClickHandler = (e) => {
             e.preventDefault();
+            e.stopPropagation(); // Stop event from bubbling up
             console.log('Tile select clicked, toggling dropdown');
             this.toggleDropdown();
-        });
+        };
+        
+        // Remove existing click listeners first
+        this.tileSelect.removeEventListener('click', this.tileSelectClickHandler);
+        
+        // Store the reference to the handler for future removal
+        this.tileSelectClickHandler = tileSelectClickHandler;
+        
+        // Add new click handler
+        this.tileSelect.addEventListener('click', this.tileSelectClickHandler);
         
         // Close dropdown when clicking outside
         // First remove any existing document level click handlers for this purpose
@@ -335,8 +383,9 @@ class Carousel {
         
         // Create and store a reference to the new handler
         this.outsideClickHandler = (e) => {
-            if (!this.tileSelect.parentNode.contains(e.target)) {
-                this.closeDropdown();
+            // Only close if we click outside both the dropdown and the tile select
+            if (!this.tileSelect.contains(e.target) && !dropdown.contains(e.target)) {
+                this.toggleDropdown(false); // Force close
             }
         };
         
@@ -345,7 +394,12 @@ class Carousel {
     }
     
     updateTileSelect(title) {
-        if (!this.tileSelect) return;
+        if (!this.tileSelect) {
+            console.warn('Tile select element not found for updateTileSelect');
+            return;
+        }
+        
+        console.log('Updating tile select with title:', title);
         
         if (title) {
             this.tileSelect.innerHTML = '';
@@ -364,16 +418,37 @@ class Carousel {
             const activeTitle = this.tiles[this.activeTileIndex].querySelector('h2, h3');
             if (activeTitle) {
                 this.updateTileSelect(activeTitle.textContent);
+            } else {
+                console.warn('Could not find title in active tile');
             }
+        } else {
+            console.warn('No tiles or active tile to extract title from');
         }
     }
     
-    toggleDropdown() {
+    toggleDropdown(forceState) {
         // Find the dropdown - we need to query each time in case it was recreated
         const dropdown = document.querySelector('.custom-dropdown');
         console.log('Toggle dropdown called', dropdown ? 'dropdown found' : 'dropdown not found');
         
         if (dropdown) {
+            // If forceState is provided, set that state instead of toggling
+            if (forceState === false) {
+                dropdown.classList.remove('show');
+                this.tileSelect.classList.remove('open');
+                this.tileSelect.parentNode.classList.remove('open');
+                console.log('Dropdown explicitly closed');
+                return;
+            }
+            
+            if (forceState === true) {
+                dropdown.classList.add('show');
+                this.tileSelect.classList.add('open');
+                this.tileSelect.parentNode.classList.add('open');
+                console.log('Dropdown explicitly opened');
+                return;
+            }
+            
             // Toggle visibility classes
             dropdown.classList.toggle('show');
             this.tileSelect.classList.toggle('open');
@@ -385,15 +460,7 @@ class Carousel {
     }
     
     closeDropdown() {
-        // Find the dropdown - we need to query each time in case it was recreated
-        const dropdown = document.querySelector('.custom-dropdown');
-        
-        if (dropdown) {
-            dropdown.classList.remove('show');
-            this.tileSelect.classList.remove('open');
-            this.tileSelect.parentNode.classList.remove('open');
-            console.log('Dropdown explicitly closed');
-        }
+        this.toggleDropdown(false);
     }
 
     updateNavigationState() {
@@ -431,7 +498,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM content loaded, initializing application');
     
     // Initialize the localization system
-    if (typeof initializeLocalization === 'function') {
+    if (typeof initializeLanguage === 'function') {
+        console.log('Initializing localization system');
+        initializeLanguage();
+    } else if (typeof initializeLocalization === 'function') {
         console.log('Initializing localization system');
         initializeLocalization();
     } else {
@@ -449,15 +519,31 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Setup footer visibility on scroll
     setupFooterScroll();
+    
+    // Initialize request handler
+    if (document.getElementById('requestReportBtn')) {
+        const requestHandler = new DiseaseRequestHandler();
+        console.log('Disease request handler initialized');
+    }
 }); 
 
 function setupFooterScroll() {
     // Show footer after page content has loaded
     const footer = document.querySelector('footer');
+    if (!footer) return;
+    
     footer.classList.add('visible');
     
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    // Always keep footer visible - don't rely on scroll events
+    // This avoids issues with LinkedIn and other in-app browsers
+    
+    // Check if we're in LinkedIn browser or other problematic browsers
+    const isInAppBrowser = detectInAppBrowser();
+    
+    if (!isInAppBrowser) {
+        // Only add scroll listener for normal browsers
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    }
     
     function handleScroll() {
         // If we're at the bottom of the page
@@ -469,14 +555,30 @@ function setupFooterScroll() {
     }
 }
 
-// Initialize carousel and footer when the DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = new Carousel();
-    setupFooterScroll();
+// Helper function to detect LinkedIn and other in-app browsers
+function detectInAppBrowser() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     
-    // Initialize request handler
-    const requestHandler = new DiseaseRequestHandler();
-});
+    // Check for LinkedIn browser
+    if (userAgent.indexOf('LinkedIn') !== -1) {
+        console.log('LinkedIn browser detected, disabling scroll events');
+        return true;
+    }
+    
+    // Check for Facebook browser
+    if (userAgent.indexOf('FBAN') !== -1 || userAgent.indexOf('FBAV') !== -1) {
+        console.log('Facebook browser detected, disabling scroll events');
+        return true;
+    }
+    
+    // Check for Instagram browser
+    if (userAgent.indexOf('Instagram') !== -1) {
+        console.log('Instagram browser detected, disabling scroll events');
+        return true;
+    }
+    
+    return false;
+}
 
 // Class to handle disease report requests
 class DiseaseRequestHandler {

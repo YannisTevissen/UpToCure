@@ -8,6 +8,8 @@ This is a simplified Flask app that doesn't rely on FastAPI.
 import os
 import sys
 import logging
+import json
+import datetime
 from flask import Flask, jsonify, render_template, send_from_directory, request
 
 # Configure logging
@@ -71,33 +73,39 @@ def get_reports():
 
 @app.route('/api/request-report', methods=['POST'])
 def request_report():
-    """Handle requests for new disease reports"""
-    logger.info("Received report request")
+    """Handle disease report requests from users"""
     try:
-        # Get request data
-        data = request.json
+        # Get the request data
+        request_data = request.json
         
-        if not data or 'disease' not in data:
-            return jsonify({"error": "Invalid request data"}), 400
+        if not request_data or 'disease' not in request_data:
+            return jsonify({'success': False, 'message': 'Invalid request data'}), 400
+        
+        # Add server timestamp
+        request_data['server_timestamp'] = datetime.datetime.now().isoformat()
         
         # Create requests directory if it doesn't exist
-        requests_dir = os.path.join(base_dir, 'disease_requests')
-        os.makedirs(requests_dir, exist_ok=True)
+        requests_dir = os.path.join(base_dir, 'requests')
+        if not os.path.exists(requests_dir):
+            os.makedirs(requests_dir)
         
-        # Create or append to requests file
-        requests_file = os.path.join(requests_dir, 'requested_diseases.txt')
+        # Generate a unique filename
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        filename = f"request_{timestamp}.json"
+        file_path = os.path.join(requests_dir, filename)
         
-        with open(requests_file, 'a', encoding='utf-8') as f:
-            # Format: disease_name|timestamp|language
-            f.write(f"{data['disease']}|{data.get('timestamp', '')}|{data.get('language', 'en')}\n")
+        # Write the request to a file
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(request_data, f, ensure_ascii=False, indent=2)
         
-        return jsonify({"success": True, "message": "Request saved successfully"})
+        logger.info(f"Saved disease report request for '{request_data['disease']}' to {file_path}")
+        
+        return jsonify({'success': True, 'message': 'Request received successfully'})
     
     except Exception as e:
-        logger.error(f"Error saving report request: {str(e)}")
-        return jsonify({"error": str(e)}), 500
-    
-    
+        logger.error(f"Error processing report request: {str(e)}", exc_info=True)
+        return jsonify({'success': False, 'message': 'Server error processing request'}), 500
+
 @app.route('/methodology.html')
 def methodology():
     """Serve the methodology page"""
