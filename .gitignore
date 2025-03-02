@@ -55,3 +55,4 @@ downloads/
 
 reports_generator/.env
 UpToCure/.venv
+UpToCure/src/__pycache__
