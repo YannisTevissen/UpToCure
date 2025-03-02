@@ -569,5 +569,123 @@ footer.visible {
 }
 
 .markdown-table tr:hover td, .simple-table tr:hover td {
-    background: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 234, 255, 0.1);
+}
+
+/* Request Report Button */
+.request-report-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.request-report-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.request-report-btn:hover {
+    background-color: rgba(0, 234, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.request-report-btn:active {
+    transform: translateY(0);
+}
+
+/* Popup Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.close-popup:hover {
+    color: #000;
+}
+
+#diseaseRequestForm {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#diseaseRequestForm input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#diseaseRequestForm button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#diseaseRequestForm button:hover {
+    background-color: rgba(0, 234, 255, 0.8);
+}
+
+.request-status {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    min-height: 24px;
+}
+
+.request-status.success {
+    color: #4CAF50;
+}
+
+.request-status.error {
+    color: #F44336;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
 } 

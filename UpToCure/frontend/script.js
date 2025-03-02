@@ -452,44 +452,158 @@ document.addEventListener('DOMContentLoaded', function() {
 }); 
 
 function setupFooterScroll() {
+    // Show footer after page content has loaded
     const footer = document.querySelector('footer');
-    if (!footer) return;
-    
-    // Variables to track scroll position
-    let lastScrollTop = 0;
-    const scrollThreshold = 20; // Reduced threshold - show footer after minimal scrolling
-    
-    // Function to handle scroll events
-    function handleScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight;
-        const clientHeight = document.documentElement.clientHeight;
-        
-        // Check if scrolled at all OR near bottom of page
-        const hasScrolled = scrollTop > scrollThreshold;
-        const nearBottom = scrollTop + clientHeight > scrollHeight - 100;
-        
-        if (hasScrolled || nearBottom) {
-            footer.classList.add('visible');
-        } else {
-            footer.classList.remove('visible');
-        }
-        
-        // Update last scroll position
-        lastScrollTop = scrollTop;
-    }
+    footer.classList.add('visible');
     
     // Add scroll event listener
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll);
     
-    // Also show footer after a delay even if no scrolling occurs
-    setTimeout(() => {
-        // Only show if user hasn't scrolled yet
-        if (window.pageYOffset === 0) {
+    function handleScroll() {
+        // If we're at the bottom of the page
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
             footer.classList.add('visible');
+        } else {
+            footer.classList.add('visible'); // Always keep footer visible now
         }
-    }, 5000); // 5 seconds delay
+    }
+}
+
+// Initialize carousel and footer when the DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = new Carousel();
+    setupFooterScroll();
     
-    // Initial check
-    handleScroll();
+    // Initialize request handler
+    const requestHandler = new DiseaseRequestHandler();
+});
+
+// Class to handle disease report requests
+class DiseaseRequestHandler {
+    constructor() {
+        this.requestBtn = document.getElementById('requestReportBtn');
+        this.popup = document.getElementById('requestPopup');
+        this.closeBtn = document.querySelector('.close-popup');
+        this.form = document.getElementById('diseaseRequestForm');
+        this.statusDiv = document.getElementById('requestStatus');
+        
+        this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+        // Open popup when button is clicked
+        this.requestBtn.addEventListener('click', () => this.openPopup());
+        
+        // Close popup when close button is clicked
+        this.closeBtn.addEventListener('click', () => this.closePopup());
+        
+        // Close popup when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === this.popup) {
+                this.closePopup();
+            }
+        });
+        
+        // Handle form submission
+        this.form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            this.handleSubmit();
+        });
+    }
+    
+    openPopup() {
+        this.popup.style.display = 'flex';
+        this.resetForm();
+    }
+    
+    closePopup() {
+        this.popup.style.display = 'none';
+    }
+    
+    resetForm() {
+        this.form.reset();
+        this.statusDiv.textContent = '';
+        this.statusDiv.className = 'request-status';
+    }
+    
+    handleSubmit() {
+        const diseaseName = document.getElementById('diseaseName').value.trim();
+        
+        if (!diseaseName) {
+            this.showStatus('error', i18n.getTranslation('requestError'));
+            return;
+        }
+        
+        // Save the request
+        this.saveRequest(diseaseName);
+    }
+    
+    saveRequest(diseaseName) {
+        // Create a request object with timestamp and language
+        const requestData = {
+            disease: diseaseName,
+            timestamp: new Date().toISOString(),
+            language: i18n.getCurrentLanguage()
+        };
+        
+        // Send the data to the server
+        fetch('/api/request-report', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestData),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Show success message
+            this.showStatus('success', i18n.getTranslation('requestSuccess'));
+            
+            // Close popup after delay
+            setTimeout(() => {
+                this.closePopup();
+            }, 2000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            
+            // If server is not available, save locally
+            this.saveLocally(requestData);
+        });
+    }
+    
+    saveLocally(requestData) {
+        try {
+            // Get existing requests from localStorage
+            let requests = JSON.parse(localStorage.getItem('diseaseRequests') || '[]');
+            
+            // Add new request
+            requests.push(requestData);
+            
+            // Save back to localStorage
+            localStorage.setItem('diseaseRequests', JSON.stringify(requests));
+            
+            // Show success message
+            this.showStatus('success', i18n.getTranslation('requestSuccess'));
+            
+            // Close popup after delay
+            setTimeout(() => {
+                this.closePopup();
+            }, 2000);
+            
+        } catch (error) {
+            console.error('Error saving locally:', error);
+            this.showStatus('error', i18n.getTranslation('requestError'));
+        }
+    }
+    
+    showStatus(type, message) {
+        this.statusDiv.textContent = message;
+        this.statusDiv.className = `request-status ${type}`;
+    }
 } 

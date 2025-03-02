@@ -11,6 +11,12 @@ const translations = {
         "methodologyLink": "Our methodology is detailed here",
         "chooseReport": "Choose a report...",
         "backToReports": "← Back to Reports",
+        "requestReport": "Request a report",
+        "requestReportTitle": "Request a Disease Report",
+        "requestReportDescription": "Please enter the name of the rare disease you would like to see a report about:",
+        "submitRequest": "Submit Request",
+        "requestSuccess": "Thank you! Your request has been submitted.",
+        "requestError": "There was an error submitting your request. Please try again.",
         
         // Methodology page
         "methodologyTitle": "UpToCure - Methodology",
@@ -59,6 +65,12 @@ const translations = {
         "methodologyLink": "Notre méthodologie est détaillée ici",
         "chooseReport": "Choisir un rapport...",
         "backToReports": "← Retour aux rapports",
+        "requestReport": "Demander un rapport",
+        "requestReportTitle": "Demander un rapport sur une maladie",
+        "requestReportDescription": "Veuillez entrer le nom de la maladie rare pour laquelle vous souhaitez voir un rapport :",
+        "submitRequest": "Soumettre la demande",
+        "requestSuccess": "Merci ! Votre demande a été soumise.",
+        "requestError": "Une erreur s'est produite lors de la soumission de votre demande. Veuillez réessayer.",
         
         // Methodology page
         "methodologyTitle": "UpToCure - Méthodologie",

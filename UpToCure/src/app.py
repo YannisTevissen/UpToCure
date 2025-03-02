@@ -69,6 +69,35 @@ def get_reports():
             "reports": []
         })
 
+@app.route('/api/request-report', methods=['POST'])
+def request_report():
+    """Handle requests for new disease reports"""
+    logger.info("Received report request")
+    try:
+        # Get request data
+        data = request.json
+        
+        if not data or 'disease' not in data:
+            return jsonify({"error": "Invalid request data"}), 400
+        
+        # Create requests directory if it doesn't exist
+        requests_dir = os.path.join(base_dir, 'disease_requests')
+        os.makedirs(requests_dir, exist_ok=True)
+        
+        # Create or append to requests file
+        requests_file = os.path.join(requests_dir, 'requested_diseases.txt')
+        
+        with open(requests_file, 'a', encoding='utf-8') as f:
+            # Format: disease_name|timestamp|language
+            f.write(f"{data['disease']}|{data.get('timestamp', '')}|{data.get('language', 'en')}\n")
+        
+        return jsonify({"success": True, "message": "Request saved successfully"})
+    
+    except Exception as e:
+        logger.error(f"Error saving report request: {str(e)}")
+        return jsonify({"error": str(e)}), 500
+    
+    
 @app.route('/methodology.html')
 def methodology():
     """Serve the methodology page"""

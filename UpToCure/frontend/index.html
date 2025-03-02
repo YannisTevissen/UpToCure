@@ -53,9 +53,25 @@
             <div class="carousel">
                 <!-- Tiles will be dynamically inserted here -->
             </div>
-            <div class="navigation-arrows">
-                <button class="nav-arrow prev">←</button>
-                <button class="nav-arrow next">→</button>
+            
+        </div>
+        
+        <!-- Request a report button -->
+        <div class="request-report-container">
+            <button id="requestReportBtn" class="request-report-btn" data-i18n="requestReport">Request a report</button>
+        </div>
+        
+        <!-- Report request popup -->
+        <div id="requestPopup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h2 data-i18n="requestReportTitle">Request a Disease Report</h2>
+                <p data-i18n="requestReportDescription">Please enter the name of the rare disease you would like to see a report about:</p>
+                <form id="diseaseRequestForm">
+                    <input type="text" id="diseaseName" name="diseaseName" required>
+                    <button type="submit" data-i18n="submitRequest">Submit Request</button>
+                </form>
+                <div id="requestStatus" class="request-status"></div>
             </div>
         </div>
     </div>
