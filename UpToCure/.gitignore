@@ -48,3 +48,4 @@ Thumbs.db
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 UpToCure/src/__pycache__/*
+UpToCure/src/__pycache__/app.cpython-311.pyc
