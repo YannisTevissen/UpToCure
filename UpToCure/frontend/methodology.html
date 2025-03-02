@@ -98,21 +98,5 @@
     <footer>
         <p data-i18n="copyright">Copyright © Yannis Tevissen 2025</p>
     </footer>
-    
-    <!-- Modified script without transformers.js functionality -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const languageSelect = document.getElementById('languageSelect');
-            const translatingIndicator = document.getElementById('translatingIndicator');
-            
-            // Always hide the translation indicator since functionality is disabled
-            if (translatingIndicator) {
-                translatingIndicator.style.display = 'none';
-            }
-            
-            // Make footer visible on page load
-            document.querySelector('footer').classList.add('visible');
-        });
-    </script>
 </body>
 </html>
