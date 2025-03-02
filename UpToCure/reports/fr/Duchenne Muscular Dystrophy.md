@@ -1,7 +1,7 @@
-# Dystrophie musculaire de Duchenne
+# Myopathie de Duchenne
 
 ## Introduction
-La dystrophie musculaire de Duchenne (DMD) est une maladie génétique grave liée au chromosome X, causée par des mutations du gène de la dystrophine, qui entraîne une dégénérescence musculaire progressive. Au cours des dernières années, et en particulier tout au long de 2023, la recherche a progressé de manière significative dans la quête de thérapies curatives. Cette revue passe en revue les dernières publications évaluées par des pairs, les essais cliniques, les initiatives précliniques et les stratégies expérimentales innovantes, tout en examinant de manière critique les points forts et les limites. Il met également en lumière les nouvelles orientations de la recherche, les principales sources de financement, les institutions de premier plan et les défis actuels.
+La myopathie de Duchenne (DMD) est une maladie génétique grave liée au chromosome X, causée par des mutations du gène de la dystrophine, qui entraîne une dégénérescence musculaire progressive. Au cours des dernières années, et en particulier tout au long de 2023, la recherche a progressé de manière significative dans la quête de thérapies curatives. Cette revue passe en revue les dernières publications évaluées par des pairs, les essais cliniques, les initiatives précliniques et les stratégies expérimentales innovantes, tout en examinant de manière critique les points forts et les limites. Il met également en lumière les nouvelles orientations de la recherche, les principales sources de financement, les institutions de premier plan et les défis actuels.
 
 ## Avancées récentes de la recherche
 
