@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>UpToCure</title>
     
+    <!-- Configuration -->
+    <script src="config.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', config.googleAnalyticsId);
+    </script>
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://uptocure.com/">
@@ -24,60 +36,79 @@
     <script src="localization.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="brand">
-                <img src="/images/logo.png" alt="Logo" class="logo">
-                <h1>UpToCure</h1>
-            </div>
-            <div class="language-selector">
-                <select id="languageSelect" aria-label="Select language">
-                    <option value="en">🇬🇧 English</option>
-                    <option value="fr">🇫🇷 Français</option>
-                </select>
-            </div>
-            <div id="translatingIndicator" class="translating-indicator">Translating...</div>
-        </header>
-        <p class="disclaimer">
-            <span data-i18n="disclaimer">UpToCure provides up-to-date reports on ongoing research efforts to cure rare disease. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please report to the resources provided in the reports.</span>
-            <a href="./methodology.html" class="methodology-link" data-i18n="methodologyLink">Our methodology is detailed here</a>
-        </p>
-        
-        <div class="carousel-container">
-            <div class="tile-select-container">
-                <div class="tile-select" id="tileSelect">
-                    <span data-i18n="chooseReport">Choose a report...</span>
+    <div class="page-wrapper">
+        <nav class="top-nav">
+            <div class="nav-content">
+                <a href="./index.html" class="nav-logo">
+                    <img src="./images/logo.png" alt="Logo" class="logo">
+                    <span class="logo-text">UpToCure</span>
+                </a>
+                <div class="nav-intro">
+                    <p data-i18n="disclaimer">UpToCure provides up-to-date reports on ongoing research efforts to cure rare disease. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please report to the resources provided in the reports.</p>
+                    <a href="./methodology.html" class="methodology-link" data-i18n="methodologyLink">Our methodology is detailed here</a>
                 </div>
-                <!-- Le dropdown personnalisé sera inséré ici par JavaScript -->
+                <div class="nav-controls">
+                    <button class="info-button" aria-label="Show information">
+                        <span class="info-icon">i</span>
+                    </button>
+                    <div class="language-selector">
+                        <select id="languageSelect" aria-label="Select language">
+                            <option value="en">🇬🇧 English</option>
+                            <option value="fr">🇫🇷 Français</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="carousel">
-                <!-- Tiles will be dynamically inserted here -->
-            </div>
-            
-        </div>
-        
-        <!-- Request a report button -->
-        <div class="request-report-container">
-            <button id="requestReportBtn" class="request-report-btn" data-i18n="requestReport">Request a report</button>
-        </div>
-        
-        <!-- Report request popup -->
-        <div id="requestPopup" class="popup-overlay">
-            <div class="popup-content">
+        </nav>
+
+        <!-- Info Popup -->
+        <div id="infoPopup" class="popup-overlay">
+            <div class="popup-content info-popup">
                 <span class="close-popup">&times;</span>
-                <h2 data-i18n="requestReportTitle">Request a Disease Report</h2>
-                <p data-i18n="requestReportDescription">Please enter the name of the rare disease you would like to see a report about:</p>
-                <form id="diseaseRequestForm">
-                    <input type="text" id="diseaseName" name="diseaseName" required>
-                    <button type="submit" data-i18n="submitRequest">Submit Request</button>
-                </form>
-                <div id="requestStatus" class="request-status"></div>
+                <div class="info-content">
+                    <p data-i18n="disclaimer">UpToCure provides up-to-date reports on ongoing research efforts to cure rare disease. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please report to the resources provided in the reports.</p>
+                    <a href="./methodology.html" class="methodology-link" data-i18n="methodologyLink">Our methodology is detailed here</a>
+                </div>
             </div>
+        </div>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="carousel-container">
+                    <div class="tile-select-container">
+                        <div class="tile-select" id="tileSelect">
+                            <span data-i18n="chooseReport">Choose a report...</span>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <!-- Tiles will be dynamically inserted here -->
+                    </div>
+                </div>
+                
+                <div class="request-report-container">
+                    <button id="requestReportBtn" class="request-report-btn" data-i18n="requestReport">Request a report</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p data-i18n="copyright">Copyright © Yannis Tevissen 2025</p>
+        </footer>
+    </div>
+
+    <!-- Report request popup -->
+    <div id="requestPopup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2 data-i18n="requestReportTitle">Request a Disease Report</h2>
+            <p data-i18n="requestReportDescription">Please enter the name of the rare disease you would like to see a report about:</p>
+            <form id="diseaseRequestForm">
+                <input type="text" id="diseaseName" name="diseaseName" required>
+                <button type="submit" data-i18n="submitRequest">Submit Request</button>
+            </form>
+            <div id="requestStatus" class="request-status"></div>
         </div>
     </div>
-    <footer>
-        <p data-i18n="copyright">Copyright © Yannis Tevissen 2025</p>
-    </footer>
     
     <!-- Scripts -->
     <script src="script.js"></script>

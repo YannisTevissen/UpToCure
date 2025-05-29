@@ -4,99 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>UpToCure - Methodology</title>
+    
+    <!-- Configuration -->
+    <script src="config.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', config.googleAnalyticsId);
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
     <script src="localization.js"></script>
-    <style>
-        /* Center the methodology tile */
-        .methodology-tile-wrapper {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin: 2rem auto;
-            position: relative;
-        }
-        
-        /* Back button styling */
-        .back-button {
-            display: inline-block;
-            margin: 2rem 0;
-            padding: 0.5rem 1rem;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            text-align: center;
-        }
-        
-        .back-button:hover {
-            background: rgba(0, 234, 255, 0.8);
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="brand">
-                <img src="./images/logo.png" alt="Logo" class="logo">
-                <h1>UpToCure</h1>
-            </div>
-            <!-- Language selector dropdown -->
-            <div class="language-selector">
-                <select id="languageSelect" aria-label="Select language">
-                    <option value="en">🇬🇧 English</option>
-                    <option value="fr">🇫🇷 Français</option>
-                </select>
-            </div>
-        </header>
-        
-        <a href="./index.html" class="back-button" data-i18n="backToReports"></a>
-        
-        <div class="methodology-tile-wrapper">
-            <div class="tile active">
-                <h1 data-i18n="methodologyHeading"></h1>
-                
-                <h2 data-i18n="goalTitle"></h2>
-                <p data-i18n="goalContent"></p>
-                
-                <h2 data-i18n="agentArchTitle"></h2>
-                <p data-i18n="agentArchContent"></p>
-                
-                <div class="tile-content">
-                    <ul>
-                        <li><span data-i18n="llmPrompting"></span></li>
-                        <li><span data-i18n="searchCapabilities"></span></li>
-                        <li><span data-i18n="systemImplementation"></span></li>
-                    </ul>
-                </div>
-                
-                <h2 data-i18n="openSourceTitle"></h2>
-                <ul>
-                    <li><p data-i18n="openSourceContent"></p><p><a href="https://github.com/yannistevissen/UpToCure" target="_blank" data-i18n="repoUptocure"></a></p></li><li><p data-i18n="openSourceAcknowledgment"></p><a href="https://huggingface.co/blog/open-deep-research" target="_blank" data-i18n="hfBlog"></a></li>
-                </ul>                
-                <p data-i18n="contributionInvitation"></p>
-                
-                <h2 data-i18n="limitationsTitle"></h2>
-                <p data-i18n="limitationsContent"></p>
-                <div class="tile-content">
-                    <ul>
-                        <li><span data-i18n="limitationHallucination"></span></li>
-                        <li><span data-i18n="limitationRecentNews"></span></li>
-                        <li><span data-i18n="limitationTranslation"></span></li>
-                    </ul>
-                </div>
-                
-                <div class="tile-content" style="margin-top: 2rem; text-align: left;">
-                    <p data-i18n="contactInfo"></p><a href="https://yannistevissen.fr" target="_blank">yannistevissen.fr</a>
+    <div class="page-wrapper">
+        <nav class="top-nav">
+            <div class="nav-content">
+                <a href="./index.html" class="nav-logo">
+                    <img src="./images/logo.png" alt="Logo" class="logo">
+                    <span class="logo-text">UpToCure</span>
+                </a>
+                <div class="nav-controls">
+                    <div class="language-selector">
+                        <select id="languageSelect" aria-label="Select language">
+                            <option value="en">🇬🇧 English</option>
+                            <option value="fr">🇫🇷 Français</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-                
+        </nav>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+                <a href="./index.html" class="back-button" data-i18n="backToReports">
+                    <span class="back-arrow">←</span>
+                    <span data-i18n="backToReports">Back to Reports</span>
+                </a>
+
+                <article class="methodology-content">
+                    <h1 data-i18n="methodologyHeading">Our Methodology</h1>
+                    
+                    <section class="methodology-section">
+                        <h2 data-i18n="goalTitle">Our Goal</h2>
+                        <p data-i18n="goalContent"></p>
+                    </section>
+
+                    <section class="methodology-section">
+                        <h2 data-i18n="agentArchTitle">Agent Architecture</h2>
+                        <p data-i18n="agentArchContent"></p>
+                        <ul class="feature-list">
+                            <li><span data-i18n="llmPrompting"></span></li>
+                            <li><span data-i18n="searchCapabilities"></span></li>
+                            <li><span data-i18n="systemImplementation"></span></li>
+                        </ul>
+                    </section>
+
+                    <section class="methodology-section">
+                        <h2 data-i18n="openSourceTitle">Open Source</h2>
+                        <ul class="link-list">
+                            <li>
+                                <p data-i18n="openSourceContent"></p>
+                                <a href="https://github.com/yannistevissen/UpToCure" target="_blank" class="external-link" data-i18n="repoUptocure"></a>
+                            </li>
+                            <li>
+                                <p data-i18n="openSourceAcknowledgment"></p>
+                                <a href="https://huggingface.co/blog/open-deep-research" target="_blank" class="external-link" data-i18n="hfBlog"></a>
+                            </li>
+                        </ul>
+                        <p data-i18n="contributionInvitation"></p>
+                    </section>
+
+                    <section class="methodology-section">
+                        <h2 data-i18n="limitationsTitle">Limitations</h2>
+                        <p data-i18n="limitationsContent"></p>
+                        <ul class="feature-list">
+                            <li><span data-i18n="limitationHallucination"></span></li>
+                            <li><span data-i18n="limitationRecentNews"></span></li>
+                            <li><span data-i18n="limitationTranslation"></span></li>
+                        </ul>
+                    </section>
+
+                    <section class="methodology-section contact-section">
+                        <p data-i18n="contactInfo"></p>
+                        <a href="https://yannistevissen.fr" target="_blank" class="external-link">yannistevissen.fr</a>
+                    </section>
+                </article>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p data-i18n="copyright">Copyright © Yannis Tevissen 2025</p>
+        </footer>
     </div>
-    
-    <footer>
-        <p data-i18n="copyright">Copyright © Yannis Tevissen 2025</p>
-    </footer>
 </body>
 </html>

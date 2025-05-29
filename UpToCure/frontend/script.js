@@ -708,4 +708,147 @@ class DiseaseRequestHandler {
         this.statusDiv.textContent = message;
         this.statusDiv.className = `request-status ${type}`;
     }
-} 
+}
+
+// Add smooth scroll behavior
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Add intersection observer for fade-in animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe elements for fade-in animation
+document.querySelectorAll('.tile, .disclaimer, .request-report-container').forEach(el => {
+    el.classList.add('fade-in-element');
+    observer.observe(el);
+});
+
+// Enhanced tile transitions
+function showTile(tile) {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(t => {
+        t.classList.remove('active');
+        t.style.transform = 'translate(-50%, -50%) scale(0.95)';
+        t.style.opacity = '0';
+    });
+    
+    tile.classList.add('active');
+    tile.style.transform = 'translate(-50%, -50%) scale(1)';
+    tile.style.opacity = '1';
+    
+    // Add subtle parallax effect to background
+    document.body.style.backgroundPosition = `${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px`;
+}
+
+// Add hover effect to tiles
+document.querySelectorAll('.tile').forEach(tile => {
+    tile.addEventListener('mousemove', (e) => {
+        const rect = tile.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+        
+        tile.style.transform = `translate(-50%, -50%) scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    tile.addEventListener('mouseleave', () => {
+        tile.style.transform = 'translate(-50%, -50%) scale(1)';
+    });
+});
+
+// Add typing animation to the title
+const title = document.querySelector('h1');
+if (title) {
+    const text = title.textContent;
+    title.textContent = '';
+    let i = 0;
+    
+    function typeWriter() {
+        if (i < text.length) {
+            title.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+    
+    // Start typing animation when page loads
+    window.addEventListener('load', typeWriter);
+}
+
+// Add smooth loading animation for images
+document.querySelectorAll('img').forEach(img => {
+    img.style.opacity = '0';
+    img.style.transition = 'opacity 0.5s ease-in-out';
+    
+    img.onload = function() {
+        img.style.opacity = '1';
+    };
+});
+
+// Add ripple effect to buttons
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        this.appendChild(ripple);
+        
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        
+        ripple.style.width = ripple.style.height = `${size}px`;
+        ripple.style.left = `${e.clientX - rect.left - size/2}px`;
+        ripple.style.top = `${e.clientY - rect.top - size/2}px`;
+        
+        ripple.classList.add('active');
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+});
+
+// Info popup functionality
+const infoButton = document.querySelector('.info-button');
+const infoPopup = document.getElementById('infoPopup');
+const closePopup = infoPopup.querySelector('.close-popup');
+
+infoButton.addEventListener('click', () => {
+    infoPopup.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+});
+
+closePopup.addEventListener('click', () => {
+    infoPopup.style.display = 'none';
+    document.body.style.overflow = '';
+});
+
+infoPopup.addEventListener('click', (e) => {
+    if (e.target === infoPopup) {
+        infoPopup.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+}); 
