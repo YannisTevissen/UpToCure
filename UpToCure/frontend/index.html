@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>UpToCure</title>
+    <title>UpToCure - AI-Powered Rare Disease Research Reports</title>
+    <meta name="description" content="Access up-to-date reports on ongoing research efforts to cure rare diseases. AI-generated insights making scientific information more accessible to everyone.">
+    <meta name="keywords" content="rare diseases, medical research, AI research reports, healthcare technology, scientific information, disease research">
+    <meta name="author" content="Yannis Tevissen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://uptocure.com/">
+    <link rel="alternate" hreflang="en" href="https://uptocure.com/">
+    <link rel="alternate" hreflang="fr" href="https://uptocure.com/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://uptocure.com/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
     
     <!-- Configuration -->
     <script src="config.js"></script>
@@ -20,20 +34,69 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://uptocure.com/">
-    <meta property="og:title" content="UpToCure">
-    <meta property="og:description" content="Up-to-date reports on ongoing research efforts to cure rare diseases, generated with AI to make science more accessible.">
-    <meta property="og:image" content="./images/bg.jpg">
+    <meta property="og:title" content="UpToCure - AI-Powered Rare Disease Research Reports">
+    <meta property="og:description" content="Access up-to-date reports on ongoing research efforts to cure rare diseases. AI-generated insights making scientific information more accessible to everyone.">
+    <meta property="og:image" content="https://uptocure.com/images/bg.jpg">
+    <meta property="og:site_name" content="UpToCure">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://uptocure.com/">
-    <meta property="twitter:title" content="UpToCure">
-    <meta property="twitter:description" content="Up-to-date reports on ongoing research efforts to cure rare diseases, generated with AI to make science more accessible.">
-    <meta property="twitter:image" content="./images/bg.jpg">
+    <meta property="twitter:title" content="UpToCure - AI-Powered Rare Disease Research Reports">
+    <meta property="twitter:description" content="Access up-to-date reports on ongoing research efforts to cure rare diseases. AI-generated insights making scientific information more accessible to everyone.">
+    <meta property="twitter:image" content="https://uptocure.com/images/bg.jpg">
+    <meta property="twitter:creator" content="@uptocure">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
     <script src="localization.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "UpToCure",
+        "description": "AI-powered platform providing up-to-date reports on ongoing research efforts to cure rare diseases",
+        "url": "https://uptocure.com",
+        "applicationCategory": "MedicalResearch",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Yannis Tevissen"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://uptocure.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "sameAs": [
+            "https://github.com/yannistevissen/UpToCure"
+        ],
+        "inLanguage": ["en", "fr"],
+        "accessibilityFeature": [
+            "highContrast",
+            "readingOrder",
+            "structuralNavigation",
+            "tableOfContents"
+        ],
+        "accessibilityHazard": "none",
+        "accessibilityAPI": "ARIA",
+        "accessibilityControl": [
+            "fullKeyboardControl",
+            "fullMouseControl"
+        ]
+    }
+    </script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -74,20 +137,24 @@
 
         <main class="main-content">
             <div class="content-wrapper">
+                <header class="content-header">
+                    <h1 class="visually-hidden">UpToCure - Rare Disease Research Reports</h1>
+                </header>
                 <div class="carousel-container">
                     <div class="tile-select-container">
                         <div class="tile-select" id="tileSelect">
                             <span data-i18n="chooseReport">Choose a report...</span>
                         </div>
                     </div>
-                    <div class="carousel">
+                    <div class="carousel" role="list" aria-label="Available disease reports">
                         <!-- Tiles will be dynamically inserted here -->
                     </div>
                 </div>
                 
-                <div class="request-report-container">
+                <section class="request-report-container" aria-labelledby="requestReportHeading">
+                    <h2 id="requestReportHeading" class="visually-hidden">Request a New Report</h2>
                     <button id="requestReportBtn" class="request-report-btn" data-i18n="requestReport">Request a report</button>
-                </div>
+                </section>
             </div>
         </main>
 
