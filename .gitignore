@@ -1,5 +1,7 @@
 # gitignore
 src/__pycache__/
+UpToCure/src/__pycache__/
+
 # Python
 __pycache__/
 *.py[cod]
