@@ -280,10 +280,133 @@ class Carousel {
             tileElement.className = 'tile';
             tileElement.dataset.index = index;
             tileElement.dataset.disease = report.title.toLowerCase().replace(/\s+/g, '-');
+            
+            // Create share button
+            const shareButton = document.createElement('button');
+            shareButton.className = 'share-button';
+            shareButton.setAttribute('aria-label', 'Share this report');
+            shareButton.innerHTML = `
+                <svg viewBox="0 0 24 24">
+                    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                </svg>
+            `;
+
+            // Create share popup
+            const sharePopup = document.createElement('div');
+            sharePopup.className = 'share-popup';
+            sharePopup.innerHTML = `
+                <div class="share-options">
+                    <button class="share-option linkedin" aria-label="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </button>
+                    <button class="share-option x" aria-label="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        <span>X</span>
+                    </button>
+                    <button class="share-option email" aria-label="Share via Email">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <span>Email</span>
+                    </button>
+                    <button class="share-option generic" aria-label="Share using device options">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                        <span>Share</span>
+                    </button>
+                </div>
+            `;
+            
+            // Add click handler for share button
+            shareButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                sharePopup.classList.toggle('show');
+            });
+
+            // Close popup when clicking outside
+            const closeSharePopup = (e) => {
+                if (!shareButton.contains(e.target) && !sharePopup.contains(e.target)) {
+                    sharePopup.classList.remove('show');
+                }
+            };
+            document.addEventListener('click', closeSharePopup);
+
+            // Add click handlers for share options
+            const shareData = {
+                title: report.title,
+                text: `Check out this report about ${report.title} on UpToCure`,
+                url: `${window.location.origin}${window.location.pathname}#${report.title.toLowerCase().replace(/\s+/g, '-')}`
+            };
+
+            // LinkedIn share
+            sharePopup.querySelector('.linkedin').addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const url = encodeURIComponent(shareData.url);
+                const title = encodeURIComponent(shareData.title);
+                const summary = encodeURIComponent(shareData.text);
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`, '_blank');
+                sharePopup.classList.remove('show');
+            });
+
+            // X share
+            sharePopup.querySelector('.x').addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const url = encodeURIComponent(shareData.url);
+                const text = encodeURIComponent(shareData.text);
+                window.open(`https://x.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+                sharePopup.classList.remove('show');
+            });
+
+            // Email share
+            sharePopup.querySelector('.email').addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const subject = encodeURIComponent(`UpToCure Report: ${shareData.title}`);
+                const body = encodeURIComponent(`${shareData.text}\n\nRead more at: ${shareData.url}`);
+                window.open(`mailto:?subject=${subject}&body=${body}`);
+                sharePopup.classList.remove('show');
+            });
+
+            // Generic share (using Web Share API)
+            sharePopup.querySelector('.generic').addEventListener('click', async (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (navigator.share) {
+                    try {
+                        await navigator.share(shareData);
+                    } catch (err) {
+                        console.log('Error sharing:', err);
+                    }
+                } else {
+                    // Fallback to copying link to clipboard
+                    try {
+                        await navigator.clipboard.writeText(shareData.url);
+                        alert('Link copied to clipboard!');
+                    } catch (err) {
+                        console.log('Error copying to clipboard:', err);
+                    }
+                }
+                sharePopup.classList.remove('show');
+            });
+            
             tileElement.innerHTML = `
                 <div class="tile-content">${report.content}</div>
                 <small>${report.date} | ${report.filename}</small>
             `;
+            
+            // Add share button and popup to tile
+            tileElement.appendChild(shareButton);
+            tileElement.appendChild(sharePopup);
+            
             this.container.appendChild(tileElement);
             this.tiles.push(tileElement);
             
@@ -912,24 +1035,29 @@ document.querySelectorAll('button').forEach(button => {
 // Info popup functionality
 const infoButton = document.querySelector('.info-button');
 const infoPopup = document.getElementById('infoPopup');
-const closePopup = infoPopup.querySelector('.close-popup');
 
-infoButton.addEventListener('click', () => {
-    infoPopup.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-});
+if (infoButton && infoPopup) {
+    const closePopup = infoPopup.querySelector('.close-popup');
+    
+    if (closePopup) {
+        infoButton.addEventListener('click', () => {
+            infoPopup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
 
-closePopup.addEventListener('click', () => {
-    infoPopup.style.display = 'none';
-    document.body.style.overflow = '';
-});
+        closePopup.addEventListener('click', () => {
+            infoPopup.style.display = 'none';
+            document.body.style.overflow = '';
+        });
 
-infoPopup.addEventListener('click', (e) => {
-    if (e.target === infoPopup) {
-        infoPopup.style.display = 'none';
-        document.body.style.overflow = '';
+        infoPopup.addEventListener('click', (e) => {
+            if (e.target === infoPopup) {
+                infoPopup.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
     }
-});
+}
 
 // Add search functionality
 const reportSearch = document.getElementById('reportSearch');

@@ -665,11 +665,30 @@ a:focus, button:focus, select:focus {
         --glass-bg: rgba(0, 0, 0, 0.2);
         --glass-border: rgba(255, 255, 255, 0.1);
         --text-color: #ffffff;
+        --primary: #3498db;
+        --secondary: #2ecc71;
+        --accent: #e74c3c;
     }
     
     body::before {
-        filter: blur(8px) brightness(0.6);
+        filter: blur(8px) brightness(0.4);
     }
+}
+
+/* Ensure tile text is always visible */
+.tile {
+    color: var(--text-color);
+}
+
+.tile-content {
+    color: var(--text-color);
+}
+
+.tile-content p,
+.tile-content li,
+.tile-content strong,
+.tile-content em {
+    color: var(--text-color);
 }
 
 /* Disclaimer */
@@ -798,6 +817,7 @@ a:focus, button:focus, select:focus {
     background: #f8fafc;
     backdrop-filter: blur(12px);
     display: none;
+    position: relative;
 }
 
 .tile.active {
@@ -805,6 +825,107 @@ a:focus, button:focus, select:focus {
     opacity: 1;
     z-index: 2;
     transform: scale(1);
+}
+
+.share-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 3;
+}
+
+.share-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.share-button svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary);
+}
+
+.share-popup {
+    position: absolute;
+    top: 3.5rem; /* Position below the share button */
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    z-index: 1000;
+    display: none;
+    min-width: 200px;
+    border: 1px solid var(--glass-border);
+    transform-origin: top right;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.share-popup.show {
+    display: block;
+}
+
+.share-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.share-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.share-option:hover {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.share-option svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.share-option span {
+    font-size: 0.9rem;
+}
+
+.share-option.linkedin svg {
+    fill: #0077B5;
+}
+
+.share-option.x svg {
+    fill: #000000;
+}
+
+.share-option.email svg {
+    fill: #EA4335;
+}
+
+.share-option.generic svg {
+    fill: #666666;
 }
 
 /* Info Button */
