@@ -18,31 +18,16 @@ def generate_report(disease: str):
     """
     output = deep_research_agent(prompt=prompt)
     print(output)
-    with open(f"../UpToCure/reports/{disease}.md", "w") as f:
+    with open(f"../UpToCure/reports/generated/{disease}.md", "w") as f:
         f.write(output)
 
 def main():
-    rare_diseases_france = [
-		"Neurofibromatosis Type 1",
-		"Cystic Fibrosis",
-		"Hereditary Hemorrhagic Telangiectasia",
-		"Prader-Willi Syndrome",
-		"Duchenne Muscular Dystrophy",
-		"Sickle Cell Disease",
-		"Myofasciitis à Macrophages",
-		"Mucopolysaccharidosis Type I (Hurler Syndrome)",
-		"Fabry Disease",
-		"Primary Ciliary Dyskinesia",
-		"Hemophilia",
-		"Amyotrophic Lateral Sclerosis",
-		"Progressive Supranuclear Palsy",
-		"Leukodystrophies",
-		"Fibrodysplasia Ossificans Progressiva",
-		"Progeria",
-		"Lysosomal Storage Diseases",
-        "Friedreich's Ataxia",
-        "Gaucher Disease",
-        "Phenylketonuria"
-    ]
-    for disease in rare_diseases_france:
+    rare_diseases = [
+		"Kleine-Levin Syndrome",
+        "Lupus",
+        "Multiple Sclerosis",
+        "Small Intestinal Bacterial Overgrowth",
+        "Inflammatory Myopathy with Abundant Macrophages",
+	]
+    for disease in rare_diseases:
         generate_report(disease)

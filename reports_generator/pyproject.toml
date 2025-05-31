@@ -1,7 +1,7 @@
 [project]
-name = "reports_generator"
+name = "uptocure-reports-generator"
 version = "0.1.0"
-description = "Default template for PDM package"
+description = "UpToCure - Medical research reports generator and translator"
 authors = [
     {name = "Yannis Tevissen", email = "contact@yannistevissen.fr"},
 ]
@@ -19,15 +19,14 @@ dependencies = [
     "openpyxl>=3.1.5",
     "pandas>=2.2.3",
     "pathvalidate>=3.2.1",
-    "pdfminer>=20191125",
-    "pdfminer-six>=20240706",
+    "pdfminer.six>=20221105",
     "Pillow>=11.0.0",
     "puremagic>=1.28",
     "pypdf>=5.1.0",
-    "python-dotenv>=1.0.1",
+    "python-dotenv>=1.0.0",
     "python-pptx>=1.0.2",
     "Requests>=2.32.3",
-    "tqdm>=4.66.4",
+    "tqdm>=4.66.0",
     "torch>=2.2.2",
     "torchvision>=0.17.2",
     "transformers>=4.46.0",
@@ -47,16 +46,17 @@ dependencies = [
     "smolagents[dev]>=1.9.2",
     "serpapi>=0.1.5",
     "sentencepiece>=0.2.0",
-    "deepl>=1.21.0"
+    "deepl>=1.22.0",
+    "pyyaml>=6.0.2"
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
 
+[tool.pdm]
+distribution = false
+
 [tool.pdm.scripts]
 report = {call = "reporter:main", env_file = ".env"}
 translate = {call = "translator:main", env_file = ".env"}
-
-
-[tool.pdm]
-distribution = false
+generate-reports = {call = "generate_and_translate:main", env_file = ".env"}

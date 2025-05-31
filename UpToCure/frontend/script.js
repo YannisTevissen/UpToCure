@@ -43,6 +43,9 @@ class Carousel {
                 this.loadReportsForLanguage(newLanguage);
             }
         });
+
+        // Add hash change listener
+        window.addEventListener('hashchange', () => this.handleHashChange());
     }
     
     loadReportsForLanguage(language) {
@@ -92,6 +95,16 @@ class Carousel {
     }
 
     updateActiveState() {
+        // Update URL hash with the current disease name
+        const activeTile = this.tiles[this.activeTileIndex];
+        if (activeTile) {
+            const diseaseName = activeTile.dataset.disease;
+            if (diseaseName) {
+                window.history.replaceState(null, '', `#${diseaseName}`);
+            }
+        }
+
+        // Update active state for all tiles
         this.tiles.forEach((tile, index) => {
             if (index === this.activeTileIndex) {
                 tile.classList.add('active');
@@ -266,6 +279,7 @@ class Carousel {
             const tileElement = document.createElement('div');
             tileElement.className = 'tile';
             tileElement.dataset.index = index;
+            tileElement.dataset.disease = report.title.toLowerCase().replace(/\s+/g, '-');
             tileElement.innerHTML = `
                 <div class="tile-content">${report.content}</div>
                 <small>${report.date} | ${report.filename}</small>
@@ -280,13 +294,27 @@ class Carousel {
         // Update dropdown options
         this.updateTileSelectOptions(reports);
         
-        // Set a random tile as active instead of the first one
-        const randomIndex = Math.floor(Math.random() * reports.length);
-        this.activeTileIndex = randomIndex;
+        // Check for hash in URL
+        const hash = window.location.hash.slice(1); // Remove the # symbol
+        if (hash) {
+            const targetIndex = reports.findIndex(report => 
+                report.title.toLowerCase().replace(/\s+/g, '-') === hash
+            );
+            if (targetIndex !== -1) {
+                this.activeTileIndex = targetIndex;
+            } else {
+                // If hash doesn't match any disease, set random index
+                this.activeTileIndex = Math.floor(Math.random() * reports.length);
+            }
+        } else {
+            // Set a random tile as active if no hash
+            this.activeTileIndex = Math.floor(Math.random() * reports.length);
+        }
+        
         this.updateActiveState();
         
         if (reports.length > 0) {
-            const selectedReport = reports[randomIndex];
+            const selectedReport = reports[this.activeTileIndex];
             console.log(`Setting initial tile select title to: ${selectedReport.title}`);
             this.updateTileSelect(selectedReport.title);
             
@@ -319,6 +347,18 @@ class Carousel {
         // Create new dropdown
         const dropdown = document.createElement('div');
         dropdown.className = 'custom-dropdown';
+        
+        // Add search bar as first option
+        const searchContainer = document.createElement('div');
+        searchContainer.className = 'dropdown-search';
+        const searchInput = document.createElement('input');
+        searchInput.type = 'text';
+        searchInput.id = 'reportSearch';
+        searchInput.className = 'report-search';
+        searchInput.placeholder = 'Search reports...';
+        searchInput.setAttribute('aria-label', 'Search reports');
+        searchContainer.appendChild(searchInput);
+        dropdown.appendChild(searchContainer);
         
         // Sort reports alphabetically by title
         const sortedReports = [...reports].sort((a, b) => {
@@ -356,6 +396,26 @@ class Carousel {
         
         // Add dropdown to DOM
         this.tileSelect.parentNode.appendChild(dropdown);
+        
+        // Add search functionality
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const options = dropdown.querySelectorAll('.dropdown-option');
+            
+            options.forEach(option => {
+                const optionText = option.textContent.toLowerCase();
+                if (optionText.includes(searchTerm)) {
+                    option.style.display = '';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+        });
+        
+        // Prevent dropdown from closing when clicking the search input
+        searchInput.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
         
         // IMPORTANT: Instead of cloning and replacing, just add a new click handler
         // This was causing issues with the dropdown functionality
@@ -490,6 +550,24 @@ class Carousel {
         
         this.container.appendChild(errorElement);
         this.updateNavigationState();
+    }
+
+    handleHashChange() {
+        const hash = window.location.hash.slice(1);
+        if (!hash) return;
+
+        const targetTile = this.tiles.find(tile => 
+            tile.dataset.disease === hash
+        );
+
+        if (targetTile) {
+            const index = parseInt(targetTile.dataset.index);
+            if (!isNaN(index)) {
+                this.activeTileIndex = index;
+                this.updateActiveState();
+                this.updateTileSelect(targetTile.querySelector('.tile-content').textContent);
+            }
+        }
     }
 }
 
@@ -850,5 +928,41 @@ infoPopup.addEventListener('click', (e) => {
     if (e.target === infoPopup) {
         infoPopup.style.display = 'none';
         document.body.style.overflow = '';
+    }
+});
+
+// Add search functionality
+const reportSearch = document.getElementById('reportSearch');
+reportSearch.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const tiles = document.querySelectorAll('.carousel .tile');
+    const dropdownOptions = document.querySelectorAll('.custom-dropdown .dropdown-option');
+    
+    // Filter tiles
+    tiles.forEach(tile => {
+        const title = tile.querySelector('.tile-content').textContent.toLowerCase();
+        const description = tile.querySelector('.tile-content').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            tile.style.display = '';
+        } else {
+            tile.style.display = 'none';
+        }
+    });
+    
+    // Filter dropdown options
+    dropdownOptions.forEach(option => {
+        const optionText = option.textContent.toLowerCase();
+        if (optionText.includes(searchTerm)) {
+            option.style.display = '';
+        } else {
+            option.style.display = 'none';
+        }
+    });
+    
+    // If dropdown is open, ensure it stays open during search
+    const dropdown = document.querySelector('.custom-dropdown');
+    if (dropdown && !dropdown.classList.contains('show')) {
+        dropdown.classList.add('show');
     }
 }); 

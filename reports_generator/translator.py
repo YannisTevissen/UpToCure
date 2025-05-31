@@ -139,11 +139,11 @@ def find_reports(base_dir: str, source_lang: str) -> List[str]:
     """
     # Try different possible paths for reports
     possible_paths = [
-        os.path.join(base_dir, '..', 'UpToCure', 'reports', source_lang),  # Original path
-        os.path.join(base_dir, 'reports', source_lang),                    # Direct subdirectory
-        os.path.join(base_dir, '..', 'reports', source_lang),              # One level up
-        os.path.join('reports', source_lang),                              # Relative to current directory
-        os.path.abspath(os.path.join('reports', source_lang))              # Absolute path
+        os.path.join(base_dir, '..', 'UpToCure', 'reports', 'generated'),  # Original path
+        os.path.join(base_dir, 'reports', 'generated'),                    # Direct subdirectory
+        os.path.join(base_dir, '..', 'reports', 'generated'),              # One level up
+        os.path.join('reports', 'generated'),                              # Relative to current directory
+        os.path.abspath(os.path.join('reports', 'generated'))              # Absolute path
     ]
     
     reports_dir = None
@@ -158,7 +158,7 @@ def find_reports(base_dir: str, source_lang: str) -> List[str]:
         return []
     
     md_files = glob.glob(os.path.join(reports_dir, '*.md'))
-    logger.info(f"Found {len(md_files)} reports in {source_lang} language directory")
+    logger.info(f"Found {len(md_files)} reports in generated directory")
     return md_files
 
 def ensure_target_dir(base_dir: str, target_lang: str) -> str:
@@ -174,11 +174,11 @@ def ensure_target_dir(base_dir: str, target_lang: str) -> str:
     """
     # Try different possible paths for target directory
     possible_paths = [
-        os.path.join(base_dir, '..', 'UpToCure', 'reports', target_lang),  # Original path
-        os.path.join(base_dir, 'reports', target_lang),                    # Direct subdirectory
-        os.path.join(base_dir, '..', 'reports', target_lang),              # One level up
-        os.path.join('reports', target_lang),                              # Relative to current directory
-        os.path.abspath(os.path.join('reports', target_lang))              # Absolute path
+        os.path.join(base_dir, '..', 'UpToCure', 'reports', 'translated', target_lang),  # Original path
+        os.path.join(base_dir, 'reports', 'translated', target_lang),                    # Direct subdirectory
+        os.path.join(base_dir, '..', 'reports', 'translated', target_lang),              # One level up
+        os.path.join('reports', 'translated', target_lang),                              # Relative to current directory
+        os.path.abspath(os.path.join('reports', 'translated', target_lang))              # Absolute path
     ]
     
     # First, check if any of these directories already exist
@@ -198,8 +198,12 @@ def ensure_target_dir(base_dir: str, target_lang: str) -> str:
         logger.error(f"Could not create target directory at {target_dir}: {str(e)}")
         # Try the second option
         target_dir = possible_paths[1]
-        os.makedirs(target_dir, exist_ok=True)
-        logger.info(f"Created alternative target directory at: {target_dir}")
+        try:
+            os.makedirs(target_dir, exist_ok=True)
+            logger.info(f"Created target directory at: {target_dir}")
+        except Exception as e:
+            logger.error(f"Could not create target directory at {target_dir}: {str(e)}")
+            raise TranslationError(f"Failed to create target directory: {str(e)}")
     
     return target_dir
 
