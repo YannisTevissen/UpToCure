@@ -6,7 +6,7 @@ const translations = {
         "copyright": "Copyright © Yannis Tevissen 2025",
         
         // Index page
-        "pageTitle": "UpToCure.ai",
+        "pageTitle": "UpToCure",
         "disclaimer": "UpToCure provides up-to-date reports on ongoing research efforts to cure rare diseases. All the reports are generated with an AI agent that can sometimes hallucinate. For precise information please refer to the resources provided in the reports.",
         "methodologyLink": "Our methodology is detailed here",
         "chooseReport": "Choose a report...",
@@ -60,7 +60,7 @@ const translations = {
         "copyright": "Copyright © Yannis Tevissen 2025",
         
         // Index page
-        "pageTitle": "UpToCure.ai",
+        "pageTitle": "UpToCure",
         "disclaimer": "UpToCure fournit des rapports actualisés sur les efforts de recherche en cours pour guérir les maladies rares. Tous les rapports sont générés avec un agent IA qui peut parfois halluciner. Pour des informations précises, veuillez consulter les ressources référencées dans les rapports.",
         "methodologyLink": "Notre méthodologie est détaillée ici",
         "chooseReport": "Choisir un rapport...",
