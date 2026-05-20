@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Methodology — {{ site_name }}{% endblock %}
+{% block description %}How UpToCure generates, translates, and publishes its rare disease research reports.{% endblock %}
+
+{% block body_class %}methodology-page{% endblock %}
+
+{% block content %}
+<a class="back-button" href="{{ home_url }}">{{ t('report_back') }}</a>
+
+<article class="methodology-content">
+    {% if lang == 'fr' %}
+    <h1>Notre Méthodologie</h1>
+
+    <section class="methodology-section">
+        <h2>Notre Objectif</h2>
+        <p>Notre mission est de rendre la recherche plus accessible en simplifiant l'accès à l'information scientifique et en démontrant que l'IA peut combler le fossé entre des sujets complexes et un public plus large.</p>
+    </section>
+
+    <section class="methodology-section">
+        <h2>IA Agentique pour la Génération de Rapports</h2>
+        <p>Pour simplifier la collecte et la synthèse de données de recherche, nous utilisons un pipeline piloté par un agent&nbsp;:</p>
+        <ul class="feature-list">
+            <li>Un grand modèle de langage est prompté pour récupérer des informations complètes sur les efforts de recherche visant à guérir les maladies rares.</li>
+            <li>L'agent IA a accès à un outil de recherche web et peut analyser les résultats pour en extraire des informations pertinentes.</li>
+            <li>Le site est entièrement open source ; le pipeline de génération vit à côté de l'application et peut cibler tout modèle compatible avec l'API OpenAI, y compris un modèle local.</li>
+        </ul>
+    </section>
+
+    <section class="methodology-section">
+        <h2>Open-Source</h2>
+        <p>Ce projet est entièrement open source. <a class="external-link" href="https://github.com/yannistevissen/UpToCure" rel="noopener noreferrer" target="_blank">Dépôt GitHub UpToCure</a>.</p>
+        <p>Cette initiative a été construite grâce à de nombreux projets open-source, avec un accent particulier sur le framework <a class="external-link" href="https://huggingface.co/blog/open-deep-research" rel="noopener noreferrer" target="_blank">Open Deep Research</a>.</p>
+    </section>
+
+    <section class="methodology-section">
+        <h2>Limitations</h2>
+        <ul class="feature-list">
+            <li>Risque d'hallucinations : les grands modèles de langage utilisés peuvent occasionnellement produire des informations inexactes ou fabriquées.</li>
+            <li>Lacunes dans la recherche récente : les développements scientifiques très récents peuvent être absents.</li>
+            <li>Précision de la traduction : les rapports sont initialement générés en anglais puis traduits.</li>
+        </ul>
+    </section>
+    {% else %}
+    <h1>Our Methodology</h1>
+
+    <section class="methodology-section">
+        <h2>Our Goal</h2>
+        <p>Our mission is to make research more accessible by simplifying access to scientific information and demonstrating that AI can bridge the gap between complex topics and a wider audience.</p>
+    </section>
+
+    <section class="methodology-section">
+        <h2>Agentic AI for Reports Generation</h2>
+        <p>To streamline the process of gathering and synthesising research data, we use an agent-driven pipeline:</p>
+        <ul class="feature-list">
+            <li>A large language model is prompted to retrieve comprehensive information on research efforts aimed at curing rare diseases.</li>
+            <li>The agent has access to a web search tool and can parse the results to extract relevant insights.</li>
+            <li>The website is open source; the generator pipeline can target any OpenAI-compatible model, including a local one.</li>
+        </ul>
+    </section>
+
+    <section class="methodology-section">
+        <h2>Open-Source</h2>
+        <p>This project is entirely open source. <a class="external-link" href="https://github.com/yannistevissen/UpToCure" rel="noopener noreferrer" target="_blank">UpToCure GitHub Repository</a>.</p>
+        <p>Built thanks to numerous open-source projects, with a special emphasis on the <a class="external-link" href="https://huggingface.co/blog/open-deep-research" rel="noopener noreferrer" target="_blank">Open Deep Research</a> framework.</p>
+    </section>
+
+    <section class="methodology-section">
+        <h2>Limitations</h2>
+        <ul class="feature-list">
+            <li>Risk of hallucinations: LLMs can occasionally produce inaccurate or fabricated information. Always verify with the cited sources.</li>
+            <li>Recent research gaps: very recent scientific developments may not yet be referenced on the web.</li>
+            <li>Translation accuracy: reports are initially generated in English and then translated to other languages.</li>
+        </ul>
+    </section>
+    {% endif %}
+</article>
+{% endblock %}

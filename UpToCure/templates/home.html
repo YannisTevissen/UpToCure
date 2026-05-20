@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('home_title') }}{% endblock %}
+{% block description %}{{ t('site_description') }}{% endblock %}
+{% block og_type %}website{% endblock %}
+
+{% block extra_jsonld %}
+<script type="application/ld+json">{{ jsonld_list|safe }}</script>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="/js/main.js"></script>
+{% endblock %}
+
+{% block content %}
+<header class="home-header">
+    <h1>{{ t('home_h1') }}</h1>
+    <p class="home-intro">{{ t('home_intro', count=reports|length) }}</p>
+</header>
+
+<section class="carousel-container" aria-label="Featured report">
+    <div class="tile-select-container">
+        <button type="button" class="tile-select" id="tileSelect" aria-haspopup="listbox" aria-expanded="false">
+            <span>{{ t('search_placeholder') }}</span>
+        </button>
+    </div>
+    <div class="carousel" id="carousel" aria-live="polite" aria-busy="true">
+        <p class="status-message">{{ t('search_placeholder') }}</p>
+    </div>
+    <div class="carousel-nav">
+        <button type="button" class="nav-arrow prev" id="navPrev" aria-label="Previous report">‹</button>
+        <button type="button" class="nav-arrow next" id="navNext" aria-label="Next report">›</button>
+    </div>
+</section>
+
+<section class="report-index" aria-labelledby="allReportsHeading">
+    <h2 id="allReportsHeading">{{ t('all_reports_heading') }}</h2>
+    <ul class="report-index-list">
+        {% for report in reports %}
+        <li>
+            <a href="/reports/{{ lang }}/{{ report.slug }}">
+                <span class="report-index-title">{{ report.title }}</span>
+                {% if report.summary %}<span class="report-index-summary">{{ report.summary }}</span>{% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="request-report-container">
+    <button type="button" id="requestReportBtn" class="request-report-btn">{{ t('request_report_cta') }}</button>
+</section>
+{% endblock %}
+
+{% block end_of_body %}
+<dialog id="infoDialog" class="dialog">
+    <form method="dialog" class="dialog-content">
+        <button type="submit" class="dialog-close" aria-label="Close">×</button>
+        <p>{{ t('disclaimer') }}</p>
+        <a href="{{ '/methodology' if lang == 'en' else '/fr/methodology' }}" class="methodology-link">{{ t('methodology_link') }}</a>
+    </form>
+</dialog>
+
+<dialog id="requestDialog" class="dialog">
+    <form id="diseaseRequestForm" class="dialog-content" method="dialog">
+        <button type="button" class="dialog-close" data-close aria-label="Close">×</button>
+        <h2>{{ t('request_report_cta') }}</h2>
+        <input type="text" id="diseaseName" name="diseaseName" required minlength="2" maxlength="120" autocomplete="off">
+        <button type="submit">Submit</button>
+        <p id="requestStatus" class="request-status" role="status" aria-live="polite"></p>
+    </form>
+</dialog>
+{% endblock %}

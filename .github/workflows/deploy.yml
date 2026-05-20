@@ -1,27 +1,67 @@
-name: Deploy UpToCure
+name: CI & Deploy UpToCure
 
 on:
   push:
     branches:
-      - main  # Adjust if your main branch has a different name
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
+  test:
+    name: Test backend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: UpToCure
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install PDM
+        run: pipx install pdm
+      - name: Install deps
+        run: pdm install -d
+      - name: Lint
+        run: pdm run ruff check .
+      - name: Unit tests
+        run: pdm run pytest -q
+      - name: End-to-end smoke test
+        run: bash scripts/smoke_test.sh
+
   deploy:
+    name: Deploy to EC2
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Set up SSH
+      - uses: actions/checkout@v4
+      - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.EC2_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
-      - name: Deploy UpToCure
+      - name: Deploy and verify
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} bash -s <<'EOF'
+            set -euo pipefail
             cd /home/ubuntu/UpToCure/UpToCure
-            git pull --force origin main
-            pdm install
-            sudo systemctl restart uptocure
+            git fetch origin main
+            git reset --hard origin/main
+            pdm install --prod
+            sudo systemctl reload-or-restart uptocure
+            # Wait until /healthz is healthy (up to 30 s)
+            for i in $(seq 1 60); do
+              if curl -sf http://127.0.0.1:8000/healthz >/dev/null; then
+                echo "Service healthy after ${i} attempts"
+                exit 0
+              fi
+              sleep 0.5
+            done
+            echo "Service failed to become healthy" >&2
+            sudo journalctl -u uptocure --no-pager -n 50 >&2
+            exit 1
           EOF

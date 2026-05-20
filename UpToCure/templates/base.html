@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>{% block title %}{{ site_name }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ t('site_description') }}{% endblock %}">
+    <meta name="author" content="Yannis Tevissen">
+    <meta name="robots" content="{% block robots %}index, follow, max-image-preview:large{% endblock %}">
+    {% block extra_meta %}{% endblock %}
+
+    <link rel="canonical" href="{% block canonical %}{{ site_url }}{% endblock %}">
+    {% for alt in alternates %}
+    <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url }}">
+    {% endfor %}
+
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:site_name" content="{{ site_name }}">
+    <meta property="og:locale" content="{{ locale }}">
+    <meta property="og:url" content="{{ self.canonical() }}">
+    <meta property="og:title" content="{{ self.title() }}">
+    <meta property="og:description" content="{{ self.description() }}">
+    <meta property="og:image" content="{% block og_image %}{{ site_url }}/images/bg.jpg{% endblock %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ self.title() }}">
+    <meta name="twitter:description" content="{{ self.description() }}">
+    <meta name="twitter:image" content="{{ self.og_image() }}">
+
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+
+    <script type="application/ld+json">{{ jsonld_website|safe }}</script>
+    <script type="application/ld+json">{{ jsonld_organization|safe }}</script>
+    {% block extra_jsonld %}{% endblock %}
+
+    <script type="module" src="/js/analytics.js"></script>
+    <script type="module" src="/js/base.js"></script>
+    {% block scripts %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <div class="page-wrapper">
+        {% include "partials/nav.html" %}
+
+        <main class="main-content">
+            <div class="content-wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+
+        {% include "partials/footer.html" %}
+    </div>
+    {% block end_of_body %}{% endblock %}
+</body>
+</html>

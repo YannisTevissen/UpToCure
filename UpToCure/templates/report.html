@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}{{ report.title }} — {{ site_name }}{% endblock %}
+{% block description %}{{ report.summary or t('site_description') }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block canonical %}{{ canonical_url }}{% endblock %}
+
+{% block extra_meta %}
+<meta name="keywords" content="{{ report.title }}, rare disease, medical research, clinical trials, gene therapy">
+<meta property="article:published_time" content="{{ published_iso }}">
+<meta property="article:modified_time" content="{{ modified_iso }}">
+{% endblock %}
+
+{% block extra_jsonld %}
+<script type="application/ld+json">{{ jsonld_report|safe }}</script>
+<script type="application/ld+json">{{ jsonld_breadcrumb|safe }}</script>
+{% endblock %}
+
+{% block body_class %}report-page{% endblock %}
+
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+        <li><a href="{{ home_url }}">{{ site_name }}</a></li>
+        <li><a href="{{ home_url }}#all-reports">{{ t('all_reports_heading') }}</a></li>
+        <li aria-current="page">{{ report.title }}</li>
+    </ol>
+</nav>
+
+<a class="back-button" href="{{ home_url }}">{{ t('report_back') }}</a>
+
+<article class="report-article">
+    <header class="report-header">
+        <h1>{{ report.title }}</h1>
+        {% if report.summary %}<p class="report-summary">{{ report.summary }}</p>{% endif %}
+        <dl class="report-meta">
+            <div><dt>{{ t('report_meta_published') }}</dt><dd><time datetime="{{ published_iso }}">{{ report.date }}</time></dd></div>
+            {% if report.metadata.get('model') %}
+            <div><dt>{{ t('report_meta_model') }}</dt><dd>{{ report.metadata['model'] }}</dd></div>
+            {% endif %}
+            {% if other_language_url %}
+            <div>
+              <dt>{{ t('report_language_alt') }}</dt>
+              <dd><a href="{{ other_language_url }}" hreflang="{{ other_language_code }}" rel="alternate">{{ other_language_name }}</a></dd>
+            </div>
+            {% endif %}
+        </dl>
+    </header>
+
+    <div class="report-body tile-content">
+        {{ report.content|safe }}
+    </div>
+</article>
+
+{% if related %}
+<aside class="related-reports" aria-labelledby="relatedHeading">
+    <h2 id="relatedHeading">{{ t('report_related') }}</h2>
+    <ul>
+        {% for item in related %}
+        <li><a href="/reports/{{ lang }}/{{ item.slug }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+</aside>
+{% endif %}
+
+<section class="request-report-container">
+    <a class="request-report-btn" href="{{ home_url }}#request">{{ t('request_report_cta') }}</a>
+</section>
+{% endblock %}

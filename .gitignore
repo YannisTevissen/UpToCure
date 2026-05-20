@@ -1,7 +1,3 @@
-# gitignore
-src/__pycache__/
-UpToCure/src/__pycache__/
-
 # Python
 __pycache__/
 *.py[cod]
@@ -9,52 +5,39 @@ __pycache__/
 *.so
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
 *.egg
-MANIFEST
 
-# Virtual Environment
+# Virtual environments / package managers
 .env
 .venv
-env/
 venv/
 ENV/
-env.bak/
-venv.bak/
 .pdm-python
+.pdm-build/
 
-# IDE/Editor files
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE / Editor
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# OS Specific
+# OS
 .DS_Store
-.DS_Store?
 ._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Project specific
-downloads_folder/
-downloads/
+# Project artifacts
 *.log
+downloads/
+downloads_folder/
 
-reports_generator/.env
-UpToCure/.venv
-UpToCure/src/__pycache__
+# User-submitted disease requests are local only
+UpToCure/disease_requests/request_*.json

@@ -1,24 +1,23 @@
 #!/usr/bin/env python
-"""
-UpToCure Application Runner
-===========================
+"""UpToCure application entry point.
 
-This script provides a simple entry point to run the UpToCure application.
+Usage:
+    python run.py            # development server on $PORT (default 8000)
+    FLASK_DEBUG=1 python run.py
 """
+
+from __future__ import annotations
 
 import os
-import sys
-import logging
+
 from src.app import app
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+
+def main() -> None:
+    port = int(os.environ.get("PORT", 8000))
+    debug = os.environ.get("FLASK_DEBUG", "0") == "1"
+    app.run(host="0.0.0.0", port=port, debug=debug)
+
 
 if __name__ == "__main__":
-    # Get port from environment or use default 8080
-    port = int(os.environ.get('PORT', 8080))
-    logger.info(f"Starting UpToCure on port {port}")
-    
-    # Run the application with debug mode enabled for development
-    app.run(host='0.0.0.0', port=port, debug=True) 
+    main()

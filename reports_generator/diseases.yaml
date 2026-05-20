@@ -1,0 +1,41 @@
+# UpToCure — list of diseases to generate reports for.
+#
+# Edit this file, then regenerate everything (English + translations) with:
+#     pdm run generate-reports
+#
+# Or just one disease (skips already-translated languages by default):
+#     pdm run -- report --disease "Spinal Muscular Atrophy"
+#     pdm run -- translate --target-lang fr
+#
+# Comment out a line with `#` to skip it temporarily.
+
+diseases:
+  - Alkaptonuria
+  - Alström Syndrome
+  - Amyotrophic Lateral Sclerosis
+  - Ataxia-Telangiectasia
+  - Batten Disease
+  - Canavan Disease
+  - Cockayne Syndrome
+  - Cystic Fibrosis
+  - Duchenne Muscular Dystrophy
+  - Fabry Disease
+  - Fibrodysplasia Ossificans Progressiva
+  - Friedreich's Ataxia
+  - Gaucher Disease
+  - Hemophilia
+  - Hereditary Hemorrhagic Telangiectasia
+  - Hyper IgM Syndrome
+  - Hypophosphatasia
+  - Inflammatory Myopathy with Abundant Macrophages
+  - Joubert Syndrome
+  - Kartagener Syndrome
+  - Kleine-Levin Syndrome
+  - Lupus
+  - Multiple Sclerosis
+  - Small Intestinal Bacterial Overgrowth
+  - Spinal Muscular Atrophy
+
+# Languages to translate into (English is always the source).
+target_languages:
+  - fr

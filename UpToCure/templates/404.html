@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('not_found_title') }} — {{ site_name }}{% endblock %}
+{% block description %}{{ t('not_found_body') }}{% endblock %}
+{% block robots %}noindex, follow{% endblock %}
+
+{% block content %}
+<section class="not-found">
+    <h1>404</h1>
+    <h2>{{ t('not_found_title') }}</h2>
+    <p>{{ t('not_found_body') }}</p>
+    <p><a class="back-button" href="{{ home_url }}">{{ t('report_back') }}</a></p>
+</section>
+
+{% if suggestions %}
+<section>
+    <h2>{{ t('all_reports_heading') }}</h2>
+    <ul class="report-index-list">
+        {% for report in suggestions %}
+        <li><a href="/reports/{{ lang }}/{{ report.slug }}">{{ report.title }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+{% endblock %}

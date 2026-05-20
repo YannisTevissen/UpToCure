@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{% if query %}{{ t('search_results_for', query=query) }} — {{ site_name }}{% else %}{{ t('search_title') }} — {{ site_name }}{% endif %}{% endblock %}
+{% block description %}{{ t('search_title') }}{% endblock %}
+{% block robots %}{% if query %}noindex, follow{% else %}index, follow{% endif %}{% endblock %}
+
+{% block content %}
+<header class="search-header">
+    <h1>{{ t('search_title') }}</h1>
+    <form class="search-form" action="/search" method="get" role="search">
+        <input type="search" name="q" value="{{ query or '' }}" placeholder="{{ t('search_placeholder') }}" autofocus>
+        {% if lang != 'en' %}<input type="hidden" name="lang" value="{{ lang }}">{% endif %}
+        <button type="submit">→</button>
+    </form>
+</header>
+
+{% if query %}
+<h2 class="search-results-heading">{{ t('search_results_for', query=query) }}</h2>
+{% if results %}
+<ul class="report-index-list">
+    {% for report in results %}
+    <li>
+        <a href="/reports/{{ lang }}/{{ report.slug }}">
+            <span class="report-index-title">{{ report.title }}</span>
+            {% if report.summary %}<span class="report-index-summary">{{ report.summary }}</span>{% endif %}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p class="search-empty">{{ t('search_no_results') }}</p>
+{% endif %}
+{% else %}
+<ul class="report-index-list">
+    {% for report in all_reports %}
+    <li>
+        <a href="/reports/{{ lang }}/{{ report.slug }}">
+            <span class="report-index-title">{{ report.title }}</span>
+            {% if report.summary %}<span class="report-index-summary">{{ report.summary }}</span>{% endif %}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
