@@ -23,7 +23,7 @@ jobs:
       - name: Install PDM
         run: pipx install pdm
       - name: Install deps
-        run: pdm install -d
+        run: pdm install -G dev
       - name: Lint
         run: pdm run ruff check .
       - name: Unit tests
