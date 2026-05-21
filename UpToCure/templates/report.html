@@ -40,7 +40,7 @@
 <article class="report-article">
     <header class="report-header">
         <h1>{{ report.title }}</h1>
-        {% if report.summary %}<p class="report-summary">{{ report.summary }}</p>{% endif %}
+        {% if report.summary_html %}<p class="report-summary">{{ report.summary_html|safe }}</p>{% endif %}
         <dl class="report-meta">
             <div><dt>{{ t('report_meta_published') }}</dt><dd><time datetime="{{ published_iso }}">{{ report.date }}</time></dd></div>
             {% if report.metadata.get('model') %}
