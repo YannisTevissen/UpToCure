@@ -48,6 +48,9 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} bash -s <<'EOF'
             set -euo pipefail
+            # Non-login SSH shells skip ~/.profile, so pipx's default ~/.local/bin
+            # is not on PATH. Prepend it so `pdm` resolves.
+            export PATH="$HOME/.local/bin:$PATH"
             cd /home/ubuntu/UpToCure/UpToCure
             git fetch origin main
             git reset --hard origin/main
