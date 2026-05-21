@@ -235,19 +235,6 @@ a { color: var(--color-primary); }
     color: var(--color-primary);
 }
 
-.info-button {
-    display: none;
-    background: var(--surface);
-    border: 1px solid var(--border-strong);
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    color: var(--color-primary-strong);
-    font-weight: bold;
-    font-style: italic;
-}
-.info-button:hover { background: var(--color-primary); color: #fff; }
-
 .main-content { flex: 1; padding: 2rem 0; }
 
 .content-wrapper {
@@ -278,55 +265,74 @@ a { color: var(--color-primary); }
     position: relative;
 }
 
-.tile-select-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
+/* Report picker (combobox) ---------------------------------------------- */
+.report-picker {
     position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    max-width: 560px;
+    margin: 0 auto 2rem;
     z-index: 10;
 }
 
-.tile-select {
+.report-picker-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.85rem 1.1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-text);
     background: var(--surface);
     border: 1px solid var(--border-strong);
-    border-radius: var(--radius-md);
-    padding: 0.9rem 2rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--color-text);
-    min-width: 300px;
-    text-align: center;
-    transition: transform var(--transition), background var(--transition), border-color var(--transition);
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
 }
-.tile-select:hover { border-color: var(--color-primary); }
-.tile-select::after {
-    content: ' ▾';
-    color: var(--color-primary);
-    margin-left: 0.5em;
+.report-picker-input::placeholder { color: var(--color-text-muted); }
+.report-picker-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    z-index: 1;
 }
-.tile-select:hover { transform: translateY(-2px); }
-.tile-select.overflow { font-size: 1rem; }
 
-.custom-dropdown {
+.report-picker-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    padding: 0 1rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    cursor: pointer;
+    transition: background var(--transition), border-color var(--transition);
+}
+.report-picker-submit:hover {
+    background: var(--color-primary-strong);
+    border-color: var(--color-primary-strong);
+}
+
+.report-picker-dropdown {
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(420px, 90vw);
+    top: calc(100% + 0.4rem);
+    left: 0;
+    right: 0;
     background: var(--surface);
     border: 1px solid var(--border-strong);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-strong);
-    margin-top: 0.5rem;
     max-height: 320px;
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
-    transform-origin: top center;
     transition: opacity var(--transition), visibility var(--transition);
     z-index: 20;
 }
-.custom-dropdown.show { opacity: 1; visibility: visible; }
+.report-picker-dropdown.show { opacity: 1; visibility: visible; }
 
 .dropdown-option {
     display: block;
@@ -339,24 +345,11 @@ a { color: var(--color-primary); }
     text-align: left;
     font-size: 0.95rem;
     font-weight: 500;
+    cursor: pointer;
 }
 .dropdown-option:last-child { border-bottom: none; }
-.dropdown-option:hover { background: rgba(37, 99, 235, 0.08); color: var(--color-primary-strong); }
-
-.report-search {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: none;
-    border-bottom: 1px solid var(--border-soft);
-    background: var(--surface);
-    color: var(--color-text);
-    font-size: 0.95rem;
-    outline: none;
-}
-.report-search::placeholder { color: var(--color-text-muted); }
-.report-search:focus { border-bottom-color: var(--color-primary); }
+.dropdown-option:hover,
+.dropdown-option:focus { background: rgba(37, 99, 235, 0.08); color: var(--color-primary-strong); outline: none; }
 
 /* Carousel + tile -------------------------------------------------------- */
 .carousel {
@@ -969,24 +962,46 @@ a { color: var(--color-primary); }
     font-size: 1.05rem;
 }
 
-/* Nav search ------------------------------------------------------------ */
-.nav-search {
-    flex: 1;
-    max-width: 360px;
+/* Slim in-page search (report + methodology pages) ---------------------- */
+.content-search {
     display: flex;
+    align-items: stretch;
+    max-width: 520px;
+    margin: 0 0 1.75rem auto;
 }
-.nav-search input {
+.content-search input {
     flex: 1;
+    min-width: 0;
     padding: 0.55rem 0.9rem;
     border: 1px solid var(--border-strong);
-    border-radius: var(--radius-md);
+    border-right: none;
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
     background: var(--surface);
     color: var(--color-text);
     font-size: 0.95rem;
     outline: none;
 }
-.nav-search input::placeholder { color: var(--color-text-muted); }
-.nav-search input:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
+.content-search input::placeholder { color: var(--color-text-muted); }
+.content-search input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    z-index: 1;
+}
+.content-search button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    padding: 0 0.85rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    cursor: pointer;
+}
+.content-search button:hover { background: var(--color-primary-strong); border-color: var(--color-primary-strong); }
 
 /* Footer ---------------------------------------------------------------- */
 .footer-content {
@@ -1065,16 +1080,16 @@ a { color: var(--color-primary); }
 
 @media (max-width: 768px) {
     :root { --nav-height: auto; --font-size-body: 1rem; }
-    .nav-content { padding: 0.6rem 1rem; gap: 0.5rem; flex-wrap: wrap; }
-    .nav-search { order: 3; width: 100%; max-width: none; }
+    .nav-content { padding: 0.6rem 1rem; gap: 0.5rem; }
     .nav-intro { display: none; }
-    .info-button { display: flex; align-items: center; justify-content: center; }
     .home-header h1 { font-size: 1.75rem; }
     .home-intro { font-size: 1rem; }
     .tile { padding: 1.5rem; }
     .tile-content { font-size: 1rem; }
     .tile-content h2 { font-size: 1.35rem; }
-    .tile-select { min-width: 220px; padding: 0.75rem 1.25rem; }
+    .report-picker { margin-bottom: 1.5rem; }
+    .report-picker-input { padding: 0.75rem 0.9rem; font-size: 1rem; }
+    .content-search { margin-left: 0; max-width: none; }
     .methodology-content { padding: 2rem 1.5rem; font-size: 1rem; }
     .methodology-content h1 { font-size: 1.75rem; }
     .report-article { padding: 1.75rem 1.25rem; }

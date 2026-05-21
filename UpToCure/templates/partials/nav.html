@@ -5,16 +5,7 @@
             <span class="logo-text">{{ site_name }}</span>
         </a>
 
-        <form class="nav-search" action="/search" method="get" role="search">
-            <label class="visually-hidden" for="navSearch">{{ t('search_placeholder') }}</label>
-            <input id="navSearch" type="search" name="q" placeholder="{{ t('search_placeholder') }}" value="{{ search_query or '' }}" autocomplete="off">
-            {% if lang != 'en' %}<input type="hidden" name="lang" value="{{ lang }}">{% endif %}
-        </form>
-
         <div class="nav-controls">
-            <button class="info-button" type="button" aria-label="Show information" data-open-dialog="infoDialog">
-                <span aria-hidden="true">i</span>
-            </button>
             <div class="language-selector">
                 <label class="visually-hidden" for="languageSelect">{{ t('nav_language') }}</label>
                 <select id="languageSelect" data-language-switcher data-current="{{ lang }}"

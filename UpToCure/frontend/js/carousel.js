@@ -5,10 +5,15 @@ import { createShareButton } from './share.js';
 export class Carousel {
     constructor() {
         this.root = document.getElementById('carousel');
-        this.tileSelect = document.getElementById('tileSelect');
+        // The report picker is a combobox: the input filters the disease list
+        // shown as a floating dropdown, but pressing Enter submits the form to
+        // /search so users can search the full text of every report too.
+        this.pickerForm = document.querySelector('.report-picker');
+        this.pickerInput = document.getElementById('reportPicker');
         this.prevBtn = document.getElementById('navPrev');
         this.nextBtn = document.getElementById('navNext');
         this.dropdown = null;
+        this.options = [];
         this.reports = [];
         this.activeIndex = 0;
         this.tileCache = new Map();
@@ -16,7 +21,7 @@ export class Carousel {
 
         this._setupNav();
         this._setupHash();
-        this._setupDropdownTrigger();
+        this._setupPicker();
         this._renderForLanguage(this.lang);
     }
 
@@ -62,7 +67,6 @@ export class Carousel {
         const report = this.reports[this.activeIndex];
         if (!report) return;
         window.history.replaceState(null, '', `#${report.slug}`);
-        this._setSelectLabel(report.title);
 
         let tile = this.tileCache.get(report.slug);
         if (!tile) {
@@ -95,7 +99,6 @@ export class Carousel {
 
         getReport(this.lang, report.slug)
             .then((detail) => {
-                // Strip the duplicate H1 from the parsed HTML (we already render it above)
                 const cleaned = (detail.content || '').replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i, '');
                 body.innerHTML = cleaned;
                 const meta = document.createElement('small');
@@ -152,14 +155,18 @@ export class Carousel {
         if (this.nextBtn) this.nextBtn.disabled = empty;
     }
 
-    _setupDropdownTrigger() {
-        if (!this.tileSelect) return;
-        this.tileSelect.addEventListener('click', (e) => {
+    _setupPicker() {
+        if (!this.pickerInput) return;
+        this.pickerInput.addEventListener('focus', () => this._toggleDropdown(true));
+        this.pickerInput.addEventListener('click', (e) => {
             e.stopPropagation();
-            this._toggleDropdown();
+            this._toggleDropdown(true);
         });
+        this.pickerInput.addEventListener('input', () => this._filterDropdown(this.pickerInput.value));
+        this.pickerInput.addEventListener('keydown', (e) => this._onPickerKey(e));
+
         document.addEventListener('click', (e) => {
-            if (this.dropdown && !this.dropdown.contains(e.target) && !this.tileSelect.contains(e.target)) {
+            if (this.dropdown && !this.dropdown.contains(e.target) && !this.pickerForm.contains(e.target)) {
                 this._toggleDropdown(false);
             }
         });
@@ -167,54 +174,78 @@ export class Carousel {
 
     _rebuildDropdown() {
         this.dropdown?.remove();
-        const dropdown = document.createElement('div');
-        dropdown.className = 'custom-dropdown';
-        dropdown.setAttribute('role', 'listbox');
+        this.options = [];
 
-        const search = document.createElement('input');
-        search.type = 'search';
-        search.className = 'report-search';
-        search.placeholder = t('searchPlaceholder');
-        search.setAttribute('aria-label', t('searchPlaceholder'));
-        dropdown.appendChild(search);
+        const dropdown = document.createElement('div');
+        dropdown.className = 'report-picker-dropdown';
+        dropdown.id = 'reportPickerList';
+        dropdown.setAttribute('role', 'listbox');
 
         this.reports.forEach((report, index) => {
             const option = document.createElement('button');
             option.type = 'button';
             option.className = 'dropdown-option';
             option.setAttribute('role', 'option');
+            option.dataset.title = report.title.toLowerCase();
             option.textContent = report.title;
-            option.addEventListener('click', () => {
-                this.activeIndex = index;
-                this._showActive();
-                this._updateNav();
-                this._toggleDropdown(false);
+            option.addEventListener('mousedown', (e) => {
+                // Use mousedown so we fire before the input's blur closes the
+                // dropdown (which would cancel the click).
+                e.preventDefault();
+                this._selectReport(index);
             });
             dropdown.appendChild(option);
+            this.options.push(option);
         });
 
-        search.addEventListener('input', (event) => {
-            const term = event.target.value.toLowerCase();
-            dropdown.querySelectorAll('.dropdown-option').forEach((option) => {
-                option.style.display = option.textContent.toLowerCase().includes(term) ? '' : 'none';
-            });
-        });
-        search.addEventListener('click', (event) => event.stopPropagation());
-
-        this.tileSelect.parentNode.appendChild(dropdown);
+        this.pickerForm.appendChild(dropdown);
         this.dropdown = dropdown;
+    }
+
+    _selectReport(index) {
+        this.activeIndex = index;
+        this.pickerInput.value = '';
+        this._filterDropdown('');
+        this._toggleDropdown(false);
+        this._showActive();
+        this._updateNav();
+    }
+
+    _filterDropdown(term) {
+        const needle = term.trim().toLowerCase();
+        let visible = 0;
+        this.options.forEach((option) => {
+            const match = !needle || option.dataset.title.includes(needle);
+            option.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+        });
+        if (visible === 0 && needle) {
+            this._toggleDropdown(false);
+        } else if (document.activeElement === this.pickerInput) {
+            this._toggleDropdown(true);
+        }
+    }
+
+    _onPickerKey(event) {
+        if (event.key === 'Escape') {
+            this._toggleDropdown(false);
+            this.pickerInput.blur();
+        } else if (event.key === 'Enter') {
+            // If exactly one option remains, jump to it instead of submitting
+            // the form to /search.
+            const visible = this.options.filter((opt) => opt.style.display !== 'none');
+            if (visible.length === 1) {
+                event.preventDefault();
+                const index = this.options.indexOf(visible[0]);
+                this._selectReport(index);
+            }
+        }
     }
 
     _toggleDropdown(force) {
         if (!this.dropdown) return;
         const willShow = force !== undefined ? force : !this.dropdown.classList.contains('show');
         this.dropdown.classList.toggle('show', willShow);
-        this.tileSelect.setAttribute('aria-expanded', String(willShow));
-    }
-
-    _setSelectLabel(text) {
-        if (!this.tileSelect) return;
-        this.tileSelect.innerHTML = `<span>${text}</span>`;
-        this.tileSelect.classList.toggle('overflow', text.length > 25);
+        this.pickerInput?.setAttribute('aria-expanded', String(willShow));
     }
 }

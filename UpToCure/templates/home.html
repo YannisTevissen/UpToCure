@@ -19,11 +19,26 @@
 </header>
 
 <section class="carousel-container" aria-label="Featured report">
-    <div class="tile-select-container">
-        <button type="button" class="tile-select" id="tileSelect" aria-haspopup="listbox" aria-expanded="false">
-            <span>{{ t('search_placeholder') }}</span>
+    <form class="report-picker" action="/search" method="get" role="search"
+          aria-label="{{ t('search_placeholder') }}">
+        <label class="visually-hidden" for="reportPicker">{{ t('search_placeholder') }}</label>
+        <input
+            id="reportPicker"
+            type="search"
+            name="q"
+            class="report-picker-input"
+            placeholder="{{ t('search_placeholder') }}"
+            autocomplete="off"
+            role="combobox"
+            aria-autocomplete="list"
+            aria-expanded="false"
+            aria-controls="reportPickerList"
+            aria-haspopup="listbox">
+        {% if lang != 'en' %}<input type="hidden" name="lang" value="{{ lang }}">{% endif %}
+        <button type="submit" class="report-picker-submit" aria-label="{{ t('search_placeholder') }}">
+            <span aria-hidden="true">→</span>
         </button>
-    </div>
+    </form>
     <div class="carousel" id="carousel" aria-live="polite" aria-busy="true">
         <p class="status-message">{{ t('search_placeholder') }}</p>
     </div>
@@ -53,14 +68,6 @@
 {% endblock %}
 
 {% block end_of_body %}
-<dialog id="infoDialog" class="dialog">
-    <form method="dialog" class="dialog-content">
-        <button type="submit" class="dialog-close" aria-label="Close">×</button>
-        <p>{{ t('disclaimer') }}</p>
-        <a href="{{ '/methodology' if lang == 'en' else '/fr/methodology' }}" class="methodology-link">{{ t('methodology_link') }}</a>
-    </form>
-</dialog>
-
 <dialog id="requestDialog" class="dialog">
     <form id="diseaseRequestForm" class="dialog-content" method="dialog">
         <button type="button" class="dialog-close" data-close aria-label="Close">×</button>

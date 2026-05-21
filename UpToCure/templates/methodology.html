@@ -8,6 +8,14 @@
 {% block content %}
 <a class="back-button" href="{{ home_url }}">{{ t('report_back') }}</a>
 
+<form class="content-search" action="/search" method="get" role="search"
+      aria-label="{{ t('search_placeholder') }}">
+    <label class="visually-hidden" for="contentSearch">{{ t('search_placeholder') }}</label>
+    <input id="contentSearch" type="search" name="q" placeholder="{{ t('search_placeholder') }}" autocomplete="off">
+    {% if lang != 'en' %}<input type="hidden" name="lang" value="{{ lang }}">{% endif %}
+    <button type="submit" aria-label="{{ t('search_placeholder') }}"><span aria-hidden="true">→</span></button>
+</form>
+
 <article class="methodology-content">
     {% if lang == 'fr' %}
     <h1>Notre Méthodologie</h1>
