@@ -143,9 +143,12 @@ if [ -n "$SLUG" ]; then
     assert_status "/reports/fr/${SLUG}" 200
 fi
 
-# Spot-check that the home page actually contains a server-rendered link
+# Spot-check that the home page actually contains a server-rendered link.
+# Use a bash substring test instead of `printf | grep -q`: with `pipefail`,
+# grep closes the pipe on first match and printf gets SIGPIPE on large bodies,
+# making the whole pipeline fail even though the match was found.
 HOME_BODY=$(curl -s "${BASE}/")
-if printf '%s' "$HOME_BODY" | grep -q "/reports/en/"; then
+if [[ "$HOME_BODY" == *"/reports/en/"* ]]; then
     log_ok "Home page contains canonical report links"
 else
     log_err "Home page is missing server-rendered report links"
@@ -154,7 +157,7 @@ fi
 
 # Spot-check sitemap content
 SITEMAP_BODY=$(curl -s "${BASE}/sitemap.xml")
-if printf '%s' "$SITEMAP_BODY" | grep -q "<urlset"; then
+if [[ "$SITEMAP_BODY" == *"<urlset"* ]]; then
     log_ok "Sitemap is valid XML"
 else
     log_err "Sitemap is malformed"
