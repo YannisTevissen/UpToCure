@@ -11,6 +11,11 @@
 
 set -euo pipefail
 
+# In CI, echo every command so failures are easy to diagnose from the runner log.
+if [ "${CI:-}" = "true" ] || [ "${SMOKE_DEBUG:-0}" = "1" ]; then
+    set -x
+fi
+
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
@@ -27,8 +32,8 @@ log_err()  { printf "${RED}✗${NC}  %s\n" "$1"; }
 
 # 1. Make sure dependencies are installed -------------------------------------
 if command -v pdm >/dev/null 2>&1; then
-    log_step "Installing dependencies (pdm install -d)"
-    pdm install -d >/dev/null
+    log_step "Installing dependencies (pdm install -G dev)"
+    pdm install -G dev >/dev/null
     RUN="pdm run"
 else
     log_step "pdm not found, using existing Python interpreter"
@@ -51,15 +56,19 @@ $RUN gunicorn --bind "${HOST}:${PORT}" --workers 1 --access-logfile - "src.app:a
 SERVER_PID=$!
 
 cleanup() {
+    local exit_code=$?
     if kill -0 "$SERVER_PID" 2>/dev/null; then
         kill "$SERVER_PID" 2>/dev/null || true
         wait "$SERVER_PID" 2>/dev/null || true
     fi
-    if [ "${KEEP_LOG:-0}" = "1" ]; then
-        printf "Server log: %s\n" "$LOG"
-    else
-        rm -f "$LOG"
+    # Always dump the gunicorn log on non-zero exit (or in CI) so failures are
+    # diagnosable from the runner output.
+    if [ "$exit_code" -ne 0 ] || [ "${CI:-}" = "true" ] || [ "${KEEP_LOG:-0}" = "1" ]; then
+        printf '\n%s gunicorn log (%s) %s\n' '----' "$LOG" '----'
+        cat "$LOG" 2>/dev/null || true
+        printf '%s end gunicorn log %s\n' '----' '----'
     fi
+    rm -f "$LOG"
 }
 trap cleanup EXIT
 
@@ -117,8 +126,17 @@ assert_status "/api/reports/en/not-a-real-disease" 404
 assert_status "/api/request-report" 400 POST '{}'
 assert_status "/api/request-report" 200 POST '{"disease": "Smoke Test Disease"}'
 
-# Detail endpoint + report page — pick the first real slug from the listing
-SLUG=$(curl -s "${BASE}/api/reports?lang=en" | python -c "import sys, json; data=json.load(sys.stdin); print((data.get('reports') or [{}])[0].get('slug',''))")
+# Detail endpoint + report page — pick the first real slug from the listing.
+# Prefer the pdm-managed interpreter so we don't rely on a bare `python` alias
+# being on PATH (Ubuntu CI runners only guarantee `python3`).
+if [ -n "${RUN}" ]; then
+    PY_CMD=($RUN python)
+elif command -v python >/dev/null 2>&1; then
+    PY_CMD=(python)
+else
+    PY_CMD=(python3)
+fi
+SLUG=$(curl -s "${BASE}/api/reports?lang=en" | "${PY_CMD[@]}" -c "import sys, json; data=json.load(sys.stdin); print((data.get('reports') or [{}])[0].get('slug',''))")
 if [ -n "$SLUG" ]; then
     assert_status "/api/reports/en/${SLUG}" 200
     assert_status "/reports/en/${SLUG}" 200
