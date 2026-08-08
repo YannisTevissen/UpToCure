@@ -91,6 +91,8 @@ class LLMClient:
         # Cumulative usage across all calls, used for cost accounting.
         self.total_input_tokens = 0
         self.total_output_tokens = 0
+        # Params this model has rejected (e.g. temperature on reasoning models).
+        self._unsupported_params: set[str] = set()
         if not self.config.api_key:
             logger.warning(
                 "LLM client created without an API key (provider=%s). "
@@ -116,14 +118,19 @@ class LLMClient:
         """Send a chat completion and return the assistant text."""
         model_id = model or self.config.generation_model
         last_error: Exception | None = None
+        request_kwargs: dict = {
+            "model": model_id,
+            "messages": messages,
+            "temperature": temperature,
+        }
+        if max_tokens is not None:
+            # Omitted entirely when unset: newer OpenAI models reject a null value.
+            request_kwargs["max_tokens"] = max_tokens
+        for param in self._unsupported_params:
+            request_kwargs.pop(param, None)
         for attempt in range(retries):
             try:
-                completion = self._client.chat.completions.create(
-                    model=model_id,
-                    messages=messages,
-                    temperature=temperature,
-                    max_tokens=max_tokens,
-                )
+                completion = self._client.chat.completions.create(**request_kwargs)
                 usage = getattr(completion, "usage", None)
                 if usage:
                     self.total_input_tokens += int(getattr(usage, "prompt_tokens", 0) or 0)
@@ -131,6 +138,18 @@ class LLMClient:
                 return (completion.choices[0].message.content or "").strip()
             except Exception as exc:  # noqa: BLE001 - retry transient errors
                 last_error = exc
+                # Newer OpenAI reasoning models reject sampling params outright;
+                # drop the offending parameter and retry immediately.
+                message = str(exc)
+                dropped = False
+                for param in ("temperature", "max_tokens"):
+                    if param in request_kwargs and f"'{param}'" in message:
+                        request_kwargs.pop(param)
+                        self._unsupported_params.add(param)
+                        logger.info("Model %s rejects %r, retrying without it", model_id, param)
+                        dropped = True
+                if dropped:
+                    continue
                 delay = 2 ** attempt
                 logger.warning("LLM call failed (attempt %d/%d): %s. Retrying in %ds.",
                                attempt + 1, retries, exc, delay)

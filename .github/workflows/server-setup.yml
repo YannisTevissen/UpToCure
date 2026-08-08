@@ -1,0 +1,86 @@
+name: Server setup (content dir migration)
+
+# One-time (idempotent) migration for the self-updating pipeline: moves content
+# outside the git checkout, installs the refresh env + systemd units, and
+# restarts the app. Run manually from the Actions tab.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Upload refresh environment
+        run: |
+          cat > refresh.env <<EOF
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          LLM_PROVIDER=openai
+          LLM_MODEL=gpt-5.6-terra
+          LLM_TRANSLATION_MODEL=gpt-5-nano
+          RESEARCH_BACKEND=openai-responses
+          UPTOCURE_REPORTS_DIR=/var/lib/uptocure/reports
+          UPTOCURE_REQUESTS_DIR=/var/lib/uptocure/disease_requests
+          MONTHLY_BUDGET_USD=30
+          REFRESH_MAX_REPORTS_PER_RUN=4
+          REFRESH_MAX_AGE_DAYS=30
+          EOF
+          scp -i ~/.ssh/id_rsa refresh.env ubuntu@${{ secrets.EC2_HOST }}:/tmp/refresh.env
+          rm refresh.env
+
+      - name: Migrate server
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} bash -s <<'EOF'
+            set -euo pipefail
+            export PATH="$HOME/.local/bin:$PATH"
+
+            cd /home/ubuntu/UpToCure/UpToCure
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Content directories, seeded/updated from the repo (never deletes
+            # server-generated files).
+            sudo mkdir -p /var/lib/uptocure/reports /var/lib/uptocure/disease_requests
+            sudo rsync -a /home/ubuntu/UpToCure/UpToCure/reports/ /var/lib/uptocure/reports/
+            sudo cp /home/ubuntu/UpToCure/UpToCure/disease_requests/*.json /var/lib/uptocure/disease_requests/ 2>/dev/null || true
+            sudo chown -R ubuntu:ubuntu /var/lib/uptocure
+
+            # Point the web app at the content dir
+            sudo mkdir -p /etc/systemd/system/uptocure.service.d
+            sudo tee /etc/systemd/system/uptocure.service.d/content.conf >/dev/null <<'CONF'
+          [Service]
+          Environment=UPTOCURE_REPORTS_DIR=/var/lib/uptocure/reports
+          Environment=UPTOCURE_REQUESTS_DIR=/var/lib/uptocure/disease_requests
+          CONF
+
+            # Refresh job credentials
+            sudo mkdir -p /etc/uptocure
+            sudo mv /tmp/refresh.env /etc/uptocure/refresh.env
+            sudo chown root:root /etc/uptocure/refresh.env
+            sudo chmod 600 /etc/uptocure/refresh.env
+
+            # Generator dependencies + units
+            (cd /home/ubuntu/UpToCure/reports_generator && pdm install --prod)
+            sudo cp /home/ubuntu/UpToCure/deploy/uptocure-refresh.service \
+                    /home/ubuntu/UpToCure/deploy/uptocure-refresh.timer \
+                    /etc/systemd/system/
+            sudo systemctl daemon-reload
+            sudo systemctl enable --now uptocure-refresh.timer
+            sudo systemctl restart uptocure
+
+            for i in $(seq 1 60); do
+              if curl -sf http://127.0.0.1:8000/healthz >/dev/null; then break; fi
+              sleep 0.5
+            done
+            echo "--- status ---"
+            curl -s http://127.0.0.1:8000/api/status
+            echo
+            systemctl list-timers uptocure-refresh.timer --no-pager
+          EOF
