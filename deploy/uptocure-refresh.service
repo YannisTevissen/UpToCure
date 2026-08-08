@@ -1,0 +1,15 @@
+[Unit]
+Description=UpToCure report refresh (generate + translate within budget)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/UpToCure/reports_generator
+EnvironmentFile=/etc/uptocure/refresh.env
+ExecStart=/home/ubuntu/.local/bin/pdm run refresh
+# A single run generates at most REFRESH_MAX_REPORTS_PER_RUN reports; deep
+# research runs can take several minutes each.
+TimeoutStartSec=4h
+Nice=10

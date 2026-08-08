@@ -41,3 +41,8 @@ downloads_folder/
 
 # User-submitted disease requests are local only
 UpToCure/disease_requests/request_*.json
+UpToCure/disease_requests/processed/
+
+# Pipeline state (cost ledger, last run) and benchmark artifacts
+UpToCure/reports/.state/
+reports_generator/benchmark_output/

@@ -88,6 +88,9 @@ class LLMClient:
 
     def __init__(self, config: LLMConfig | None = None):
         self.config = config or LLMConfig.from_env()
+        # Cumulative usage across all calls, used for cost accounting.
+        self.total_input_tokens = 0
+        self.total_output_tokens = 0
         if not self.config.api_key:
             logger.warning(
                 "LLM client created without an API key (provider=%s). "
@@ -121,6 +124,10 @@ class LLMClient:
                     temperature=temperature,
                     max_tokens=max_tokens,
                 )
+                usage = getattr(completion, "usage", None)
+                if usage:
+                    self.total_input_tokens += int(getattr(usage, "prompt_tokens", 0) or 0)
+                    self.total_output_tokens += int(getattr(usage, "completion_tokens", 0) or 0)
                 return (completion.choices[0].message.content or "").strip()
             except Exception as exc:  # noqa: BLE001 - retry transient errors
                 last_error = exc

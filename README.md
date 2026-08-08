@@ -23,18 +23,23 @@ UpToCure/
 │   │   ├── styles.css
 │   │   ├── images/
 │   │   └── js/                ← ES modules (config, i18n, api, carousel, share, request, main)
-│   ├── reports/{en,fr}/       ← Published markdown reports
+│   ├── reports/{en,fr}/       ← Markdown reports (dev seed; production content lives outside git)
 │   ├── disease_requests/      ← User-submitted requests (JSON files)
 │   ├── tests/                 ← pytest suite
 │   ├── scripts/smoke_test.sh  ← Local end-to-end smoke test
 │   └── pyproject.toml
-└── reports_generator/         ← Offline content pipeline (Python 3.11+)
-    ├── llm.py                 ← OpenAI-compatible client (works with local LLMs)
-    ├── reporter.py            ← Generates one markdown report per disease
-    ├── translator.py          ← Translates reports between languages
-    ├── generate_and_translate.py
-    ├── diseases.yaml          ← Single source of truth for the diseases to publish
-    └── pyproject.toml
+├── reports_generator/         ← Content pipeline (Python 3.11+)
+│   ├── llm.py                 ← OpenAI-compatible client (works with local LLMs)
+│   ├── backends.py            ← Pluggable research backends (smolagents / Responses / deep research)
+│   ├── reporter.py            ← Generates one markdown report per disease
+│   ├── translator.py          ← Translates reports between languages
+│   ├── refresh.py             ← Scheduled self-update job (budget-capped)
+│   ├── costs.py               ← Pricing table + monthly cost ledger
+│   ├── benchmark_backends.py  ← Compare backends on the same diseases
+│   ├── generate_and_translate.py
+│   ├── diseases.yaml          ← Base catalog of diseases to publish
+│   └── pyproject.toml
+└── deploy/                    ← systemd units + server setup for the self-updating pipeline
 ```
 
 ## Running the website locally
@@ -62,8 +67,10 @@ The site is structured to be discoverable: every report has its own server-rende
 | `GET`  | `/methodology` and `/fr/methodology` | Methodology page |
 | `GET`  | `/search?q=…&lang=…` | Server-rendered search results |
 | `GET`  | `/sitemap.xml` | Generated dynamically from the published reports |
+| `GET`  | `/feed.xml` and `/fr/feed.xml` | RSS feed of the 20 most recently updated reports |
 | `GET`  | `/robots.txt` | Allows everything except the JSON API and query-string search |
 | `GET`  | `/healthz` | Liveness probe |
+| `GET`  | `/api/status` | Pipeline status: last refresh run, report counts, month-to-date spend |
 | `GET`  | `/api/reports?lang=en\|fr` | JSON list of report metadata (no HTML body) |
 | `GET`  | `/api/reports/<lang>/<slug>` | JSON for one report (used by the carousel) |
 | `POST` | `/api/request-report` | Rate-limited (20/hour/IP) submission |
@@ -109,7 +116,52 @@ pdm install
 pdm run generate-reports    # uses diseases.yaml, skips existing files
 pdm run -- report --disease "Pompe Disease"
 pdm run -- translate --target-lang fr
+pdm run refresh -- --dry-run   # what the scheduled job would do
 ```
+
+## Self-updating pipeline
+
+The site updates itself: a systemd timer on the server runs
+`reports_generator/refresh.py` daily. Each run:
+
+1. **Ingests user requests** (`POST /api/request-report` JSON files): each
+   candidate is validated with one cheap LLM call, deduplicated against the
+   catalog, and accepted names are queued permanently.
+2. **Selects work** — catalog diseases with no English report first, then the
+   stalest reports older than `REFRESH_MAX_AGE_DAYS` (default 30), capped at
+   `REFRESH_MAX_REPORTS_PER_RUN` (default 4) generations per run. Four per day
+   keeps a ~100-disease catalog fresh on a monthly cycle.
+3. **Generates and translates** within a hard budget: every LLM call is priced
+   into a monthly ledger, and the run stops as soon as `MONTHLY_BUDGET_USD`
+   (default $30) is reached. Token usage and cost are stamped into each
+   report's front-matter.
+4. **Publishes instantly** — reports are written to the content directory the
+   Flask app serves from (`UPTOCURE_REPORTS_DIR`), no deploy needed.
+
+Progress is visible at `/api/status`. Server setup lives in
+[`deploy/README.md`](deploy/README.md).
+
+### Research backends
+
+`RESEARCH_BACKEND` (or `--backend`) selects how a report is researched:
+
+| Backend | How it works | Cost/report (gpt-5.6-terra) |
+|---------|--------------|------------------------------|
+| `smolagents` | CodeAgent loop, free DuckDuckGo search + page fetches | ~$0.21 |
+| `openai-responses` | One Responses API call with OpenAI's hosted `web_search` tool | ~$0.30–0.40 |
+| `deep-research` | `o4-mini-deep-research` with autonomous search (`DEEP_RESEARCH_MAX_TOOL_CALLS`) | ~$0.40–0.90 |
+
+`smolagents` works with any OpenAI-compatible provider (including local
+models); the other two require OpenAI. `pdm run benchmark --disease "…"`
+generates the same reports with several backends side by side into
+`benchmark_output/` for comparison.
+
+A three-disease benchmark (August 2026, `gpt-5.6-terra`) found both backends
+produce fully template-compliant reports, but `openai-responses` cited
+13–20 unique sources per report versus 7–8 for `smolagents`, at similar speed
+and cost (~$0.25 vs ~$0.16) — so production uses `openai-responses`. Note:
+`deep-research` models may require OpenAI organisation verification; the
+backend is implemented but untested on unverified accounts.
 
 ### Choosing an LLM (cost-aware defaults)
 
@@ -122,6 +174,9 @@ All LLM calls go through `reports_generator/llm.py`, which speaks the OpenAI Cha
 | `LLM_API_KEY` | Cross-provider API key | provider env var |
 | `LLM_MODEL` | Model used for report generation | `gpt-5` |
 | `LLM_TRANSLATION_MODEL` | Model used for translation | `gpt-5-nano` |
+| `RESEARCH_BACKEND` | `smolagents`, `openai-responses`, `deep-research` | `smolagents` |
+| `UPTOCURE_REPORTS_DIR` | Content root read by the app and written by the pipeline | `UpToCure/reports` |
+| `MONTHLY_BUDGET_USD` | Hard monthly spend cap for the refresh job | `30` |
 
 #### Local LLM example (Ollama)
 
@@ -133,32 +188,35 @@ LLM_TRANSLATION_MODEL=qwen2.5:7b-instruct \
 pdm run generate-reports
 ```
 
-#### Per-report cost (May 2026 prices)
+#### Per-report cost (August 2026 prices)
 
-A finished report is ~6 000 markdown tokens. The agent loop typically consumes 30k–80k input tokens and produces 5k–8k output tokens across all internal steps.
+A finished report is ~6 000 markdown tokens. The research phase typically consumes 30k–80k input tokens and produces 5k–8k output tokens.
 
 | Pipeline component | Model | Tokens (typical) | Cost per report |
 |--------------------|-------|------------------|-----------------|
-| Deep-research generation | `gpt-5` ($1.25 in / $10 out per 1M) | 60k in / 7k out | **≈ $0.14** |
-| Translation EN → FR (per language) | `gpt-5-nano` ($0.05 in / $0.40 out per 1M) | 7k in / 8k out | **≈ $0.003** |
-| Alternative — frontier quality | `claude-sonnet-4.6` ($3 in / $15 out) | 60k in / 7k out | ≈ $0.29 |
-| Alternative — ultra cheap (lower quality) | `gemini-2.5-flash-lite` ($0.10 in / $0.40 out) | 60k in / 7k out | ≈ $0.009 |
+| Research + generation (recommended) | `gpt-5.6-terra` ($2 in / $12 out per 1M) | 60k in / 7k out | **≈ $0.21** |
+| Translation EN → FR (per language) | `gpt-5-nano` ($0.05 in / $0.40 out per 1M) | 7k in / 8k out | **≈ $0.004** |
+| Alternative — frontier quality | `gpt-5.5` ($5 in / $30 out) | 60k in / 7k out | ≈ $0.51 |
+| Alternative — ultra cheap (lower quality) | `gpt-5.6-luna` ($0.20 in / $1.20 out) | 60k in / 7k out | ≈ $0.02 |
 
-So with the defaults, a freshly generated report in English plus French costs roughly **$0.15**. Updating the whole catalog (~25 diseases × 2 languages) is therefore well under **$5**.
+With the recommended tier, a freshly generated report in English plus French costs roughly **$0.21**. Refreshing the full ~100-disease catalog once a month costs **≈ $21/month** (the `openai-responses` backend adds ~$0.10–0.20/report in hosted search fees), which is why `MONTHLY_BUDGET_USD` defaults to $30. The pricing table used by the ledger lives in `reports_generator/costs.py`.
 
 #### Wiring a local LLM end-to-end
 
-- **Generation**: `smolagents` + `OpenAIServerModel` is already plumbed in `reporter.py`. Just set `LLM_PROVIDER=ollama` and pick a 30B+ model — anything smaller will struggle with the agent loop. The web search and page fetch tools (`DuckDuckGoSearchTool`, `VisitWebpageTool`) work without an external API key.
+- **Generation**: use `RESEARCH_BACKEND=smolagents` with `LLM_PROVIDER=ollama` and pick a 30B+ model — anything smaller will struggle with the agent loop. The web search and page fetch tools (`DuckDuckGoSearchTool`, `VisitWebpageTool`) work without an external API key.
 - **Translation**: any 7B+ multilingual instruct model is fine. The `translate_lines` helper batches lines and protects the markdown structure.
-
-See the analysis in `docs/` or the original chat for caveats around model quality vs. medical-research accuracy.
 
 ## Deployment
 
 `.github/workflows/deploy.yml`:
 
 1. On every PR and push: lint with ruff, run pytest, run the live smoke test.
-2. On push to `main`: SSH into the EC2 host, `git fetch && git reset --hard origin/main`, `pdm install --prod`, reload the `uptocure` systemd unit, then poll `/healthz` for up to 30 seconds and fail the job if it doesn't come back healthy.
+2. On push to `main`: SSH into the EC2 host, `git fetch && git reset --hard origin/main`, `pdm install --prod` (app + generator), install/enable the `uptocure-refresh` systemd units, reload the `uptocure` systemd unit, then poll `/healthz` for up to 30 seconds and fail the job if it doesn't come back healthy.
+
+In production the markdown content lives **outside** the git checkout
+(`UPTOCURE_REPORTS_DIR=/var/lib/uptocure/reports`) so deploys never clobber
+server-generated reports. One-time server setup is documented in
+[`deploy/README.md`](deploy/README.md).
 
 ## License
 

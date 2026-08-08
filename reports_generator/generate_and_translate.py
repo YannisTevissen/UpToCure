@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -27,14 +28,16 @@ logger = logging.getLogger("pipeline")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-REPORTS_ROOT = REPO_ROOT / "UpToCure" / "reports"
+REPORTS_ROOT = Path(
+    os.environ.get("UPTOCURE_REPORTS_DIR", str(REPO_ROOT / "UpToCure" / "reports"))
+)
 DEFAULT_CONFIG = Path(__file__).resolve().parent / "diseases.yaml"
 
 
 def _load_config(path: Path) -> tuple[list[str], list[str]]:
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     diseases = [d for d in (data.get("diseases") or []) if d]
-    languages = [l for l in (data.get("target_languages") or []) if l and l != "en"]
+    languages = [lang for lang in (data.get("target_languages") or []) if lang and lang != "en"]
     return diseases, languages
 
 

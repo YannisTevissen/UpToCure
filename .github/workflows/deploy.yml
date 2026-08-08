@@ -55,6 +55,13 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             pdm install --prod
+            # Generator deps + refresh units (self-updating reports pipeline)
+            (cd /home/ubuntu/UpToCure/reports_generator && pdm install --prod)
+            sudo cp /home/ubuntu/UpToCure/deploy/uptocure-refresh.service \
+                    /home/ubuntu/UpToCure/deploy/uptocure-refresh.timer \
+                    /etc/systemd/system/
+            sudo systemctl daemon-reload
+            sudo systemctl enable --now uptocure-refresh.timer
             sudo systemctl reload-or-restart uptocure
             # Wait until /healthz is healthy (up to 30 s)
             for i in $(seq 1 60); do

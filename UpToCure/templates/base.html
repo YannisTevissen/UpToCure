@@ -14,6 +14,8 @@
     {% for alt in alternates %}
     <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url }}">
     {% endfor %}
+    <link rel="alternate" type="application/rss+xml" title="UpToCure"
+          href="{{ site_url }}{{ '/feed.xml' if lang == 'en' else '/' + lang + '/feed.xml' }}">
 
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
     <meta property="og:site_name" content="{{ site_name }}">

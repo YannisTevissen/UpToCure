@@ -54,7 +54,8 @@
         {% for report in reports %}
         <li>
             <a href="/reports/{{ lang }}/{{ report.slug }}">
-                <span class="report-index-title">{{ report.title }}</span>
+                <span class="report-index-title">{{ report.title }}
+                    {%- if report.slug in recent_slugs %} <span class="badge-updated">{{ t('badge_updated') }}</span>{% endif %}</span>
                 {% if report.summary %}<span class="report-index-summary">{{ report.summary }}</span>{% endif %}
             </a>
         </li>

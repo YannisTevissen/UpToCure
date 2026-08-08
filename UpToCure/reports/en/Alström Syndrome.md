@@ -1,132 +1,72 @@
+---
+title: "Alstr\xF6m Syndrome"
+date: '2026-05-23'
+model: gpt-5.5
+generator: uptocure-reports-generator
+summary: "Recent research efforts aimed at curing Alstr\xF6m Syndrome."
+---
 
 # Alström Syndrome
 
-## Introduction
+## Overview
 
-Alström Syndrome is a rare, autosomal recessive multisystem disorder caused by mutations in the ALMS1 gene. Since its genetic basis was elucidated, research interest has gradually increased—though, as of 2025, this condition remains among the most challenging rare diseases to treat or cure. The following review synthesizes the most authoritative and up-to-date information regarding the pathogenesis of Alström Syndrome and comprehensively analyzes all recent (2022–2025) research progress toward a cure.
+Alström syndrome is an ultra-rare inherited disorder caused by disease-causing variants in both copies of the ALMS1 gene, and it is considered a ciliopathy because ALMS1 is linked to the function of primary cilia, tiny cell structures that help tissues sense signals [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/) [MedlinePlus Genetics](https://medlineplus.gov/genetics/condition/alstrom-syndrome/). It usually begins in infancy or childhood and can involve progressive cone-rod retinal dystrophy with severe vision loss, hearing loss, obesity, insulin resistance or type 2 diabetes, dilated cardiomyopathy, kidney disease, liver disease, and lung or systemic fibrosis [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/) [NIH GARD](https://rarediseases.info.nih.gov/diseases/5764/alstrom-syndrome).
 
----
+There is currently no approved cure that corrects ALMS1, so care is supportive and preventive: genetic diagnosis, regular monitoring of the eyes, ears, heart, kidneys, liver, lungs, growth, endocrine health, and metabolism, plus standard treatment of each complication as it appears [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/). Prognosis varies, but serious long-term risks include cardiomyopathy, progressive kidney disease, liver disease, diabetes-related complications, and respiratory or fibrotic organ disease [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/).
 
-## What is Alström Syndrome?
+## Scope of Recent Research (2020–present)
 
-Alström Syndrome (OMIM #203800) is a hereditary disorder caused by inheriting two faulty (pathogenic) variants in the ALMS1 gene [^1][^2]. The mutated gene affects the function of primary cilia—microscopic, hair-like structures critical for healthy cell signaling, especially in the eye, ear, heart, and metabolic tissues.
+From 2020 to 2026, Alström syndrome research has remained scientifically active but very small because the condition is extremely rare; the main recent translational questions are how to reduce hyperphagia and obesity, slow diabetes and fibrotic organ damage, improve natural-history and biomarker data, and eventually develop a feasible ALMS1-correcting therapy [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome) [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/). The field is not yet close to a proven cure: recent human studies have focused on pathway-directed drugs and natural history rather than gene replacement, gene editing, RNA repair, or cell therapy for ALMS1 correction [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome).
 
-The most notable features of Alström Syndrome include:
-- Early-onset vision loss and legal blindness (cone-rod dystrophy, typically in the first decade of life)
-- Progressive hearing loss (sensorineural)
-- Metabolic disturbances such as obesity and severe insulin-resistant diabetes
-- Life-threatening cardiomyopathies (diverse and often severe heart muscle diseases)
-- Liver, kidney, and occasionally lung, urogenital, or endocrine dysfunction
+## Major Breakthroughs and Emerging Therapies
 
-Clinical studies published in 2022–2023 continue to describe increasing diversity in symptoms and age of onset, often linked to specific mutations. Nonetheless, medical reviews and genetic research remain consistent in affirming ALMS1 as the only disease-causing gene identified to date [^1][^2]. 
+The clearest recent therapeutic advance has been testing melanocortin-4 receptor pathway activation for severe genetic obesity. Setmelanotide is a melanocortin-4 receptor agonist designed to reduce hunger and weight in disorders where brain appetite signaling is disrupted, and it was studied in a phase 3 trial that included people with Bardet-Biedl syndrome and a small number of people with Alström syndrome [Setmelanotide phase 3 trial](https://clinicaltrials.gov/study/NCT03746522). The peer-reviewed trial reported clinically meaningful weight and hunger improvements mainly in Bardet-Biedl syndrome, while the Alström syndrome subgroup was too small to prove disease-specific efficacy [Lancet Diabetes & Endocrinology setmelanotide trial](https://doi.org/10.1016/S2213-8587(22)00277-7).
 
-> For more information:
-> - [Orphanet Journal of Rare Diseases, 2022](https://ojrd.biomedcentral.com/articles/10.1186/s13023-022-02483-7)
-> - [Frontiers in Genetics, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861322/)
-> - [OMIM #203800](https://omim.org/entry/203800)
-> - [Orphanet summary](https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&Expert=52)
+A second disease-modifying strategy has targeted fibrosis, because Alström syndrome can involve progressive scarring in organs such as the liver, kidneys, heart, and lungs [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/). PBI-4050, an oral anti-fibrotic small molecule developed by ProMetic Life Sciences, was tested in an open-label phase 2 Alström syndrome study focused on safety, tolerability, and exploratory efficacy, but it has not become an approved curative or disease-modifying therapy for Alström syndrome [PBI-4050 phase 2 trial](https://clinicaltrials.gov/study/NCT02739217).
 
-Alström Syndrome is officially classified as a "ciliopathy," a group of genetic diseases caused by primary cilia defects. Since 2022, there have not been new genes linked to Alström Syndrome nor any major changes in its classification.
+Gene therapy and gene editing remain aspirational rather than clinically available. ALMS1 encodes a very large protein, and large genes are difficult to package into standard adeno-associated virus vectors, a common delivery vehicle for in vivo gene therapy [UniProt ALMS1 entry](https://www.uniprot.org/uniprotkb/Q8TCU4/entry) [AAV vector review](https://doi.org/10.1038/s41573-019-0012-9). Any curative ALMS1 strategy may therefore need nonstandard approaches such as dual-vector delivery, non-viral delivery, selected functional mini-genes, or precise editing tailored to specific variants, but no registered Alström syndrome clinical trial is testing those approaches as of 2026-05-23 [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome).
 
----
+RNA therapeutics and cell therapy are also at an early conceptual stage for this disease. Because pathogenic ALMS1 variants are spread across a large gene, splice-correction or antisense approaches would likely apply only to genetically defined subgroups unless a broader shared mechanism is found [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/). Cell replacement would also be challenging because Alström syndrome affects many organs, not just one replaceable cell type [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/).
 
-## Current Landscape of Research Aimed at a Cure (2022–2025)
+## Clinical Trials and Experimental Approaches
 
-### Key Finding
+The most notable recent interventional trial is NCT03746522, a phase 3 study of setmelanotide sponsored by Rhythm Pharmaceuticals in Bardet-Biedl syndrome and Alström syndrome, with a randomized placebo-controlled period followed by open-label treatment [Setmelanotide phase 3 trial](https://clinicaltrials.gov/study/NCT03746522). The published results support benefit for Bardet-Biedl syndrome and leave Alström-specific efficacy uncertain because very few Alström participants were enrolled [Lancet Diabetes & Endocrinology setmelanotide trial](https://doi.org/10.1016/S2213-8587(22)00277-7).
 
-**There are no recent (2022–2025) peer-reviewed publications, clinical trials, preclinical or experimental therapy reports—nor publicly registered research projects—specifically targeting a cure or direct disease modification in Alström Syndrome.**
+Another important experimental study is NCT02739217, an open-label phase 2 study of PBI-4050 sponsored by ProMetic Life Sciences in people with Alström syndrome [PBI-4050 phase 2 trial](https://clinicaltrials.gov/study/NCT02739217). Its rationale was to test an anti-fibrotic approach in a syndrome where fibrotic organ disease contributes substantially to morbidity, but the study did not establish an approved cure [PBI-4050 phase 2 trial](https://clinicaltrials.gov/study/NCT02739217) [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/).
 
-This stark absence is itself a major conclusion and is discussed in detail below.
+Registered Alström syndrome studies also include observational and natural-history work, which is important because small patient numbers make it difficult to design trials with reliable endpoints [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome). As of 2026-05-23, there is no registered clinical trial of ALMS1 gene replacement, CRISPR editing, RNA repair, or curative cell therapy for Alström syndrome [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome).
 
-### Methodology of the Literature Search
+## Methodologies and Scientific Approaches
 
-Multiple up-to-date search strategies were employed, covering:
-- Peer-reviewed literature (including PubMed, Google Scholar equivalents, and leading medical journals)
-- Clinical trial registries (ClinicalTrials.gov, EU Clinical Trials Register, WHO ICTRP)
-- Preclinical and experimental research repositories
-- Major rare disease consortia and pipeline trackers
+Researchers study Alström syndrome through genetic testing, detailed clinical phenotyping, and long-term monitoring of organ function, because complications appear across multiple tissues and at different ages [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/). Recent trials therefore use practical endpoints such as weight, hunger scores, safety laboratory measures, metabolic status, fibrosis-related measures, and organ-function markers rather than a single universal cure endpoint [Setmelanotide phase 3 trial](https://clinicaltrials.gov/study/NCT03746522) [PBI-4050 phase 2 trial](https://clinicaltrials.gov/study/NCT02739217).
 
-All searches requested studies, trials, or experimental projects from 2022 onwards for:
-- Disease-modifying drug interventions
-- Gene therapy, genome editing, RNA-targeted therapy
-- Stem cell strategies or regenerative medicine
-- Novel biotechnological approaches
-- Early-stage research, including preprints, grant-funded projects, and conference abstracts
+For future curative research, the central technical problem is delivery. ALMS1 is large and relevant to several organs, while common viral gene-therapy vectors have payload and tissue-targeting limits [UniProt ALMS1 entry](https://www.uniprot.org/uniprotkb/Q8TCU4/entry) [AAV vector review](https://doi.org/10.1038/s41573-019-0012-9). This makes improved model systems, genotype-phenotype registries, retinal and systemic biomarkers, and safer multi-organ delivery platforms essential before an ALMS1-correcting therapy can be tested responsibly [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/).
 
-**No studies, projects, or trials fitting these criteria were retrieved.** This is after repeated broad and narrow, syndrome-specific queries.
+## Leading Institutions and Funding
 
----
+The field is supported by a small international network of rare-disease clinicians, academic researchers, patient advocates, and industry sponsors. Alström Syndrome International is a central patient-advocacy and research-support organization, while NIH GARD provides curated rare-disease information for patients and clinicians [Alström Syndrome International](https://www.alstrom.org/) [NIH GARD](https://rarediseases.info.nih.gov/diseases/5764/alstrom-syndrome). GeneReviews reflects the role of expert clinical genetics groups in defining surveillance and management standards for the disorder [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/).
 
-## Analysis and Implications
+Industry funding has driven the most visible recent therapeutic trials: Rhythm Pharmaceuticals sponsored the setmelanotide phase 3 trial, and ProMetic Life Sciences sponsored the PBI-4050 phase 2 trial [Setmelanotide phase 3 trial](https://clinicaltrials.gov/study/NCT03746522) [PBI-4050 phase 2 trial](https://clinicaltrials.gov/study/NCT02739217). Public trial records do not show a large dedicated ALMS1-curative clinical program comparable to those seen in some more common inherited retinal or neuromuscular diseases [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome).
 
-### Why Are There No Curative Research Efforts?
+## Strengths, Limitations, and Challenges
 
-Alström Syndrome is exceedingly rare—fewer than 1,000 cases reported worldwide. Its heterogeneity, complexity, and the limited number of affected individuals and families create significant obstacles for:
-- Clinical trial recruitment
-- Attracting major research funding (both public and private)
-- Biotech/pharma industry involvement
-- Justifying large-scale preclinical or platform technology investment
+The main strength of the field is that Alström syndrome has a known monogenic cause, recognizable natural history, organized patient advocacy, and measurable complications, all of which make rational therapy development possible [MedlinePlus Genetics](https://medlineplus.gov/genetics/condition/alstrom-syndrome/) [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/) [Alström Syndrome International](https://www.alstrom.org/). Recent interventional studies also show that industry-sponsored trials can be conducted in this ultra-rare population, even though enrollment is necessarily small [Setmelanotide phase 3 trial](https://clinicaltrials.gov/study/NCT03746522) [PBI-4050 phase 2 trial](https://clinicaltrials.gov/study/NCT02739217).
 
-Even among rare ciliopathies, Alström Syndrome faces particular challenges because:
-- There is substantial clinical overlap with other syndromes, making unique therapy development niche and unprofitable for private sector actors.
-- The genetic target (ALMS1) is enormous (the gene spans more than 200,000 base pairs), complicating gene therapy approaches that rely on standard viral vectors.
-- The disorder affects multiple organ systems, requiring a broad therapeutic strategy rather than one organ-specific intervention.
+The main limitations are biological and practical: ALMS1 is large, the syndrome is multisystem, retinal and hearing damage can begin early, and small patient numbers make randomized trials difficult [UniProt ALMS1 entry](https://www.uniprot.org/uniprotkb/Q8TCU4/entry) [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/). Safety will be a major issue for any future systemic gene-delivery or gene-editing approach, because a meaningful cure would need durable benefit across several vulnerable organs rather than short-term improvement in one symptom [AAV vector review](https://doi.org/10.1038/s41573-019-0012-9) [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1267/).
 
-### Strengths of Current Research
+## Outlook and Future Directions
 
-While there is no active curative research pipeline, the field has made advances in:
-- Expanding known ALMS1 variations, leading to better genetic diagnosis and familial counseling [^1][^2].
-- Improved understanding of genotype-phenotype correlations, especially for different cardiac manifestations [^1].
-- Management guidelines for early intervention with symptom-based, multidisciplinary care.
+A true cure for Alström syndrome is unlikely in the immediate near term, but the path forward is becoming clearer: the milestones to watch are stronger natural-history datasets, validated biomarkers of fibrosis and metabolic progression, clearer evidence on whether obesity-pathway or anti-fibrotic drugs alter long-term outcomes, development of delivery systems that can overcome ALMS1 gene-size and multi-organ barriers, and the first registered ALMS1-correcting preclinical or clinical program [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome) [UniProt ALMS1 entry](https://www.uniprot.org/uniprotkb/Q8TCU4/entry) [AAV vector review](https://doi.org/10.1038/s41573-019-0012-9).
 
-These fundamental science advances lay groundwork for future translational research, as they enable earlier and more precise diagnosis.
+## References
 
-### Limitations and Remaining Challenges
-
-- **Lack of Therapeutic Innovation:** As of 2025, all medical interventions remain symptomatic, focusing on vision support, diabetes management, cardiac monitoring, and supportive care—there are no disease-modifying drugs, no gene or molecular therapies, and no ongoing or completed trials aimed at a cure.
-- **Research Funding and Infrastructure:** Ultra-rare diseases like Alström Syndrome receive minimal research funding, making it challenging to launch large-scale or international projects.
-- **Biological Complexity:** The ALMS1 gene’s size and the multi-systemic nature of the syndrome complicate the prospects for traditional single-gene replacement therapy.
-- **Patient Cohort Limitations:** The rarity of the disease makes multi-site or multi-national trials logistically difficult without new models of global collaboration.
-
-### Opportunities and Emerging Trends
-
-**Although no active curative research is visible, there are clear opportunities for future progress:**
-- Gene therapy technologies are rapidly improving, including the development of extra-large viral vectors and non-viral delivery platforms.
-- The rise of RNA-based therapies (e.g., antisense oligonucleotides, siRNA, RNA editing) could make targeting ALMS1 feasible in the next decade.
-- Patient advocacy groups and international rare disease consortia are increasingly prioritizing neglected syndromes and might catalyze focused funding or platform trial infrastructure.
-
-### Leading Institutions and Funding
-
-As of this review, no single institution, biotech company, or funding agency is publicly recognized as leading disease-modifying research for Alström Syndrome in 2022–2025. Progress is mostly incremental and confined to case series, management consensus statements, and global patient registries.
-
-### Critical Summary
-
-Despite meaningful progress in understanding the disease at the genetic and clinical level, **no recent cure-focused research exists for Alström Syndrome**. Major breakthroughs in gene therapy and RNA drug delivery in neighboring rare diseases suggest a possibility of technological "spillover"—but, as of this writing, Alström Syndrome remains on the periphery of therapeutic innovation.
-
----
-
-## Recommendations for Patients, Families, and Researchers
-
-- **Management**: Focus remains on early, precision diagnosis and symptom-specific multidisciplinary care. For guidance: [Orphanet disease summary](https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&Expert=52).
-- **Information & Advocacy**: Families should connect with advocacy organizations such as Alström Syndrome International ([alstrom.org](https://www.alstrom.org/)) and EURORDIS ([eurordis.org](https://www.eurordis.org/)) for the latest updates and opportunities to participate in patient registries or research networks.
-- **For Researchers**: The field is ripe for innovation; lessons from gene editing, RNA therapy, and platform approaches in other rare diseases might be adapted to Alström Syndrome. Inter-institutional and international collaboration will be critical.
-
----
-
-## Citations
-
-- [Expansion of the clinical and mutational spectrum of Alström syndrome: novel ALMS1 variants and genotype-phenotype correlations, Orphanet Journal of Rare Diseases, 2022](https://ojrd.biomedcentral.com/articles/10.1186/s13023-022-02483-7)
-- [Case Series and Review: Clinical and Genetic Analysis of Alström Syndrome, Frontiers in Genetics, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861322/)
-- [Online Mendelian Inheritance in Man (OMIM), Alström Syndrome #203800](https://omim.org/entry/203800)
-- [Orphanet summary on Alström Syndrome](https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&Expert=52)
-- Alström Syndrome International, [alstrom.org](https://www.alstrom.org/)
-- EURORDIS Rare Disease Europe, [eurordis.org](https://www.eurordis.org/)
-
----
-
-## Conclusion
-
-**There are currently no published or publicly registered research projects, trials, or therapies (2022–2025) aimed at curing or substantially altering the course of Alström Syndrome.** While foundational knowledge has grown, and diagnostic methods have improved, the search for a cure has yet to reach the preclinical or clinical pipeline. This significant gap highlights the urgent need for multi-stakeholder collaboration, increased research funding, and the adaptation of innovative therapies from neighboring genetic diseases.
-
-[^1]: [Orphanet Journal of Rare Diseases, 2022](https://ojrd.biomedcentral.com/articles/10.1186/s13023-022-02483-7)
-[^2]: [Frontiers in Genetics, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861322/)
+- [GeneReviews: Alström Syndrome](https://www.ncbi.nlm.nih.gov/books/NBK1267/) — NCBI Bookshelf, 2018.
+- [MedlinePlus Genetics: Alström syndrome](https://medlineplus.gov/genetics/condition/alstrom-syndrome/) — MedlinePlus/NIH, 2023.
+- [NIH GARD: Alstrom syndrome](https://rarediseases.info.nih.gov/diseases/5764/alstrom-syndrome) — Genetic and Rare Diseases Information Center, 2024.
+- [ClinicalTrials.gov Alström search](https://clinicaltrials.gov/search?cond=Alstrom%20Syndrome) — ClinicalTrials.gov, 2026.
+- [Setmelanotide phase 3 trial](https://clinicaltrials.gov/study/NCT03746522) — ClinicalTrials.gov/Rhythm Pharmaceuticals, 2024.
+- [Lancet Diabetes & Endocrinology setmelanotide trial](https://doi.org/10.1016/S2213-8587(22)00277-7) — Haqq et al., 2022.
+- [PBI-4050 phase 2 trial](https://clinicaltrials.gov/study/NCT02739217) — ClinicalTrials.gov/ProMetic Life Sciences, 2020.
+- [UniProt ALMS1 entry](https://www.uniprot.org/uniprotkb/Q8TCU4/entry) — UniProt Consortium, 2026.
+- [AAV vector review](https://doi.org/10.1038/s41573-019-0012-9) — Wang, Tai, and Gao, 2019.
+- [Alström Syndrome International](https://www.alstrom.org/) — Alström Syndrome International, 2026.

@@ -27,3 +27,5 @@ distribution = false
 report           = {call = "reporter:main",                env_file = ".env"}
 translate        = {call = "translator:main",              env_file = ".env"}
 generate-reports = {call = "generate_and_translate:main",  env_file = ".env"}
+refresh          = {call = "refresh:main",                 env_file = ".env"}
+benchmark        = {call = "benchmark_backends:main",      env_file = ".env"}

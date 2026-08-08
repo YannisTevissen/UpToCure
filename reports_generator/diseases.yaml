@@ -10,31 +10,107 @@
 # Comment out a line with `#` to skip it temporarily.
 
 diseases:
+  - Achondroplasia
+  - Acromegaly
+  - Acute Intermittent Porphyria
+  - Adrenoleukodystrophy
+  - Alagille Syndrome
   - Alkaptonuria
+  - Alpha-1 Antitrypsin Deficiency
   - Alström Syndrome
+  - Amyloidosis
   - Amyotrophic Lateral Sclerosis
+  - Angelman Syndrome
   - Ataxia-Telangiectasia
+  - Bardet-Biedl Syndrome
   - Batten Disease
+  - Behçet's Disease
+  - CADASIL
   - Canavan Disease
+  - Castleman Disease
+  - Charcot-Marie-Tooth Disease
+  - CHARGE Syndrome
+  - Chronic Granulomatous Disease
   - Cockayne Syndrome
+  - Cornelia de Lange Syndrome
+  - Creutzfeldt-Jakob Disease
   - Cystic Fibrosis
+  - DiGeorge Syndrome
+  - Dravet Syndrome
   - Duchenne Muscular Dystrophy
+  - Ehlers-Danlos Syndrome
+  - Eosinophilic Granulomatosis with Polyangiitis
+  - Epidermolysis Bullosa
   - Fabry Disease
+  - Familial Mediterranean Fever
+  - Fanconi Anemia
   - Fibrodysplasia Ossificans Progressiva
+  - Fragile X Syndrome
   - Friedreich's Ataxia
+  - Galactosemia
   - Gaucher Disease
   - Hemophilia
   - Hereditary Hemorrhagic Telangiectasia
+  - Hereditary Spastic Paraplegia
+  - Huntington's Disease
+  - Hutchinson-Gilford Progeria Syndrome
   - Hyper IgM Syndrome
   - Hypophosphatasia
   - Inflammatory Myopathy with Abundant Macrophages
   - Joubert Syndrome
   - Kartagener Syndrome
+  - Kawasaki Disease
   - Kleine-Levin Syndrome
+  - Krabbe Disease
+  - Langerhans Cell Histiocytosis
+  - Leber Congenital Amaurosis
+  - Leigh Syndrome
+  - Lesch-Nyhan Syndrome
+  - Li-Fraumeni Syndrome
+  - Loeys-Dietz Syndrome
   - Lupus
+  - Maple Syrup Urine Disease
+  - Marfan Syndrome
+  - McCune-Albright Syndrome
+  - MELAS Syndrome
+  - Menkes Disease
+  - Metachromatic Leukodystrophy
+  - Moyamoya Disease
+  - Mucopolysaccharidosis Type I (Hurler Syndrome)
+  - Mucopolysaccharidosis Type II (Hunter Syndrome)
   - Multiple Sclerosis
+  - Myasthenia Gravis
+  - Narcolepsy
+  - Neurofibromatosis Type 1
+  - Neuromyelitis Optica
+  - Niemann-Pick Disease
+  - Noonan Syndrome
+  - Osteogenesis Imperfecta
+  - Paroxysmal Nocturnal Hemoglobinuria
+  - Phenylketonuria
+  - Pompe Disease
+  - Prader-Willi Syndrome
+  - Pulmonary Arterial Hypertension
+  - Rett Syndrome
+  - Sarcoidosis
+  - Sickle Cell Disease
+  - Sjögren's Syndrome
   - Small Intestinal Bacterial Overgrowth
   - Spinal Muscular Atrophy
+  - Systemic Sclerosis
+  - Tay-Sachs Disease
+  - Thrombotic Thrombocytopenic Purpura
+  - Tourette Syndrome
+  - Treacher Collins Syndrome
+  - Tuberous Sclerosis Complex
+  - Turner Syndrome
+  - Usher Syndrome
+  - Von Hippel-Lindau Disease
+  - Von Willebrand Disease
+  - Williams Syndrome
+  - Wilson Disease
+  - Wiskott-Aldrich Syndrome
+  - Zellweger Syndrome
 
 # Languages to translate into (English is always the source).
 target_languages:

@@ -96,8 +96,14 @@ def translate_file(
     provider: str = "llm",
     client: LLMClient | None = None,
     force: bool = False,
-    translate_filename: bool = True,
+    translate_filename: bool = False,
 ) -> Path | None:
+    """Translate one markdown report.
+
+    The filename stem is kept identical to the source by default so that both
+    language versions share the same URL slug — the site's hreflang pairing
+    and language switcher rely on same-slug matching.
+    """
     target_dir.mkdir(parents=True, exist_ok=True)
 
     if translate_filename:

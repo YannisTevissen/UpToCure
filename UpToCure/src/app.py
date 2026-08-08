@@ -43,8 +43,13 @@ from src.i18n import (
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_DIR = BASE_DIR / "frontend"
-REPORTS_DIR = BASE_DIR / "reports"
-REQUESTS_DIR = BASE_DIR / "disease_requests"
+# Content lives outside the git checkout in production so that server-side
+# report generation survives `git reset --hard` deploys. The in-repo folders
+# remain the defaults for local development.
+REPORTS_DIR = Path(os.environ.get("UPTOCURE_REPORTS_DIR", str(BASE_DIR / "reports")))
+REQUESTS_DIR = Path(os.environ.get("UPTOCURE_REQUESTS_DIR", str(BASE_DIR / "disease_requests")))
+# Pipeline state (cost ledger, last-run info) written by reports_generator/refresh.py.
+STATE_DIR = Path(os.environ.get("UPTOCURE_STATE_DIR", str(REPORTS_DIR / ".state")))
 IMAGES_DIR = FRONTEND_DIR / "images"
 TEMPLATES_DIR = BASE_DIR / "templates"
 
@@ -127,11 +132,21 @@ def _apply_default_headers(response: Response) -> Response:
 
 # ----- HTML pages -------------------------------------------------------------
 
+RECENT_BADGE_DAYS = 14
+
+
+def _recent_slugs(reports) -> set[str]:
+    """Slugs of reports updated within the last RECENT_BADGE_DAYS days."""
+    cutoff = (dt.date.today() - dt.timedelta(days=RECENT_BADGE_DAYS)).isoformat()
+    return {r.slug for r in reports if (seo._iso_date(r.date) or "") >= cutoff}
+
+
 def _render_home(lang: str):
     reports = report_parser.list_reports(str(REPORTS_DIR), lang)
     ctx = _base_context(lang)
     ctx.update(
         reports=reports,
+        recent_slugs=_recent_slugs(reports),
         jsonld_list=seo.jsonld_item_list(reports, lang),
     )
     response = Response(render_template("home.html", **ctx))
@@ -285,6 +300,61 @@ def sitemap_xml():
     return Response("\n".join(lines), mimetype="application/xml")
 
 
+# ----- RSS feed ----------------------------------------------------------------
+
+def _rfc822(iso_date: str) -> str:
+    try:
+        parsed = dt.datetime.strptime(iso_date, "%Y-%m-%d")
+    except (ValueError, TypeError):
+        parsed = dt.datetime.utcnow()
+    return parsed.strftime("%a, %d %b %Y 00:00:00 +0000")
+
+
+def _render_feed(lang: str):
+    from xml.sax.saxutils import escape
+
+    reports = report_parser.list_reports(str(REPORTS_DIR), lang)
+    latest = sorted(reports, key=lambda r: seo._iso_date(r.date) or "", reverse=True)[:20]
+
+    items = []
+    for report in latest:
+        url = seo.report_url(lang, report.slug)
+        items.append(
+            "    <item>\n"
+            f"      <title>{escape(report.title)}</title>\n"
+            f"      <link>{escape(url)}</link>\n"
+            f"      <guid isPermaLink=\"true\">{escape(url)}</guid>\n"
+            f"      <pubDate>{_rfc822(seo._iso_date(report.date))}</pubDate>\n"
+            f"      <description>{escape(report.summary or '')}</description>\n"
+            "    </item>"
+        )
+
+    body = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        "  <channel>\n"
+        f"    <title>UpToCure — {escape(t('all_reports_heading', lang))}</title>\n"
+        f"    <link>{escape(seo.home_url(lang))}</link>\n"
+        f"    <description>{escape(t('site_description', lang))}</description>\n"
+        f"    <language>{lang}</language>\n"
+        f'    <atom:link href="{escape(seo.site_url("/feed.xml" if lang == "en" else f"/{lang}/feed.xml"))}" rel="self" type="application/rss+xml"/>\n'
+        + "\n".join(items) + "\n"
+        "  </channel>\n"
+        "</rss>\n"
+    )
+    return _cache(Response(body, mimetype="application/rss+xml"), seconds=900)
+
+
+@app.route("/feed.xml")
+def feed_en():
+    return _render_feed("en")
+
+
+@app.route("/fr/feed.xml")
+def feed_fr():
+    return _render_feed("fr")
+
+
 # ----- legacy hash redirect --------------------------------------------------
 
 @app.route("/_redirect/<slug>")
@@ -310,6 +380,43 @@ def healthz():
 @app.route("/api")
 def api_root():
     return jsonify(name="UpToCure", version="2.1.0")
+
+
+@app.route("/api/status")
+def api_status():
+    """Pipeline transparency: last refresh run and month-to-date spend."""
+    payload: dict = {
+        "reports": {
+            lang: len(report_parser.list_reports(str(REPORTS_DIR), lang))
+            for lang in SUPPORTED_LANGS
+        },
+    }
+
+    last_run_path = STATE_DIR / "last_run.json"
+    if last_run_path.exists():
+        try:
+            run = json.loads(last_run_path.read_text(encoding="utf-8"))
+            payload["last_run"] = {
+                "started": run.get("started"),
+                "finished": run.get("finished"),
+                "generated": len(run.get("generated") or []),
+                "translated": len(run.get("translated") or []),
+                "errors": len(run.get("errors") or []),
+                "stopped_by_budget": run.get("stopped_by_budget", False),
+            }
+        except (json.JSONDecodeError, OSError):
+            logger.exception("Unreadable last_run.json")
+
+    ledger_path = STATE_DIR / "cost-ledger.json"
+    if ledger_path.exists():
+        try:
+            ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+            month = dt.date.today().strftime("%Y-%m")
+            payload["month_spend_usd"] = (ledger.get(month) or {}).get("total_usd", 0.0)
+        except (json.JSONDecodeError, OSError):
+            logger.exception("Unreadable cost ledger")
+
+    return _cache(jsonify(payload), seconds=300)
 
 
 @app.route("/api/reports")

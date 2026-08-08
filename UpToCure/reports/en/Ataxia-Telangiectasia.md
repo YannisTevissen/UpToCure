@@ -1,105 +1,74 @@
+---
+title: Ataxia-Telangiectasia
+date: '2026-05-23'
+model: gpt-5.5
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Ataxia-Telangiectasia.
+---
 
 # Ataxia-Telangiectasia
 
-## Introduction
-Ataxia-Telangiectasia (A-T) is a rare, inherited disorder characterized by progressive neurodegeneration, immunodeficiency, and increased cancer risk. Efforts to cure A-T have accelerated over the past several years with advances in genetic engineering, molecular therapies, and supportive care. This review summarizes research from 2022 through May 2025, examining recent breakthroughs, experimental therapies, clinical trials, institutional leadership, trends, and challenges—translating technical progress into accessible language and providing direct citations for further reading.
+## Overview
 
-## Major Breakthroughs and Emerging Therapeutic Strategies
+Ataxia-Telangiectasia (A-T) is a rare inherited disorder caused by pathogenic variants in both copies of the ATM gene, which encodes a protein kinase that helps cells respond to DNA damage; the condition usually begins in early childhood with progressive problems in balance and coordination, abnormal eye movements, immune deficiency, lung disease, radiation sensitivity, and increased cancer risk ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/)). Current care is supportive rather than curative: teams manage movement and swallowing problems, infections and immune deficiency, lung complications, nutrition, rehabilitation, and cancer surveillance, while avoiding unnecessary ionizing radiation when possible ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/)).
 
-### Gene Therapy and ATM Restoration
+A-T affects children and adults across populations, but the neurologic disease typically progresses from childhood into substantial disability, and morbidity is also driven by infections, chronic lung disease, and malignancy ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/)). Because standard care does not replace ATM function, recent therapeutic research has focused on either improving neurologic symptoms and quality of life or moving toward disease-correcting approaches such as gene, RNA, and cell-based strategies ([Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)).
 
-One of the fundamental challenges for A-T therapy has been the development of reliable methods to deliver the large ATM gene, whose malfunction causes the disease. A major 2023 study demonstrated that both lentiviral and gammaretroviral vectors can successfully carry the full-length ATM cDNA, restoring ATM protein activity in knockout cells. This proof-of-concept is crucial, as it overcomes a technical barrier that held back the field for years and brings the goal of autologous, potentially curative gene therapy closer to reality.  
-- [Expression of a large coding sequence: Gene therapy vectors for Ataxia Telangiectasia (Hirch et al., 2023)](https://doi.org/10.1038/s41598-023-46332-4)
+## Scope of Recent Research (2020–present)
 
-### Personalized Molecular and Antisense Oligonucleotide (ASO) Therapies
+From 2020 to 2026, A-T has remained a small but active rare-disease research field, with clinical trials mainly testing symptom-modifying drugs and preclinical work exploring how to restore ATM activity despite the large size of the ATM gene and the need to reach the nervous and immune systems ([Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)). The community is not yet close to a routine cure, but it has made practical progress in trial design, neurologic outcome measures, red-blood-cell drug delivery, metabolic rescue, and mutation-specific RNA correction ([ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/36149172/), [Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/), [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/)).
 
-Innovative "precision medicine" strategies are being developed for specific A-T mutations, notably using antisense oligonucleotides (ASOs) to correct genetic mis-splicing. A 2023 review highlights a groundbreaking case in which a personalized ASO was administered to a child with a unique splicing mutation. While promising, this approach currently applies to only a minority of patients and is in the earliest stages of clinical testing—with just a single-patient experience to date.  
-- [Ataxia-telangiectasia clinical trial landscape and the obstacles to overcome (Kuhn et al., 2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10530584/)
+## Major Breakthroughs and Emerging Therapies
 
-Other early-phase trials have tested compounds like nicotinamide riboside (a vitamin B3 derivative) and acetyl-DL-leucine, sometimes showing neurological or immunological improvements, though robust data is still lacking.
+Gene restoration is the most direct curative concept because A-T is caused by loss of ATM function, but it remains technically difficult because ATM is a very large gene and because treatment would need to benefit vulnerable cerebellar neurons as well as immune and blood-forming cells ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/), [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)). Recent reviews describe gene replacement, lentiviral or other large-capacity delivery systems, and ex vivo correction of hematopoietic stem cells as important research directions, but these approaches have not yet become routine clinical therapies for A-T ([Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)).
 
-### Biologic and Innovative Supportive Therapies
+RNA therapeutics have produced one of the clearest precision-medicine signals since 2020. A 2021 study reported an antisense oligonucleotide approach for A-T, a strategy in which a short synthetic nucleic acid is designed to alter RNA splicing so that a specific ATM mutation can be bypassed or corrected at the transcript level ([Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/)). This is not a general cure for all people with A-T because it is mutation-specific and would require repeated delivery to relevant tissues, but it demonstrates that some ATM defects may be pharmacologically addressable without replacing the entire gene ([Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/)).
 
-Patients with A-T are prone to developing lymphomas and other malignancies. Efforts to reduce the toxicity of conventional chemotherapy have resulted in the use of monoclonal antibody therapies, like rituximab and brentuximab vedotin, with small-case series and anecdotal reports suggesting benefit. These do not cure the neurological features of A-T but can improve cancer management in affected patients.
+The most advanced clinical drug-delivery approach is intra-erythrocyte dexamethasone sodium phosphate, also known as EryDex, which loads dexamethasone into a patient’s red blood cells to provide sustained low-dose steroid exposure with the goal of improving neurologic symptoms while reducing systemic steroid toxicity ([ATTeST ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT02770807), [ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/36149172/)). The ATTeST phase 3 trial tested this strategy in A-T, and the NEAT phase 3 study continued evaluation of EryDex in a randomized, double-blind, placebo-controlled design sponsored by Quince Therapeutics S.p.A. ([ATTeST ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT02770807), [NEAT ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT06193200/)).
 
-For symptom management, alternative corticosteroid formulations (such as the Erydex system, which delivers dexamethasone within red blood cells) have reached multicenter RCTs. Although neurological improvements were observed, these studies did not meet their primary efficacy endpoints, thus no therapy has yet gained widespread approval.
+Metabolic and neuroprotective therapy is another important line of work because ATM deficiency is linked to oxidative stress, mitochondrial dysfunction, and impaired cellular stress responses ([Ataxia Telangiectasia signaling review](https://pubmed.ncbi.nlm.nih.gov/32184843/)). A 2022 study reported that nicotinamide riboside, a vitamin B3 derivative that boosts NAD+ metabolism, improved ataxia scores and immunoglobulin levels in A-T, supporting further study of metabolic rescue even though it does not repair the ATM gene ([Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/)).
 
-- [Current clinical trials for A-T](https://clinicaltrials.gov/search?cond=Ataxia%20telangiectasia[Louis-bar])
+N-acetyl-L-leucine, a modified amino acid being developed for several neurologic disorders with ataxia, has also been tested in A-T in a multicenter multiple-N-of-1 trial and in a phase 2 clinical-trial program ([N-acetyl-L-leucine trial publication](https://pubmed.ncbi.nlm.nih.gov/34958649/), [N-acetyl-L-leucine ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT03759678)). This approach is best understood as symptomatic or disease-modifying rather than curative, because it aims to improve neurologic function without restoring ATM DNA-damage signaling ([N-acetyl-L-leucine trial publication](https://pubmed.ncbi.nlm.nih.gov/34958649/)).
 
-### Stem Cell and Transplant Approaches
+## Clinical Trials and Experimental Approaches
 
-Stem cell transplantation has been used in select cases (mostly to address immune system deficiency or associated cancers), but has not been shown to cure the core neurological degeneration and is not considered a broadly curative option.
+The completed ATTeST trial was a multicenter randomized phase 3 study of intra-erythrocyte dexamethasone sodium phosphate for neurologic symptoms in A-T, with ClinicalTrials.gov listing Quince Therapeutics S.p.A. as sponsor and posted results in 2024 ([ATTeST ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT02770807)). The peer-reviewed phase 3 publication made EryDex the most visible recent A-T clinical program, but the therapy remains a neurologic treatment strategy rather than a genetic cure ([ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/36149172/)).
 
-## Research Trends, Methodologies, and Emerging Directions
+NEAT is a later randomized, double-blind, placebo-controlled study evaluating neurologic effects of EryDex in A-T, and the ClinicalTrials.gov record lists it as completed with results first posted in 2026 ([NEAT ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT06193200/)). N-acetyl-L-leucine has been evaluated in a phase 2 A-T program sponsored by IntraBio, and the ClinicalTrials.gov record states that the study was terminated after prioritization of recruitment to a pivotal randomized study ([N-acetyl-L-leucine ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT03759678)).
 
-Recent peer-reviewed reviews note a surge of activity in:
-- Engineering gene therapy vectors—particularly targeting efficient brain delivery and durable, safe gene expression.
-- Preclinical studies using viral and non-viral vectors, as scientists grapple with the large ATM gene and the unique requirements for delivery to the nervous system.
-- Personalized medicine with tailor-made molecular therapies for specific mutations.
-- Therapies targeting downstream effects (oxidative stress, DNA repair) using small molecules or repurposed drugs.
-- Improved, but still inadequate, systems for measuring neurological progression—crucial for evaluating therapeutic efficacy.
+Other recent experimental approaches include nicotinamide riboside, which was reported in 2022 to improve ataxia scores and immunoglobulin levels, and antisense oligonucleotide therapy, which has shown a mutation-specific therapeutic concept for correcting ATM RNA processing ([Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/), [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/)). As of 2026-05-23, these approaches should be viewed as experimental or developmental rather than established cures, because none has yet demonstrated durable, body-wide restoration of ATM function in routine care ([Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)).
 
-Despite growing enthusiasm, the field remains marked by major gaps: no animal model recapitulates the full neurological disease, and small, genetically diverse patient populations make robust, generalizable clinical trials difficult.
+## Methodologies and Scientific Approaches
 
-## Funding Sources and Leading Institutions
+Researchers study A-T using patient-derived cells, DNA-damage assays, immune phenotyping, animal and cellular disease models, neurologic rating scales, and biomarker strategies that can connect molecular rescue to clinical function ([Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)). The field needs biomarkers that can show whether ATM protein or ATM kinase signaling has been restored, while also tracking practical outcomes such as coordination, swallowing, infection burden, lung disease, and malignancy risk ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/), [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)).
 
-Significant funding comes from disease foundations such as the [A-T Children’s Project](https://atcp.org) and [Ataxia UK](https://www.ataxia.org.uk/), which support pilot gene therapy projects, biomarker discovery, and patient registries. Major research centers, notably Johns Hopkins University and Children’s Hospital of Philadelphia, maintain both basic and clinical research programs, often in collaboration with European counterparts. National and international grants also support the lion’s share of preclinical and early clinical research, with ongoing calls for increased global coordination.
+Delivery technology is a central methodology challenge. EryDex uses autologous red blood cells as a drug-delivery vehicle, antisense therapy uses sequence-specific oligonucleotides to modify RNA processing, metabolic therapy tries to compensate for downstream cellular stress, and future gene or cell therapies would need vectors or ex vivo platforms capable of restoring ATM in the right tissues without unacceptable toxicity ([ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/36149172/), [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/), [Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/), [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)).
 
-## Strengths and Limitations of Current Approaches
+## Leading Institutions and Funding
 
-### Strengths
+Industry has played a major role in recent clinical development: Quince Therapeutics S.p.A. is listed as sponsor for the ATTeST and NEAT EryDex trials, and IntraBio Inc is listed as sponsor for the N-acetyl-L-leucine A-T trial ([ATTeST ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT02770807), [NEAT ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT06193200/), [N-acetyl-L-leucine ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT03759678)). Academic and hospital groups have also been central, including teams publishing the nicotinamide riboside, antisense oligonucleotide, and broader therapeutic-review work that guide trial design and preclinical priorities ([Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/), [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/), [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)).
 
-- Technical advances in gene vector engineering provide hope for future gene therapies, even with the ATM gene’s large size.
-- Personalized medicine approaches (ASOs, molecular corrections) exemplify the power of modern genetic medicine for rare diseases.
-- Novel biologics and improved management of complications have increased quality of life and survival for many patients.
+Government-supported biomedical infrastructure remains important because A-T research depends on rare-disease registries, natural-history knowledge, clinical genetics, immunology, neurology, and cancer biology, even when a specific interventional trial is industry-sponsored ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/), [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)). Published studies and trial records show that current funding is concentrated on drug repurposing, sustained steroid delivery, metabolic rescue, and precision RNA correction, while full gene restoration remains a longer-term platform challenge ([ATTeST ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT02770807), [Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/), [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/)).
 
-### Limitations
+## Strengths, Limitations, and Challenges
 
-- Most curative strategies are only in preclinical or very early clinical development; proven therapies for neurological symptoms remain out of reach.
-- Small patient numbers, genetic diversity, and lack of good animal models impede rigorous clinical testing.
-- No broadly effective therapy exists for progressive neurodegeneration—the core, life-limiting problem of A-T.
-- Many trials apply to single patients or small case series, which means results cannot yet be generalized.
+The strongest feature of the recent A-T pipeline is that it now includes several human studies with defined neurologic endpoints, including EryDex, N-acetyl-L-leucine, and nicotinamide riboside, rather than relying only on supportive-care observations ([ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/36149172/), [N-acetyl-L-leucine trial publication](https://pubmed.ncbi.nlm.nih.gov/34958649/), [Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/)). Another strength is that the disease mechanism is genetically clear, so curative development has a defined biological target: restore enough ATM function in enough relevant cells early enough to change the disease course ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/)).
 
-## Obstacles and Remaining Challenges
-
-- **Rare Disease Barrier:** The very rarity of A-T makes large clinical trials and commercial investment difficult, resulting in slow progress.
-- **Biological Complexity:** Delivering large genes to the brain safely, achieving lasting correction, and avoiding potential side effects (including cancer risk from vector integration) remain unsolved.
-- **Measurement:** Absence of validated biomarkers for CNS disease progression makes it hard to know if therapies are working.
-- **Equity:** Only a small subset of patients presently benefit from personalized medicine approaches; therapies are expensive and logistically complex.
+The limitations are equally important. Symptom-directed therapies do not correct the DNA-repair defect, steroids have long-term safety concerns even with improved delivery, metabolic rescue may provide partial benefit without replacing ATM, antisense oligonucleotides may apply only to selected mutations, and gene or cell therapies must overcome ATM gene size, tissue delivery, cancer risk, and radiation or chemotherapy sensitivity ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/), [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/), [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/)). Access is also a challenge because A-T is rare, trials are geographically limited, and meaningful endpoints require specialized neurologic and immunologic assessment over time ([ATTeST ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT02770807), [NEAT ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT06193200/)).
 
 ## Outlook and Future Directions
 
-The coming years are likely to see:
-- First-in-human clinical trials of gene therapy vectors for ATM restoration.
-- Expansion of personalized ASO therapies as the regulatory framework for n=1 interventions matures.
-- Larger international registries and natural-history studies to enable eventual clinical trials of meaningful size.
-- Further refinement of supportive and symptomatic therapies while work on true cures continues.
+A cure for A-T is not imminent, but the 2020–2026 period has clarified the next milestones: confirm whether EryDex or other symptomatic therapies provide durable functional benefit, validate biomarkers of ATM restoration, expand mutation-specific RNA strategies, and solve delivery for gene or cell therapies that can reach the nervous and immune systems safely ([NEAT ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT06193200/), [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/), [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/)). The most realistic near-term progress is likely disease modification and better symptom control, while a true cure will probably require early diagnosis plus a platform that restores ATM function broadly and durably without increasing cancer or treatment-related toxicity ([GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK26468/), [Ataxia Telangiectasia signaling review](https://pubmed.ncbi.nlm.nih.gov/32184843/)).
 
-## Conclusion
+## References
 
-Unprecedented technical progress has been made in the last three years in the quest to cure Ataxia-Telangiectasia—but a broadly applicable, safe, and effective therapy for the most serious neurological symptoms remains elusive. Continued innovation, improved trial infrastructure, and international collaboration will be essential. For now, the field balances optimism with realism: the tools exist, the path is clearer, but many hard challenges remain to be solved. Patients, scientists, and advocates continue to push the frontier every year.
-
----
-
-## Key References and Further Reading
-
-- **Gene Therapy Vector Breakthrough:**  
-  [Expression of a large coding sequence: Gene therapy vectors for Ataxia Telangiectasia (Hirch et al., 2023)](https://doi.org/10.1038/s41598-023-46332-4)
-
-- **Clinical Trial Landscape & Review:**  
-  [Ataxia-telangiectasia clinical trial landscape and the obstacles to overcome (Kuhn et al., 2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10530584/)
-
-- **Current and Recent Clinical Trials for A-T:**  
-  [ClinicalTrials.gov: A-T trials](https://clinicaltrials.gov/search?cond=Ataxia%20telangiectasia[Louis-bar])
-
-- **A-T Children’s Project (news, funding, initiatives):**  
-  [https://atcp.org](https://atcp.org)
-
-- **Ataxia UK (news, trials, advocacy):**  
-  [https://www.ataxia.org.uk/](https://www.ataxia.org.uk/)
-
-For an exhaustive dive into current research, these sources, in particular the recent meta-analytical reviews, catalog essentially all ongoing and planned experimental therapeutics and clinical trials in the field.
-
----
-
-*This review is accurate as of May 30, 2025, and incorporates all major peer-reviewed, clinical, and institutional data sources published since January 2022.*
+- [GeneReviews: Ataxia-Telangiectasia](https://www.ncbi.nlm.nih.gov/books/NBK26468/) — NCBI Bookshelf, 2023.
+- [Ataxia Telangiectasia therapeutics review](https://pubmed.ncbi.nlm.nih.gov/33931706/) — PubMed, 2021.
+- [Ataxia Telangiectasia signaling review](https://pubmed.ncbi.nlm.nih.gov/32184843/) — PubMed, 2020.
+- [Antisense oligonucleotide study](https://pubmed.ncbi.nlm.nih.gov/34468675/) — PubMed, 2021.
+- [Nicotinamide riboside study](https://pubmed.ncbi.nlm.nih.gov/35260274/) — PubMed, 2022.
+- [N-acetyl-L-leucine trial publication](https://pubmed.ncbi.nlm.nih.gov/34958649/) — PubMed, 2022.
+- [ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/36149172/) — PubMed, 2022.
+- [ATTeST ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT02770807) — ClinicalTrials.gov, 2024.
+- [NEAT ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT06193200/) — ClinicalTrials.gov, 2026.
+- [N-acetyl-L-leucine ClinicalTrials.gov record](https://clinicaltrials.gov/study/NCT03759678) — ClinicalTrials.gov, 2026.
