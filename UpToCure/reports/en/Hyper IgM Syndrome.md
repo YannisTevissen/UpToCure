@@ -1,127 +1,76 @@
+---
+title: Hyper IgM Syndrome
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Hyper IgM Syndrome.
+input_tokens: 70448
+output_tokens: 5925
+search_calls: 8
+cost_usd: 0.292
+---
 
 # Hyper IgM Syndrome
 
-## Introduction
+## Overview
 
-Hyper IgM Syndromes (HIGM) are rare genetic immunodeficiencies where patients are unable to properly switch from making IgM to other types of antibodies. This often results in severe recurrent infections. Historically, the only cure has been allogeneic hematopoietic stem cell transplantation (HSCT), a therapy that requires a well-matched donor and carries significant risks. Since 2022, however, there has been dramatic progress in gene and cell therapies, opening new avenues for a less risky and more personalized cure.
+Hyper IgM syndrome is a group of rare inherited immune disorders in which the body has trouble making several important antibody types—especially IgG and IgA—even though IgM may be normal or high. The best-known form, X-linked Hyper IgM syndrome (HIGM1), is caused by harmful variants in *CD40LG*, which disrupt communication between activated T cells and B cells. It usually affects boys and often begins in infancy or early childhood with recurrent respiratory infections, opportunistic infections such as *Pneumocystis jirovecii*, chronic diarrhea, poor growth, low neutrophil counts, and sometimes liver disease or cancer risk. In CD40 ligand deficiency, more than half of affected males develop symptoms by age one and more than 90% by age four; the reported median survival from diagnosis is 25 years, although outcomes vary substantially with modern prevention and treatment. [CD40 Ligand Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1402/)
 
----
+Current care aims to prevent infections and organ damage through immunoglobulin replacement, antimicrobial treatment and prophylaxis, monitoring for liver and gastrointestinal disease, and management of complications such as neutropenia. For CD40 ligand deficiency, allogeneic hematopoietic stem cell transplantation (HSCT)—replacement of blood-forming stem cells using cells from a donor—is the only established curative treatment, ideally performed before major organ dysfunction develops. [CD40 Ligand Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1402/)
 
-## Recent Breakthroughs and Research Directions (2022–2025)
+## Scope of Recent Research (2020–present)
 
-### Gene Therapy and Editing
+Research activity has accelerated most clearly for X-linked *CD40LG* deficiency, which accounts for most Hyper IgM syndrome and is well suited to gene correction because the disease arises from a single gene defect in immune cells. The dominant questions are whether a patient’s own blood-forming stem cells can be edited safely enough to provide lifelong immune reconstitution, whether edited T cells can provide faster temporary protection, and how to preserve normal, tightly controlled CD40L expression. As of August 8, 2026, the field has moved from compelling patient-cell and animal studies to an initial single-patient clinical study, but it remains far from a broadly validated, routinely available gene-based cure. [Modeling gene editing for Hyper-IgM](https://pmc.ncbi.nlm.nih.gov/articles/PMC7933961/) [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L)
 
-#### **1. First-in-Human Base-Editing Gene Therapy Clinical Trial**
+## Major Breakthroughs and Emerging Therapies
 
-In 2025, the NIH (NIAID) launched the first clinical trial using base-editing gene therapy to correct the CD40L Q220X mutation, which causes X-linked Hyper IgM. In this pioneering early-phase trial, a patient's own blood stem cells are gene-edited ex vivo and re-infused after myeloablative conditioning. Immune reconstitution, safety, and durability of gene correction are being evaluated.
+The most consequential advance is the first reported use of autologous base-edited stem cells and T cells in a person with CD40L deficiency. Base editing changes a target DNA letter without making the double-strand DNA break used in conventional CRISPR cutting. In this case, NIH investigators used an adenine base editor to correct the patient-specific *CD40LG* Q220X mutation in both blood-forming stem/progenitor cells and T cells. The edited T cells were intended as a rapid “bridge” while edited stem cells established durable production of new immune cells. At one and two months after stem-cell infusion, the investigators reported more than 90% corrected alleles in myeloid cells, increasing correction in natural-killer, B, and T cells, and the first detection of class-switched IgG-positive B cells; these observations are encouraging but are extremely early results from one patient reported in a meeting abstract rather than a completed peer-reviewed clinical trial. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L)
 
-- **Institution:** NIAID, NIH (USA)
-- **Status:** Active (as of May 2025, results pending)
-- **Funding:** NIH
-- **Citation:** [Gene Therapy for Hyper IgM Syndrome (Trial summary)](https://www.withpower.com/trial/phase-2-syndrome-4-2025-c938f)
+A parallel strategy uses CRISPR-Cas9 with homology-directed repair (HDR), the cell’s template-guided DNA-repair pathway, to insert a functional *CD40LG* sequence into its natural genomic location in hematopoietic stem and progenitor cells (HSPCs). This placement is important because CD40L must be switched on at the right time and level, rather than expressed continuously. In a 2024 preclinical study, adding the DNA-PK inhibitor AZD7648 increased targeted HDR correction at *CD40LG* to about 60% in mobilized human CD34-positive cells and improved the representation of corrected long-term engrafting cells in primary and secondary mouse xenografts. [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/)
 
-#### **2. HDR-Based Gene Editing: Translational Preclinical Advances**
+Edited T-cell products may offer a second, potentially less intensive route to restoring CD40L function, although they would not by themselves replace the entire blood and immune system. A 2023 study developed a scalable, good-manufacturing-practice-compatible process using Cas9 and an integrase-defective lentiviral donor template to insert a broadly applicable corrective sequence into CD4-positive T cells. Edited cells from healthy donors and patients retained central and stem-like memory characteristics, showed physiologically regulated CD40LG expression and function, and persisted in mouse xenograft experiments. [GMP-compatible T-cell correction](https://pubmed.ncbi.nlm.nih.gov/37693944/)
 
-In 2024, Catto & Dunbar from the NIH/NHLBI reported advanced preclinical results using homology-directed repair (HDR) and base-editing in hematopoietic stem cells. Experiments in animal models (including mice and primates) demonstrated stable, long-term immune correction and multilineage reconstitution—providing key evidence to support translation to human trials.
+Researchers are also improving safety and breadth. A 2023 genome-integrity study found that some harmful on-target deletions were selected against during culture and could be reduced by enriching the corrected cells, but it also detected occasional trapping of donor-vector copies at the editing site—an outcome that did not prevent function in the tested cells but requires careful product-specific monitoring. Meanwhile, UCLA received a 2026 seed grant to develop prime-editing approaches for nine patient-specific *CD40LG* mutations. Prime editing is designed to make precise sequence changes without double-strand DNA breaks or a conventional viral DNA donor, but this Hyper IgM work remains preclinical. [Genome-integrity assessment in edited T cells](https://pubmed.ncbi.nlm.nih.gov/37916874/) [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
 
-- **Institution:** NHLBI, NIH (USA)
-- **Citation:** [Progress toward the challenging goal of HDR-based gene editing for hyper-IgM syndrome  
-Mol Ther Methods Clin Dev. 2024](https://doi.org/10.1016/j.omtm.2024.101359)
+## Clinical Trials and Experimental Approaches
 
-#### **3. Enhancing Editing Efficiency: DNA-PK Inhibition**
+The leading clinical effort is the NIAID-sponsored, single-participant Phase 1/2 study, [NCT06959771](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29), conducted at the NIH Clinical Center in Bethesda, Maryland. The study began on July 16, 2025, and is designed for one adult male with the *CD40LG* Q220X variant. It tests a single infusion of autologous base-edited HSPCs, supported by base-edited T cells, after conditioning that includes alemtuzumab and busulfan; planned outcome measures include CD40L expression, IgG production, vaccine responses, lineage-specific correction, and whole-exome sequencing at 24 months. The registry was last verified on March 23, 2026, and listed the study as recruiting with estimated primary completion in October 2027. [NCT06959771 trial record](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29)
 
-Preclinical work in 2024 showed that inhibition of DNA-PK, a DNA repair protein, greatly enhances the efficiency of CRISPR editing in human blood stem cells. This strategy boosts the potential for consistent and effective gene repair in future therapies.
+The May 2026 report from this study described a clinically important challenge: liver tests worsened after alemtuzumab and recurrent *Cryptosporidium* became detectable, so the team paused conditioning and infused the edited T-cell product first. The reported improvement in liver tests then allowed busulfan conditioning and edited-HSPC infusion. This adaptive dual-cell strategy is innovative, but durable antibody independence, infection control, long-term engraftment, and delayed genotoxicity remain unproven. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L)
 
-- **Citation:** [DNA-PK inhibition enhances gene editing efficiency in HSPCs for CRISPR-based treatment of X-linked hyper IgM syndrome (Cell Press, 2024)](https://www.cell.com/molecular-therapy-family/methods/fulltext/S2329-0501(24)00113-X)
+HSCT research also continues to improve the available cure. A 2022 study of four patients receiving transplants from asymptomatic female *CD40LG* carriers reported engraftment, good immune reconstitution, no graft-versus-host disease or opportunistic infections during one to five years of follow-up, and immunoglobulin independence in three patients. A 2026 case report further described sustained immune recovery 7.5 years after transplant from a carrier mother, despite approximately 32% CD40L expression, suggesting that carrier relatives can sometimes be viable donors after careful evaluation. [Carrier-donor HSCT study](https://pubmed.ncbi.nlm.nih.gov/35443026/) [Carrier-donor transplant case report](https://pubmed.ncbi.nlm.nih.gov/42169993/)
 
-#### **4. Autologous Edited T Cell Therapy**
+## Methodologies and Scientific Approaches
 
-Research published in EMBO Molecular Medicine (2023/2024) described the development of T cell therapies using a patient’s own gene-edited T cells. These cells, edited to correct disease-causing mutations, restored immune function rapidly in animal models and could serve as a bridge to fully curative stem cell therapies.
+Hyper IgM cure research combines patient-derived CD4-positive T cells and CD34-positive HSPCs with disease-model mice and human-cell xenografts. Investigators measure correction at the DNA level, CD40L expression after T-cell activation, class-switched memory B cells, immunoglobulin production, immune-cell diversity, resistance to opportunistic infection, and long-term multilineage engraftment. Delivery platforms include electroporated Cas9 or base-editor messenger RNA/protein complexes, adeno-associated virus serotype 6 donor templates for HDR, and integrase-defective lentiviral vectors for T-cell correction. [Modeling gene editing for Hyper-IgM](https://pmc.ncbi.nlm.nih.gov/articles/PMC7933961/) [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/) [GMP-compatible T-cell correction](https://pubmed.ncbi.nlm.nih.gov/37693944/)
 
-- **Citation:** [Modeling, optimization, and comparable efficacy of T cell therapies in X-HIGM1 (EMBO Mol Med, 2023/2024)](https://www.embopress.org/doi/full/10.15252%2Femmm.202013545)
+## Leading Institutions and Funding
 
----
+The clinical base-editing program is led by the National Institute of Allergy and Infectious Diseases and NIH Clinical Center, with collaborators from the Frederick National Laboratory for Cancer Research, NIH’s Center for Cellular Engineering, UT Southwestern, CellScript/Wisconsin Institute for Immune and Cell Therapy, and Massachusetts General Hospital. Seattle Children’s Research Institute, the University of Washington, and CSL Behring contributed to the HDR-HSPC work, while the San Raffaele Telethon Institute for Gene Therapy has advanced T-cell editing and genome-integrity studies. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L) [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/)
 
-### Established and Supportive Therapies
+Patient-led philanthropy has played an unusually direct role in this small field. The Hyper IgM Foundation awarded $100,000 in 2023 to support genome-integrity characterization of edited CD4-positive T cells at San Raffaele, $75,000 in 2025 to Duke University and NIAID collaborators for in vivo editing research, and $100,000 in 2026 to UCLA for preclinical prime-editing development; it also awarded $25,000 in 2026 to Baylor College of Medicine for a functional atlas of *CD40* and *CD40LG* variants. [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
 
-#### **HSCT Remains the Standard**
+## Strengths, Limitations, and Challenges
 
-Allogeneic hematopoietic stem cell transplantation is still the only proven cure for most patients worldwide. Multicenter studies, especially for children treated before severe complications arise, report excellent long-term outcomes, but the approach carries risks and relies on matched donors.
+The scientific rationale is strong: restoring CD40L in a patient’s own immune system could avoid donor matching, graft rejection, and graft-versus-host disease while preserving native control of a gene whose overexpression can be harmful. The first treated patient provides an important proof of clinical feasibility, and the observed early multilineage correction and emergence of class-switched B cells are biologically meaningful. HSCT also remains an effective real-world cure when a suitable donor is available, including in carefully selected carrier-donor settings. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L) [Carrier-donor HSCT study](https://pubmed.ncbi.nlm.nih.gov/35443026/)
 
-- **Recent evidence:** [Frontiers Immunology case report, 2025](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1572791/full)
+The limitations are substantial. The first gene-editing result involves one 37-year-old participant with only one to two months of reported follow-up, and treatment still required chemotherapy-based conditioning, which can be particularly hazardous in people with pre-existing liver disease. Conventional CRISPR-HDR editing may cause unintended edits, large on-target DNA changes, or impaired long-term stem-cell fitness; base and prime editing may reduce double-strand-break risks but introduce their own off-target and delivery concerns. Finally, *CD40LG*-directed therapies will not automatically cure other Hyper IgM syndromes caused by defects such as *CD40*, *AICDA*, or *UNG*; for example, a 2023 review identified only 40 reported patients with *CD40* deficiency, underscoring how limited the evidence base is for rarer genetic subtypes. [Genome-integrity assessment in edited T cells](https://pubmed.ncbi.nlm.nih.gov/37916874/) [Clinical features of CD40 deficiency](https://pubmed.ncbi.nlm.nih.gov/38129705/)
 
----
+## Outlook and Future Directions
 
-## Methodologies and Technologies
-
-Recent advances include:
-- Next-generation gene editing (base and prime editing, CRISPR/Cas systems)
-- Molecular enhancers (e.g., DNA-PK inhibitors)
-- Ex vivo gene modification of patient-derived HSPCs and T cells
-- Viral and non-viral vector development for safer, more precise editing
-
-These approaches were validated in human cells, sophisticated animal models, and the first clinical recipient (2025).
-
----
-
-## Funding Sources and Leading Institutions
-
-- **National Institutes of Health (NIH):** The overwhelming global leader, especially the NIAID and NHLBI branches.
-- **Hyper IgM Foundation:** Provides research grants for gene therapy/carrier studies and supports collaborations between leading immunologists ([Hyper IgM Foundation funding](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)).
-- **Primary Immune Deficiency Treatment Consortium (PIDTC):** Supports collaborative infrastructure and research ([PIDTC funding](https://pidtc.rarediseasesnetwork.org/funding-opportunities)).
-- **NIH RePORTER:** [NIH project example](https://reporter.nih.gov/project-details/11189295)
-- **Academic and hospital partners:** North America and EU consortia; commercial participation is limited so far.
-
----
-
-## Critical Evaluation
-
-### Strengths
-
-- **Technological momentum:** Rapid translation of gene-editing advances from bench to bedside.
-- **Funding and infrastructure:** NIH, rare disease foundations, and consortia provide robust, multiyear support.
-- **Proof-of-concept breakthroughs:** Animal studies and human gene editing therapies are yielding durable immune system correction.
-
-### Limitations
-
-- **Sample size:** Human trials remain tiny (e.g., a single-patient gene-editing trial).
-- **Long-term unknowns:** Durability, off-target edits, and safety in real patients need years of follow-up.
-- **Lack of alternative classes:** No novel small molecule or non-gene/cell biologic approaches have shown progress.
-
-### Remaining Challenges
-
-- Proving long-term safety and full immune restoration in people—moving beyond animal models.
-- Ensuring these cutting-edge therapies become available to non-US/global patients.
-- Scaling up precise gene-correction while avoiding immune complications or off-target problems.
-
----
-
-## Trends and Future Outlook
-
-Scientific reviews project a near-future shift from traditional transplant to gene-edited, autologous therapies as THE cure, provided trials confirm safety and efficacy. If the base-editing clinical trial at the NIH proves successful, international consortia and faster approval pathways could follow, particularly as gene editing platforms improve.
-
-**Accessible explanation:**  
-For families and patients, real hope is on the horizon. For the first time, gene therapy is trying to *fix* the immune problem at its genetic root by safely editing one’s own stem or immune cells—potentially curing Hyper IgM Syndrome permanently and eliminating the need for risky donor transplants.
-
----
+Hyper IgM syndrome is closer to a gene-based cure than it was in 2020, but not yet close to a standard gene therapy. The key milestones to watch are durable follow-up from NCT06959771 through and beyond its estimated October 2027 completion, sustained infection-free and immunoglobulin-independent immune function, confirmation that corrected stem cells maintain safe long-term blood production, and replication in additional patients with different *CD40LG* variants. If those milestones are met, next-generation approaches such as prime editing and less-toxic conditioning could broaden access; until then, early expert care, infection prevention, and appropriately timed HSCT remain central to saving lives. [NCT06959771 trial record](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29) [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
 
 ## References
 
-- [Gene Therapy for Hyper IgM Syndrome (Trial summary, withpower.com)](https://www.withpower.com/trial/phase-2-syndrome-4-2025-c938f)
-- [Progress toward HDR-based gene editing for hyper-IgM syndrome (Mol Ther Methods Clin Dev, 2024)](https://doi.org/10.1016/j.omtm.2024.101359)
-- [DNA-PK inhibition enhances gene editing efficiency (Cell Press, 2024)](https://www.cell.com/molecular-therapy-family/methods/fulltext/S2329-0501(24)00113-X)
-- [Modeling, optimization, and comparable efficacy of T cell therapies in X-HIGM1 (EMBO Mol Med)](https://www.embopress.org/doi/full/10.15252%2Femmm.202013545)
-- [Case Report: CD40LG Arg203Ile variant (Frontiers Immunology, 2025)](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1572791/full)
-- [Hyper IgM Foundation funding](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
-- [NIH RePORTER: Gene Therapy and Hematopoietic Stem Cell Research](https://reporter.nih.gov/project-details/11189295)
-- [PIDTC funding opportunities](https://pidtc.rarediseasesnetwork.org/funding-opportunities)
-- [J Clin Immunol review (Springer)](https://link.springer.com/article/10.1007/s10875-023-01633-1)
-- [Wiley MedComm review](https://onlinelibrary.wiley.com/doi/10.1002/mco2.613)
-- [ResearchGate review](https://www.researchgate.net/publication/386114429_Progress_toward_the_challenging_goal_of_HDR-based_gene_editing_for_hyper-IgM_syndrome)
-
----
-
-### Additional context
-
-Some primary research studies and reviews remain paywalled, but the majority of cited works and trial records are open or summarized in abstracts. Innovation is, for now, almost entirely driven out of the US (mainly the NIH) and allied rare-disease networks. Major commercial drug developers have not yet entered the field in force, possibly pending proof of clinical success from these pioneering trials.
-
+- [CD40 Ligand Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1402/) — Dunn and de la Morena, GeneReviews, 2025.
+- [Modeling gene editing for Hyper-IgM](https://pmc.ncbi.nlm.nih.gov/articles/PMC7933961/) — Vavassori et al., *EMBO Molecular Medicine*, 2021.
+- [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L) — De Ravin et al., *Journal of Human Immunity*, 2026.
+- [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/) — Pugliano et al., *Molecular Therapy Methods & Clinical Development*, 2024.
+- [GMP-compatible T-cell correction](https://pubmed.ncbi.nlm.nih.gov/37693944/) — Canarutto et al., *Molecular Therapy Methods & Clinical Development*, 2023.
+- [Genome-integrity assessment in edited T cells](https://pubmed.ncbi.nlm.nih.gov/37916874/) — Canarutto et al., *Molecular Therapy Methods & Clinical Development*, 2023.
+- [NCT06959771 trial record](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29) — National Institute of Allergy and Infectious Diseases, ClinicalTrials.gov, 2026.
+- [Carrier-donor HSCT study](https://pubmed.ncbi.nlm.nih.gov/35443026/) — Chandrakasan et al., *Blood Advances*, 2022.
+- [Carrier-donor transplant case report](https://pubmed.ncbi.nlm.nih.gov/42169993/) — Ebens et al., *Journal of Human Immunity*, 2026.
+- [Clinical features of CD40 deficiency](https://pubmed.ncbi.nlm.nih.gov/38129705/) — Banday et al., *Journal of Clinical Immunology*, 2023.
+- [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/) — Hyper IgM Foundation, 2026.

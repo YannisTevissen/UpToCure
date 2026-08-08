@@ -1,127 +1,76 @@
-
-# Syndrome d'hyper IgM
-
-## Introduction
-
-Les syndromes hyper IgM (HIGM) sont des immunodéficiences génétiques rares dans lesquelles les patients sont incapables de passer correctement de la production d'IgM à d'autres types d'anticorps. Il en résulte souvent de graves infections récurrentes. Historiquement, le seul remède a été la greffe de cellules souches hématopoïétiques allogéniques (GCSH), une thérapie qui nécessite un donneur bien compatible et comporte des risques importants. Depuis 2022, cependant, des progrès spectaculaires ont été réalisés dans le domaine des thérapies géniques et cellulaires, ouvrant de nouvelles voies pour une guérison moins risquée et plus personnalisée.
-
+---
+title: Syndrome d'hyper-IgM
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir le syndrome Hyper-IgM.
+input_tokens: 70448
+output_tokens: 5925
+search_calls: 8
+cost_usd: 0.292
 ---
 
-## Percées récentes et orientations de la recherche (2022-2025)
+# Syndrome d'hyper-IgM
 
-### Thérapie et édition génétiques
+## Overview
 
-#### **1. Premier essai clinique de thérapie génique d'édition de bases chez l'homme**
+Le syndrome Hyper-IgM est un groupe de troubles immunitaires héréditaires rares dans lesquels l'organisme a du mal à produire plusieurs types d'anticorps importants — en particulier l'IgG et l'IgA — même si l'IgM peut être normal ou élevé. La forme la mieux connue, le syndrome Hyper-IgM lié à l'X (HIGM1), est causée par des variants nuisibles dans *CD40LG*, qui perturbent la communication entre les cellules T activées et les cellules B. Il affecte généralement les garçons et commence souvent dès l'enfance ou au cours de la première enfance par des infections respiratoires récurrentes, des infections opportunistes telles que *Pneumocystis jirovecii*, une diarrhée chronique, une mauvaise croissance, une faible numération des neutrophiles et parfois une maladie du foie ou un risque de cancer. Dans le déficit du ligand CD40, plus de la moitié des hommes affectés développent des symptômes avant l'âge d'un an et plus de 90 % avant l'âge de quatre ans ; la survie médiane rapportée depuis le diagnostic est de 25 ans, bien que les résultats varient considérablement selon les mesures de prévention et de traitement modernes. [CD40 Ligand Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1402/)
 
-En 2025, le NIH (NIAID) a lancé le premier essai clinique utilisant la thérapie génique par édition de bases pour corriger la mutation CD40L Q220X, responsable de l'hyper IgM lié à l'X. Dans cet essai pionnier de phase précoce, les cellules souches sanguines d'un patient sont modifiées génétiquement ex vivo et réinjectées après un conditionnement myéloablatif. La reconstitution immunitaire, la sécurité et la durabilité de la correction génétique sont en cours d'évaluation.
+Les soins actuels visent à prévenir les infections et les lésions d'organes grâce au remplacement des immunoglobulines, au traitement et à la prophylaxie antimicrobiennes, à la surveillance des maladies hépatiques et gastro-intestinales et à la gestion des complications telles que la neutropénie. Pour le déficit du ligand CD40, la transplantation allogénique de cellules souches hématopoïétiques (HSCT) — remplacement des cellules souches formant le sang à partir de cellules d'un donneur — est le seul traitement curatif établi, idéalement réalisée avant l'apparition d'une dysfonction majeure des organes. [CD40 Ligand Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1402/)
 
-- **Institution:** NIAID, NIH (États-Unis)
-- **Statut:** Actif (à partir de mai 2025, résultats en attente)
-- **Financement:** NIH
-- **Citation:** [Thérapie génique pour le syndrome d'hyper IgM (résumé de l'essai)] (https://www.withpower.com/trial/phase-2-syndrome-4-2025-c938f)
+## Scope of Recent Research (2020–present)
 
-#### **2. Édition de gènes par HDR : Avancées précliniques translationnelles**
+L'activité de recherche s'est accélérée de façon la plus nette pour le déficit lié à l'X de *CD40LG*, qui représente la majorité du syndrome Hyper-IgM et se prête bien à une correction génétique car la maladie résulte d'un défaut d'un seul gène dans les cellules immunitaires. Les questions dominantes sont de savoir si les propres cellules souches formant le sang du patient peuvent être modifiées en toute sécurité pour assurer une reconstitution immunitaire à vie, si les cellules T modifiées peuvent offrir une protection temporaire plus rapide, et comment préserver l'expression normale et strictement contrôlée de CD40L. En date du 8 août 2026, le domaine est passé de résultats convaincants sur des cellules de patients et des modèles animaux à une première étude clinique sur un seul patient, mais il est encore loin d'un remède basé sur les gènes largement validé et disponible en routine. [Modeling gene editing for Hyper-IgM](https://pmc.ncbi.nlm.nih.gov/articles/PMC7933961/) [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L)
 
-En 2024, Catto &amp; Dunbar du NIH/NHLBI ont rapporté des résultats précliniques avancés utilisant la réparation dirigée par homologie (HDR) et l'édition de bases dans les cellules souches hématopoïétiques. Des expériences sur des modèles animaux (y compris des souris et des primates) ont démontré une correction immunitaire stable et à long terme ainsi qu'une reconstitution de plusieurs lignées, fournissant ainsi des preuves essentielles pour soutenir le passage à des essais chez l'homme.
+## Major Breakthroughs and Emerging Therapies
 
-- **Institution:** NHLBI, NIH (USA)
-- **Citation:** [Progrès vers l'objectif ambitieux de l'édition de gènes par HDR pour le syndrome hyper-IgM  
-Mol Ther Methods Clin Dev. 2024](https://doi.org/10.1016/j.omtm.2024.101359)
+La avancée la plus significative est la première utilisation rapportée de cellules souches et de T modifiés de base autologues chez une personne atteinte de déficit en CD40L. L'édition de base modifie une lettre d'ADN ciblée sans provoquer la cassure en double brin de l'ADN utilisée dans le découpage CRISPR conventionnel. Dans ce cas, des chercheurs du NIH ont utilisé un éditeur de base à adénine pour corriger la mutation *CD40LG* Q220X spécifique au patient à la fois dans les cellules souches/progénitrices formant le sang et dans les cellules T. Les cellules T modifiées étaient destinées à servir de pont rapide pendant que les cellules souches modifiées établissaient une production durable de nouvelles cellules immunitaires. À un et deux mois après l'infusion des cellules souches, les chercheurs ont rapporté plus de 90% d'allèles corrigés dans les cellules myéloïdes, augmentant la correction chez les cellules NK, les cellules B et T, et la première détection de cellules B IgG positives ayant subi un changement de classe; ces observations sont encourageantes mais il s'agit de résultats extrêmement précoces provenant d'un seul patient et présentés dans un résumé de conférence plutôt que d'un essai clinique évalué par des pairs. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L)
 
-#### **3. Améliorer l'efficacité de l'édition : Inhibition de la DNA-PK**
+Une stratégie parallèle utilise CRISPR-Cas9 avec réparation guidée par homologie (HDR), la voie de réparation de l'ADN guidée par le modèle de la cellule, pour insérer une séquence fonctionnelle *CD40LG* à son emplacement génomique naturel dans les cellules souches hématopoïétiques et progénitrices (HSPCs). Ce placement est important car CD40L doit être activé au bon moment et au bon niveau, plutôt que exprimé en continu. Dans une étude préclinique de 2024, l'ajout de l'inhibiteur DNA-PK AZD7648 a augmenté la correction HDR ciblée sur *CD40LG* à environ 60 % dans les cellules humaines CD34‑positives mobilisées et a amélioré la représentation des cellules qui s'engagent durablement corrigées dans les xenogreffes murines primaires et secondaires. [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/)
 
-Des travaux précliniques menés en 2024 ont montré que l'inhibition de la DNA-PK, une protéine de réparation de l'ADN, améliore considérablement l'efficacité de l'édition CRISPR dans les cellules souches du sang humain. Cette stratégie renforce le potentiel de réparation génétique cohérente et efficace dans les thérapies futures.
+Les produits T‑cell modifiés pourraient offrir une seconde voie, potentiellement moins intensive, pour restaurer la fonction de CD40L, bien qu'ils ne remplaceront pas à eux seuls l'ensemble du sang et du système immunitaire. Une étude de 2023 a développé un procédé évolutif compatible bonnes pratiques de fabrication utilisant Cas9 et un modèle donneur lentiviral défectif par intégrase pour insérer une séquence corrective largement applicable dans les cellules T CD4-positives. Les cellules modifiées provenant de donneurs sains et de patients conservaients des caractéristiques de mémoire centrales et semblables à des cellules souches, montraient une expression et une fonction de CD40LG régulées physiologiquement, et persistaient dans les expériences de xénogreffes chez la souris. [GMP-compatible T-cell correction](https://pubmed.ncbi.nlm.nih.gov/37693944/)
 
-- **Citation:** [L'inhibition de la DNA-PK améliore l'efficacité de l'édition de gènes dans les HSPC pour le traitement CRISPR du syndrome hyper IgM lié à l'X (Cell Press, 2024)](https://www.cell.com/molecular-therapy-family/methods/fulltext/S2329-0501(24)00113-X)
+Les chercheurs améliorent également la sécurité et l'étendue. Une étude sur l'intégrité du génome de 2023 a montré que certaines délétions nocives sur cible ont été éliminées pendant la culture et pourraient être réduites en enrichissant les cellules corrigées, mais elle a aussi détecté de temps à autre l'emprisonnement de copies du vecteur donneur au site d'édition — un résultat qui n'a pas empêché la fonction dans les cellules testées mais nécessite une surveillance attentive et spécifique au produit. Pendant ce temps, l'UCLA a reçu en 2026 une subvention de départ pour développer des approches d'édition prime pour neuf mutations *CD40LG* spécifiques au patient. L'édition prime est conçue pour effectuer des changements précis de séquence sans cassures de l'ADN à double brin ni donneur viral d'ADN conventionnel, mais ce travail sur le Hyper IgM demeure préclinique. [Genome-integrity assessment in edited T cells](https://pubmed.ncbi.nlm.nih.gov/37916874/) [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
 
-#### **4. Thérapie cellulaire T autologue éditée**
+## Clinical Trials and Experimental Approaches
 
-Une recherche publiée dans EMBO Molecular Medicine (2023/2024) décrit le développement de thérapies à base de cellules T utilisant les propres cellules T du patient, modifiées génétiquement. Ces cellules, modifiées pour corriger les mutations à l'origine de la maladie, ont rétabli rapidement la fonction immunitaire dans des modèles animaux et pourraient servir de passerelle vers des thérapies à base de cellules souches totalement curatives.
+L'effort clinique principal est l'étude de phase 1/2, sponsorisée par le NIAID, menée sur un seul participant, [NCT06959771](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29), réalisée au NIH Clinical Center à Bethesda, dans le Maryland. L'étude a débuté le 16 juillet 2025 et est conçue pour un seul adulte masculin porteur de la variante *CD40LG* Q220X. Elle teste une seule perfusion de HSPCs autologues modifiés de base, soutenues par des cellules T modifiées de base, après un conditionnement qui inclut l'alemtuzumab et le busulfan ; les mesures de résultats prévues comprennent l'expression de CD40L, la production d'IgG, les réponses vaccinales, la correction par lignage et le séquençage de l'exome entier à 24 mois. Le registre a été vérifié pour la dernière fois le 23 mars 2026 et a inscrit l'étude comme en recrutement avec une complétion primaire estimée en octobre 2027. [NCT06959771 trial record](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29)
 
-- **Citation:** [Modélisation, optimisation et efficacité comparable des thérapies à base de cellules T dans l'X-HIGM1 (EMBO Mol Med, 2023/2024)](https://www.embopress.org/doi/full/10.15252%2Femmm.202013545)
+Le rapport de mai 2026 de cette étude décrit un défi cliniquement important : les tests hépatiques se sont aggravés après l'alemtuzumab et un *Cryptosporidium* récurrent est devenu détectable, de sorte que l'équipe a mis le conditionnement en pause et a administré en premier le produit T‑cell modifié. L'amélioration rapportée des tests hépatiques a ensuite permis le conditionnement par busulfan et l'infusion de HSPC modifiés. Cette stratégie adaptative à double cellule est innovante, mais l'indépendance durable des anticorps, le contrôle des infections, l'engraftment à long terme et la genotoxicité retardée restent non prouvés. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L)
 
----
+La recherche sur HSCT continue également à améliorer le remède disponible. Une étude de 2022 sur quatre patients ayant reçu des greffes de donneuses asymptomatiques porteuses de *CD40LG* a rapporté un engraftment, une bonne reconstitution immunitaire, l'absence de maladie du greffon contre l'hôte ou d'infections opportunistes pendant un à cinq ans de suivi, et une indépendance vis-à-vis des immunoglobulines chez trois patients. Un rapport de cas de 2026 décrit en outre une récupération immunitaire soutenue 7,5 ans après la transplantation auprès d'une mère porteuse, malgré environ 32% d'expression de CD40L, suggérant que les proches porteuses peuvent parfois être des donneurs viables après une évaluation soigneuse. [Carrier-donor HSCT study](https://pubmed.ncbi.nlm.nih.gov/35443026/) [Carrier-donor transplant case report](https://pubmed.ncbi.nlm.nih.gov/42169993/)
 
-### Thérapies établies et de soutien
+## Methodologies and Scientific Approaches
 
-#### **La TCSH reste la norme**
+La recherche sur la cure Hyper IgM combine des T CD4‑positifs provenant du patient et des HSPC CD34‑positifs avec des modèles murins de la maladie et des xénogreffes de cellules humaines. Les chercheurs mesurent la correction au niveau de l'ADN, l'expression de CD40L après activation des cellules T, les cellules B mémoire à changement de classe, la production d'immunoglobulines, la diversité des cellules immunitaires, la résistance aux infections opportunistes et l'engraftment à long terme à lignées multiples. Les plateformes de livraison comprennent les complexes Cas9 électroporés ou des éditeurs de base sous forme d'ARNm/protéine, des modèles donneurs adénovirus adéno‑associés de sérotype 6 pour HDR, et des vecteurs lentiviraux dépourvus d'intégrase pour la correction des cellules T. [Modeling gene editing for Hyper-IgM](https://pmc.ncbi.nlm.nih.gov/articles/PMC7933961/) [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/) [GMP-compatible T-cell correction](https://pubmed.ncbi.nlm.nih.gov/37693944/)
 
-La transplantation de cellules souches hématopoïétiques allogéniques est encore le seul traitement prouvé pour la plupart des patients dans le monde. Des études multicentriques, en particulier pour les enfants traités avant l'apparition de complications graves, font état d'excellents résultats à long terme, mais cette approche comporte des risques et repose sur des donneurs compatibles.
+## Leading Institutions and Funding
 
-- **Recent evidence:** [Frontiers Immunology case report, 2025] (https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1572791/full)
+Le programme clinique d'édition de base est dirigé par le National Institute of Allergy and Infectious Diseases et le NIH Clinical Center, avec des collaborateurs du Frederick National Laboratory for Cancer Research, du NIH Center for Cellular Engineering, UT Southwestern, CellScript/Wisconsin Institute for Immune and Cell Therapy, et du Massachusetts General Hospital. Seattle Children’s Research Institute, l'Université de Washington et CSL Behring ont contribué aux travaux HDR-HSPC, tandis que le San Raffaele Telethon Institute for Gene Therapy a fait avancer l'édition des cellules T et les études d'intégrité du génome. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L) [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/)
 
----
+La philanthropie dirigée par les patients a joué un rôle inhabituellement direct dans ce petit domaine. La Hyper IgM Foundation a accordé 100 000 dollars en 2023 pour soutenir la caractérisation de l'intégrité du génome des T CD4-positifs édités à San Raffaele, 75 000 dollars en 2025 à l'Université Duke et à des collaborateurs du NIAID pour la recherche d'édition in vivo, et 100 000 dollars en 2026 à l'UCLA pour le développement préclinique de l'édition de base (prime-editing); elle a également accordé 25 000 dollars en 2026 au Baylor College of Medicine pour un atlas fonctionnel des variantes de *CD40* et *CD40LG*. [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
 
-## Méthodologies et technologies
+## Strengths, Limitations, and Challenges
 
-Parmi les avancées récentes, on peut citer
-- Édition de gènes de nouvelle génération (édition de bases et d'amorces, systèmes CRISPR/Cas)
-- Améliorateurs moléculaires (par exemple, inhibiteurs de l'ADN-PK)
-- Modification génique ex vivo de cellules souches de haute performance (HSPC) et de cellules T dérivées de patients
-- Développement de vecteurs viraux et non viraux pour une édition plus sûre et plus précise
+La logique scientifique est solide : restaurer CD40L dans le système immunitaire du patient lui-même pourrait éviter l'appariement des donneurs, le rejet de greffe et la maladie du greffon contre l'hôte tout en préservant le contrôle natif d'un gène dont la surpression peut être nocive. Le premier patient traité fournit une preuve importante de faisabilité clinique, et la correction précoce multi-lignée observée et l'émergence de cellules B mémoire à changement de classe sont biologiquement significatives. HSCT demeure également une cure efficace dans le monde réel lorsque un donneur approprié est disponible, y compris dans des contextes soigneusement sélectionnés donneur-porteur. [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L) [Carrier-donor HSCT study](https://pubmed.ncbi.nlm.nih.gov/35443026/)
 
-Ces approches ont été validées sur des cellules humaines, des modèles animaux sophistiqués et le premier receveur clinique (2025).
+Les limites sont substantielles. Le premier résultat d'édition génétique concerne un participant de 37 ans avec seulement un à deux mois de suivi rapportés, et le traitement nécessitait encore un conditionnement à base de chimiothérapie, ce qui peut être particulièrement dangereux chez les personnes atteintes de maladie hépatique préexistante. L'édition CRISPR-HDR conventionnelle peut provoquer des modifications non volontaires, de grandes modifications d'ADN sur cible, ou une aptitude réduite des cellules souches à long terme ; l'édition de base et l'édition prime peut réduire les risques de cassure double brin mais introduit leurs propres problèmes hors cible et de livraison. Enfin, les thérapies dirigées vers *CD40LG* ne guérissent pas automatiquement d'autres syndromes Hyper IgM causés par des défauts tels que *CD40*, *AICDA* ou *UNG* ; par exemple, une revue de 2023 n'a identifié que 40 patients signalés avec une déficience en *CD40*, soulignant à quel point les données restent limitées pour les sous-types génétiques plus rares. [Genome-integrity assessment in edited T cells](https://pubmed.ncbi.nlm.nih.gov/37916874/) [Clinical features of CD40 deficiency](https://pubmed.ncbi.nlm.nih.gov/38129705/)
 
----
+## Outlook and Future Directions
 
-## Sources de financement et principales institutions
+Le syndrome Hyper IgM est plus proche d'une cure basée sur le gène qu'il ne l'était en 2020, mais il n'est pas encore proche d'une thérapie génique standard. Les jalons clés à surveiller sont un suivi durable de NCT06959771 jusqu'à et au-delà de son achèvement prévu en octobre 2027, une fonction immunitaire durable sans infection et indépendante des immunoglobulines, la confirmation que les cellules souches corrigées maintiennent une production sanguine sûre à long terme, et une réplication chez des patients supplémentaires présentant différentes variantes *CD40LG*. Si ces jalons sont atteints, les approches de nouvelle génération telles que l'édition prime et un conditionnement moins toxique pourraient élargir l'accès; jusqu'alors, des soins précoces par des experts, la prévention des infections et une HSCT bien synchronisée restent essentiels pour sauver des vies. [NCT06959771 trial record](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29) [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
 
-- **Instituts nationaux de la santé (NIH) : **Le leader mondial incontesté, en particulier les branches NIAID et NHLBI.
-- **Fondation Hyper IgM:** Octroie des bourses de recherche pour des études sur la thérapie génique/le portage et soutient les collaborations entre les principaux immunologistes ([Hyper IgM Foundation funding](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)).
-- **Primary Immune Deficiency Treatment Consortium (PIDTC):** soutient l'infrastructure et la recherche collaborative ([PIDTC funding] (https://pidtc.rarediseasesnetwork.org/funding-opportunities)).
-- **NIH RePORTER:** [exemple de projet NIH] (https://reporter.nih.gov/project-details/11189295)
-- **Partenaires universitaires et hospitaliers:** Consortiums d'Amérique du Nord et de l'UE ; la participation commerciale est limitée à ce jour.
+## References
 
----
-
-## Évaluation critique
-
-### Points forts
-
-- **L'élan technologique : la traduction rapide des avancées en matière d'édition de gènes du laboratoire au chevet du patient.
-- **Financement et infrastructure:** Les NIH, les fondations pour les maladies rares et les consortiums apportent un soutien solide et pluriannuel.
-- **Des études sur les animaux et des thérapies d'édition de gènes chez l'homme permettent d'obtenir une correction durable du système immunitaire.
-
-### Limitations
-
-- **Taille de l'échantillon:** Les essais sur l'homme restent minuscules (par exemple, un essai d'édition de gènes sur un seul patient).
-- **Les inconnues à long terme : la durabilité, les vérifications hors cible et la sécurité chez les patients réels nécessitent des années de suivi.
-- **Absence de classes alternatives:** Aucune nouvelle petite molécule ou approche biologique non génétique/cellulaire n'a progressé.
-
-### Défis à relever
-
-- Prouver l'innocuité à long terme et la restauration complète du système immunitaire chez l'homme - au-delà des modèles animaux.
-- Veiller à ce que ces thérapies de pointe soient accessibles aux patients non américains/mondiaux.
-- Augmenter la correction précise des gènes tout en évitant les complications immunitaires ou les problèmes hors cible.
-
----
-
-## Tendances et perspectives d'avenir
-
-Les revues scientifiques prévoient dans un avenir proche le passage de la transplantation traditionnelle aux thérapies autologues génétiquement modifiées comme LE remède, à condition que les essais confirment l'innocuité et l'efficacité. Si l'essai clinique d'édition de base mené par les NIH s'avère concluant, des consortiums internationaux et des voies d'approbation plus rapides pourraient suivre, en particulier au fur et à mesure que les plateformes d'édition de gènes s'améliorent.
-
-**Explication accessible:**  
-Pour les familles et les patients, un véritable espoir se profile à l'horizon. Pour la première fois, la thérapie génique tente de "régler" le problème immunitaire à sa racine génétique en modifiant en toute sécurité les propres cellules souches ou immunitaires, ce qui pourrait permettre de guérir définitivement le syndrome Hyper IgM et d'éliminer la nécessité de recourir à des greffes risquées à partir de donneurs.
-
----
-
-## Références
-
-- [Thérapie génique pour le syndrome d'hyper IgM (résumé de l'essai, withpower.com)] (https://www.withpower.com/trial/phase-2-syndrome-4-2025-c938f)
-- [Progrès vers l'édition de gènes par HDR pour le syndrome hyper-IgM (Mol Ther Methods Clin Dev, 2024)] (https://doi.org/10.1016/j.omtm.2024.101359)
-- [L'inhibition de la DNA-PK améliore l'efficacité de l'édition de gènes (Cell Press, 2024)] (https://www.cell.com/molecular-therapy-family/methods/fulltext/S2329-0501(24)00113-X)
-- [Modélisation, optimisation et efficacité comparable des thérapies à base de cellules T dans le cas de X-HIGM1 (EMBO Mol Med)] (https://www.embopress.org/doi/full/10.15252%2Femmm.202013545)
-- [Rapport de cas : variante CD40LG Arg203Ile (Frontiers Immunology, 2025)] (https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1572791/full)
-- [Financement de la Fondation Hyper IgM] (https://hyperigm.org/hyper-igm-foundation-research-grant-funding/)
-- [NIH RePORTER : Thérapie génique et recherche sur les cellules souches hématopoïétiques] (https://reporter.nih.gov/project-details/11189295)
-- [Opportunités de financement du PIDTC] (https://pidtc.rarediseasesnetwork.org/funding-opportunities)
-- [Revue J Clin Immunol (Springer)] (https://link.springer.com/article/10.1007/s10875-023-01633-1)
-- [Revue Wiley MedComm] (https://onlinelibrary.wiley.com/doi/10.1002/mco2.613)
-- [Revue de ResearchGate] (https://www.researchgate.net/publication/386114429_Progress_toward_the_challenging_goal_of_HDR-based_gene_editing_for_hyper-IgM_syndrome)
-
----
-
-### Contexte supplémentaire
-
-Certaines études et analyses de recherche primaire restent payantes, mais la majorité des travaux cités et des comptes rendus d'essais sont ouverts ou résumés dans des abstracts. Pour l'instant, l'innovation est presque entièrement impulsée par les États-Unis (principalement les NIH) et les réseaux alliés de maladies rares. Les principaux développeurs de médicaments commerciaux ne sont pas encore entrés en force dans le domaine, peut-être dans l'attente d'une preuve de succès clinique de ces essais pionniers.
-
+- [CD40 Ligand Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1402/) — Dunn et de la Morena, GeneReviews, 2025.
+- [Modeling gene editing for Hyper-IgM](https://pmc.ncbi.nlm.nih.gov/articles/PMC7933961/) — Vavassori et al., *EMBO Molecular Medicine*, 2021.
+- [First-in-human base-edit therapy](https://rupress.org/jhi/article/2/CIS2026/eCIS2026abstract.1/281914/A-First-in-Human-Base-Edit-Gene-Therapy-for-CD40L) — De Ravin et al., *Journal of Human Immunity*, 2026.
+- [DNA-PK inhibition for CRISPR correction](https://pubmed.ncbi.nlm.nih.gov/40012884/) — Pugliano et al., *Molecular Therapy Methods & Clinical Development*, 2024.
+- [GMP-compatible T-cell correction](https://pubmed.ncbi.nlm.nih.gov/37693944/) — Canarutto et al., *Molecular Therapy Methods & Clinical Development*, 2023.
+- [Genome-integrity assessment in edited T cells](https://pubmed.ncbi.nlm.nih.gov/37916874/) — Canarutto et al., *Molecular Therapy Methods & Clinical Development*, 2023.
+- [NCT06959771 trial record](https://clinicaltrials.gov/study/NCT06959771?rank=3&term=AREA%5BBasicSearch%5D%28palifermin%29+AND+AREA%5BOverallStatus%5D%28RECRUITING+OR+NOT_YET_RECRUITING+OR+ACTIVE_NOT_RECRUITING+OR+ENROLLING_BY_INVITATION%29) — National Institute of Allergy and Infectious Diseases, ClinicalTrials.gov, 2026.
+- [Carrier-donor HSCT study](https://pubmed.ncbi.nlm.nih.gov/35443026/) — Chandrakasan et al., *Blood Advances*, 2022.
+- [Carrier-donor transplant case report](https://pubmed.ncbi.nlm.nih.gov/42169993/) — Ebens et al., *Journal of Human Immunity*, 2026.
+- [Clinical features of CD40 deficiency](https://pubmed.ncbi.nlm.nih.gov/38129705/) — Banday et al., *Journal of Clinical Immunology*, 2023.
+- [Hyper IgM Foundation research grants](https://hyperigm.org/hyper-igm-foundation-research-grant-funding/) — Hyper IgM Foundation, 2026.

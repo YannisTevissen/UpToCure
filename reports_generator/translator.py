@@ -15,6 +15,7 @@ import sys
 from pathlib import Path
 from typing import Iterable
 
+import yaml
 from dotenv import load_dotenv
 from tqdm import tqdm
 
@@ -43,10 +44,48 @@ def lang_name(code: str) -> str:
 
 # ---- LLM-based translation ---------------------------------------------------
 
+def _split_front_matter(content: str) -> tuple[str | None, str]:
+    """Return (front_matter_yaml, body). Front matter is None when absent."""
+    if content.startswith("---\n"):
+        end = content.find("\n---\n", 4)
+        if end != -1:
+            return content[4:end], content[end + 5:].lstrip("\n")
+    return None, content
+
+
 def translate_markdown_llm(content: str, src: str, tgt: str, client: LLMClient) -> str:
-    lines = content.split("\n")
-    translated = client.translate_lines(lines, lang_name(src), lang_name(tgt))
-    return "\n".join(translated)
+    # Front matter is translated structurally (only human-readable values);
+    # feeding it through line translation corrupts the YAML.
+    fm_raw, body = _split_front_matter(content)
+    lines = body.split("\n")
+    translated_body = "\n".join(client.translate_lines(lines, lang_name(src), lang_name(tgt)))
+    if fm_raw is None:
+        return translated_body
+    try:
+        meta = yaml.safe_load(fm_raw) or {}
+    except yaml.YAMLError:
+        meta = {}
+    if not isinstance(meta, dict):
+        meta = {}
+    for key in ("title", "summary"):
+        value = meta.get(key)
+        if isinstance(value, str) and value.strip():
+            translated = client.translate(value, lang_name(src), lang_name(tgt)).strip()
+            meta[key] = translated[:1].upper() + translated[1:]
+    # Keep the body H1 in sync with the translated title: the line translator
+    # occasionally leaves headings in the source language.
+    title = meta.get("title")
+    if isinstance(title, str) and title.strip():
+        body_lines = translated_body.split("\n")
+        for i, line in enumerate(body_lines):
+            if line.startswith("# "):
+                body_lines[i] = f"# {title}"
+                break
+            if line.strip():
+                break
+        translated_body = "\n".join(body_lines)
+    fm = yaml.safe_dump(meta, sort_keys=False, allow_unicode=True).strip()
+    return f"---\n{fm}\n---\n\n{translated_body}"
 
 
 # ---- Optional DeepL fallback -------------------------------------------------

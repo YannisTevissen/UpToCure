@@ -1,65 +1,76 @@
+---
+title: Surcroissance bactérienne de l'intestin grêle
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir l'hypercroissance bactérienne
+  de l'intestin grêle.
+input_tokens: 37471
+output_tokens: 4844
+search_calls: 5
+cost_usd: 0.1831
+---
 
 # Surcroissance bactérienne de l'intestin grêle
 
-## Introduction
-La prolifération bactérienne dans l'intestin grêle (SIBO) est une affection caractérisée par un excès de bactéries dans l'intestin grêle, entraînant souvent des symptômes tels que des ballonnements, des douleurs et une malabsorption. Pendant des années, le traitement a été centré sur des antibiotiques comme la rifaximine, mais la récurrence et l'efficacité limitée ont incité à rechercher d'urgence des remèdes plus durables. Vous trouverez ci-dessous une revue complète de tous les efforts de recherche récents (2023-2025) visant à guérir le SIBO, traduisant des avancées scientifiques complexes dans un langage accessible.
+## Vue d'ensemble
 
-## Dernières études et percées évaluées par des pairs
+La surcroissance bactérienne de l'intestin grêle (SIBO) est une affection dans laquelle des quantités excessives ou un mélange anormal de bactéries sont présents dans l'intestin grêle, où elles peuvent fermenter les aliments trop tôt et contribuer aux ballonnements, à l'inconfort abdominal, à la diarrhée, aux gaz et — lorsque la gravité est élevée — à la malabsorption des graisses et aux carences nutritionnelles. Elle est le plus souvent associée à des problèmes qui ralentissent le mouvement intestinal ou altèrent l'anatomie, y compris les troubles de la motilité, une chirurgie gastro-intestinale antérieure et certaines maladies systémiques ; elle peut également se produire avec des troubles tels que le syndrome de l'intestin irritable. [ACG clinical guideline](https://pubmed.ncbi.nlm.nih.gov/32023228/) [AGA clinical practice update](https://gastro.org/clinical-guidance/diagnosis-and-management-of-small-intestinal-bacterial-overgrowth-sibo/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32023228/?utm_source=openai))
 
-### Microbiote intestinal, immunologie et FMT
-Une revue de référence publiée en 2023 par Di Vincenzo et al. ([Antibiotics, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10295019/)) fournit une synthèse moderne de la pathophysiologie et des thérapies du SIBO. Elle explore la manière dont le SIBO perturbe la fonction de barrière intestinale, réduit la production de peptides antimicrobiens et entraîne une inflammation chronique par le biais de l'activation immunitaire (TLR, TNF-α, ILs).  
-- **Innovation FMT:** Chez la souris, la FMT (transplantation de microbiote fécal) a réduit la neuroinflammation et inversé la pathologie intestinale liée au SIBO. Bien que l'utilisation chez l'homme n'en soit qu'à ses débuts, cela suggère que la FMT pourrait un jour offrir une guérison durable si la sécurité, l'efficacité et la sélection des donneurs sont optimisées.
-- **De nouvelles données expliquent comment la perméabilité intestinale du SIBO est liée aux symptômes systémiques, ce qui favorise l'émergence de thérapies visant à rétablir l'équilibre microbien plutôt qu'à éradiquer les bactéries.
+Il n’existe pas de remède unique et prouvé pour le SIBO, car la surcroissance bactérienne revient souvent si le facteur sous-jacent — telle qu’une motilité intestinale altérée, un rétrécissement structurel ou une malabsorption — n’est pas corrigé. Les soins actuels visent donc à identifier et traiter ces facteurs, à corriger les déficits nutritionnels lorsque présents, et à utiliser une courte cure d’antibiotiques, généralement l’antibiotique peu absorbé rifaximin, pour réduire la surcroissance bactérienne et les symptômes. [AGA clinical practice update](https://gastro.org/clinical-guidance/diagnosis-and-management-of-small-intestinal-bacterial-overgrowth-sibo/) [Antibiotic-response meta-analysis](https://pubmed.ncbi.nlm.nih.gov/38173154/) ([gastro.org](https://gastro.org/clinical-guidance/diagnosis-and-management-of-small-intestinal-bacterial-overgrowth-sibo/?utm_source=openai))
 
-**La plupart des recherches sur la FMT pour le SIBO sont précliniques (basées sur l'animal), et il n'existe pas encore de protocoles de FMT standardisés et éprouvés pour le SIBO chez l'homme.
+## Portée des recherches récentes (2020–présent)
 
-### Berbérine contre rifaximine : innovation dans les essais cliniques
-L'essai BRIEF-SIBO est une réponse directe aux limites des antibiotiques actuels. ([Guo et al., Front Pharmacol., 2023](https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2023.1121435/full))
-- **Conception:** Essai contrôlé randomisé en ouvert (N=180), comparant la berbérine (un antimicrobien d'origine végétale) à la rifaximine chez des patients atteints de SIBO.  
-- **Critères d'évaluation:** Éradication du SIBO par test respiratoire, soulagement des symptômes et changements dans le microbiome intestinal sur une période de 6 semaines.
-- **Il s'agit du premier essai clinique randomisé d'envergure comparant un produit naturel à un antibiotique de référence, ce qui pourrait permettre de réduire les coûts et d'élargir l'accès aux soins.
-- **Faiblesse:** Centre unique, suivi court (pas de données sur les rechutes à long terme), et les résultats n'ont pas encore été publiés en 2024.
+La recherche depuis 2020 est active mais reste relativement modeste et cliniquement hétérogène par rapport à la recherche sur les maladies inflammatoires de l’intestin ou le cancer. Les principales questions sont de savoir comment définir le SIBO de manière fiable, le distinguer des troubles liés à la production de gaz, identifier les patients les plus susceptibles de bénéficier des antibiotiques et restaurer un écosystème microbien intestinal sain sans exposition répétée à des antimicrobiens à large spectre. Les travaux actuels se décrivent mieux comme visant un contrôle durable et une prévention de la récidive plutôt que le développement d’une thérapie curative à court terme. [ACG clinical guideline](https://pubmed.ncbi.nlm.nih.gov/32023228/) [Culture and sequencing study](https://www.cghjournal.org/article/S1542-3565%2823%2900452-4/fulltext) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32023228/?utm_source=openai))
 
-## Thérapies expérimentales et nouvelles orientations de la recherche
+## Grandes avancées et thérapies émergentes
 
-### Ingénierie du microbiome et thérapie par les phages
-- Bien que la phagothérapie (virus ciblant les bactéries) et les consortiums de microbiome synthétique suscitent un intérêt conceptuel et préclinique important, aucun essai clinique sur l'homme ni aucune étude concluante sur l'animal ciblant le SIBO n'ont été publiés à ce jour (2025). Ces domaines restent à la pointe de la technologie et font l'objet d'une exploration active pour les maladies apparentées.
+**Thérapie antimicrobienne à petites molécules.** Les antibiotiques restent l'intervention la mieux étayée, mais la synthèse récente des données met en évidence à la fois leur utilité et leurs limites. Une revue systématique et une méta-analyse de 2024 ont montré que les patients présentant un SIBO documenté étaient plus susceptibles d'obtenir une amélioration de leurs symptômes avec les antibiotiques qu'avec le placebo ou l'absence d'antibiotique, bien que les études sous-jacentes soient petites et de qualité limitée. Cela soutient un traitement antibiotique ciblé mais n'établit pas une éradication permanente ni n'identifie l'agent optimal, la dose ou le calendrier de rétraitement. [Antibiotic-response meta-analysis](https://pubmed.ncbi.nlm.nih.gov/38173154/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38173154/?utm_source=openai))
 
-### Probiotiques modifiés et modulation immunitaire
-- Les réunions de recherche et les revues mentionnent régulièrement les probiotiques de nouvelle génération et les microbiomes modifiés comme stratégies pour le SIBO et les troubles de la motilité, mais ils ne sont pas encore établis en tant que thérapies pour le SIBO.
-- La modulation immunitaire est une cible prometteuse, étant donné les mécanismes immunitaires du SIBO. Jusqu'à présent, aucun essai clinique n'a testé de médicaments immunomodulateurs spécifiquement destinés au SIBO chez l'homme.
+**Restauration du microbiote.** La stratégie biologique émergente la plus notable est la transplantation de microbiote fécal (FMT): transfert des micro-organismes du donneur sélectionné pour modifier la communauté microbienne intestinale du receveur. Dans une étude randomisée et contrôlée par placebo impliquant 55 personnes atteintes de SIBO, quatre capsules orales de FMT administrées sur quatre semaines ont été associées à une amélioration plus importante des symptômes gastro-intestinaux et à une augmentation de la diversité microbienne fécale par rapport au placebo. Ces résultats sont encourageants, mais l'étude était de petite taille, utilisait des tests respiratoires et des résultats axés sur les symptômes plutôt qu'un critère de guérison durable validé, et nécessite une réplication dans des essais plus vastes et menés de manière indépendante. [FMT randomized trial](https://link.springer.com/article/10.1186/s12876-021-01630-x) ([link.springer.com](https://link.springer.com/article/10.1186/s12876-021-01630-x?utm_source=openai))
 
-## Tendances méthodologiques
+**Probiotics et compléments diététiques.** Les probiotiques font l'objet d'études en tant qu'outils à faible risque pour soutenir le traitement antibiotique ou remodeler l'environnement microbien, mais les preuves restent incohérentes. Une revue systématique de 2024 a trouvé seulement des preuves de faible certitude favorisant les probiotiques par rapport au placebo pour la résolution du test à l'haleine, avec une hétérogénéité substantielle et un risque de biais. Par conséquent, les probiotiques sont des adjuvants expérimentaux plutôt que des traitements curatifs établis pour le SIBO. [Probiotic systematic review](https://pubmed.ncbi.nlm.nih.gov/39538392/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/39538392/?utm_source=openai))
 
-- **Les chercheurs soulignent la variabilité des tests respiratoires et l'absence de critères unifiés pour le SIBO, ce qui rend les études plus difficiles à comparer.
-- **Le domaine évolue de la suppression bactérienne pure (antibiotiques) vers la restauration de l'équilibre de l'"écosystème" microbien de l'intestin, que ce soit avec la FMT, les modulateurs du microbiome ou les thérapies immunitaires.
+## Essais cliniques et approches expérimentales
 
-## Défis de la recherche
+Une étude achevée, non randomisée, à aveugle simple sponsorisée par l'Hôpital Populaire n°10 de Shanghai a évalué la transplantation de microbiote fécal (FMT) pour le SIBO chez 66 participants (NCT06162702); le registre indique l'achèvement en novembre 2023 mais ne publie pas les résultats de l'étude. Une autre étude, randomisée, en double aveugle et contrôlée par placebo, sponsorisée par l'Université médicale poméranienne de Szczecin, a testé des probiotiques et une intervention alimentaire comme compléments à la rifaximine chez 129 participants; elle s'est terminée en août 2025, mais les résultats n'ont pas été publiés dans le registre. [NCT06162702](https://clinicaltrials.gov/study/NCT06162702) [NCT06223685](https://clinicaltrials.gov/study/NCT06223685) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT06162702?utm_source=openai))
 
-- **La plupart des nouvelles thérapies sont bloquées à des stades précliniques ou conceptuels ; le passage à des essais solides sur l'homme est un obstacle permanent.
-- **Même après une thérapie réussie, le SIBO réapparaît souvent, ce qui suggère la nécessité de rétablir et de maintenir un microbiome sain, et pas seulement d'éliminer les bactéries.
-- **Accès et coût:** Les thérapies à base de plantes et les thérapies innovantes du microbiome promettent d'être abordables et accessibles, mais nécessitent une approbation réglementaire et des données de sécurité à long terme.
-- **La majorité des essais cliniques actuels se concentrent sur le soulagement des symptômes ; les efforts multicentriques véritablement axés sur la "guérison" restent rares.
+Une étude exploratoire sur la rifaximin chez des personnes souffrant de SIBO et de ballonnements abdominaux (NCT06772064) est répertoriée comme en recrutement et teste la suspension sèche de rifaximin à 0,4 g deux fois par jour pendant deux semaines. Cela reflète un intérêt continu pour améliorer l'administration des antimicrobiens conventionnels et mesurer la réponse symptomatique, plutôt qu'un virage vers la thérapie génique, la thérapie cellulaire ou l'édition génétique pour le SIBO. [NCT06772064](https://clinicaltrials.gov/study/NCT06772064) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT06772064?utm_source=openai))
 
-## Principales institutions, financement et auteurs principaux
+## Méthodologies et approches scientifiques
 
-- **Essais cliniques:** Département de gastro-entérologie, Chine (BRIEF-SIBO) et Centre des sciences de la santé de l'Université de Pékin.
-- **Innovation préclinique:** Centres européens de gastroentérologie, tels que la Fondazione Policlinico Universitario Agostino Gemelli IRCCS à Rome.
-- **La plupart des grandes études récentes ne font pas état d'un financement explicite ; l'innovation est ralentie par un soutien multicentrique et gouvernemental limité par rapport à la charge de morbidité.
+Une avancée méthodologique centrale consiste à passer de la dépendance exclusive aux tests respiratoires à l'hydrogène ou au méthane vers un échantillonnage direct de l'intestin grêle. Une étude dirigée par Cedars-Sinai a combiné la culture d’aspirat duodénal avec le séquençage de l'ARN ribosomal 16S et la métagénomique shotgun pour identifier des caractéristiques microbiologiques et métaboliques associées au SIBO. Cette approche pourrait éventuellement définir des sous-types biologiquement distincts qui pourraient être traités de manière plus précise. [Culture and sequencing study](https://www.cghjournal.org/article/S1542-3565%2823%2900452-4/fulltext) ([cghjournal.org](https://www.cghjournal.org/article/S1542-3565%2823%2900452-4/fulltext?utm_source=openai))
 
-## Perspectives et résumé
+Les chercheurs améliorent également les diagnostics moins invasifs. Une comparaison réalisée en 2024 entre la culture d'aspirat jéjunal et les tests respiratoires à l'hydrogène et au méthane illustre l'effort continu visant à établir des standards diagnostiques cliniquement utiles, tandis qu'un système de détection bactérienne par capsule intelligente a montré un accord avec les tests basés sur la culture sur plusieurs sites et mérite une validation supplémentaire. [Breath test versus aspirate culture](https://pubmed.ncbi.nlm.nih.gov/37725319/) [Smart-capsule detection study](https://pubmed.ncbi.nlm.nih.gov/39587802/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37725319/?utm_source=openai))
 
-Le paysage thérapeutique du SIBO est sur le point de se transformer. Des percées récentes jettent les bases des stratégies de nouvelle génération basées sur le microbiome et l'immunité, mais à la mi-2025, la seule innovation clinique majeure est l'essai tête-à-tête entre la berbérine et la rifaximine. Les guérisons durables pourraient éventuellement nécessiter des approches combinées - rétablir l'écologie intestinale, soutenir l'immunité et corriger la motilité. Pour l'instant, les patients et les cliniciens devraient surveiller les résultats des essais cliniques randomisés en cours et suivre les domaines émergents tels que la thérapie par les phages et le microbiome modifié pour trouver de nouvelles options.
+## Institutions de premier plan et financement
 
-**Ressources recommandées pour les mises à jour en cours:**  
-- [ClinicalTrials.gov] (https://clinicaltrials.gov/),  
-- [OMS ICTRP] (https://www.who.int/clinical-trials-registry-platform),  
-- [Registre des essais cliniques de l'UE] (https://www.clinicaltrialsregister.eu/)
+Cedars-Sinai à Los Angeles est un centre majeur des États-Unis pour la définition du SIBO, le profilage du microbiote, la recherche sur les tests respiratoires et les études sur les traitements. Son étude sur la culture et le séquençage a été partiellement soutenue par le National Philanthropic Trust; la publication rapporte également des relations de licences institutionnelles et des liens entre les chercheurs et des entreprises développant des diagnostics et des thérapies gastro-intestinaux. [Culture and sequencing study](https://www.cghjournal.org/article/S1542-3565%2823%2900452-4/fulltext) ([cghjournal.org](https://www.cghjournal.org/article/S1542-3565%2823%2900452-4/fulltext?utm_source=openai))
 
-**Citations clés:**  
-- [Guo H, Lu S, Zhang J, et al. Front Pharmacol. 2023](https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2023.1121435/full)  
-- [Di Vincenzo F, Nicoletti A, Negri M, et al. Antibiotics. 2023] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10295019/)
+Des travaux cliniques importants proviennent également du Centre médical de l’Armée affilié à l’Université médicale de l’Armée à Chongqing, en Chine, qui a mené l’étude FMT randomisée à 55 personnes avec le soutien de deux subventions du Comité scientifique militaire de l’Armée populaire de Libération : 17–163-12-ZT-002–060-01 et 16QNP098. Le 10e Hôpital Populaire de Shanghai et l’Université médicale poméranienne de Szczecin ont parrainé des études FMT enregistrées et des études probiotiques-rifaximine enregistrées, respectivement. [FMT randomized trial](https://link.springer.com/article/10.1186/s12876-021-01630-x) [NCT06162702](https://clinicaltrials.gov/study/NCT06162702) [NCT06223685](https://clinicaltrials.gov/study/NCT06223685) ([link.springer.com](https://link.springer.com/article/10.1186/s12876-021-01630-x?utm_source=openai))
 
----
+## Points forts, limites et défis
 
-*Cette analyse a été réalisée à partir de la littérature et des données d'essais en vigueur jusqu'en mai 2025. Pour des demandes de citations spécifiques à un sujet ou plus approfondies, veuillez suivre les liens fournis ou consulter les actes de conférences et les registres d'essais pour les études les plus récentes.*
+Les points forts du domaine résident dans une voie thérapeutique pratique et établie, une reconnaissance croissante que le SIBO n'est pas une seule condition biologiquement homogène, et des outils de plus en plus sophistiqués pour l'échantillonnage du microbiome de l'intestin grêle. Cependant, l'amélioration des symptômes, la normalisation des tests respiratoires et l'éradication véritable à long terme de la surcroissance pathologique ne constituent pas des résultats interchangeables. Des définitions diagnostiques incohérentes, des tests respiratoires imparfaits, de petits échantillons, un suivi court et des causes sous-jacentes variées rendent difficile de comparer les essais ou de prouver qu'une intervention a guéri le SIBO plutôt que de le supprimer temporairement. [AGA clinical practice update](https://gastro.org/clinical-guidance/diagnosis-and-management-of-small-intestinal-bacterial-overgrowth-sibo/) [Culture and sequencing study](https://www.cghjournal.org/article/S1542-3565%2823%2900452-4/fulltext) ([gastro.org](https://gastro.org/clinical-guidance/diagnosis-and-management-of-small-intestinal-bacterial-overgrowth-sibo/?utm_source=openai))
+
+FMT illustre à la fois les promesses et les risques. Bien qu'elle puisse rétablir la diversité microbienne de manière plus large que les antibiotiques, elle nécessite un dépistage rigoureux des donneurs et une fabrication standardisée; l'Administration américaine des aliments et des médicaments (FDA) a averti que la FMT expérimentale a été associée à la transmission d'organismes pathogènes et à des infections graves. Des cures d'antibiotiques répétées soulèvent également des inquiétudes concernant la résistance, les effets indésirables et l'échec à corriger le problème anatomique ou de motilité qui prédispose une personne à une récidive. [FDA FMT safety alert](https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-march-12-2020-safety-alert-regarding-use-fecal-microbiota-transplantation-and-risk-serious) [AGA clinical practice update](https://gastro.org/clinical-guidance/diagnosis-and-management-of-small-intestinal-bacterial-overgrowth-sibo/) ([fda.gov](https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-march-12-2020-safety-alert-regarding-use-fecal-microbiota-transplantation-and-risk-serious?utm_source=openai))
+
+## Perspectives et directions futures
+
+Un remède pour le SIBO n'est pas proche dans le sens d'une seule thérapie qui résout définitivement la maladie chez la plupart des patients. Les jalons les plus significatifs à surveiller sont des normes diagnostiques validées fondées sur un prélèvement direct et le séquençage; des essais randomisés plus vastes avec des résultats durables et centrés sur le patient; des produits de microbiote standardisés plus sûrs; et des traitements qui combinent une réduction microbienne avec correction d'une motilité altérée, d'une anatomie modifiée, ou d'autres causes profondes. D'ici là, l'objectif réaliste est une rémission individualisée et durable avec une exposition minimisée aux antibiotiques plutôt que l'éradication universelle. [Antibiotic-response meta-analysis](https://pubmed.ncbi.nlm.nih.gov/38173154/) [FMT randomized trial](https://link.springer.com/article/10.1186/s12876-021-01630-x) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38173154/?utm_source=openai))
+
+## Références
+
+- [ACG clinical guideline](https://pubmed.ncbi.nlm.nih.gov/32023228/) — Pimentel et al., 2020.
+- [AGA clinical practice update](https://gastro.org/clinical-guidance/diagnosis-and-management-of-small-intestinal-bacterial-overgrowth-sibo/) — American Gastroenterological Association, 2020.
+- [Antibiotic-response meta-analysis](https://pubmed.ncbi.nlm.nih.gov/38173154/) — Takakura et al., 2024.
+- [FMT randomized trial](https://link.springer.com/article/10.1186/s12876-021-01630-x) — Xu et al., 2021.
+- [NCT06162702](https://clinicaltrials.gov/study/NCT06162702) — ClinicalTrials.gov, 2023.
+- [NCT06223685](https://clinicaltrials.gov/study/NCT06223685) — ClinicalTrials.gov, 2025.
+- [NCT06772064](https://clinicaltrials.gov/study/NCT06772064) — ClinicalTrials.gov, 2025.
+- [Probiotic systematic review](https://pubmed.ncbi.nlm.nih.gov/39538392/) — Niño et al., 2024.
+- [Culture and sequencing study](https://www.cghjournal.org/article/S1542-3565%2823%2900452-4/fulltext) — Leite et al., 2024.
+- [Breath test versus aspirate culture](https://pubmed.ncbi.nlm.nih.gov/37725319/) — Tang et al., 2024.
+- [Smart-capsule detection study](https://pubmed.ncbi.nlm.nih.gov/39587802/) — Jones et al., 2024.
+- [FDA FMT safety alert](https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-march-12-2020-safety-alert-regarding-use-fecal-microbiota-transplantation-and-risk-serious) — U.S. Food and Drug Administration, 2020.

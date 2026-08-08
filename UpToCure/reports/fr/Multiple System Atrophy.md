@@ -1,107 +1,88 @@
-
-# Atrophie du système multiple
-
-## Introduction
-
-L'atrophie multisystémique (AMS) est une maladie neurodégénérative rare et progressive qui n'a pas encore de remède connu à ce jour (2025). Au cours des deux dernières années, la recherche s'est accélérée, notamment en ce qui concerne les thérapies visant à modifier la progression de la maladie ou à la guérir. Cette revue résume le paysage de la recherche sur la MSA - y compris les essais cliniques, les thérapies expérimentales, les modèles précliniques, les institutions et le financement - tout en analysant les défis qui restent à relever sur la voie de la guérison.
-
+---
+title: Ataxie multisystémique
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir l'atrophie multisystémique.
+input_tokens: 73762
+output_tokens: 7215
+search_calls: 9
+cost_usd: 0.3241
 ---
 
-## Efforts de recherche récents pour guérir la MSA
+# Ataxie multisystémique
 
-### Progrès dans le diagnostic, la thérapie et les méthodologies d'essai
+## Aperçu
 
-Des articles de synthèse récents résument les progrès réalisés dans la thérapie et le diagnostic de la MSA. L'accent est mis sur le développement de biomarqueurs, les thérapies ciblées contre l'agrégation pathologique de l'alpha-synucléine et les essais multicentriques rigoureux ([Watanabe et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9978260/) ; [Li et al., 2024](https://link.springer.com/article/10.1007/s00415-024-12269-5)).
+Multiple system atrophy (MSA) is a rare, adult-onset, rapidly progressive neurodegenerative disorder. It combines problems with the automatic functions of the body—such as blood-pressure control, bladder function, and breathing—with Parkinson-like slowness and stiffness and/or poor balance and coordination. MSA is an *alpha-synucléinopathie*: abnormal clumps of the protein alpha-synuclein accumulate predominantly in oligodendrocytes, the brain cells that support nerve fibers. Average survival is roughly 6–10 years from symptom onset, although progression varies substantially between individuals. [AMULET phase 2 trial](https://www.sciencedirect.com/science/article/abs/pii/S1474442226001006)
 
----
+There is no approved treatment that stops, reverses, or cures MSA. Current care is therefore multidisciplinary and symptom-directed—for example, medicines and lifestyle measures for low blood pressure on standing, treatment for bladder and bowel symptoms, selected Parkinson medicines, and speech, swallowing, physical, occupational, respiratory, and palliative care support. These measures can improve comfort and function but do not alter the underlying disease course. [AMULET phase 2 trial](https://www.sciencedirect.com/science/article/abs/pii/S1474442226001006)
 
-### Essais cliniques (2023-2025)
+## Portée des recherches récentes (2020–présent)
 
-- **Lu AF82422 (anticorps anti-α-synucléine)** : Essai multinational mené par la Mayo Clinic pour ralentir la progression de la maladie ([Mayo Trial Registry] (https://www.mayo.edu/research/clinical-trials/diseases-conditions/multiple-system-atrophy-)).
-- **ATH434 (Alterity Therapeutics)** : L'essai de phase 2 a montré des résultats positifs dans le ralentissement de la progression de la MSA et la stabilisation de la fonction motrice ([Alterity, 2025](https://alteritytherapeutics.com/investor-centre/news/2025/01/30/alterity-therapeutics-announces-positive-ath434-phase-2-trial-results-in-multiple-system-atrophy-led-by-robust-clinical-efficacy/)).
-- **Ampreloxetine** : De vastes essais de phase 3 en cours dans plusieurs centres américains se concentrent sur les effets symptomatiques et les effets modificateurs possibles de la maladie ([UCSD](https://clinicaltrials.ucsd.edu/multiple-system-atrophy), [UCSF](https://clinicaltrials.ucsf.edu/multiple-system-atrophy)).
-- **Thérapie génique AB-1005 (AskBio)** : Premier essai mondial de thérapie génique de la MSA, la phase 1 s'est achevée en toute sécurité avec l'engagement de la cible ([AskBio](https://www.askbio.com/multiple-system-atrophy-msa-clinical-trial/)).
-- **Thérapie génique AAV1.NT3** : Stratégie neuroprotectrice de phase précoce délivrée par un vecteur viral ciblé ([Nature](https://www.nature.com/articles/s41434-025-00518-9)).
-- Consultez tous les essais en cours sur le [Registre des essais cliniques de l'UE] (https://www.clinicaltrialsregister.eu/ctr-search/search?query=multiple+system+atrophy).
+La recherche sur l'AMS est devenue plus active sur le plan clinique, avec des approches visant à réduire l’alpha-synucléine toxique, à diminuer sa production, à modifier les lésions liées au fer, à apaiser l’inflammation, à protéger les neurones vulnérables et à améliorer le diagnostic et les mesures prêtes pour les essais. Cependant, le domaine reste loin d’une thérapie curative démontrée : plus de 30 médicaments testés au cours des dernières décennies n’ont pas montré un avantage modificateur de la maladie, bien que le premier grand essai de phase 3 d’un anticorps anti-alpha-synucléine et plusieurs thérapies biologiques en stade précoce soient désormais en cours. [Recent advances in MSA trials](https://pubmed.ncbi.nlm.nih.gov/38416311/) [MASCOT phase 3 trial](https://clinicaltrials.gov/study/NCT06706622)
 
----
+## Percées majeures et thérapies émergentes
 
-### Approches précliniques et expérimentales
+La stratégie principale de modification de la maladie est l’immunothérapie contre l’alpha-synucléine. Amlenetug (Lu AF82422) est un anticorps monoclonal conçu — un anticorps fabriqué pour se lier à une cible choisie — qui reconnaît les espèces d’alpha-synucléine impliquées dans l’agrégation et la propagation. Dans des expériences cellulaires et chez la souris, il a réduit l’amorçage de l’alpha-synucléine, c’est-à-dire la capacité de la protéine mal repliée à induire davantage de mauvais replis. [Amlenetug preclinical rationale](https://www.nature.com/articles/s41531-024-00849-1) Dans l’essai AMULET de phase 2 à 64 participants, l’amlenetug n’a pas atteint son objectif principal dans l’ensemble de la population analysée, mais les tendances cliniques, d’imagerie et de biomarqueurs ont été jugées suffisantes pour justifier une étude de phase 3 confirmatoire. [AMULET phase 2 trial](https://www.sciencedirect.com/science/article/abs/pii/S1474442226001006)
 
-- **RS-D7** : Les études animales démontrent une neuroprotection ([Oxford Academic](https://academic.oup.com/ijnp/article/28/Supplement_1/i76/8009801)).
-- **ENT-01** : Cible l'alpha-synucléine entérique (intestinale), prometteuse dans les modèles précliniques ([DelveInsight](https://www.delveinsight.com/blog/multiple-system-atrophy-treatment)).
-- **Thérapie génique de l'alpha-synucléine (NIH)** : Perturbe le mauvais pliage de la protéine ; progresse vers une évaluation clinique précoce ([NIH RePORTER] (https://reporter.nih.gov/search/Q16CRa99xUK-bwp7-IaBhg/project-details/10922836)).
+Un deuxième programme d’anticorps, TAK-341 (MEDI1341), offre un contrepoids important au signal d’amlenetug. TAK-341 a été conçu pour se lier à l’alpha-synucléine, mais son essai de phase 2 comprenant 158 participants n’a pas montré de différence significative par rapport au placebo dans la progression de l’incapacité sur 52 semaines; l’aggravation moyenne modifiée de l’UMSARS était de 5,1 points avec TAK-341 et 5,2 avec le placebo. Le traitement était généralement bien toléré, mais ce résultat négatif montre que cibler simplement l’alpha-synucléine ne garantit pas un bénéfice clinique. [TAK-341 phase 2 results](https://www.hra.nhs.uk/planning-and-improving-research/application-summaries/research-summaries/phase-2-study-of-tak-341-for-multiple-system-atrophy/)
 
----
+Les thérapies ARN offrent un moyen plus direct de réduire la production d’alpha-synucléine. ION464 est un oligonucléotide antisens (ASO), un médicament génétique synthétique court conçu pour se lier aux instructions ARN d’une protéine et réduire sa production. L’étude de phase 1 en cours HORIZON administre l’ION464 par injection intrathécale dans le liquide cérébrospinal et mesure la sécurité, l’exposition au médicament et les changements du total d’alpha-synucléine dans le liquide céphalo-rachidien. [ION464 HORIZON trial](https://clinicaltrials.gov/study/NCT04165486) Pour étayer le concept, une étude sur modèle murin de 2026 a testé une administration systémique d’un ASO ciblant l’alpha-synucléine dans la MSA, illustrant les efforts pour résoudre le principal défi consistant à atteindre largement les médicaments à base d’ARN dans le cerveau. [Systemic alpha-synuclein ASO in an MSA mouse model](https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2026.1807721/pdf)
 
-### Tendances, percées et nouvelles méthodologies
+La thérapie génique est testée comme stratégie de neuroprotection plutôt que comme suppression directe de l’alpha-synucléine. L’essai de Brain Neurotherapy Bio de phase 1 injecte un vecteur de type adéno-associé virus 2 (AAV2) portant le gène du facteur neurotrophique dérivé des cellules gliales (GDNF), destiné à soutenir les circuits neuronaux producteurs de dopamine, directement dans le putamen. L’étude comprend une chirurgie simulée et est principalement une étude de sécurité, elle ne peut donc pas encore établir que le transfert de gène GDNF ralentit ou inverse l’AMS. [AAV2-GDNF phase 1 trial](https://clinicaltrials.gov/study/NCT04680065)
 
-- **ATH434** (Alterity) est la première petite molécule à démontrer un ralentissement de la progression de la MSA dans un essai de phase 2 - une étape cruciale vers la modification de la maladie.
-- les **thérapies géniques** (AB-1005, AAV1.NT3) passent de la promesse théorique à la mise en œuvre clinique.
-- **Directions émergentes** : immunothérapie, oligonucléotides antisens et combinaisons multicibles (voir aussi [MedRxiv preprints](https://www.medrxiv.org/)).
-- Le diagnostic fondé sur les biomarqueurs et la stratification des patients, la transcriptomique à cellule unique et l'intégration de l'intelligence artificielle dans la conception des essais marquent des avancées méthodologiques essentielles ([Li et al., 2024](https://link.springer.com/article/10.1007/s00415-024-12269-5)).
+Les approches par petites molécules restent actives. ATH434 est un médicament expérimental oral destiné à redistribuer l’excès de fer et à réduire les lésions oxydatives liées au fer, tout en pouvant également influencer l’agrégation de l’alpha-synucléine. Son essai randomisé de phase 2 with 77 participants a été achevé en 2024 et a mesuré le fer cérébral par IRM, l’alpha-synucléine, la chaîne légère de neurofilaments — marqueur sanguin ou du liquide céphalo-rachidien de lésions neuronales — et le handicap clinique. [ATH434-201 phase 2 trial](https://clinicaltrials.gov/study/NCT05109091) Les présentations des sponsors ont rapporté des résultats cliniques et d’imagerie exploratoires favorables, mais ces affirmations nécessitent une confirmation dans un essai plus large et indépendant avant que ATH434 puisse être considéré comme un traitement modificateur de la maladie validé. [ATH434 sponsor-reported phase 2 data](https://alteritytherapeutics.com/investor-centre/news/2025/09/15/alterity-therapeutics-presents-ath434-201-phase-2-data-at-the-american-neurological-association-annual-meeting/)
 
----
+## Essais cliniques et approches expérimentales
 
-### Principales institutions et financement
+Le programme le plus avancé actuellement est l’essai MASCOT de Lundbeck sur l’amlenetug, une étude de phase 3 randomisée et en double aveugle qui a recruté 401 personnes atteintes d’une MSA précoce. Les participants reçoivent une dose faible d’amlenetug, une dose élevée d’amlenetug, ou un placebo toutes les quatre semaines pendant une période contrôlée par placebo de 72 semaines; la date d’achèvement primaire est estimée pour février 2028. [MASCOT phase 3 trial](https://clinicaltrials.gov/study/NCT06706622) MASCOT suit AMULET, dont le résultat de la phase 2 était suggestif plutôt que définitif car son objectif principal n’a pas été atteint. [AMULET phase 2 trial](https://www.sciencedirect.com/science/article/abs/pii/S1474442226001006)
 
-- **Sources de financement** : NIH des États-Unis, Horizon Europe de l'UE, Coalition MSA, Fondation Michael J. Fox.
-- **Centres de recherche clés** : Mayo Clinic, UCSF, UCSD, NYU, UCLA, Alterity (Australie), University College London, grands centres japonais (par exemple, Fujita University).
+Exénatide, un agoniste du récepteur du peptide-1-like glucagon (GLP-1) déjà utilisé dans le diabète, a produit l’un des signaux académiques récents les plus encourageants. Dans la petite étude de phase 2a randomisée mais ouverte de l’UCL, les scores de handicap UMSARS sur 48 semaines se sont aggravés de 6,1 points avec l’exénatide contre 13,3 points avec les soins standards, soit une différence entre les groupes ajustée de −7,44 points. Cependant, les biomarqueurs objectifs, l’imagerie et les résultats de marche basés sur des capteurs n’ont pas différé selon le groupe de traitement, et le design non aveugle laisse les effets du placebo et de l’observateur comme explications plausibles; un essai plus grand et en double aveugle est nécessaire. [Exenatide phase 2a trial](https://onlinelibrary.wiley.com/doi/full/10.1002/ana.70004)
 
----
+D’autres approches expérimentales sont à des stades précoces de développement. L’essai ION464 ASO de phase 1, mené par Ionis, compte 40 participants et reste en recrutement avec une achèvement estimée en 2027, tandis que l’étude de thérapie génique putaminale AAV2-GDNF, comportant neuf participants, est active mais ne recrute pas et prévoit une achèvement primaire en août 2026. [ION464 HORIZON trial](https://clinicaltrials.gov/study/NCT04165486) [AAV2-GDNF phase 1 trial](https://clinicaltrials.gov/study/NCT04680065) La thérapie autologue par cellules stromales mésenchymales intrathécales est également étudiée dans le cadre d’un essai adaptatif, randomisé et en double aveugle, mais elle demeure expérimentale et n’a pas démontré d’efficacité clinique. [Autologous mesenchymal-stromal-cell trial](https://clinicaltrials.gov/study/NCT05167721)
 
-## Analyse critique : Points forts, limites et défis
+## Méthodologies et approches scientifiques
 
-### Points forts
+Les études modernes sur l'AMS combinent des échelles d’évaluation clinique avec des mesures biologiques qui peuvent démontrer si un traitement atteint sa cible visée. Celles-ci incluent l’IRM structurelle et quantitative pour l’atrophie cérébrale régionale et le fer, la chaîne légère de neurofilaments dans le sang ou le liquide céphalo-rachidien, et des mesures d’alpha-synucléine libre ou agrégée. L’objectif est de dépasser le recours exclusif aux scores symptomatiques, qui peuvent être variables dans une maladie rapide et hétérogène. [Recent advances in MSA trials](https://pubmed.ncbi.nlm.nih.gov/38416311/) [ATH434-201 phase 2 trial](https://clinicaltrials.gov/study/NCT05109091)
 
-- Augmentation sans précédent des stratégies de modification de la maladie et des essais cliniques en phase avancée.
-- Les collaborations mondiales, multicentriques et multidisciplinaires améliorent la validité de la recherche.
-- Les thérapies personnalisées, multimodales et combinées augmentent le potentiel d'impact clinique.
+Une plateforme particulièrement importante est le test d’amplification du semis d’alpha-synucléine. Ces essais de laboratoire amplifient de minuscules quantités d’alpha-synucléine mal repliée associée à la maladie à partir du liquide céphalo-rachidien ou du sang, ce qui peut améliorer la certitude diagnostique, distinguer les souches d’alpha-synucléine liées à la MSA de celles de la maladie de Parkinson et, à terme, fournir un marqueur pharmacodynamique indiquant si une thérapie modifie le comportement pathologique de la protéine. [CSF alpha-synuclein seed-amplification protocol](https://pubmed.ncbi.nlm.nih.gov/36653527/) [Serum alpha-synuclein seed biomarker](https://www.nature.com/articles/s41591-023-02358-9) Les chercheurs construisent également des cohortes de patients profondément caractérisées avec des évaluations cliniques longitudinales, des biospécimens et des banques de cellules souches pluripotentes induites (iPSC) pour tester les mécanismes de la maladie dans des cellules dérivées des patients et améliorer le recrutement des essais. [Trial-ready MSA cohorts and iPSC banking](https://pmc.ncbi.nlm.nih.gov/articles/PMC10864413/)
 
-### Limitations
+## Institutions et financement principaux
 
-- Aucune thérapie n'a encore permis de stopper ou d'inverser complètement la MSA ; le succès actuel consiste à ralentir (et non à arrêter) la progression de la maladie.
-- Les thérapies géniques et cellulaires à un stade précoce doivent surmonter des problèmes d'échelle, de coût et de validation de la sécurité.
-- Le recrutement et l'hétérogénéité des patients, ainsi que l'absence de biomarqueurs précoces, empêchent d'obtenir rapidement des résultats.
+Les principaux centres académiques comprennent University College London et le National Hospital for Neurology and Neurosurgery, qui ont dirigé l’étude sur l’exénatide; Mayo Clinic, NYU Langone Health, Duke University et d’autres sites internationaux ayant participé à des essais thérapeutiques multicentriques; et des réseaux de recherche MSA européens et nord-américains qui apportent des données sur l’histoire naturelle et des biospécimens. [Exenatide phase 2a trial](https://onlinelibrary.wiley.com/doi/full/10.1002/ana.70004) [TAK-341 phase 2 trial](https://clinicaltrials.gov/study/NCT05526391) Les promoteurs industriels incluent Lundbeck avec amlenetug, Ionis avec ION464, Brain Neurotherapy Bio avec AAV2-GDNF, Takeda et AstraZeneca avec TAK-341, et Alterity avec ATH434. [MASCOT phase 3 trial](https://clinicaltrials.gov/study/NCT06706622) [ION464 HORIZON trial](https://clinicaltrials.gov/study/NCT04165486) [AAV2-GDNF phase 1 trial](https://clinicaltrials.gov/study/NCT04680065)
 
-### Défis en cours
+Le financement est un mélange d’essais sponsorisés par l’industrie, de subventions gouvernementales et de philanthropie dirigée par les patients. Mission MSA rapporte le financement de 75 projets axés sur la MSA pour un total de 4,33 millions de dollars depuis 2013, tandis que la National Ataxia Foundation propose une bourse annuelle Michael Lundquist de 50 000 dollars axée sur la MSA avec des caractéristiques cérébelleuses. [Mission MSA research program](https://missionmsa.org/research/) [Michael Lundquist MSA-C grant](https://www.ataxia.org/researcher-resources/) Le National Institute of Neurological Disorders and Stroke des États-Unis finance également des travaux ciblés, y compris une attribution en 2024 de 42 269 $ pour des biomarqueurs MSA quantitatifs basés sur la transcriptomique. [NIH MSA biomarker award](https://report.nih.gov/award/index.cfm?fy=2024&orgid=1725201&view=state)
 
-- Des essais de phase 3 plus vastes et plus longs avec des conceptions adaptatives sont nécessaires.
-- Mise au point de thérapies géniques/cellulaires sûres et efficaces à diffusion modulable.
-- Défis réglementaires, financiers et logistiques pour les nouvelles biotechnologies complexes.
-- La complexité de la MSA peut nécessiter des interventions personnalisées, ce qui complique encore le développement des thérapies.
+## Points forts, limites et défis
 
----
+La principale force du domaine actuel est que les thérapies sont de plus en plus construites autour d’une cible de maladie cohérente: l’alpha-synucléine pathologique et ses effets en aval sur les cellules gliales et les circuits neuronaux. Le lancement de MASCOT signifie que cette cible reçoit enfin un test de phase 3 important et doté d’un pouvoir statistique adéquat. [MASCOT phase 3 trial](https://clinicaltrials.gov/study/NCT06706622) Le domaine améliore également sa capacité à identifier des participants biologiquement appropriés et à évaluer l’engagement de la cible en utilisant des tests d’amplification du semis, l’imagerie et des biomarqueurs dans les fluides. [CSF alpha-synuclein seed-amplification protocol](https://pubmed.ncbi.nlm.nih.gov/36653527/) [Trial-ready MSA cohorts and iPSC banking](https://pmc.ncbi.nlm.nih.gov/articles/PMC10864413/)
 
-## La recherche expliquée dans un langage accessible
+Les limites sont substantielles. Les résultats négatifs de TAK-341 et l’échec du critère principal d’AMULET montrent que la biologie anti-alpha-synucléine prometteuse n’a pas encore été traduite en bénéfice clinique démontré. [TAK-341 phase 2 results](https://www.hra.nhs.uk/planning-and-improving-research/application-summaries/research-summaries/phase-2-study-of-tak-341-for-multiple-system-atrophy/) [AMULET phase 2 trial](https://www.sciencedirect.com/science/article/abs/pii/S1474442226001006) La MSA progresse rapidement, les diagnostics peuvent être incertains tôt dans la maladie, et les patients diffèrent quant à la prédominance des symptômes autonomiques, similaires à Parkinson ou cérébelleux. Les thérapies peuvent aussi arriver après des dommages irréversibles: la justification préclinique d’amlenetug suggère que bloquer davantage l’ensemencement pourrait ne pas éliminer une pathologie déjà établie. [Amlenetug preclinical rationale](https://www.nature.com/articles/s41531-024-00849-1) Enfin, des injections spinales répétées, des perfusions intraveineuses et une chirurgie cérébrale pourraient créer des barrières de sécurité, de coût et d’accès même si ces approches s’avèrent efficaces. [ION464 HORIZON trial](https://clinicaltrials.gov/study/NCT04165486) [AAV2-GDNF phase 1 trial](https://clinicaltrials.gov/study/NCT04680065)
 
-- **Le terme "modificateur de la maladie" signifie que l'on combat les causes des lésions nerveuses et que l'on ne se contente pas de masquer les symptômes.
-- **La thérapie génique** consiste à délivrer du matériel génétique protecteur ou correcteur aux cellules cérébrales ou nerveuses - dans le cas de la MSA, il s'agit de bloquer ou d'éliminer les protéines toxiques.
-- Un remède reste difficile à trouver car la MSA concerne de nombreuses régions du cerveau et un mauvais pliage complexe des protéines ; chaque nouvelle thérapie doit être soigneusement testée pour en vérifier la sécurité et l'efficacité.
+## Outlook and Future Directions
 
----
+À la date du 8 août 2026, la MSA n’est pas proche d’une guérison, mais le domaine est passé d’expérimentations purement symptomatiques à des essais biologiquement ciblés, soutenus par des biomarqueurs. La plus grande étape sera de savoir si l’amlenetug modifie l’évolution du handicap ou la survie dans l’essai de phase 3 MASCOT ; d’autres tests critiques sont de savoir si l’ION464 peut réduire en toute sécurité l’alpha-synucléine chez les personnes atteintes de MSA, si l’AAV2-GDNF est sûr et montre un signal neuroprotecteur crédible, et si les résultats prometteurs mais préliminaires d’exenatide et d’ATH434 peuvent être reproduits dans des essais plus importants et en aveugle. Une véritable guérison exigera probablement un diagnostic précoce, ainsi qu’une thérapie — ou une combinaison de thérapies — qui à la fois arrête les dommages causés par l’alpha-synucléine et protège ou restaure les réseaux neuronaux endommagés. [MASCOT phase 3 trial](https://clinicaltrials.gov/study/NCT06706622) [ION464 HORIZON trial](https://clinicaltrials.gov/study/NCT04165486) [Exenatide phase 2a trial](https://onlinelibrary.wiley.com/doi/full/10.1002/ana.70004)
 
-## Citations
+## References
 
-1. Watanabe H, Shima S, Mizutani Y, Ueda A, Ito M. (2022). [Multiple System Atrophy : Advances in Diagnosis and Therapy] (https://pmc.ncbi.nlm.nih.gov/articles/PMC9978260/). journal of Movement Disorders, 16(1)_.
-2. Li, T., Wen, J., Han, F. et al. (2024). [Multiple system atrophy : an update and emerging directions of biomarkers and clinical trials](https://link.springer.com/article/10.1007/s00415-024-12269-5). _Journal of Neurology_.
-3. Campese N, Caliò B, Fanciulli A, et al. (2023). [Pain in Multiple System Atrophy : a Systematic Review and Meta-Analysis] (https://pubmed.ncbi.nlm.nih.gov/38094640/). _Movement Disorders Clinical Practice_.
-4. [Essais de la clinique Mayo sur la MSA] (https://www.mayo.edu/research/clinical-trials/diseases-conditions/multiple-system-atrophy-)
-5. [Résultats de l'essai ATH434 - Alterity Therapeutics] (https://alteritytherapeutics.com/investor-centre/news/2025/01/30/alterity-therapeutics-announces-positive-ath434-phase-2-trial-results-in-multiple-system-atrophy-led-by-robust-clinical-efficacy/)
-6. [Essais de l'UCSD MSA] (https://clinicaltrials.ucsd.edu/multiple-system-atrophy)
-7. [Essais de l'UCSF MSA] (https://clinicaltrials.ucsf.edu/multiple-system-atrophy)
-8. [Essai clinique d'AskBio AB-1005] (https://www.askbio.com/multiple-system-atrophy-msa-clinical-trial/)
-9. [Thérapie génique AAV1.NT3 (Nature 2025)] (https://www.nature.com/articles/s41434-025-00518-9)
-10. [Registre des essais cliniques de l'UE : MSA](https://www.clinicaltrialsregister.eu/ctr-search/search?query=multiple+system+atrophy)
-11. [Étude RS-D7 (Oxford Academic)] (https://academic.oup.com/ijnp/article/28/Supplement_1/i76/8009801)
-12. [ENT-01 et traitement MSA (DelveInsight)] (https://www.delveinsight.com/blog/multiple-system-atrophy-treatment)
-13. [NIH RePORTER-Alpha-synuclein Gene Therapy Project] (https://reporter.nih.gov/search/Q16CRa99xUK-bwp7-IaBhg/project-details/10922836)
-14. [MedRxiv MSA Research Pipeline] (https://www.medrxiv.org/)
-
----
-
-## Conclusion
-
-En 2025, bien qu'il n'existe pas de remède à l'atrophie du système multiple, une expansion spectaculaire de la recherche innovante, des essais cliniques en phase avancée et une convergence sur la modification de la maladie permettent d'espérer de véritables progrès. Les thérapies géniques, les immunothérapies et les interventions multimodales personnalisées marquent le début d'une nouvelle ère, mais les défis liés à la complexité de la maladie, à la taille des essais et à l'accès sûr et équitable demeurent. L'avenir de la recherche sur la MSA dépend désormais d'une innovation, d'une collaboration et d'un financement soutenus.
-
-*Pour plus de détails, suivez les liens de citation ci-dessus pour les sources primaires et les mises à jour continues.*
+- [AMULET phase 2 trial](https://www.sciencedirect.com/science/article/abs/pii/S1474442226001006) — *The Lancet Neurology*, 2026.
+- [Recent advances in MSA trials](https://pubmed.ncbi.nlm.nih.gov/38416311/) — *Current Neurology and Neuroscience Reports*, 2024.
+- [MASCOT phase 3 trial](https://clinicaltrials.gov/study/NCT06706622) — ClinicalTrials.gov, 2026.
+- [Amlenetug preclinical rationale](https://www.nature.com/articles/s41531-024-00849-1) — *npj Parkinson’s Disease*, 2025.
+- [TAK-341 phase 2 results](https://www.hra.nhs.uk/planning-and-improving-research/application-summaries/research-summaries/phase-2-study-of-tak-341-for-multiple-system-atrophy/) — UK Health Research Authority, 2026.
+- [ION464 HORIZON trial](https://clinicaltrials.gov/study/NCT04165486) — ClinicalTrials.gov, 2026.
+- [Systemic alpha-synuclein ASO in an MSA mouse model](https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2026.1807721/pdf) — *Frontiers in Aging Neuroscience*, 2026.
+- [AAV2-GDNF phase 1 trial](https://clinicaltrials.gov/study/NCT04680065) — ClinicalTrials.gov, 2026.
+- [ATH434-201 phase 2 trial](https://clinicaltrials.gov/study/NCT05109091) — ClinicalTrials.gov, 2024.
+- [ATH434 sponsor-reported phase 2 data](https://alteritytherapeutics.com/investor-centre/news/2025/09/15/alterity-therapeutics-presents-ath434-201-phase-2-data-at-the-american-neurological-association-annual-meeting/) — Alterity Therapeutics, 2025.
+- [Exenatide phase 2a trial](https://onlinelibrary.wiley.com/doi/full/10.1002/ana.70004) — Vijiaratnam et al., *Annals of Neurology*, 2025.
+- [Autologous mesenchymal-stromal-cell trial](https://clinicaltrials.gov/study/NCT05167721) — ClinicalTrials.gov, 2026.
+- [CSF alpha-synuclein seed-amplification protocol](https://pubmed.ncbi.nlm.nih.gov/36653527/) — *Nature Protocols*, 2023.
+- [Serum alpha-synuclein seed biomarker](https://www.nature.com/articles/s41591-023-02358-9) — *Nature Medicine*, 2023.
+- [Trial-ready MSA cohorts and iPSC banking](https://pmc.ncbi.nlm.nih.gov/articles/PMC10864413/) — *Journal of Neurology*, 2024.
+- [TAK-341 phase 2 trial](https://clinicaltrials.gov/study/NCT05526391) — ClinicalTrials.gov, 2026.
+- [Mission MSA research program](https://missionmsa.org/research/) — Mission MSA, 2026.
+- [Michael Lundquist MSA-C grant](https://www.ataxia.org/researcher-resources/) — National Ataxia Foundation, 2026.
+- [NIH MSA biomarker award](https://report.nih.gov/award/index.cfm?fy=2024&orgid=1725201&view=state) — National Institutes of Health, 2024.

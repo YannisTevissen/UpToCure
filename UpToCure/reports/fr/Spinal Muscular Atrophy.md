@@ -1,131 +1,90 @@
-
-# Amyotrophie spinale 
-
-## Introduction
-
-L'amyotrophie spinale (SMA) est une maladie neuromusculaire héréditaire grave qui était, jusqu'à récemment, l'une des principales causes génétiques de mortalité infantile. Au cours des dernières années, les traitements ont rapidement progressé, passant des soins de soutien à des thérapies de modification de la maladie et, de plus en plus, à la possibilité d'une guérison. Cette revue fournit un résumé complet et accessible des recherches les plus récentes (2024-2025) sur les efforts curatifs pour la SMA, y compris les articles évalués par des pairs, les nouvelles thérapies, les essais cliniques et précliniques, et les orientations expérimentales audacieuses.
-
+---
+title: Amyotrophie spinale
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir l'amyotrophie spinale.
+input_tokens: 55608
+output_tokens: 6840
+search_calls: 6
+cost_usd: 0.2533
 ---
 
-## L'ère de la thérapie génique
+# Amyotrophie spinale
 
-La thérapie génique a transformé le paysage de la SMA. Le principal traitement, l'onasemnogene abeparvovec (Zolgensma), délivre une copie saine du gène SMN1. Les données les plus récentes, issues du monde réel et des registres, confirment ses avantages et sa sécurité pour les patients, en particulier pour les enfants traités à un très jeune âge.
+## Vue d'ensemble
 
-- [Mise à jour 2024 : Déclaration de consensus européen sur la thérapie génique pour l'amyotrophie spinale] (https://www.sciencedirect.com/science/article/pii/S1090379824000874)  
-  Les nouvelles lignes directrices des experts européens donnent la priorité à l'intervention précoce, à la sélection des patients et à la surveillance de la sécurité lors de l'utilisation du Zolgensma, reflétant ainsi l'expérience acquise avec ce médicament.
+L'amyotrophie spinale (SMA) est une maladie neuromusculaire héréditaire, généralement causée par des copies non fonctionnelles du gène **SMN1**. Une insuffisance de la protéine de survie des motoneurones (SMN) entraîne une perte irréversible de neurones moteurs — les cellules nerveuses qui contrôlent les mouvements volontaires — entraînant une faiblesse progressive, une fonte musculaire et, dans les cas de SMA infantile sévère non traitée, une insuffisance respiratoire et une mort prématurée. La sévérité varie considérablement: certains nourrissons développent une faiblesse profonde au cours des premiers mois de la vie, tandis que d'autres présentent des symptômes dans l'enfance ou à l'âge adulte et peuvent rester ambulants pendant des années. [FDA: Itvisma approval](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy)
 
-- [Les données à long terme renforcent l'innocuité de la thérapie génique Zolgensma pour l'amyotrophie spinale] (https://www.neurologylive.com/view/long-term-data-reinforces-safety-gene-therapy-zolgensma-sma)  
-  Un suivi de cinq ans montre la persistance de la sécurité et des avantages de la thérapie génique dans le monde réel.
+Aux États-Unis, les soins qui modifient la maladie comprennent désormais les thérapies d'épissage SMN2, nusinersen et risdiplam, le remplacement intraveineux du gène SMN1 par onasemnogene abeparvovec-xioi (Zolgensma) pour les enfants éligibles de moins de deux ans, et, depuis novembre 2025, l'intrathécale onasemnogene abeparvovec-brve (Itvisma) pour les personnes âgées de deux ans et plus. Ces traitements s'accompagnent de soins respiratoires, nutritionnels, orthopédiques, de rééducation et de soins psychosociaux. Ils modifient substantiellement le pronostic, surtout lorsqu'ils sont commencés avant l'apparition des symptômes, mais ils ne restaurent pas de manière fiable les neurones moteurs ou les muscles déjà perdus et ne constituent pas des cures établies. [SMA treatment best practices](https://www.neurology.org/doi/10.1212/CPJ.0000000000200374) [FDA: Itvisma approval](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy)
 
-- [Les données de STEER ouvrent la voie à une thérapie génique de la SMA pour une plus large tranche d'âge d'enfants] (https://www.ajmc.com/view/steer-data-open-door-to-sma-gene-therapy-for-wider-age-range-of-children)  
-  L'administration intrathécale dans le cadre d'essais cliniques permet d'élargir l'accès aux enfants plus âgés et à ceux dont la maladie est plus avancée.
+## Portée des recherches récentes (2020–présent)
 
-Cependant, des recherches critiques ont fait état d'effets indésirables rares mais graves, en particulier chez les patients traités à des stades avancés, soulignant la nécessité d'une sélection rigoureuse des patients :
+Les recherches depuis 2020 ont été exceptionnellement actives car la SMA a une cause génétique bien définie, des traitements efficaces qui augmentent le SMN fournissent une base clinique solide, et le dépistage néonatal permet un traitement avant une atteinte nerveuse majeure. Les questions dominantes sont de savoir comment délivrer le SMN en toute sécurité et de manière durable au système nerveux central quel que soit l'âge et la taille du corps, si une correction permanente du gène de secours **SMN2** est faisable, et comment réparer les faiblesses résiduelles après la thérapie SMN. Le domaine est proche de prévenir une grande partie de la maladie lorsque le traitement commence extrêmement tôt, mais il n'est pas encore proche d'une cure biologique universelle et éprouvée pour les personnes atteintes de SMA déjà établies. [SPR1NT trial](https://pubmed.ncbi.nlm.nih.gov/35715566/) [Base-editing rescue in mice](https://pubmed.ncbi.nlm.nih.gov/36996170/) [SMA treatment best practices](https://www.neurology.org/doi/10.1212/CPJ.0000000000200374)
 
-- [Issue fatale suite à l'utilisation de l'onasemnogène abeparvovec dans l'atrophie musculaire spinale à un stade avancé] (https://www.nature.com/articles/s41434-025-00535-8)  
-  Certains patients à un stade avancé ont connu des complications fatales, ce qui a incité à réviser les lignes directrices et à évaluer les risques.
+## Avancées majeures et thérapies émergentes
 
----
+**Le remplacement génétique s'est considérablement élargi.** Onasemnogene abeparvovec utilise un vecteur de virus adéno-associé de type 9 (AAV9) pour fournir un gène SMN fonctionnel. Dans l'étude de phase III SPR1NT, tous les 14 nourrissons pré-symptomatiques possédant deux copies de SMN2 qui ont été traités avant l'âge de six semaines ont survécu sans ventilation permanente à 14 mois, et tous se sont assis de manière indépendante pendant au moins 30 secondes à 18 mois; ce résultat illustre l'avantage exceptionnellement important d'intervenir avant l'apparition des symptômes. [SPR1NT trial](https://pubmed.ncbi.nlm.nih.gov/35715566/) Le suivi à long terme de la cohorte START originale a désormais rapporté la survie et le bénéfice conservé jusqu'à environ une décennie, bien que la cohorte ait été très petite et que de nombreux participants aient ensuite reçu nusinersen ou risdiplam, limitant les conclusions sur la thérapie génique seule. [LT-001 long-term follow-up](https://pubmed.ncbi.nlm.nih.gov/42016922/)
 
-## L'édition du génome et les thérapies de nouvelle génération
+Une avancée réglementaire majeure en 2025 a été l'approbation par la FDA de **Itvisma**, une formulation intrathécale plus concentrée de l'onasemnogene abeparvovec pour les adultes et les enfants âgés de deux ans et plus présentant des mutations SMN1 confirmées. L'administration intrathécale place le vecteur directement dans le liquide céphalo-rachidien autour de la moelle épinière, visant à atteindre les motoneurones avec une dose vecteur inférieure à celle de l'administration systémique intraveineuse et à étendre le remplacement génétique unique au-delà des plus jeunes enfants. [FDA: Itvisma approval](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy) Il s'agit d'une expansion importante du traitement modifiant la maladie plutôt que d'une preuve de guérison, car les dommages neuronaux et musculaires existants peuvent persister et la durabilité à long terme sur l'ensemble de la vie reste à l'étude. [FDA: Itvisma approval](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy) [LT-001 long-term follow-up](https://pubmed.ncbi.nlm.nih.gov/42016922/)
 
-Les stratégies émergentes visent à guérir véritablement la SMA au niveau génétique, en corrigeant les mutations de l'ADN des patients plutôt qu'en les compensant.
+**Le traitement dirigé par l’ARN continue d’évoluer.**  
+Le risdiplam est une petite molécule orale qui modifie l’épissage de l’ARN SMN2 afin de produire davantage de protéine SMN complète.  
+Dans le programme SUNFISH Phase III chez les SMA de type 2 et non ambulants de type 3, 32 % des participants se sont améliorés d’au moins trois points sur la Motor Function Measure après 24 mois et 58 % se sont stabilisés ou améliorés, renforçant la valeur d'une production systémique soutenue de SMN. [SUNFISH two-year results](https://pubmed.ncbi.nlm.nih.gov/36735057/)  
+Une preuve de concept particulièrement innovante provient d'un seul cas prénatal de risdiplam rapporté en 2025, dans lequel le traitement fœtal semblait améliorer la maladie au cours de 30 mois de suivi.  
+Ce résultat est prometteur mais demeure un seul cas, et ne constitue pas une preuve que le traitement médicamenteux prénatal soit prêt pour les soins de routine. [Prenatal risdiplam case](https://www.nejm.org/doi/abs/10.1056/NEJMc2300802)
 
-- [L'édition de bases dépendante de CRISPR comme stratégie thérapeutique pour les maladies neuromusculaires héréditaires] (https://www.frontiersin.org/journals/genome-editing/articles/10.3389/fgeed.2025.1553590/epub)  
-  Les progrès des éditeurs de bases CRISPR permettent de corriger les mutations de la SMA dans des modèles animaux. Cette approche n'a pas encore fait l'objet d'essais chez l'homme, mais elle est considérée comme très prometteuse par les experts.
+**L'édition du génome est la voie potentielle la plus évidente vers une correction génétique véritable et unique, mais elle reste préclinique.** Plutôt que d'ajouter une copie externe de SMN1 ou de modifier l'ARN à répétition, les chercheurs utilisent des base editors—outils dérivés CRISPR qui peuvent modifier une seule lettre d'ADN sans provoquer une cassure en double brin d'ADN—pour convertir la variante clé de l'exon 7 de SMN2 en une séquence semblable à SMN1. Dans un modèle murin de SMA, une administration double par AAV d'éditeurs de base a obtenu une édition ciblée élevée, une augmentation de la production de SMN, une amélioration de la fonction motrice et une survie moyenne prolongée; en associant l'édition à nusinersen, la survie moyenne s'est davantage prolongée. [Base-editing rescue in mice](https://pubmed.ncbi.nlm.nih.gov/36996170/) Des travaux séparés sur des cellules et des souris dérivées de patients ont également montré que des éditeurs de bases d'adénine à haute fidélité peuvent corriger SMN2 tout en réduisant l'édition hors cible détectable. [Base editing as genetic treatment](https://pubmed.ncbi.nlm.nih.gov/36711797/) Ces études soutiennent le concept de correction permanente mais n'ont pas encore établi une édition sûre, une administration sûre, une réadministration ou un suivi à long terme chez l'homme.
 
-- [La double approche génétique améliore le traitement de l'amyotrophie spinale] (https://crisprmedicinenews.com/news/dual-genetic-approach-enhances-treatment-of-spinal-muscular-atrophy/)  
-  Une stratégie préclinique de pointe associe la thérapie génique virale à l'édition de gènes CRISPR, doublant ainsi la restauration de la protéine SMN dans les études animales.
+**Les thérapies complémentaires dirigées vers les muscles visent à traiter la faiblesse que la restauration du SMN seule ne peut inverser.** L'apitegromab est un anticorps qui bloque l'activation de la myostatine, une protéine qui limite la croissance musculaire. Dans l'essai de phase III SAPPHIRE chez les patients non ambulants atteints de SMA de type 2 ou de type 3, déjà traités par nusinersen ou risdiplam, les groupes de doses combinées d'apitegromab chez les enfants âgés de 2 à 12 ans ont montré une amélioration de 1,8 points sur l'échelle Hammersmith Functional Motor Scale–Expanded par rapport au placebo à 12 mois ; la dose de 20 mg/kg seule n'a pas atteint la signification statistique par rapport au placebo. [SAPPHIRE Phase III trial](https://pubmed.ncbi.nlm.nih.gov/40818473/) Cela n'est pas une stratégie de guérison génétique, mais cela pourrait devenir une approche de combinaison importante pour améliorer la fonction motrice résiduelle après un traitement ciblé SMN. [SAPPHIRE Phase III trial](https://pubmed.ncbi.nlm.nih.gov/40818473/)
 
-- [Repousser les limites : orientations futures de la prise en charge de l'amyotrophie spinale] (https://www.sciencedirect.com/science/article/pii/S1471491424003393)  
-  Cette revue récente détaille le vaste pipeline : de l'édition de base/prime au ciblage de l'ARN, à la thérapie génique et cellulaire combinatoire et aux systèmes d'administration innovants.
+## Essais cliniques et approches expérimentales
 
-D'autres recherches fondamentales progressent grâce à d'importants projets des NIH et du Broad Institute :
+L’essai de phase IIIb SMART a testé l’onasemnogene abeparvovec administré par voie intraveineuse chez 24 enfants symptomatiques pesant entre 8,5 et 21 kg, une population au‑delà de l’expérience clinique initiale concernant les faibles poids. À 52 semaines, la plupart des participants évaluables ont maintenu ou amélioré les scores de fonction motrice, et quatre ont atteint de nouveaux jalons moteurs ; toutefois, des élévations asymptomatiques des enzymes hépatiques sont apparues chez 83 % et une thrombocytopénie chez 71 %, soulignant que la thérapie génique à dose élargie nécessite une surveillance intensive et souvent des corticostéroïdes prolongés. [SMART Phase IIIb trial](https://pubmed.ncbi.nlm.nih.gov/39804575/)
 
-- [Projet préclinique d'édition du génome des NIH - SMA] (https://reporter.nih.gov/search/14E9CE024F8FC3D67598B8961CAA4A01A2FFCEB861BF/project-details/11089340)  
-- [Projet 1 : Édition thérapeutique de gènes pour l'amyotrophie spinale] (https://reporter.nih.gov/search/9V7C-SuyhEq08uA9tv2quQ/project-details/11089352)
-- [Innovative Genomics Institute : CRISPR Clinical Trials 2024] (https://innovativegenomics.org/news/crispr-clinical-trials-2024/)
+L'essai de phase III STEER de Novartis sur OAV101/onasemnogene abeparvovec intrathécal chez les patients pédiatriques atteints de SMA de type 2 a été achevé, selon l'enregistrement ClinicalTrials.gov mis à jour pour la dernière fois le 13 janvier 2026. L'enregistrement décrit une dose intrathécale unique de 1,2 × 10^14 génomes vectoriels par rapport à une procédure simulée sur une période de traitement de 52 semaines ; les résultats n'ont pas été publiés sur cet enregistrement au moment de sa mise à jour. [STEER trial record](https://clinicaltrials.gov/study/NCT05089656) Le programme de développement intrathécal connexe a fourni la base clinique pour l'approbation par la FDA le 24 novembre 2025 d'Itvisma pour les patients âgés de deux ans et plus. [FDA: Itvisma approval](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy)
 
----
+Pour une thérapie dirigée vers les muscles, Scholar Rock a mené à bien l'étude de phase III SAPPHIRE comportant 188 participants en décembre 2024. Sa publication de 2025 a rapporté un bénéfice statistiquement significatif pour l'analyse combinée de la dose d'apitegromab chez des participants plus jeunes recevant nusinersen ou risdiplam en traitement de fond, avec des taux d'événements indésirables largement similaires à ceux du placebo. [SAPPHIRE Phase III trial](https://pubmed.ncbi.nlm.nih.gov/40818473/) L'étude est notable car elle évalue un traitement combiné plutôt que de remplacer la thérapie dirigée contre SMN. [SAPPHIRE trial record](https://clinicaltrials.gov/study/NCT05156320)
 
-## Essais cliniques et progrès translationnels
+## Méthodologies et Approches Scientifiques
 
-Des essais cliniques sont en cours :
+La recherche sur la cure SMA combine des fibroblastes dérivés de patients et des neurones moteurs dérivés de cellules souches pluripotentes induites avec des modèles murins génétiques tels que les souris Δ7 SMA. Ces systèmes permettent aux chercheurs de mesurer la correction de l’épissage de SMN2, la restauration de la protéine SMN, la survie des neurones moteurs, la fonction neuromusculaire, le comportement moteur et la survie, avant de passer aux essais cliniques chez l’humain. AAV9 et les vecteurs apparentés constituent des plateformes de livraison centrales car ils peuvent atteindre le système nerveux, tandis que les systèmes à éditeurs scindés sont utilisés parce que les éditeurs de bases sont trop volumineux pour tenir dans un seul vecteur AAV conventionnel. [Base-editing rescue in mice](https://pubmed.ncbi.nlm.nih.gov/36996170/) [Base editing as genetic treatment](https://pubmed.ncbi.nlm.nih.gov/36711797/)
 
-- Élargissement des protocoles de thérapie génique (par exemple, nouvelles doses, âges plus élevés)
-- Première édition de gènes chez l'homme et nouvelles thérapies par oligonucléotides antisens
-- Thérapies combinées et méthodes avancées d'administration de cellules
+Des essais cliniques combinent de plus en plus des échelles fonctionnelles — telles que HFMSE, Revised Upper Limb Module, CHOP INTEND et Motor Function Measure — avec des biomarqueurs. La chaîne légère de neurofilament, un marqueur sanguin ou du liquide céphalorachidien des atteintes neuronales, est un candidat de premier plan pour mesurer la neurodégénérescence, le pronostic et la réponse au traitement, bien qu'une interprétation spécifique à l'âge et une validation prospective soient encore nécessaires. [SMA biomarker roadmap](https://pubmed.ncbi.nlm.nih.gov/37458045/) [Neurofilament reference ranges](https://pubmed.ncbi.nlm.nih.gov/38215341/)
 
-Liste complète et actualisée des procès :
-- [Cure SMA Clinical Trials Finder] (https://www.curesma.org/cure-sma-clinical-trials/)
-- [Rapport sur l'état de la SMA en 2024 (PDF)] (https://www.curesma.org/wp-content/uploads/2025/04/State-of-SMA-Report2024_vWeb.pdf)
-- [Registre ClinicalTrials.gov] (https://clinicaltrials.gov/)
+## Principales institutions et financement
 
----
+Les principaux contributeurs académiques et cliniques comprennent Boston Children’s Hospital, Harvard Medical School, the Broad Institute, UMass Chan Medical School, Nationwide Children’s Hospital, The Ohio State University, St. Jude Children’s Research Hospital, University College London et des centres neuromusculaires internationaux représentés dans les essais multicentriques majeurs. Le programme d’édition de base, par exemple, a impliqué des chercheurs de Boston Children’s, Harvard, the Broad Institute, UMass Chan, Ohio State, MIT et l’Université du Missouri. [Restauration par édition de base chez la souris](https://pubmed.ncbi.nlm.nih.gov/36996170/) Les principaux développeurs de l’industrie comprennent Novartis Gene Therapies, Roche/Genentech, Biogen et Scholar Rock. [Meilleures pratiques de traitement de la SMA](https://www.neurology.org/doi/10.1212/CPJ.0000000000200374) [Essai de phase III SAPPHIRE](https://pubmed.ncbi.nlm.nih.gov/40818473/)
 
-## Directions de recherche émergentes
+Le financement dirigé par les patients demeure particulièrement influent dans la SMA. Cure SMA a rapporté plus de 85 millions de dollars de soutien cumulé pour des subventions de recherche fondamentale et des programmes de découverte de médicaments, et son cycle de subventions 2024 prévoyait 750 000 dollars répartis sur cinq à six projets, avec des prix d'investigateur allant jusqu'à 150 000 dollars sur deux ans. [Cure SMA research funding announcement](https://www.curesma.org/cure-sma-launches-request-for-proposals-for-sma-research-projects-and-postdoctoral-fellowships/) [Cure SMA 2024 research RFP](https://www.curesma.org/wp-content/uploads/2024/07/2024-Basic-Research-RFP.pdf) Au niveau fédéral, l’initiative du NIH Wellstone Muscular Dystrophy Specialized Research Center prévoyait 4,8 millions de dollars pour l’exercice 2025, répartis sur des centres de recherche neuromusculaires collaboratifs, une infrastructure plus vaste qui peut soutenir une science pertinente à SMA. [NIH Wellstone center initiative](https://grants.nih.gov/grants/guide/notice-files/NOT-AR-25-004.html)
 
-Parmi les pistes en phase initiale et spéculatives, citons
+## Points forts, limites et défis
 
-- **Édition de la base et de l'amorce** : Amélioration de la précision et de la sécurité de la correction d'un seul gène - uniquement préclinique pour l'instant.
-- **Thérapies combinatoires** : Utilisation combinée de plusieurs modalités (par exemple, thérapie génique + édition de gènes) pour maximiser le sauvetage de la protéine SMN.
-- **Livraison avancée** : Cibler en toute sécurité les cellules de la moelle épinière difficiles à atteindre reste un défi majeur.
-- **Médicaments modulateurs d'ARN et d'épissage** : Plusieurs nouveaux candidats entrent dans les premiers essais cliniques pour les patients qui n'ont pas accès à la thérapie génique ou qui n'ont pas eu de succès avec celle-ci.
+La preuve la plus solide concernant la SMA est que la restauration précoce du SMN peut modifier radicalement l'histoire naturelle, en particulier après le dépistage néonatal et le traitement pré-symptomatique. [SPR1NT trial](https://pubmed.ncbi.nlm.nih.gov/35715566/) Le domaine dispose également de plusieurs options mécaniquement distinctes — modification de l'épissage de l'ARN, remplacement génique, édition génique et ciblage musculaire — ce qui crée des opportunités réalistes pour des traitements personnalisés et combinés. [SMA treatment best practices](https://www.neurology.org/doi/10.1212/CPJ.0000000000200374) [SAPPHIRE Phase III trial](https://pubmed.ncbi.nlm.nih.gov/40818473/)
 
----
+Cependant, le facteur temps demeure déterminant, car le traitement ne peut pas remplacer de manière fiable les motoneurones déjà perdus. La thérapie génique comporte également d'importantes limites de sécurité et de mise en œuvre : toxicité hépatique, faible numération plaquettaire, réponses immunitaires, exposition aux corticostéroïdes, contraintes de dose du vecteur et incertitude quant à la durabilité à vie. [SMART Phase IIIb trial](https://pubmed.ncbi.nlm.nih.gov/39804575/) [FDA: Itvisma approval](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy) Pour l'édition de base, les obstacles non résolus sont une livraison ciblée vers un nombre suffisant de motoneurones, des modifications non intentionnelles de l'ADN ou de l'ARN, des réponses immunitaires contre l'AAV et les protéines d'édition, et démontrer un bénéfice durable dans des modèles animaux de grande taille puis dans des essais chez l'homme. [Base-editing rescue in mice](https://pubmed.ncbi.nlm.nih.gov/36996170/) [Base editing as genetic treatment](https://pubmed.ncbi.nlm.nih.gov/36711797/)
 
-## Financement, leadership et effort global
+## Outlook and Future Directions
 
-Les récentes initiatives de financement et de plaidoyer démontrent que la recherche d'un traitement est une priorité mondiale :
+À partir du 8 août 2026, SMA est mieux décrite comme une maladie dans laquelle un traitement précoce peut souvent prévenir une progression catastrophique, et non comme une maladie qui a été guérie. Les prochains jalons à surveiller sont les résultats à long terme après le remplacement intrathécal du gène, la confirmation du bénéfice et de la sécurité chez les adolescents et les adultes, des biomarqueurs validés qui peuvent guider un traitement personnalisé, et les premières études chez l'homme sur l'édition permanente de SMN2. Un véritable remède nécessitera non seulement une production soutenue de SMN, mais aussi une correction sûre à vie, un accès large à travers les âges et les stades de la maladie, et un moyen de traiter les dommages survenus avant le traitement. [FDA: Itvisma approval](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy) [Base-editing rescue in mice](https://pubmed.ncbi.nlm.nih.gov/36996170/)
 
-- [Cure SMA lance une campagne de plaidoyer pour une nouvelle recherche fédérale sur la SMA (2025)] (https://www.curesma.org/cure-sma-launches-advocacy-campaign-to-secure-new-federal-research-for-sma/)
-- [MDA : plus de 5 millions de dollars en subventions de recherche pour 2024/2025] (https://www.mda.org/press-releases/2024/mda-announces-over-5-million-dollars-in-research-grants-to-advance-neuromuscular-disease-research)
-- [Shift Pharmaceuticals reçoit 3 millions de dollars pour des études précliniques sur la SMA] (https://bionexuskc.org/shift-pharmaceuticals-awarded-3-million-for-spinal-muscular-atrophy-treatment/)
+## References
 
-Principaux groupes et centres de recherche :
-- Laboratoire de David Liu (Broad Institute/Harvard) - pionniers de l'édition de base/prime.
-- Novartis Gene Therapies, Nationwide Children's Hospital, Cure SMA et les principaux consortiums européens de la SMA.
-
----
-
-## Points forts, limites et défis à relever
-
-**Strengths:**
-- Accélération massive de la recherche sur la SMA - de nombreuses nouvelles méthodes sont sur le point d'être utilisées en clinique.
-- Sécurité durable de la thérapie génique dans les cas de diagnostic précoce.
-- Forte collaboration internationale et augmentation du financement.
-
-**Limitations:**
-- Les technologies de diffusion pour l'édition du génome ne sont pas encore prêtes à être utilisées en clinique.
-- Les événements mortels survenus dans le cadre de la thérapie génique pour les patients en phase avancée de développement soulignent la nécessité d'une analyse minutieuse des risques.
-- L'accès mondial et l'accessibilité financière restent des obstacles majeurs.
-
-**Défis non résolus:**
-- Correction précise du gène SMN1 défectueux chez les patients humains (édition/remise).
-- Surveillance à long terme de la sécurité des nouvelles thérapies.
-- Veiller à ce que tous les cas de SMA dans le monde soient diagnostiqués et traités à un stade précoce.
-
----
-
-## Donner du sens à la science : Pour tous
-
-La SMA est causée par des mutations qui entravent la survie des motoneurones. Si les nouvelles thérapies sont porteuses d'espoir et ont littéralement sauvé des vies, un remède universel à vie reste un objectif futur. La thérapie génique et l'édition du génome pourraient rendre la guérison possible, en particulier lorsque ces approches arriveront à maturité. L'investissement mondial et la coopération scientifique détermineront la rapidité et l'équité avec lesquelles ces remèdes deviendront réalité.
-
----
-
-## Références
-
-- [Mise à jour 2024 : Déclaration de consensus européen sur la thérapie génique pour l'amyotrophie spinale] (https://www.sciencedirect.com/science/article/pii/S1090379824000874)
-- [Issue fatale suite à l'utilisation de l'onasemnogène abeparvovec dans l'atrophie musculaire spinale à un stade avancé] (https://www.nature.com/articles/s41434-025-00535-8)
-- [Repousser les limites : orientations futures de la prise en charge de l'amyotrophie spinale] (https://www.sciencedirect.com/science/article/pii/S1471491424003393)
-- [Les données à long terme renforcent l'innocuité de la thérapie génique Zolgensma pour l'amyotrophie spinale] (https://www.neurologylive.com/view/long-term-data-reinforces-safety-gene-therapy-zolgensma-sma)
-- [Les données de STEER ouvrent la voie à une thérapie génique de la SMA pour une plus large tranche d'âge d'enfants] (https://www.ajmc.com/view/steer-data-open-door-to-sma-gene-therapy-for-wider-age-range-of-children)
-- [La double approche génétique améliore le traitement de l'amyotrophie spinale] (https://crisprmedicinenews.com/news/dual-genetic-approach-enhances-treatment-of-spinal-muscular-atrophy/)
-- [L'édition de bases dépendante de CRISPR comme stratégie thérapeutique pour les maladies neuromusculaires héréditaires] (https://www.frontiersin.org/journals/genome-editing/articles/10.3389/fgeed.2025.1553590/epub)
-- [Projet préclinique d'édition du génome des NIH - SMA] (https://reporter.nih.gov/search/14E9CE024F8FC3D67598B8961CAA4A01A2FFCEB861BF/project-details/11089340)
-- [Cure SMA Clinical Trials Finder] (https://www.curesma.org/cure-sma-clinical-trials/)
-- [Rapport sur l'état de la SMA en 2024 (PDF)] (https://www.curesma.org/wp-content/uploads/2025/04/State-of-SMA-Report2024_vWeb.pdf)
-- [Registre ClinicalTrials.gov] (https://clinicaltrials.gov/)
-- [MDA : plus de 5 millions de dollars en subventions de recherche pour 2024/2025] (https://www.mda.org/press-releases/2024/mda-announces-over-5-million-dollars-in-research-grants-to-advance-neuromuscular-disease-research)
-- [Shift Pharmaceuticals reçoit 3 millions de dollars pour des études précliniques sur la SMA] (https://bionexuskc.org/shift-pharmaceuticals-awarded-3-million-for-spinal-muscular-atrophy-treatment/)
-- [Innovative Genomics Institute : CRISPR Clinical Trials 2024] (https://innovativegenomics.org/news/crispr-clinical-trials-2024/)
+- [FDA approval of Itvisma for spinal muscular atrophy](https://www.fda.gov/news-events/press-announcements/fda-approves-gene-therapy-treatment-spinal-muscular-atrophy) — U.S. Food and Drug Administration, 2025.
+- [Spinal muscular atrophy update in best practices](https://www.neurology.org/doi/10.1212/CPJ.0000000000200374) — Neurology Clinical Practice, 2024.
+- [SPR1NT trial](https://pubmed.ncbi.nlm.nih.gov/35715566/) — Strauss et al., *Nature Medicine*, 2022.
+- [LT-001 long-term follow-up](https://pubmed.ncbi.nlm.nih.gov/42016922/) — Waldrop et al., *eClinicalMedicine*, 2026.
+- [SUNFISH two-year results](https://pubmed.ncbi.nlm.nih.gov/36735057/) — Baranello et al., *Journal of Neurology*, 2023.
+- [Prenatal risdiplam case](https://www.nejm.org/doi/abs/10.1056/NEJMc2300802) — Finkel et al., *New England Journal of Medicine*, 2025.
+- [Base-editing rescue in mice](https://pubmed.ncbi.nlm.nih.gov/36996170/) — Arbab et al., *Science*, 2023.
+- [Base editing as genetic treatment](https://pubmed.ncbi.nlm.nih.gov/36711797/) — Choudhury et al., *Nature Communications*, 2023.
+- [SAPPHIRE Phase III trial](https://pubmed.ncbi.nlm.nih.gov/40818473/) — Crawford et al., *The Lancet Neurology*, 2025.
+- [SMART Phase IIIb trial](https://pubmed.ncbi.nlm.nih.gov/39804575/) — McMillan et al., *Neurology*, 2025.
+- [STEER trial record](https://clinicaltrials.gov/study/NCT05089656) — ClinicalTrials.gov, 2026.
+- [SAPPHIRE trial record](https://clinicaltrials.gov/study/NCT05156320) — ClinicalTrials.gov, 2026.
+- [SMA biomarker roadmap](https://pubmed.ncbi.nlm.nih.gov/37458045/) — Glascock et al., *Journal of Neuromuscular Diseases*, 2023.
+- [Neurofilament reference ranges](https://pubmed.ncbi.nlm.nih.gov/38215341/) — Bayoumy et al., *Clinical Chemistry and Laboratory Medicine*, 2024.
+- [Cure SMA research funding announcement](https://www.curesma.org/cure-sma-launches-request-for-proposals-for-sma-research-projects-and-postdoctoral-fellowships/) — Cure SMA, 2024.
+- [Cure SMA 2024 research RFP](https://www.curesma.org/wp-content/uploads/2024/07/2024-Basic-Research-RFP.pdf) — Cure SMA, 2024.
+- [NIH Wellstone center initiative](https://grants.nih.gov/grants/guide/notice-files/NOT-AR-25-004.html) — National Institutes of Health, 2024.

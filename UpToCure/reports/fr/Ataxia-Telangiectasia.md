@@ -1,105 +1,86 @@
-
-# Ataxie-Télangiectasie
-
-## Introduction
-L'ataxie-télangiectasie (A-T) est une maladie héréditaire rare caractérisée par une neurodégénérescence progressive, une immunodéficience et un risque accru de cancer. Les efforts pour guérir l'A-T se sont accélérés au cours des dernières années grâce aux progrès du génie génétique, des thérapies moléculaires et des soins de soutien. Cette revue résume la recherche de 2022 à mai 2025, en examinant les percées récentes, les thérapies expérimentales, les essais cliniques, le leadership institutionnel, les tendances et les défis - en traduisant les progrès techniques dans un langage accessible et en fournissant des citations directes pour une lecture plus approfondie.
-
-## Percées majeures et stratégies thérapeutiques émergentes
-
-### Thérapie génique et restauration de l'ATM
-
-L'un des défis fondamentaux de la thérapie A-T a été le développement de méthodes fiables pour délivrer le grand gène ATM, dont le dysfonctionnement est à l'origine de la maladie. Une importante étude réalisée en 2023 a démontré que les vecteurs lentiviraux et gammaretroviraux peuvent transporter avec succès l'ADNc ATM de pleine longueur et restaurer l'activité de la protéine ATM dans les cellules désactivées. Cette preuve de concept est cruciale, car elle permet de surmonter un obstacle technique qui a freiné le domaine pendant des années et rapproche de la réalité l'objectif d'une thérapie génique autologue, potentiellement curative.  
-- [Expression d'une grande séquence codante : Vecteurs de thérapie génique pour l'ataxie télangiectasie (Hirch et al., 2023)] (https://doi.org/10.1038/s41598-023-46332-4)
-
-### Thérapies moléculaires personnalisées et thérapies par oligonucléotides antisens (ASO)
-
-Des stratégies innovantes de "médecine de précision" sont développées pour des mutations A-T spécifiques, notamment en utilisant des oligonucléotides antisens (ASO) pour corriger les erreurs d'épissage génétique. Une revue de 2023 met en lumière un cas révolutionnaire dans lequel un OSA personnalisé a été administré à un enfant présentant une mutation d'épissage unique. Bien que prometteuse, cette approche ne s'applique actuellement qu'à une minorité de patients et n'en est qu'aux premiers stades des essais cliniques, avec une seule expérience de patient à ce jour.  
-- [Le paysage des essais cliniques sur l'ataxie-télangiectasie et les obstacles à surmonter (Kuhn et al., 2023)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10530584/)
-
-D'autres essais de phase précoce ont testé des composés tels que le riboside de nicotinamide (un dérivé de la vitamine B3) et l'acétyl-DL-leucine, montrant parfois des améliorations neurologiques ou immunologiques, bien que l'on manque encore de données solides.
-
-### Thérapies biologiques et thérapies de soutien innovantes
-
-Les patients atteints d'A-T sont susceptibles de développer des lymphomes et d'autres tumeurs malignes. Les efforts visant à réduire la toxicité de la chimiothérapie conventionnelle ont abouti à l'utilisation de thérapies à base d'anticorps monoclonaux, comme le rituximab et le brentuximab vedotin, avec de petites séries de cas et des rapports anecdotiques suggérant un bénéfice. Ces thérapies ne guérissent pas les caractéristiques neurologiques de l'A-T mais peuvent améliorer la prise en charge du cancer chez les patients atteints.
-
-Pour la gestion des symptômes, des formulations alternatives de corticostéroïdes (telles que le système Erydex, qui délivre de la dexaméthasone dans les globules rouges) ont fait l'objet d'essais cliniques randomisés multicentriques. Bien que des améliorations neurologiques aient été observées, ces études n'ont pas atteint leurs principaux critères d'efficacité, de sorte qu'aucune thérapie n'a encore été largement approuvée.
-
-- [Essais cliniques en cours pour l'A-T](https://clinicaltrials.gov/search?cond=Ataxia%20telangiectasia[Louis-bar])
-
-### Approches en matière de cellules souches et de transplantation
-
-La transplantation de cellules souches a été utilisée dans certains cas (principalement pour remédier à une déficience du système immunitaire ou à des cancers associés), mais il n'a pas été démontré qu'elle permettait de guérir la dégénérescence neurologique principale et elle n'est pas considérée comme une option curative au sens large.
-
-## Tendances de la recherche, méthodologies et nouvelles orientations
-
-Des études récentes, évaluées par des pairs, font état d'un regain d'activité dans le domaine de la santé publique :
-- Ingénierie des vecteurs de thérapie génique, en particulier en ce qui concerne l'efficacité de l'administration au cerveau et l'expression durable et sûre des gènes.
-- Des études précliniques utilisant des vecteurs viraux et non viraux, alors que les scientifiques se débattent avec le grand gène ATM et les exigences uniques de l'acheminement vers le système nerveux.
-- Médecine personnalisée avec des thérapies moléculaires sur mesure pour des mutations spécifiques.
-- Thérapies ciblant les effets en aval (stress oxydatif, réparation de l'ADN) à l'aide de petites molécules ou de médicaments redéfinis.
-- Des systèmes améliorés, mais encore insuffisants, pour mesurer la progression neurologique, cruciale pour l'évaluation de l'efficacité thérapeutique.
-
-Malgré un enthousiasme croissant, le domaine reste marqué par des lacunes majeures : aucun modèle animal ne récapitule l'ensemble de la maladie neurologique, et les populations de patients, petites et génétiquement diverses, rendent difficiles les essais cliniques robustes et généralisables.
-
-## Sources de financement et principales institutions
-
-Un financement important provient de fondations de lutte contre la maladie, telles que le [A-T Children's Project] (https://atcp.org) et [Ataxia UK] (https://www.ataxia.org.uk/), qui soutiennent des projets pilotes de thérapie génique, la découverte de biomarqueurs et des registres de patients. Les principaux centres de recherche, notamment l'université Johns Hopkins et l'hôpital pour enfants de Philadelphie, mènent des programmes de recherche fondamentale et clinique, souvent en collaboration avec leurs homologues européens. Les subventions nationales et internationales soutiennent également la majeure partie de la recherche préclinique et des premiers stades de la recherche clinique, avec des appels constants à une coordination mondiale accrue.
-
-## Points forts et limites des approches actuelles
-
-### Points forts
-
-- Les progrès techniques dans le domaine de l'ingénierie des vecteurs génétiques permettent d'espérer de futures thérapies géniques, malgré la taille importante du gène ATM.
-- Les approches de médecine personnalisée (ASO, corrections moléculaires) illustrent la puissance de la médecine génétique moderne pour les maladies rares.
-- Les nouveaux médicaments biologiques et l'amélioration de la prise en charge des complications ont permis d'améliorer la qualité de vie et la survie de nombreux patients.
-
-### Limitations
-
-- La plupart des stratégies curatives n'en sont qu'au stade préclinique ou au tout début du développement clinique ; les thérapies éprouvées pour les symptômes neurologiques restent hors de portée.
-- Le petit nombre de patients, la diversité génétique et l'absence de bons modèles animaux empêchent la réalisation d'essais cliniques rigoureux.
-- Il n'existe pas de thérapie largement efficace pour la neurodégénérescence progressive, le problème central de l'A-T, qui limite la durée de vie.
-- De nombreux essais portent sur des patients uniques ou de petites séries de cas, ce qui signifie que les résultats ne peuvent pas encore être généralisés.
-
-## Obstacles et défis restants
-
-- **La rareté de l'A-T rend difficiles les essais cliniques de grande envergure et les investissements commerciaux, d'où la lenteur des progrès.
-- **Complexité biologique:** L'introduction de gènes de grande taille dans le cerveau en toute sécurité, l'obtention d'une correction durable et l'évitement des effets secondaires potentiels (y compris le risque de cancer lié à l'intégration du vecteur) ne sont pas encore résolus.
-- **Mesure:** L'absence de biomarqueurs validés pour la progression des maladies du SNC fait qu'il est difficile de savoir si les thérapies sont efficaces.
-- **Équité:** Seul un petit groupe de patients bénéficie actuellement des approches de médecine personnalisée ; les thérapies sont coûteuses et complexes d'un point de vue logistique.
-
-## Perspectives et orientations futures
-
-Les années à venir devraient être marquées par
-- Premiers essais cliniques chez l'homme de vecteurs de thérapie génique pour la restauration de l'ATM.
-- Expansion des thérapies ASO personnalisées à mesure que le cadre réglementaire pour les interventions n=1 arrive à maturité.
-- Des registres internationaux plus importants et des études de l'histoire naturelle pour permettre d'éventuels essais cliniques de taille significative.
-- Les thérapies de soutien et les thérapies symptomatiques continuent d'être affinées, tandis que les travaux sur les véritables remèdes se poursuivent.
-
-## Conclusion
-
-Des progrès techniques sans précédent ont été réalisés au cours des trois dernières années dans la recherche d'un traitement de l'ataxie-télangiectasie, mais une thérapie largement applicable, sûre et efficace pour les symptômes neurologiques les plus graves n'a pas encore été trouvée. La poursuite de l'innovation, l'amélioration de l'infrastructure des essais et la collaboration internationale seront essentielles. Pour l'instant, le domaine fait preuve d'optimisme et de réalisme : les outils existent, la voie est plus claire, mais il reste encore de nombreux défis à relever. Les patients, les scientifiques et les défenseurs des droits de l'homme continuent de repousser les limites chaque année.
-
+---
+title: Ataxie-télangiectasie
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir l'ataxie-télangiectasie.
+input_tokens: 83448
+output_tokens: 6118
+search_calls: 9
+cost_usd: 0.3303
 ---
 
-## Références clés et lectures complémentaires
+# Ataxie-télangiectasie
 
-- **Rupture du vecteur de thérapie génique:**  
-  [Expression d'une grande séquence codante : Vecteurs de thérapie génique pour l'ataxie télangiectasie (Hirch et al., 2023)] (https://doi.org/10.1038/s41598-023-46332-4)
+## Vue d'ensemble
 
-- **Paysage et examen des essais cliniques:**  
-  [Le paysage des essais cliniques sur l'ataxie-télangiectasie et les obstacles à surmonter (Kuhn et al., 2023)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10530584/)
+Ataxie-télangiectasie (A-T) est une maladie héréditaire rare causée par des altérations délétères dans les deux copies du gène *ATM*, qui normalement aide les cellules à répondre aux dommages de l'ADN et au stress oxydatif. La forme classique d'A-T débute généralement pendant la petite enfance avec une aggravation des troubles de l'équilibre, de la coordination, de la parole et des mouvements oculaires; elle peut aussi provoquer une immunodéficience, des infections pulmonaires récurrentes, une sensibilité marquée aux radiations ionisantes et un risque élevé de cancer. La forme A-T variante peut commencer plus tard et progresser plus lentement, mais elle demeure associée à un handicap neurologique et à un risque de cancer. [GeneReviews: Ataxia-Telangiectasia](https://www.ncbi.nlm.nih.gov/books/NBK26468/)
 
-- **Essais cliniques en cours et récents pour A-T:**  
-  [ClinicalTrials.gov : A-T trials](https://clinicaltrials.gov/search?cond=Ataxia%20telangiectasia[Louis-bar])
+Le pronostic varie considérablement selon le sous-type génétique et les complications; toutefois, l'A-T classique est une maladie qui peut réduire l’espérance de vie, le cancer, les maladies pulmonaires chroniques et les infections étant des contributeurs majeurs à une mortalité précoce. Il n’existe pas de traitement curatif ou modifiant la maladie approuvé qui rétablisse la fonction de *ATM* dans tout l’organisme. Les soins actuels sont multidisciplinaires et de soutien, comprenant des soins physiques, professionnels (ergothérapie), orthophoniques, pulmonaires, nutritionnels et immunologiques; la prévention des infections et le remplacement d’immunoglobululine lorsque nécessaire; la surveillance du cancer; et la minimisation de l’exposition inutile aux radiations ionisantes. [GeneReviews: Ataxia-Telangiectasia](https://www.ncbi.nlm.nih.gov/books/NBK26468/)
 
-- **Projet pour les enfants A-T (nouvelles, financement, initiatives):**  
-  [https://atcp.org](https://atcp.org)
+## Portée des recherches récentes (2020–présent)
 
-- **Ataxia UK (actualités, essais, plaidoyer):**  
-  [https://www.ataxia.org.uk/](https://www.ataxia.org.uk/)
+Depuis 2020, la recherche sur l'A-T est devenue plus axée sur les aspects thérapeutiques, en particulier autour de la restauration de l’activité de *ATM* chez les personnes porteuses de mutations altérant l’épissage, la protection des neurones vulnérables, la correction du dysfonctionnement mitochondrial et l’amélioration des fonctions neurologiques mesurables dans les essais cliniques. Le domaine est actif mais reste précoce dans le développement curatif : l’approche moléculaire la plus directe — des oligonucléotides antisens (ASOs) spécifiques à chaque mutation — a atteint un traitement individualisé et une petite étude de phase 1/2, tandis que l’édition génique et les concepts de remplacement génique à large échelle restent précliniques. [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/) [A-T clinical-trial landscape](https://pmc.ncbi.nlm.nih.gov/articles/PMC10530584/)
 
-Pour une plongée exhaustive dans la recherche actuelle, ces sources, en particulier les récentes méta-analyses, répertorient essentiellement toutes les thérapies expérimentales et tous les essais cliniques en cours et prévus dans ce domaine.
+## Avancées majeures et thérapies émergentes
 
----
+L’avance la plus importante pour traiter la cause fondamentale est la thérapie par ASO de basculement de l’épissage. Les ASOs sont de courts brins synthétiques d'acide nucléique conçus pour se lier à l’ARN et modifier la façon dont il est épissé avant la production de protéines. Une étude de 2023 a utilisé le séquençage du génome entier chez 235 personnes atteintes d'A-T afin d’identifier des variantes potentiellement compatibles avec cette stratégie; 9 % ont été classées comme probablement compatibles et 6 % comme possiblement compatibles. Les chercheurs ont restauré le bon épissage de l’ARN *ATM* et la signalisation en aval d’ATM dans des fibroblastes dérivés de patients pour des variants récurrents, puis ont traité un enfant avec l’atipeksen personnalisé pendant trois ans sans événements indésirables graves. [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/)
 
-*Cette étude est exacte au 30 mai 2025 et intègre toutes les principales sources de données cliniques, institutionnelles et évaluées par des pairs publiées depuis janvier 2022*
+L’atipeksen est conçu pour la variante récurrente *ATM* c.7865C>T, qui crée un site d’épissage anormal et empêche la production de la protéine ATM normale. Le médicament est administré dans le liquide cérébrospinal par injection intrathécale et vise à restaurer l’épissage normal du transcrit d’ARN affecté. Ce n’est pas encore une cure générale de l’A-T : elle est spécifique à une mutation, nécessite des doses répétées et n’a pas encore démontré qu’elle peut inverser une maladie neurologique établie ni protéger contre toutes les complications systémiques de l’A-T. [A-T ASO phase 1/2 study](https://clinicaltrials.gov/study/NCT07215416) [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/)
+
+L’édition génétique constitue une autre stratégie potentiellement curative, mais elle demeure expérimentale. En 2020, des chercheurs ont utilisé une correction assistée par CRISPR/Cas9 dans des cellules souches pluripotentes induites — des cellules adultes reprogrammées dans un état semblable à celui des cellules souches — provenant de deux personnes atteintes d'A-T. La correction des variantes *ATM* causant la maladie a restauré les réponses cellulaires aux dommages de l’ADN et au stress oxydatif. Cela fournit une preuve de principe importante, mais les cellules modifiées n’ont pas encore été livrées en toute sécurité à grande échelle au cerveau, au système immunitaire, aux poumons et à d’autres tissus affectés chez les personnes atteintes d'A-T. [CRISPR correction of ATM mutations in patient iPS cells](https://pubmed.ncbi.nlm.nih.gov/32037450/)
+
+Plusieurs approches non curatives peuvent néanmoins ralentir les dommages ou améliorer la fonction. Le riboside de nicotinamide, précurseur du NAD+ apparenté à la vitamine B3, a amélioré la neurodégénérescence, la neuroinflammation et les performances motrices chez des souris déficientes en *Atm*, apparemment en améliorant le contrôle de la qualité mitochondriale. Dans une étude ouverte sur 24 personnes sur une durée de quatre mois, le riboside de nicotinamide était associé à une amélioration des scores d’ataxie et à des concentrations plus élevées d’immunoglobulines, mais l’absence de groupe placebo signifie que l’efficacité demeure incertaine. [NAD+ supplementation and mitophagy in A-T](https://pubmed.ncbi.nlm.nih.gov/33734555/) [Nicotinamide riboside proof-of-concept trial](https://pubmed.ncbi.nlm.nih.gov/34515380/)
+
+Le triheptanoin, une huile métabolique destinée à rétablir les voies de production d’énergie dans les mitochondries, a donné des signaux encourageants lors des phases 2a/2b. Dans une étude randomisée en double aveugle, contrôlée par placebo et à escalade posologique impliquant 31 participants, la dose la plus élevée était associée à des améliorations dans un indicateur de stress mitochondriale des cellules nasales et à des mesures motrices, de parole et de déglutition sélectionnées, bien que des événements indésirables gastro-intestinaux aient conduit à limiter la dose à 20% de l’apport calorique chez certains participants. Ces résultats soutiennent le dysfonctionnement mitochondrial comme caractéristique modifiable de l’A-T, plutôt que de démontrer la correction du trouble génétique sous-jacent. [Triheptanoin phase 2a/b trial](https://pubmed.ncbi.nlm.nih.gov/40616902/)
+
+La recherche identifie également de nouvelles cibles en aval de la perte d’ATM. Une étude de 2024 a montré que la carence en ATM activait les cellules microgliales du cerveau et reliait cette activation à la neurodégénérescence dans des modèles d'A-T et dans du matériel dérivé de patients. Ce travail soutient des approches de test visant à réduire la neuroinflammation nocive, mais de telles approches seraient probablement complémentaires à, plutôt qu’un substitut à, la restauration de la fonction d’ATM. [ATM-deficiency-induced microglial activation](https://pubmed.ncbi.nlm.nih.gov/38159274/)
+
+## Essais cliniques et approches expérimentales
+
+L’essai génétique le plus direct est l’étude de phase 1/2 sponsorisée par le Boston Children’s Hospital sur l’atipeksen, inscrite comme recrutant au 8 août 2026. L’étude prévoit d’enrôler 10 personnes atteintes d’A-T classique qui portent au moins une copie de la variante *ATM* c.7865C>T. Son objectif principal est la sécurité; le changement neurologique sera mesuré avec le A-T Neurological Examination Toolkit, des évaluations globales structurées, des mesures de mouvement portables, l’IRM et des biomarqueurs incluant la chaîne légère de neurofilaments et l’alpha-foetoprotéine. Aucun résultat d’efficacité clinique n’a encore été publié. [A-T ASO phase 1/2 study](https://clinicaltrials.gov/study/NCT07215416)
+
+Un résultat clinique majeur de 2026 provient de l’essai de phase 3 d’IntraBio sur la lévacetylleucine, également appelée N-acétyl-L-leucine. Chez 73 participants âgés de quatre ans ou plus, l’essai croisé randomisé en double aveugle a montré une amélioration moyenne plus importante sur l’échelle d’évaluation et de notation de l’ataxie avec la lévacetylleucine par rapport au placebo, sans événements indésirables graves liés au traitement ni décès. Bien que ce soit une avancée symptomatique significative, la lévacetylleucine ne répare pas le gène *ATM*; son étude d’extension en cours examine si un traitement à plus long terme peut avoir des effets neuroprotecteurs ou modificateurs de la maladie. [Levacetylleucine phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/42309084/)
+
+D’autres essais avancés ciblent le déclin neurologique plutôt que la mutation causale. Quince Therapeutics mène l’étude NEAT de phase 3 sur EryDex, dans laquelle le phosphate de dexaméthasone est encapsulé dans les globules rouges du patient afin de réduire la toxicité systémique associée au traitement stéroïde à long terme conventionnel. Son étude de phase 3 précédente, ATTeST, a évalué 175 participants, tandis que l’étude NEAT en cours est conçue comme un essai randomisé, en double aveugle, contrôlé par placebo. [EryDex NEAT phase 3 study](https://clinicaltrials.gov/study/NCT06193200) [EryDex ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/39152028/)
+
+## Méthodologies et approches scientifiques
+
+Les chercheurs en A-T combinent de plus en plus un diagnostic génétique approfondi avec des systèmes expérimentaux dérivés des patients. Le séquençage du génome entier et le séquençage de l’ARN peuvent révéler des variantes *ATM* introniques profonds ou d’autres variantes pertubant l’épissage, non détectées par les tests conventionnels axés sur les exons, identifier les personnes qui pourraient bénéficier d’un ASO et vérifier si un ASO restaure le bon traitement de l’ARN et la signalisation d’ATM dans des fibroblastes avant le traitement. [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/)
+
+Le domaine améliore également les modèles de maladie et les mesures de résultats. Comme de nombreuses souches de souris déficientes en *Atm* plus anciennes ne reproduisaient pas l’ataxie progressive observée chez l’homme, les chercheurs ont développé des modèles de souris combinant une déficience de réparation de l’ADN *Atm/Aptx* avec une ataxie progressive et une dégénérescence cérébelleuse. Ces modèles font l’objet d’études avec électrophysiologie, imagerie calcique, analyse de l’expression génétique, enregistrement des circuits cérébraux et interventions sur les neurones de Purkinje. Les études cliniques associent de plus en plus des échelles d’ataxie à l’IRM, à des dispositifs portables numériques, à la chaîne légère de neurofilaments, à l’alpha-foetoprotéine, à des tests de stress cellulaire et à des signatures de réponse à l’interféron pour détecter des effets biologiques dans de petites populations. [NIH project: Defining cerebellar pathophysiology in A-T](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01NS131646&arg_ProgOfficeCode=137) [Triheptanoin phase 2a/b trial](https://pubmed.ncbi.nlm.nih.gov/40616902/)
+
+## Principales établissements et financement
+
+Le Boston Children’s Hospital, la Harvard Medical School, le Broad Institute et l’A-T Children’s Project ont joué un rôle central dans le développement d’ASO personnalisés, y compris l’atipeksen et le cadre génomique pour identifier les variantes *ATM* susceptibles d’épissage correct. L’Université du Queensland et l’Hôpital pour enfants du Queensland ont dirigé des études mitochondriales et métaboliques sur le riboside de nicotinamide et le triheptanoin. IntraBio a financé le programme global de phase 3 de la lévacetylleucine, tandis que Quince Therapeutics finance le programme actuel de développement pivot d’EryDex. [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/) [Levacetylleucine phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/42309084/) [EryDex NEAT phase 3 study](https://clinicaltrials.gov/study/NCT06193200)
+
+Le financement gouvernemental et philanthropique reste essentiel car l'A-T est rare et hautement hétérogène. Par exemple, le National Institute of Neurological Disorders and Stroke (États‑Unis) a attribué le R01NS131646, « Defining cerebellar pathophysiology in Ataxia Telangiectasia », pour 2024–2028; son financement prévu pour l’exercice 2026 s’élevait à 679 607 dollars. Le projet utilise des modèles de souris améliorés pour identifier les mécanismes cérébelleux et les cibles de traitement. [NIH project: Defining cerebellar pathophysiology in A-T](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01NS131646&arg_ProgOfficeCode=137)
+
+## Points forts, limites et défis
+
+Une des forces majeures de la recherche actuelle sur l'A-T est que plusieurs approches sont désormais testées chez l’humain: des médicaments dirigés contre les symptômes ont atteint la phase 3, des thérapies métaboliques ont généré des données contrôlées de phase 2, et la thérapie personnalisée à base d’ARN est passée des cellules des patients à un traitement clinique intrathécal. [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/) [Levacetylleucine phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/42309084/)
+
+La limitation centrale est que A-T est un trouble de réparation de l'ADN qui touche tout le corps, et pas seulement un trouble cérébelleux. Un remède durable devrait permettre de rétablir en toute sécurité une activité ATM adéquate dans le système nerveux central, les cellules immunitaires, les tissus pulmonaires pertinents et les cellules susceptibles de développer un cancer, idéalement avant qu'une perte neuronale irréversible ne survienne. Les ASOs s'appliquent actuellement qu'à certains sous-ensembles de mutations et nécessitent une livraison à travers ou autour de la barrière hémato-encéphalique ; l'édition génomique soulève des enjeux majeurs de livraison, de ciblage hors cible, de dommages à l'ADN et de sécurité à long terme vis-à-vis du cancer dans un trouble déjà défini par l'instabilité du génome. La transplantation de cellules souches hématopoïétiques peut aider certaines complications immunitaires ou liées au cancer, mais l'expérience publiée reste limitée et incohérente en ce qui concerne le bénéfice neurologique. [A-T ASO phase 1/2 study](https://clinicaltrials.gov/study/NCT07215416) [Hematopoietic stem-cell transplantation review](https://pubmed.ncbi.nlm.nih.gov/42051534/) [DFG: Hematopoietic stem-cell gene therapy for A-T](https://gepris.dfg.de/gepris/projekt/428639696?language=en)
+
+## Perspectives et directions futures
+
+À la date du 8 août 2026, A-T n'est pas proche d'une cure universelle, mais le domaine est passé au-delà du simple soutien. Les jalons les plus importants à suivre sont la sécurité clinique et les résultats neurologiques d'atipeksen; l'expansion des programmes ASO à d'autres variantes d'épissage d'ATM; la validation de biomarqueurs pouvant démontrer l'engagement de la cible et une neurodégénérescence plus lente; les résultats à plus long terme de la levacetylleucine, EryDex et des interventions métaboliques; et des démonstrations précliniques montrant que l'édition génétique ou la délivrance génétique peuvent restaurer en toute sécurité l'activité de l'ATM dans le cerveau et les tissus périphériques. Un objectif réaliste à court terme est une modification de la maladie spécifique à chaque mutation et un traitement plus précoce, tandis qu'une cure largement applicable nécessitera de résoudre les questions de délivrance systémique et de sécurité à long terme. [A-T ASO phase 1/2 study](https://clinicaltrials.gov/study/NCT07215416) [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/)
+
+## Références
+
+- [GeneReviews: Ataxia-Telangiectasia](https://www.ncbi.nlm.nih.gov/books/NBK26468/) — NCBI Bookshelf, 2025.
+- [A-T clinical-trial landscape](https://pmc.ncbi.nlm.nih.gov/articles/PMC10530584/) — *Frontiers in Pediatrics*, 2023.
+- [Individualized splice-switching ASO framework](https://pmc.ncbi.nlm.nih.gov/articles/PMC10371869/) — Kim et al., *Nature*, 2023.
+- [A-T ASO phase 1/2 study](https://clinicaltrials.gov/study/NCT07215416) — Boston Children’s Hospital and ClinicalTrials.gov, 2026.
+- [CRISPR correction of ATM mutations in patient iPS cells](https://pubmed.ncbi.nlm.nih.gov/32037450/) — Nayler et al., *Human Molecular Genetics*, 2020.
+- [NAD+ supplementation and mitophagy in A-T](https://pubmed.ncbi.nlm.nih.gov/33734555/) — Fang et al., *Aging Cell*, 2021.
+- [Nicotinamide riboside proof-of-concept trial](https://pubmed.ncbi.nlm.nih.gov/34515380/) — Veenhuis et al., *Movement Disorders*, 2021.
+- [Triheptanoin phase 2a/b trial](https://pubmed.ncbi.nlm.nih.gov/40616902/) — Lynch et al., *eBioMedicine*, 2025.
+- [ATM-deficiency-induced microglial activation](https://pubmed.ncbi.nlm.nih.gov/38159274/) — Lai et al., *Cell Reports Medicine*, 2024.
+- [Levacetylleucine phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/42309084/) — Martakis et al., *The Lancet Neurology*, 2026.
+- [EryDex NEAT phase 3 study](https://clinicaltrials.gov/study/NCT06193200) — Quince Therapeutics and ClinicalTrials.gov, 2026.
+- [EryDex ATTeST phase 3 trial](https://pubmed.ncbi.nlm.nih.gov/39152028/) — *The Lancet Neurology*, 2024.
+- [NIH project: Defining cerebellar pathophysiology in A-T](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01NS131646&arg_ProgOfficeCode=137) — National Institute of Neurological Disorders and Stroke, 2026.
+- [Hematopoietic stem-cell transplantation review](https://pubmed.ncbi.nlm.nih.gov/42051534/) — Bozkurt et al., *Frontiers in Pediatrics*, 2026.
+- [DFG: Hematopoietic stem-cell gene therapy for A-T](https://gepris.dfg.de/gepris/projekt/428639696?language=en) — German Research Foundation, 2020.

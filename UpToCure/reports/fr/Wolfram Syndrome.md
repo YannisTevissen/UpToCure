@@ -1,135 +1,78 @@
+---
+title: Syndrome de Wolfram
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir le syndrome de Wolfram.
+input_tokens: 36962
+output_tokens: 4252
+search_calls: 4
+cost_usd: 0.1649
+---
 
 # Syndrome de Wolfram
 
-## Qu'est-ce que le syndrome de Wolfram ?
+## Aperçu
 
-Le syndrome de Wolfram (WS), parfois appelé DIDMOAD (Diabetes Insipidus, Diabetes Mellitus, Optic Atrophy, and Deafness), est une maladie neurodégénérative progressive, génétique et extrêmement rare. Elle est le plus souvent causée par des mutations du gène WFS1, bien que des mutations du gène CISD2 puissent donner lieu à une variante (WS2). 
+Syndrome de Wolfram est un trouble génétique rare et progressif, le plus souvent causé par des mutations délétères dans les deux copies du gène *WFS1*. La maladie classique commence généralement dans l’enfance avec le diabète dépendant de l’insuline et la dégénérescence du nerf optique, puis peut impliquer le diabète insipide, la perte auditive, les troubles de la vessie et des complications neurologiques ou psychiatriques; ce schéma est parfois appelé DIDMOAD. [GeneReviews: WFS1 Spectrum Disorder](https://www.ncbi.nlm.nih.gov/books/NBK4144/) Le pronostic varie sensiblement selon le génotype et les complications, mais une maladie évolutive du tronc cérébral et du système neurologique a historiquement entraîné une mortalité prématurée chez de nombreuses personnes touchées. [Diagnosis, Management, and Treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC4705145/)
 
-Les symptômes apparaissent dès l'enfance et comprennent généralement un diabète insulinodépendant, une perte progressive de la vision, une déficience auditive, un diabète insipide et une détérioration neurologique. Les estimations de la prévalence situent le WS à environ 1 sur 100 000 en Amérique du Nord, et entre 1 sur 500 000 et 1 sur 770 000 dans le monde. La maladie est finalement mortelle, la plupart des patients étant confrontés à des complications multiples au fil du temps.
+Il n’existe aucune thérapie approuvée qui guérisse, inverse ou arrête durablement le syndrome de Wolfram. La prise en charge actuelle est pluridisciplinaire et axée sur les symptômes: technologies liées à l’insuline et au glucose pour le diabète, desmopressine pour le diabète insipide lorsque nécessaire, soutien pour une faible vision, aides auditives ou implants cochléaires, surveillance de la vessie et des reins, soins neurologiques et de santé mentale, et conseil génétique. [GeneReviews: WFS1 Spectrum Disorder](https://www.ncbi.nlm.nih.gov/books/NBK4144/)
 
-**Références** :  
-- [NIH/PMC10652474] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10652474/)  
-- [Frontiers in Genetics, 2023] (https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2023.1198171/full)  
-- [MDPI, 2023](https://www.mdpi.com/1422-0067/24/4/3690)
+## Portée des recherches récentes (2020–présent)
 
----
+La recherche depuis 2020 est devenue plus translationnelle, passant d’études sur le stress du réticulum endoplasmique (RE) et le déséquilibre calcique vers des essais médicamenteux chez l’homme, des modèles de cellules souches dérivées de patients et le remplacement du gène rétinien. La question centrale est de savoir si protéger les cellules vulnérables suffisamment tôt peut préserver la fonction, tandis que des programmes à plus long terme cherchent à corriger ou remplacer le gène défectueux et les cellules endommagées; au 8 août 2026, ces approches restent expérimentales plutôt que curatives. [WFS1 Gene Delivery in Mice](https://pubmed.ncbi.nlm.nih.gov/41998758/) [Clinical-Trial Design for Neurodegeneration](https://pubmed.ncbi.nlm.nih.gov/40344084/)
 
-## Principaux efforts de recherche en vue d'une guérison (2023-2025)
+## Principales avancées et thérapies émergentes
 
-### Recherche préclinique
+Les approches par petites molécules visent à réduire le stress du RE — la réponse cellulaire nocive déclenchée lorsque les protéines se replient mal ou que la gestion du calcium est perturbée. Le dantrolène, un médicament relaxant musculaire existant qui stabilise la libération de calcium du réticulum endoplasmique, a été bien toléré dans une petite étude ouverte de phase Ib/IIa, mais six mois de traitement n’ont pas amélioré de manière significative la vision ou la fonction neurologique dans l’ensemble; sa principale valeur résidait dans l’établissement d’un cadre de sécurité réalisable et de test de biomarqueurs. [Dantrolene Phase Ib/IIa Trial](https://insight.jci.org/articles/view/145188) Le valproate de sodium, autre médicament réutilisé, avait déjà montré des effets protecteurs dans des modèles cellulaires portant des variantes dominantes de *WFS1*, mais la traduction chez les patients a été difficile. [Valproate and WFS1 Mutations](https://pubmed.ncbi.nlm.nih.gov/32219690/)
 
-#### 1. **Thérapie génique et correction génétique**
+Une stratégie pharmacologique plus récente est AMX0035, une association orale de taurursodiol et de phénylbutyrate de sodium visant à réduire les signaux de mort cellulaire associés au stress du RE et au stress mitochondrial. Son étude sur le syndrome de Wolfram évalue s’il est possible de préserver la fonction des cellules bêta pancréatiques résiduelles, en utilisant le peptide C‑peptide stimulé par un repas — marqueur de la production d’insuline par l’organisme — comme principal critère d’efficacité, aux côtés des résultats de la glycémie, de la dose d’insuline et de l’acuité visuelle. [AMX0035 Phase II Study](https://clinicaltrials.gov/study/NCT05676034)
 
-- **"Génomique du syndrome de Wolfram 1 (WFS1)" (Khöks, S., 2023)**
-    - *Résumé* : Cette revue décrit les approches expérimentales de thérapie génique pour le syndrome de Wolfram, y compris le transfert direct du gène WFS1, l'administration du facteur de survie MANF avec des vecteurs AAV, et les thérapies basées sur l'ARN. Notamment, la correction génétique CRISPR-Cas9 dans les cellules β pancréatiques dérivées de cellules souches pluripotentes induites provenant de patients atteints du syndrome de Wolfram a rétabli la fonction chez les souris. Il s'agit d'études de preuve de concept, qui n'ont pas encore été testées chez l'homme.
-    - *Méthodologie Modèles animaux et systèmes cellulaires dérivés de patients, édition de gènes CRISPR, administration de gènes AAV.
-    - *percées* : Validation de la faisabilité de la correction des mutations du gène WFS1 au niveau du gène et de la protéine dans les types de cellules pertinents pour la maladie.
-    - *Institution/Financement* : Institut Perron et Université Murdoch, Australie.
-    - *Limitations Strictement préclinique ; aucun essai clinique n'a été lancé en 2025.
-    - **Source** : [Biomolecules, 2023 (PMC10527379)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10527379/)
+La replacement génétique a produit une avancée préclinique importante. Dans une étude sur souris et iPSC de 2026, une injection intravitréenne — une injection dans l’œil — d’un adéno-associé virus de sérotype 2 portant le gène humain normal *WFS1* a amélioré la survie des cellules ganglionnaires rétiniennes et la fonction visuelle dans un modèle de syndrome de Wolfram. [WFS1 Gene Delivery in Mice](https://pubmed.ncbi.nlm.nih.gov/41998758/) Ceci constitue une forte preuve de concept pour le traitement local des maladies du nerf optique, mais il n’a pas encore établi la sécurité, la dose, la durabilité, la compatibilité immunitaire ou le bénéfice clinique chez l’homme.
 
-#### 2. **Approches pharmacologiques**
+La replacement cellulaire et l’édition génétique restent des possibilités à un stade encore précoce. Des chercheurs ont corrigé une variante *WFS1* chez un patient dans des cellules souches pluripotentes induites (iPSCs) — des cellules adultes reprogrammées en cellules souches — puis ont généré des cellules bêta productrices d’insuline qui ont inversé le diabète après transplantation chez la souris. [Gene-Edited Beta Cells Reverse Diabetes in Mice](https://pubmed.ncbi.nlm.nih.gov/32321868/) Par ailleurs, des travaux sur les formes liées de Wolfram syndrome, *WFS1* et *CISD2*, ont montré que la restauration d’un peptide dérivé de CISD2 améliorait l’équilibre calcique dans les cellules déficientes et améliorait des traits diabétiques dans des modèles de drosophile, suggérant une stratégie potentiellement plus large de secours basée sur des protéines ou des peptides. [Reciprocal Rescue by WFS1 and CISD2](https://pubmed.ncbi.nlm.nih.gov/40181095/)
 
-- **Agonistes des récepteurs du GPL-1**
-    - *Résumé Des études montrent que les agonistes du GLP-1R, des médicaments souvent utilisés dans le traitement du diabète, peuvent améliorer la fonction des cellules pancréatiques et neuronales dans des modèles précliniques présentant une déficience en WFS1.
-    - *Méthodologie Cellules humaines in vitro, modèles animaux déficients en WFS1.
-    - *Institution* : NIH.
-    - *Limitations Pas d'essais cliniques dans les WS en 2025.
-    - **Source** : [PMC10244297](https://pmc.ncbi.nlm.nih.gov/articles/PMC10244297/)
+## Essais cliniques et approches expérimentales
 
-- **Inhibiteur de la calpaïne (Ibudilast) et agoniste du récepteur Sigma-1 (PRE-084)**
-    - *Résumé* : Ces agents sont prometteurs dans l'inversion de certains effets des mutations WFS1 dans des modèles de maladie, y compris des améliorations dans la survie et la fonction des cellules. Cependant, tous les résultats sont limités à des études en laboratoire ou sur des animaux.
-    - **Source** : [Khöks, S. 2023] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10527379/)
+La plus grande étude contrôlée récente est TREATWOLFRAM (NCT03717909), essai international de phase II, randomisé et double aveugle sur le valproate de sodium, soutenu par l’Université de Birmingham. Soixante-trois enfants et adultes ont été randomisés et suivis pendant 36 mois; les résultats intermédiaires rapportés n’ont pas montré de ralentissement significatif de la perte d’acuité visuelle, pas d’amélioration des résultats glycémiques mesurés, et plus d’épisodes d’hypoglycémie dans le groupe valproate. [TREATWOLFRAM Results](https://www.endocrine-abstracts.org/ea/0111/ea0111oc9.7) Ce résultat négatif est scientifiquement important car il montre que la protection prometteuse contre le stress du RE dans les modèles de laboratoire ne se traduit pas automatiquement par un effet cliniquement significatif.
 
-#### 3. **Agonistes de l'insuline double**
+À l’Université Washington à St. Louis, l’étude de phase Ib/IIa sur le dantrolène a testé 19 participants évaluable et a trouvé une tolérance à court terme acceptable mais aucune amélioration globale significative des résultats des cellules bêta, de la vision ou du neurologique. [Dantrolene Phase Ib/IIa Trial](https://insight.jci.org/articles/view/145188) L’étude en phase II ouverte AMX0035 d’Amylyx Pharmaceuticals (NCT05676034) a commencé en mars 2023, a atteint l’achèvement primaire en juillet 2024 et demeure active mais ne recrute pas pour un suivi à long terme; le registre ne répertorie aucun résultat publié, il ne faut donc pas présumer de l’efficacité. [AMX0035 Phase II Study](https://clinicaltrials.gov/study/NCT05676034)
 
-- **DA-CH5 Agoniste double de l'incrétine**
-    - *Résumé Un nouveau peptide (DA-CH5) ciblant les récepteurs GLP-1 et GIP a amélioré la glycémie et la santé des îlots pancréatiques chez les rats knock-out WFS1.
-    - *percées* : Amélioration du métabolisme et de la protection des cellules β dans un modèle animal bien établi de diabète WS.
-    - *Limitations* : Pas encore testé chez l'homme.
-    - **Source** : [PMC10611518](https://pmc.ncbi.nlm.nih.gov/articles/PMC10611518/)
+## Méthodologies et approches scientifiques
 
----
+Les chercheurs combinent des registres de patients et des cohortes d’histoire naturelle avec des mesures sensibles destinées à détecter des changements avant l’apparition d’une déficience grave. Celles-ci incluent la tomographie par cohérence optique (OCT) des couches de fibres nerveuses rétiniennes et des cellules ganglionnaires, l’acuité visuelle standardisée, le test de C‑peptide après repas mixte pour la fonction résiduelle des cellules bêta, les données de surveillance continue de la glycémie, les échelles d’évaluation neurologique et l’IRM structurelle du cerveau. [Clinical-Trial Design for Neurodegeneration](https://pubmed.ncbi.nlm.nih.gov/40344084/) [Retinal Ganglion-Cell Loss Pattern](https://pubmed.ncbi.nlm.nih.gov/35452662/)
 
-### Essais cliniques (2023-2025)
+Les études mécanistiques utilisent des souris déficientes en *Wfs1*, des iPSCs dérivées de patients différenciées en cellules bêta, neurones et cellules rétiniennes, et des études de plus en plus détaillées des cellules gliales qui soutiennent les axones du nerf optique. Une étude sur souris et iPSC de 2024 a identifié des anomalies oligodendrogliales comme contributeur potentiellement pertinent à la neuropathie optique, élargissant le champ au-delà d’une vision centrée sur les neurones. [Oligodendroglia in Wolfram Optic Neuropathy](https://pubmed.ncbi.nlm.nih.gov/PMC11351506) La chaîne légère de la neurofilament sanguin est également évaluée comme marqueur de lésion neuroaxonnale, bien que les données actuelles ne la valident pas encore comme mesure fiable de progression pour des patients individuels. [Neurofilament Light Chain Study](https://pubmed.ncbi.nlm.nih.gov/41929703/)
 
-#### 1. **Essai de réorientation du valproate de sodium**
+## Institutions et financement principaux
 
-- *Objectif Déterminer si le valproate de sodium, un médicament antiépileptique reconnu, ralentit ou modifie la progression de la WS.
-- *Conception Essai international contrôlé et randomisé lancé en 2023.
-- *Statut Recrutement actif à partir de la mi-2024. Aucun résultat n'a encore été publié.
-- *Financement/Direction* : Consortium universitaire multicentrique.
-- *Limitations Le médicament est bien étudié dans la population générale, mais il doit faire preuve d'une efficacité unique dans les SS.
-- **Registre** : [ISRCTN10176118](https://www.isrctn.com/ISRCTN10176118)
+L’Université de Washington à St. Louis est un centre majeur aux États-Unis grâce à sa clinique du syndrome de Wolfram, son registre, ses recherches sur l’histoire naturelle, l’étude du dantrolène et le site d’essai AMX0035. Le programme sur le dantrolène a reçu le soutien des National Institutes of Health américains, y compris les subventions du National Institute of Diabetes and Digestive and Kidney Diseases DK112921, DK113487, et DK020579, ainsi que le soutien du National Center for Advancing Translational Sciences. [Dantrolene Phase Ib/IIa Trial]
 
-#### 2. **Essai sur le dantrolène sodique (résultat négatif)**
+L’Université de Birmingham et des centres cliniques collaborants au Royaume-Uni, en France, en Espagne et en Pologne ont dirigé TREATWOLFRAM, la première étude multicentrique randomisée et contrôlée sur un médicament dans le syndrome de Wolfram. [TREATWOLFRAM Results] Amylyx Pharmaceuticals sponsorise le programme AMX0035, tandis que des organisations dirigées par des patients et des fonds philanthropiques — notamment la Snow Foundation, Unravel Wolfram Syndrome Fund, Ellie White Foundation, Stowe Fund, Eye Hope Foundation et Feiock Fund — ont soutenu les travaux cliniques et en laboratoire. [Dantrolene Phase Ib/IIa Trial]
 
-- *Résumé Un vaste essai clinique mené avec soin n'a révélé aucune amélioration du diabète, de la vision ou des résultats neurologiques avec le dantrolène sodique chez les patients atteints de WS. Cet agent n'est plus considéré comme un remède prometteur.
-- *Importance : Le résultat négatif met en évidence les défis posés par la réorientation des médicaments pour le WS ; l'essai s'est probablement appuyé sur un raisonnement mécaniste antérieur, mais a échoué au niveau du critère d'évaluation clinique.
-- **Résumé de l'examen par les pairs** : [PMC9960967](https://pmc.ncbi.nlm.nih.gov/articles/PMC9960967/)
+## Forces, limites et défis
 
-#### 3. **Autres agents (Tirzepatide, AMX0035, etc.)**
+Les points forts du domaine sont une cause génétique claire dans la plupart des cas classiques, des modèles de maladie dérivés de patients de plus en plus performants, des biomarqueurs oculaires et endocriniens mesurables, et des preuves que le remplacement génétique peut restaurer les déficits liés à la vision chez les animaux. [WFS1 Gene Delivery in Mice] L’étude sur le valproate terminée démontre également que le recrutement multinational et les essais contrôlés par placebo sont possibles malgré la rareté du trouble. [TREATWOLFRAM Results]
 
-- *Statut* : Certaines revues discutent d'une éventuelle réorientation d'agents comme le tirzepatide ou l'AMX0035 sur la base de mécanismes ou de succès dans des maladies apparentées, mais il n'y a pas d'essais cliniques enregistrés ou d'études actives spécifiques au WS à la date de 2025.
-- **Références** : [Khöks, S. 2023] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10527379/)
+La principale limitation est que le syndrome de Wolfram endommage plusieurs organes sur de nombreuses années, ce qui signifie qu’un traitement qui atteint les cellules bêta peut ne pas atteindre la rétine, le tronc cérébral, le système auditif ou l’appareil urinaire. De petits essais, des âges et stades de maladie variables, la perte neuronale irréversible avant le traitement, et des changements cliniques lents rendent l’efficacité difficile à détecter. [Clinical-Trial Design for Neurodegeneration](https://pubmed.ncbi.nlm.nih.gov/40344084/) La thérapie génique ajoute des défis de délivrance du vecteur, de réponses immunitaires, de durabilité, et la probabilité que différents organes nécessitent des voies de délivrance différentes; la transplantation de cellules éditées doit aussi aborder le risque tumoral, la protection immunitaire, la complexité de fabrication et l’engraftment à long terme. [Gene-Edited Beta Cells Reverse Diabetes in Mice](https://pubmed.ncbi.nlm.nih.gov/32321868/)
 
----
+## Perspectives et directions futures
 
-### Directions de la recherche précoce et émergente
+Un remède n’est pas imminent, mais la recherche sur le syndrome de Wolfram progresse des concepts généraux de protection cellulaire vers des thérapies adaptées à des tissus et mécanismes spécifiques. Les prochaines étapes les plus importantes sont des résultats AMX0035 à long terme évalués par les pairs, la réplication et la traduction de la délivrance du gène rétinien *WFS1* dans des études utilisables chez l’homme, des biomarqueurs d’essai validés et des preuves que l’intervention précoce peut préserver — et non simplement mesurer — la vision, la production d’insuline endogène et la fonction neurologique. [AMX0035 Phase II Study](https://clinicaltrials.gov/study/NCT05676034) [WFS1 Gene Delivery in Mice](https://pubmed.ncbi.nlm.nih.gov/41998758/)
 
-Malgré des travaux précliniques énergiques, les deux dernières années ont révélé l'absence d'essais cliniques de thérapie génique, de thérapie cellulaire ou de CRISPR nouvellement enregistrés et ciblant directement la maladie de von Willebrand. De même, les principaux résumés de conférence ou prépublications (2023-2025) ne font pas état de nouvelles interventions arrivant en clinique. Les principales institutions soulignent que les obstacles à la transposition restent importants et qu'aucun pipeline industriel de premier plan n'a été annoncé publiquement pour des études de thérapie génique ou cellulaire chez l'homme dans le cadre de la maladie de von Willebrand.
+## References
 
----
-
-## Tendances, forces, limites et défis
-
-### Principales avancées et tendances
-
-- **Édition de gènes** : Première preuve de principe solide pour la correction de gènes dans des cellules dérivées de cellules souches de patients et dans des modèles animaux, ce qui laisse espérer de futures thérapies curatives ([Khöks, S. 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10527379/)).
-- **Drug Repurposing Focus** : Presque tous les essais cliniques portent sur des molécules existantes réaffectées à la neuroprotection ou au sauvetage cellulaire (par exemple, le valproate de sodium, le dantrolène [négatif]).
-- **Utilisation accrue des systèmes de modèles de maladies** : Progrès dans les modèles de souris et de cellules adaptés aux maladies pour tester de nouveaux agents et thérapies géniques prometteurs.
-- **Médecine personnalisée** : Les revues et les études précliniques plaident de plus en plus en faveur de stratégies personnalisées, axées sur le génotype, compte tenu de l'hétérogénéité clinique de la maladie de Creutzfeldt-Jakob.
-
-### Limites principales
-
-- **Lacune traductionnelle** : Toutes les thérapies géniques, protéiques et cellulaires (y compris la correction CRISPR) en sont au stade préclinique. Aucune intervention n'a franchi les obstacles réglementaires ou techniques pour les essais sur l'homme.
-- **Critères d'évaluation et recrutement** : La rareté de la maladie empêche la réalisation d'essais cliniques suffisamment puissants ; l'essai en cours sur le valproate pourrait être confronté à un recrutement lent et à des mesures de résultats difficiles.
-- **Résultats négatifs** : Les résultats négatifs de l'essai du Dantrolène tempèrent l'optimisme concernant les solutions pharmacologiques faciles.
-- **Absence de nouveaux projets industriels** : Il n'y a pas de nouveaux programmes industriels majeurs de thérapie génique/cellulaire curative pour WS annoncés depuis 2023.
-
-### Financement et institutions
-
-- La recherche de pointe est largement menée par les centres médicaux universitaires en collaboration avec des consortiums régionaux et mondiaux sur les maladies rares.
-- Principaux contributeurs institutionnels : Institut Perron (Australie), laboratoires soutenus par le NIH, Université Murdoch et plusieurs consortiums internationaux d'essais cliniques.
-- Les sources de financement comprennent les agences nationales de recherche en santé, les fondations de lutte contre les maladies et les partenariats public-universitaire. Des informations détaillées sur les bailleurs de fonds sont disponibles dans les articles primaires et les registres d'essais liés.
-
----
-
-## Analyse critique et perspectives
-
-Alors que l'édition de gènes et la pharmacologie avancée ont donné des résultats passionnants dans des modèles cellulaires et animaux - confirmant l'espoir de guérisons futures - les percées thérapeutiques réelles pour les patients restent insaisissables. Le passage de la science préclinique aux essais sur l'homme est entravé par des défis techniques, financiers et réglementaires, ainsi que par l'extrême rareté de la maladie elle-même.
-
-Les efforts cliniques actuels dans le monde réel se limitent à des médicaments repensés, dont la majorité n'a pas encore montré de bénéfices clairs chez les personnes atteintes de la maladie de von Willebrand. Les besoins urgents sont les suivants :  
-- Faire passer les travaux de thérapie génique et de correction génique du laboratoire aux premiers essais cliniques  
-- Améliorer la collaboration internationale pour l'infrastructure des essais sur les maladies rares  
-- Obtenir des financements et des partenariats industriels pour les thérapies de nouvelle génération  
-- Tenir des registres d'essais cliniques transparents et mondiaux et publier les résultats négatifs
-
-Pour les patients et leurs familles, le paysage en 2025 est marqué par des progrès progressifs, mais aussi par des rappels inquiétants des défis qui restent à relever.
-
----
-
-## Citations et sources
-
-- [Vue d'ensemble et génétique du syndrome de Wolfram (NIH, 2024)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10652474/)
-- [Revue complète de la génétique et des thérapies WFS1 (Khöks, S., 2023, Biomolecules)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10527379/)
-- [Agonistes du GLP-1R/travaux précliniques (NIH, 2023)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10244297/)
-- [Étude DA-CH5 sur le double agoniste de l'incrétine (2023)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10611518/)
-- [Essai clinique du valproate de sodium (ISRCTN10176118)] (https://www.isrctn.com/ISRCTN10176118)
-- [Essai négatif sur le dantrolène sodique (MDPI/NIH Review, 2023)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC9960967/)
-- [Frontiers in Genetics, 2023] (https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2023.1198171/full)
-- [MDPI review, 2023](https://www.mdpi.com/1422-0067/24/4/3690)
-
----
-
-**Note:** Cette revue est exhaustive et à jour en mai 2025, reflétant toutes les études, essais et rapports de pipeline indexés et disponibles, trouvés grâce à des recherches systématiques dans les registres académiques et cliniques. Pour les mises à jour futures, il est recommandé de continuer à surveiller les registres et les serveurs de préimpression.
+- [AMX0035 Phase II Study](https://clinicaltrials.gov/study/NCT05676034) — ClinicalTrials.gov, 2026.
+- [Clinical-Trial Design for Neurodegeneration](https://pubmed.ncbi.nlm.nih.gov/40344084/) — Wang et al., 2025.
+- [Dantrolene Phase Ib/IIa Trial](https://insight.jci.org/articles/view/145188) — Abreu et al., *JCI Insight*, 2021.
+- [Diagnosis, Management, and Treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC4705145/) — Urano, *Current Diabetes Reports*, 2016.
+- [Gene-Edited Beta Cells Reverse Diabetes in Mice](https://pubmed.ncbi.nlm.nih.gov/32321868/) — Maxwell et al., *Science Translational Medicine*, 2020.
+- [GeneReviews: WFS1 Spectrum Disorder](https://www.ncbi.nlm.nih.gov/books/NBK4144/) — GeneReviews®, 2022.
+- [Neurofilament Light Chain Study](https://pubmed.ncbi.nlm.nih.gov/41929703/) — Fu et al., 2026.
+- [Oligodendroglia in Wolfram Optic Neuropathy](https://pubmed.ncbi.nlm.nih.gov/PMC11351506) — Van der Veken et al., *Acta Neuropathologica Communications*, 2024.
+- [Reciprocal Rescue by WFS1 and CISD2](https://pubmed.ncbi.nlm.nih.gov/40181095/) — Chen et al., *Molecular Therapy*, 2025.
+- [Retinal Ganglion-Cell Loss Pattern](https://pubmed.ncbi.nlm.nih.gov/35452662/) — Grenet et al., *Ophthalmology Science*, 2022.
+- [TREATWOLFRAM Results](https://www.endocrine-abstracts.org/ea/0111/ea0111oc9.7) — Barrett et al., *Endocrine Abstracts*, 2025.
+- [Valproate et WFS1 Mutations](https://pubmed.ncbi.nlm.nih.gov/32219690/) — Matsunaga et al., *Journal of Endocrinology*, 2020.
+- [WFS1 Gene Delivery in Mice](https://pubmed.ncbi.nlm.nih.gov/41998758/) — Gantner et al., 2026.

@@ -1,108 +1,80 @@
+---
+title: Hypophosphatasie
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir l'hypophosphatasie.
+input_tokens: 55862
+output_tokens: 6229
+search_calls: 6
+cost_usd: 0.2465
+---
 
 # Hypophosphatasie
 
-## Introduction
+## Overview
 
-L'hypophosphatasie (HPP) est une maladie génétique rare causée par des mutations du gène ALPL, qui altère la fonction de la phosphatase alcaline non spécifique des tissus (TNSALP) et perturbe la minéralisation des os et des dents. Les symptômes varient de formes périnatales potentiellement mortelles à des maladies légères à l'âge adulte. Historiquement, la thérapie était un soutien, mais ces dernières années ont été marquées par des avancées transformatrices visant à trouver de véritables remèdes.
+Hypophosphatasia (HPP) is an inherited condition caused mainly by harmful variants in the *ALPL* gene, which lowers activity of tissue-nonspecific alkaline phosphatase (TNAP), an enzyme needed for normal mineralization of bones and teeth. Low TNAP allows inorganic pyrophosphate (PPi), a natural brake on mineral formation, to accumulate. HPP ranges from severe prenatal or infantile disease—with poorly mineralized bones, chest-related breathing failure, seizures, and early death without treatment—to childhood, adult, and tooth-predominant forms involving premature tooth loss, fractures or stress fractures, pain, weakness, and disability. [GeneReviews: Hypophosphatasia](https://www.ncbi.nlm.nih.gov/books/NBK1150/pdf/Bookshelf_NBK1150.pdf) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1150/pdf/Bookshelf_NBK1150.pdf))
 
----
+The current targeted standard of care is asfotase alfa, a bone-targeted TNAP enzyme-replacement therapy (ERT) given by repeated subcutaneous injection. It has substantially improved survival, skeletal mineralization, and respiratory outcomes in severe pediatric-onset HPP, but it does not repair the underlying *ALPL* variant and may need to continue lifelong; orthopedic, respiratory, neurologic, dental, pain-management, and rehabilitation care remain important. [GeneReviews: Hypophosphatasia](https://www.ncbi.nlm.nih.gov/books/NBK1150/pdf/Bookshelf_NBK1150.pdf) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1150/pdf/Bookshelf_NBK1150.pdf))
 
-## Portée de la recherche récente (2023-2025)
+## Scope of Recent Research (2020–present)
 
-Les efforts de recherche sur l'HPP se sont concentrés sur 
-- Amélioration de la substitution enzymatique standard, 
-- Faire progresser le diagnostic génétique et la classification des variantes, 
-- Développement de thérapies géniques et cellulaires expérimentales, 
-- Exploration de nouveaux biomarqueurs et de nouvelles stratégies de surveillance.
+Research since 2020 has been active but remains concentrated in preclinical development rather than human curative trials. The dominant goal is to provide durable TNAP activity—ideally after one treatment—through adeno-associated virus (AAV) gene transfer, gene-modified blood or stromal cells, or engineered B cells; a parallel clinical effort is improving enzyme replacement rather than curing the genetic disease. As of August 8, 2026, the evidence supports genuine disease correction in animal models, but no curative gene, cell, or gene-editing treatment has yet demonstrated clinical benefit in people with HPP. [AAV8 TNAP-D10 in mice](https://pmc.ncbi.nlm.nih.gov/articles/PMC8446309/) [HSPC gene therapy in mice](https://pubmed.ncbi.nlm.nih.gov/41814653/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8446309/?utm_source=openai))
 
-### Principales avancées et tendances
+## Major Breakthroughs and Emerging Therapies
 
-#### Diagnostics de précision
+**AAV gene replacement.** The leading preclinical strategy packages a bone-targeted, secreted TNAP construct called TNAP-D10 into AAV vectors. In a 2020 newborn mouse study, a high-dose intramuscular self-complementary AAV8-TNAP-D10 treatment raised circulating alkaline-phosphatase activity, restored major measures of femoral structure and mineralization, and improved predicted bone strength. The dose requirement was important: lower doses prolonged survival but left substantial skeletal abnormalities, showing that survival alone is not an adequate measure of correction. [High-dose AAV8-TNAP-D10 study] ([link.springer.com](https://link.springer.com/article/10.1007/s00223-020-00676-5))
 
-Un effort international historique, le [Global ALPL Gene Variant Classification Project] (https://doi.org/10.1016/j.bone.2023.116947) (Bone, 2024), a créé une base de données mondiale alimentée par l'IA et continuellement mise à jour pour les variantes du gène ALPL. Cette plateforme améliore le diagnostic génétique, le conseil et jette les bases de thérapies individualisées.
+A related AAV8 candidate, ARU-2801, was tested as a one-time muscle-directed treatment in severe HPP-model mice. A single neonatal injection maintained high plasma alkaline-phosphatase activity for up to 18 months and produced mature bone mineralization by computed tomography. [ARU-2801 mouse study] ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S232905012100108X?utm_source=openai)) Subsequent reported nonhuman-primate work found sustained alkaline-phosphatase activity after intramuscular dosing, with vector DNA mainly detected at the injected muscle and no reported ectopic calcification or tumors in the study period; these findings are encouraging but are not a substitute for human safety and efficacy data. [ARU-2801 translational study] ([jstage.jst.go.jp](https://www.jstage.jst.go.jp/article/manms/19/3/19_229/_article/-char/en?utm_source=openai))
 
-#### Traitement enzymatique substitutif (TES)
+**Gene-modified cell therapies.** In 2026, investigators reported an autologous-style hematopoietic stem and progenitor cell (HSPC) approach in which cells were modified with a lentiviral vector, RMP100-LVV, to continuously secrete soluble TNAP. In humanized mice and a severe HPP mouse model, the treatment produced durable enzyme activity, improved skeletal disease, and prevented early mortality. This is potentially a one-time treatment model, but it uses integrating lentiviral gene transfer and would require careful assessment of conditioning, insertion-related risks, durability, and manufacturing before clinical use. [Lentiviral HSPC therapy study] ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41814653/?utm_source=openai))
 
-L'asfotase alfa (Strensiq) reste la seule thérapie approuvée au niveau mondial. Des études de cas récentes confirment sa capacité à inverser la maladie osseuse - même chez les patients adultes atteints d'HPP présentant de nouvelles mutations du gène ALPL - tout en proposant de nouveaux biomarqueurs non invasifs pour le suivi de la maladie ([Hidaka N. et al., JBMR Plus, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10731098/)).
+**Fetal gene-cell intervention.** Because severe perinatal HPP can damage the skeleton and chest before birth, a 2026 mouse study tested transplantation during gestation of human embryonic-stem-cell-derived mesenchymal stromal cells engineered to express *ALPL*-D10. Treated HPP-model mice had improved survival, early weight gain, and bone lesions versus untreated controls. This is an especially innovative approach because it attempts to intervene before irreversible prenatal disease develops, but it is at a very early stage and raises substantial fetal-procedure, immunologic, cell-engraftment, and long-term safety questions. [In-utero gene-cell therapy study](https://www.sciencedirect.com/science/article/pii/S3117387X26000315) ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S3117387X26000315?utm_source=openai))
 
-#### Essais cliniques en cours
+**Engineered B-cell protein delivery.** Be Biopharma’s preclinical candidate BE-102 uses a patient’s engineered B cells as a living source of active TNAP. The company reports that the approach is designed to provide continuous TNAP secretion after a single administration and has shown long-term enzyme activity and reversal of PPi-mediated mineralization inhibition in preclinical models. These are company-reported preclinical data rather than peer-reviewed clinical results, but the platform could be attractive because it is intended to be adjustable and re-dosable. [BE-102 program] ([be.bio/pipeline/](https://be.bio/pipeline/?utm_source=openai))
 
-Tous les essais cliniques actifs et récents se concentrent sur l'amélioration du traitement à l'asfotase alfa, avec les leaders de l'industrie Alexion Pharmaceuticals et Novartis au premier plan. Voir, par exemple, une étude de détermination de la dose en 2023 : [NCT05890794](https://clinicaltrials.gov/ct2/show/NCT05890794). Aucun essai de thérapie génique ou cellulaire n'a été enregistré en mai 2025.
+## Clinical Trials and Experimental Approaches
 
-#### Thérapies expérimentales et émergentes
+No registered human trial identified in this review is yet testing AAV, HSPC, fetal cell, or engineered-B-cell treatment for HPP. The human interventional pipeline is instead led by efzimfotase alfa (ALXN1850), a next-generation recombinant alkaline-phosphatase replacement designed to improve the practical limitations of existing ERT. In a completed Phase 1 dose-escalation study in 15 adults with HPP sponsored by Alexion Pharmaceuticals, efzimfotase alfa showed acceptable short-term safety and tolerability, dose-related exposure, and pharmacodynamic effects on TNAP substrates; it remains enzyme replacement, not genetic correction. [Phase 1 ALXN1850 trial] [Efzimfotase alfa Phase 1 report] ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT04980248?utm_source=openai))
 
-Le domaine le plus passionnant est la recherche de véritables remèdes à l'aide de techniques génétiques et cellulaires :
+Alexion’s ongoing Phase 3 program includes a randomized placebo-controlled study in 124 treatment-naive adolescents and adults, with primary completion recorded on July 9, 2025 and estimated study completion on March 29, 2028. Pediatric Phase 3 studies include a placebo-controlled trial in treatment-naive children aged 2 to under 12 years and an active-controlled comparison with asfotase alfa in previously treated children; neither registry record reported results as of their latest 2026 updates. [Adult Phase 3 ALXN1850 trial] [Pediatric Phase 3 MULBERRY trial] [Pediatric Phase 3 CHESTNUT trial] ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT06079281?utm_source=openai))
 
-- **Médicaments à base de cellules B modifiées (BCM):**  
-  Be Biopharma a montré dans des modèles animaux que les cellules B modifiées - conçues pour sécréter de la phosphatase alcaline - peuvent inverser durablement les caractéristiques de l'HPP après une seule dose ([Communiqué de presse de Be Biopharma, mai 2024] (https://be.bio/be-biopharma-announces-new-preclinical-data-for-novel-b-cell-medicine-for-the-potential-treatment-of-hypophosphatasia/)).
+## Methodologies and Scientific Approaches
 
-- **Thérapie génique à base d'AAV:**  
-  Des équipes universitaires (Millán, Miyake et al.) ont obtenu des guérisons par injection unique dans des modèles animaux d'HPP en utilisant la thérapie génique AAV8-TNAP-D10. Ces interventions restaurent la santé des os et des dents et présentent une grande sécurité ([JBMR Plus, 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC9850441/), [PubMed 2025](https://pubmed.ncbi.nlm.nih.gov/39799564/)).
+Researchers use severe TNAP-deficient mouse models, including *Alpl*/*Akp2* knockout mice, to measure survival, seizures, growth, bone mineral density, micro-tomodensitométrie, bone mechanics, tooth and jaw development, PPi levels, and alkaline-phosphatase activity. These models make it possible to compare delivery routes, vector doses, tissue distribution, and unwanted mineralization; importantly, recent AAV studies show that enzyme levels sufficient to keep mice alive may still be insufficient to normalize bone architecture. [High-dose AAV8-TNAP-D10 study] ([link.springer.com](https://link.springer.com/article/10.1007/s00223-020-00676-5))
 
-- **Programme japonais ARU-2801:**  
-  De nouveaux candidats à la thérapie génique (ARU-2801) ont été présentés comme efficaces dans des modèles animaux, et d'autres études translationnelles sont en cours ([NMS-gt.org, 2023](https://www.nms-gt.org/en)).
+The principal delivery platforms are muscle-directed AAV8 vectors that turn muscle into a long-term source of circulating bone-targeted TNAP, lentivirally modified HSPCs that engraft and secrete TNAP, engineered B cells that function as controllable protein-producing cells, and mesenchymal stromal cells for prenatal delivery. Across platforms, TNAP activity and its substrates PPi and pyridoxal-5′-phosphate are key pharmacodynamic biomarkers, while vector biodistribution, immune responses, bone imaging, ectopic calcification, and long-term tumor surveillance are central safety measures. [ARU-2801 translational study] [HSPC gene therapy in mice] [BE-102 program] ([jstage.jst.go.jp](https://www.jstage.jst.go.jp/article/manms/19/3/19_229/_article/-char/en?utm_source=openai))
 
-- **Perspectives et examens des pipelines  
-  Des revues de l'état de l'art résument les défis et les progrès, avec des études permettant l'obtention d'une IND et des premiers essais sur l'homme à l'horizon ([IntechOpen, 2024](https://www.intechopen.com/chapters/1188199)).
+## Leading Institutions and Funding
 
----
+The recent preclinical field includes Sanford Burnham Prebys Medical Discovery Institute and collaborators studying AAV-TNAP biology, Nippon Medical School-associated investigators advancing ARU-2801 experiments, and UCLA investigators collaborating with Rampart Bioscience on HSPC-based gene therapy. The 2026 fetal cell-therapy work was supported through Japan’s Agency for Medical Research and Development (AMED) regenerative-medicine and cell-and-gene-therapy acceleration program. [AAV8 TNAP-D10 study] [ARU-2801 translational study] [HSPC gene therapy in mice] [In-utero gene-cell therapy study] ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8446309/?utm_source=openai))
 
-## Méthodologies, institutions de premier plan, financement
+On the clinical and commercial side, Alexion Pharmaceuticals, an AstraZeneca Rare Disease company, is running the advanced efzimfotase alfa trials, while Be Biopharma has selected BE-102 as a preclinical HPP development candidate. These efforts sit alongside patient-focused organizations that support disease awareness, trial participation, and access to specialist care, although the most advanced curative-platform work remains laboratory-based. [Adult Phase 3 ALXN1850 trial] [BE-102 program] ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT06079281?utm_source=openai))
 
-- **Méthodologies:**  
-  - Remplacement enzymatique (ERT)
-  - Thérapie génique virale (AAV8)
-  - Thérapies cellulaires modifiées (médecine cellulaire B)
-  - Génomique diagnostique avancée et IA
-- **Leaders:**  
-  - Alexion (AstraZeneca), Novartis, Be Biopharma ; les meilleurs universitaires sont des institutions du Japon (Université de Tokyo, Nippon Medical School), des États-Unis et de l'UE.
-- **Financement:**  
-  - R&amp;D de l'industrie, NIH/US, fondations pour les maladies rares, consortiums université-industrie.
+## Strengths, Limitations, and Challenges
 
----
+The central strength of HPP cure research is biological clarity: most disease-causing variants reduce a single enzyme activity, and replacing TNAP can correct the downstream PPi excess. AAV, HSPC, B-cell, and fetal-cell approaches have each produced sustained TNAP activity and meaningful disease improvement in animal models, while existing ERT establishes that restoring this enzyme can change clinically important outcomes. [AAV8 TNAP-D10 in mice] [HSPC gene therapy in mice] [GeneReviews: Hypophosphatasia] ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8446309/?utm_source=openai))
 
-## Analyse critique
+The major limitations are translation and timing. High AAV doses may be needed for full skeletal correction, yet high systemic AAV exposure can create toxicity concerns; treatment after birth may not reverse developmental damage that arose in the womb; and durable overexpression of a mineralization-promoting enzyme must avoid ectopic calcification. Cell-based approaches introduce further hurdles, including conditioning toxicity for HSPC therapy, insertional risk with lentiviral vectors, immune compatibility, fetal-procedure risk, manufacturing complexity, and equitable access. [High-dose AAV8-TNAP-D10 study] [In-utero gene-cell therapy study] [HSPC gene therapy in mice] ([link.springer.com](https://link.springer.com/article/10.1007/s00223-020-00676-5))
 
-### Points forts
+## Outlook and Future Directions
 
-- **ERT** permet de sauver la vie dans les cas graves d'HPP et dispose de solides données de sécurité.
-- **Les diagnostics avancés** permettent désormais des soins plus personnalisés et l'inclusion dans les essais.
-- **Les thérapies génétiques et les thérapies cellulaires modifiées** chez l'animal offrent ce qui pourrait être des guérisons définitives et à vie avec un seul traitement.
+L'hypophosphatasie (HPP) n'est pas proche d'avoir un remède humain établi, mais c'est une cible plausible pour une thérapie unique et durable, car son défaut central est bien défini et plusieurs plateformes peuvent fournir de la TNAP fonctionnelle. Les prochains jalons à surveiller sont la publication des résultats définitifs de la phase 3 d'ALXN1850; les progrès réglementaires formels ou d'enregistrement d'essais pour les programmes AAV, cellules B ou HSPC; des données de sécurité reproductibles chez les grands animaux; et des preuves qu'un traitement durable corrige non seulement les marqueurs biochimiques et la survie, mais aussi la solidité osseuse, la croissance, les maladies dentaires, la fonction et les complications prénatales sans minéralisation ectopique. [Adult Phase 3 ALXN1850 trial](https://clinicaltrials.gov/study/NCT06079281) [ARU-2801 translational study](https://www.jstage.jst.go.jp/article/manms/19/3/19_229/_article/-char/en) [BE-102 program](https://be.bio/pipeline/) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT06079281?utm_source=openai))
 
-### Limitations
+## Références
 
-- L'ERT n'est pas un remède : elle dure toute la vie et nécessite des perfusions fréquentes ; elle est coûteuse et n'est pas parfaitement efficace dans tous les cas.
-- **Les progrès de la thérapie génique/cellulaire** n'en sont qu'au stade préclinique (animal) ; la traduction humaine est en préparation mais n'a pas encore commencé.
-- La fréquence ultra rare limite les progrès rapides, les investissements et le recrutement de patients.
-- Les questions de l'efficacité réelle et comparative et de l'accès mondial ne sont pas résolues.
-
-### Défis à relever
-
-- Nécessité d'essais solides sur l'homme : La sécurité, l'efficacité durable et la sécurité immunologique doivent être démontrées pour la première fois chez l'homme.
-- Obstacles réglementaires, financiers et d'accès aux nouvelles thérapies.
-- Garantir l'équité et l'inclusion globale au fur et à mesure que les thérapies progressent.
-
----
-
-## Résumé pour tous les publics
-
-La recherche sur l'HPP a rapidement évolué : au-delà de la thérapie enzymatique, qui continue à sauver des vies, une nouvelle ère se dessine, dans laquelle les thérapies géniques et les nouvelles thérapies cellulaires pourraient apporter des remèdes durables et ponctuels. Aujourd'hui, grâce à la collaboration scientifique mondiale, à la génomique avancée et à la biotechnologie, la guérison est une perspective réelle pour les patients nés avec ce qui était autrefois une maladie incurable. Il est essentiel de maintenir la vigilance, le financement et l'engagement des patients pour que le domaine passe des modèles animaux aux essais sur l'homme et, enfin, aux cures cliniques.
-
----
-
-## Citations et lectures recommandées
-
-- [Projet global de variante ALPL, Bone, 2024] (https://doi.org/10.1016/j.bone.2023.116947)
-- [Asfotase alfa chez les adultes, JBMR Plus, 2023] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10731098/)
-- [NCT05890794 Essai ERT] (https://clinicaltrials.gov/ct2/show/NCT05890794)
-- [Communiqué de presse de Be Biopharma (mai 2024)] (https://be.bio/be-biopharma-announces-new-preclinical-data-for-novel-b-cell-medicine-for-the-potential-treatment-of-hypophosphatasia/)
-- [CRISPR Medicine News, Sep 2024](https://crisprmedicinenews.com/press-release-service/card/be-biopharma-announces-preclinical-data-for-novel-engineered-b-cell-medicine-for-the-potential-treat/)
-- [AAV8-TNAP-D10, JBMR Plus, 2024] (https://pmc.ncbi.nlm.nih.gov/articles/PMC9850441/)
-- [AAV8-TNAP-D10 chez la souris HPP, PubMed, Jan 2025] (https://pubmed.ncbi.nlm.nih.gov/39799564/)
-- [News-Medical, "Single-injection gene therapy," Feb 2025] (https://www.news-medical.net/news/20250204/New-gene-therapy-shows-promise-for-lifelong-treatment-of-hypophosphatasia.aspx)
-- [ARU-2801, NMS-gt.org, juillet 2023] (https://www.nms-gt.org/en)
-- [Gene Therapy State-of-the-Art Review, IntechOpen, 2024](https://www.intechopen.com/chapters/1188199)
-
----
-
-*Cette revue résume toutes les données évaluées par les pairs, les données cliniques et les données en cours d'élaboration jusqu'en mai 2025. Elle est conçue pour les lecteurs non spécialistes et les experts. Pour les mises à jour, consultez les sources citées et les registres d'essais cliniques*
+- [GeneReviews: Hypophosphatasia](https://www.ncbi.nlm.nih.gov/books/NBK1150/pdf/Bookshelf_NBK1150.pdf) — Université de Washington, Seattle; NCBI Bookshelf, 2025.
+- [AAV8 TNAP-D10 in mice](https://pmc.ncbi.nlm.nih.gov/articles/PMC8446309/) — Kinoshita et al., *Journal of Bone and Mineral Research*, 2021.
+- [High-dose AAV8-TNAP-D10 study](https://link.springer.com/article/10.1007/s00223-020-00676-5) — Nakamura-Takahashi et al., *Calcified Tissue International*, 2020.
+- [ARU-2801 mouse study](https://www.sciencedirect.com/science/article/pii/S232905012100108X) — Matsumoto et al., *Molecular Therapy: Methods & Clinical Development*, 2021.
+- [ARU-2801 translational study](https://www.jstage.jst.go.jp/article/manms/19/3/19_229/_article/-char/en) — Medical Association of Nippon Medical School, 2023.
+- [HSPC gene therapy in mice](https://pubmed.ncbi.nlm.nih.gov/41814653/) — Carrillo et al., *Molecular Therapy*, 2026.
+- [In-utero gene-cell therapy study](https://www.sciencedirect.com/science/article/pii/S3117387X26000315) — *Molecular Therapy Advances*, 2026.
+- [BE-102 program](https://be.bio/pipeline/) — Be Biopharma, 2026.
+- [Phase 1 ALXN1850 trial](https://clinicaltrials.gov/study/NCT04980248) — ClinicalTrials.gov, 2024.
+- [Efzimfotase alfa Phase 1 report](https://pmc.ncbi.nlm.nih.gov/articles/PMC11425692/) — Dahir et al., *Journal of Bone and Mineral Research*, 2024.
+- [Adult Phase 3 ALXN1850 trial](https://clinicaltrials.gov/study/NCT06079281) — ClinicalTrials.gov, 2026.
+- [Pediatric Phase 3 MULBERRY trial](https://clinicaltrials.gov/study/NCT06079359) — ClinicalTrials.gov, 2026.
+- [Pediatric Phase 3 CHESTNUT trial](https://clinicaltrials.gov/study/NCT06079372) — ClinicalTrials.gov, 2026.

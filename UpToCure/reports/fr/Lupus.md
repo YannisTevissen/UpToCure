@@ -1,102 +1,81 @@
+---
+title: Lupus
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir le lupus.
+input_tokens: 54988
+output_tokens: 6267
+search_calls: 7
+cost_usd: 0.2552
+---
 
 # Lupus
 
-## Introduction : Qu'est-ce que le lupus ?
+## Aperçu
 
-Le lupus érythémateux systémique (LES), communément appelé lupus, est une maladie auto-immune touchant plusieurs organes, dans laquelle le système immunitaire attaque par erreur les propres tissus de l'organisme. Le lupus peut affecter la peau, les articulations, les reins, le cerveau et d'autres organes. Pendant des décennies, le traitement s'est concentré sur le contrôle des symptômes, la suppression du système immunitaire et la prévention des dommages aux organes, car il n'existe pas de remède définitif.
+Le lupus érythémateux systémique (LES), généralement appelé lupus, est une maladie auto-immune chronique dans laquelle le système immunitaire attaque par erreur les tissus propres du corps. Il peut provoquer des périodes d'inflammation imprévisibles (« poussées ») et de rémission, affectant la peau, les articulations, les cellules sanguines, les reins, le cœur, les poumons et le cerveau; l'inflammation rénale, appelée néphrite lupique, figure parmi ses complications les plus graves. [NIAMS lupus overview](https://www.niams.nih.gov/health-topics/lupus) Les femmes développent le lupus environ neuf fois plus souvent que les hommes, bien que tout le monde puisse être affecté. [NIAMS lupus overview](https://www.niams.nih.gov/health-topics/lupus)
 
----
+Le pronostic s'est grandement amélioré: les documents NIH indiquent qu'environ 97 % des personnes atteintes de lupus survivent au moins cinq ans après le diagnostic et 90 % survivent au moins dix ans, mais les résultats varient considérablement selon l'atteinte d'organes, l'accès à des soins spécialisés et la réponse au traitement. [NIH Action Plan for Lupus Research](https://www.niams.nih.gov/about/working-groups/lupus-federal/action-plan) Il n'existe actuellement aucun remède approuvé. Les soins standard visent à prévenir les poussées et les dommages irréversibles des organes en utilisant l'hydroxychloroquine chez la plupart des patients, des corticostéroïdes soigneusement minimisés, et—lorsque nécessaire—des immunosuppresseurs ou des biologiques tels que le mycophénolate mofétil, le cyclophosphamide, le belimumab, l'anifrolumab, ou le rituximab en cas de maladie réfractaire. [EULAR 2023 management recommendations](https://pubmed.ncbi.nlm.nih.gov/37827694/)
 
-## Efforts de recherche récents en vue d'une guérison (2023-2025)
+## Portée de la recherche récente (2020–présent)
 
-Entre 2023 et 2025, la recherche sur le lupus a connu une évolution remarquable, passant de la prise en charge des symptômes aux premières thérapies véritablement transformatrices, voire curatives. Parmi les principaux développements, citons les thérapies cellulaires révolutionnaires, les médicaments ciblés améliorés, les connaissances issues du big data et le travail préparatoire assidu pour les thérapies de nouvelle génération.
+Depuis 2020, la recherche sur le lupus se concentre de plus en plus sur la question de savoir s'il est possible de « réinitialiser » durablement le système auto-immun, plutôt que de le supprimer simplement. Les questions dominantes de guérison sont de savoir si une suppression profonde des lymphocytes B responsables de la maladie et des plasmocytes producteurs d'anticorps peut produire une rémission durable sans traitement; si cela peut être réalisé en toute sécurité et à grande échelle; et comment les biomarqueurs moléculaires peuvent identifier les personnes les plus susceptibles d'en bénéficier. Les premiers résultats cliniques sont d'une promesse inhabituelle pour les thérapies cellulaires conçues, mais ils restent largement basés sur de petites études non contrôlées chez des patients gravement résistants au traitement plutôt que sur des essais randomisés définitifs. [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917)
 
----
+## Grandes avancées et thérapies émergentes
 
-### Principales avancées et tendances de la recherche
+La principale stratégie potentielle de réinitialisation de la maladie est **thérapie CAR-T dirigée contre CD19**. La thérapie CAR-T prend les propres lymphocytes T d'un patient, les ingénie pour reconnaître une cible, les faire se multiplier, puis les réinfuser après une chimiothérapie qui réduit temporairement les cellules immunitaires existantes. Dans le lupus, les cellules CAR-T CD19 visent à éliminer des populations étendues de lymphocytes B, y compris les cellules qui peuvent mûrir en cellules productrices d'auto-anticorps. Une étude en usage compassionnel de 2022 a traité cinq jeunes personnes atteintes d'un LES sévère et réfractaire aux traitements; toutes sont entrées en rémission après une seule infusion et ont interrompu l'immunosuppression du lupus pendant le suivi rapporté. [Anti-CD19 CAR-T in refractory SLE](https://pubmed.ncbi.nlm.nih.gov/36109639/)
 
-#### 1. La thérapie cellulaire CAR-T : Un changement de paradigme
+Les preuves de suivi ont renforcé le signal tout en soulignant sa nature préliminaire. Dans une série de cas de 2024, tous les huit participants atteints d'un LES sévère ont atteint une rémission DORIS — une définition de rémission rigoureuse et élaborée internationalement — après une seule infusion de CAR-T CD19 ; l'immunosuppression a été arrêtée chez les 15 participants répartis entre le lupus, la myosite et la sclérose systémique. Le suivi médian était de 15 mois, les B cells sont finalement revenus après une moyenne de 112 jours, et l'étude a rapporté principalement un syndrome de libération de cytokines de faible gravité, bien qu'un participant ait développé une pneumonie nécessitant une hospitalisation. [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917) Ces résultats soutiennent l'hypothèse selon laquelle les lymphocytes B nouvellement régénérés pourraient revenir dans un état moins autoréactif, mais ils n'établissent pas encore de cure permanente. [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917)
 
-**La thérapie par cellules T à récepteur d'antigène chimérique (CAR-T), initialement développée pour le cancer, est rapidement devenue la voie la plus prometteuse pour guérir le lupus. En réorganisant les cellules immunitaires du patient pour cibler et éliminer les cellules B responsables de la maladie, les essais CAR-T ont permis d'obtenir de solides rémissions sans médicaments dans des cas de lupus sévères et résistants aux traitements.
+Une stratégie connexe tente d'éliminer à la fois les lymphocytes B positifs CD19 et les plasmocytes à longue durée de vie. **thérapie CAR-T CD19/BCMA à double ciblage** ajoute l'antigène de maturation des lymphocytes B (BCMA), une cible exprimée sur les plasmocytes qui peut continuer à produire des auto-anticorps après une déplétion conventionnelle des lymphocytes B. Dans une étude de phase 1 en ouvert, 12 personnes atteintes de LES réfractaire ont reçu des CAR-T dirigés contre CD19 et BCMA ; l'activité de la maladie a diminué rapidement, la fonction rénale s'est améliorée chez 10 participants atteints de néphrite lupique dans les 90 jours, et deux participants atteints à la fois de lymphome et de lupus ont rapporté une rémission du lupus sans traitement pouvant durer jusqu'à 46 mois. [CD19/BCMA CAR-T phase 1 study](https://pubmed.ncbi.nlm.nih.gov/38777376/)
 
-- **US/EU RESET-SLE Phase 1/2 (CABA-201) et Relmacabtagene Autoleucel (Relma-cel, Chine, EULAR 2024):**
-  - Les patients atteints de lupus sévère traités par la thérapie CAR-T anti-CD19 ont connu une rémission durable et sans médicaments, certains d'entre eux conservant le contrôle de la maladie pendant plus de six mois et arrêtant avec succès tous les médicaments immunosuppresseurs.
-  - Plus de 90 % des patients traités dans la plus grande étude chinoise rapportée ont arrêté tous les stéroïdes et immunosuppresseurs, montrant des résultats "transformateurs" ([JW Therapeutics EULAR 2024 release](https://www.jwtherapeutics.com/en/media/press-release/20240530/) ; [RESET-SLE registry](https://www.cancer.gov/clinicaltrials/NCI-2024-00563) ; [Nature, May 2025](https://www.nature.com/articles/s41422-025-01128-1)).
-  - Des résultats similaires ont été rapportés dans des collaborations universitaires-industrielles américaines/européennes ([Cabaletta Bio](https://www.cabalettabio.com/patients/phase-12-trial-in-lupus) ; [Université de Chicago](https://www.uchicagomedicine.org/find-a-clinical-trial/clinical-trial/irb240468)).
+Une autre approche dirigée contre les plasmocytes utilise **daratumumab**, un anticorps anti-CD38 déjà approuvé qui élimine les cellules sécrétrices d'anticorps plutôt que de modifier génétiquement les cellules T. Dans l'étude DARALUP de phase 2 en ouvert à Charité–Universitätsmedizin Berlin, 10 femmes atteintes d'un SLE actif malgré plusieurs traitements antérieurs ont reçu huit injections hebdomadaires; les scores d'activité de la maladie SLEDAI-2K ont chuté, passant de 12 au départ à 4 à la semaine 12 et sont restés améliorés jusqu'à la semaine 36. [DARALUP phase 2 study](https://doi.org/10.1038/s41467-026-69112-w) Il s'agit d'une preuve de concept importante pour cibler la production persistante d'auto-anticorps, mais il est mieux décrit comme un traitement potentiellement puissant modifiant la maladie plutôt qu'une cure démontrée. [DARALUP phase 2 study](https://doi.org/10.1038/s41467-026-69112-w)
 
-- *Analyse critique  
-  La thérapie CAR-T représente la première voie crédible de guérison du lupus sévère, mais elle n'en est encore qu'au stade des études préliminaires. Les promesses sont extraordinaires, mais les risques (tels que l'infection, le syndrome de libération des cytokines), le coût élevé et la complexité technique de la fabrication de la thérapie limitent l'application immédiate et généralisée. Un suivi plus long dans des populations plus nombreuses et plus diversifiées est nécessaire pour garantir une sécurité et un effet durables.
+La recherche en stade précoce poursuit **la tolérance immunitaire spécifique à l’antigène** : apprendre au système immunitaire à ne pas attaquer le soi tout en préservant la défense normale contre les infections. Dans une étude sur souris, des nanoparticules polymères biodégradables portant de la dexaméthasone ont été délivrées à des cellules dendritiques, cellules immunitaires qui aident à diriger les réponses des lymphocytes T ; le traitement a augmenté les cellules T régulatrices et a réduit la maladie lupique chez des souris déficientes en Fcgr2b. [Tolerogenic nanoparticles in lupus-prone mice](https://pubmed.ncbi.nlm.nih.gov/37176021/) Cette plateforme est préclinique, mais elle représente une voie conceptuellement attrayante vers une guérison immunitaire sélective plutôt qu'une ablation immunitaire générale. [Tolerogenic nanoparticles in lupus-prone mice](https://pubmed.ncbi.nlm.nih.gov/37176021/)
 
----
+## Expériences cliniques et approches expérimentales
 
-#### 2. Médicaments ciblés et modification des maladies
+Plusieurs essais CAR-T testent désormais si les résultats précoces obtenus dans le cadre académique peuvent être reproduits dans des études plus vastes et multicentres. Cabaletta Bio soutient RESET-SLE, une étude de phase 1/2 sur la thérapie CAR-T autologue CD19 rese-cel (rese-cel; CABA-201) dans le SLE actif non rénal et la néphrite lupique ; l'étude enregistrée a commencé en février 2024, prévoit d'inclure 28 participants et a une date estimée d'achèvement primaire en décembre 2029. [RESET-SLE trial record](https://clinicaltrials.gov/study/NCT06121297) Kyverna Therapeutics étudie son produit CAR-T CD19 entièrement humain, KYV-101, dans l'essai de phase 1/2 KYSA-3 pour la néphrite lupique réfractaire. [KYSA-3 trial record](https://clinicaltrials.gov/study/NCT06342960)
 
-- **De nouveaux médicaments à petites molécules** (par exemple, le deucravacitinib) et des produits biologiques avancés (anifrolumab, belimumab) se sont révélés plus efficaces pour de nombreux patients dans le cadre d'essais randomisés ([Arthritis Research &amp; Therapy, 2024] (https://arthritis-research.biomedcentral.com/articles/10.1186/s13075-024-03331-8)).  
-- Sans être curative, leur action ciblée offre une meilleure qualité de vie, moins d'effets secondaires et jette les bases de futures "cures fonctionnelles" où la maladie est contrôlée sans médicaments quotidiens.
-- **Les revues systématiques et les lignes directrices internationales** ([Nature 2025](https://www.nature.com/articles/s41392-025-02168-0) ; [EULAR 2024](https://ard.bmj.com/content/83/11/1489)) soulignent la consolidation de ces thérapies en tant que norme de soins tout en insistant sur le fait qu'une guérison reste possible mais n'est pas encore une pratique courante.
+Les efforts pour rendre la thérapie cellulaire plus rapide et plus accessible incluent des produits dérivés de donneurs « prêts à l'emploi ». Une étude précoce enregistrée en Chine évalue des CAR-T allogéniques dérivés du sang de cordon ombilical ciblant à la fois CD19 et BCMA dans un SLE réfractaire ; l'essai a commencé en mars 2025 et est conçu pour mesurer les événements indésirables, la rémission et le maintien de la rémission sans médicament. [Allogeneic CD19/BCMA CAR-T trial](https://clinicaltrials.gov/study/NCT07274059) Parallèlement, l'étude DARALUP de phase 2 terminée a testé le daratumumab chez 10 patients et a constaté des réductions de l'activité clinique de la maladie et des anticorps anti-ADN double brin, mais son dessin en étude à bras unique et le court suivi empêchent de tirer des conclusions sur une cure durable. [DARALUP phase 2 study](https://doi.org/10.1038/s41467-026-69112-w)
 
----
+## Méthodologies et approches scientifiques
 
-#### 3. Recherche expérimentale et préclinique
+Les chercheurs combinent des mesures cliniques de la maladie avec une surveillance immunitaire pour déterminer si une thérapie a véritablement réinitialisé le lupus. Les études CAR-T suivent la déplétion et la récupération des lymphocytes B, les auto-anticorps tels que l'anticorps anti-ADN à brin double, les protéines du complément C3 et C4, la perte de protéines rénales, et des résultats validés incluant la rémission DORIS et l'Index d'activité de la maladie lupique (SLEDAI). [RESET-SLE trial record](https://clinicaltrials.gov/study/NCT06121297) Ces mesures aident à distinguer la suppression à court terme d'une rémission clinique et immunologique soutenue après l'arrêt du traitement. [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917)
 
-- **La thérapie/édition génique, les vaccins tolérogènes et les approches de réinitialisation immunitaire** restent très prometteuses en théorie. En mai 2025, aucun essai clinique publié sur l'homme et seulement quelques travaux précliniques sur l'animal n'étaient disponibles - les progrès en sont au stade de l'examen et du prototypage.
-- **Nouveaux immunomodulateurs:** La découverte du D2469079A, un antagoniste de TLR7/8 pénétrant dans le cerveau, pourrait aider à contrôler le lupus neuropsychiatrique, avec de bons résultats dans les modèles animaux mais pas encore d'application chez l'homme ([bioRxiv, avril 2025](https://www.biorxiv.org/content/biorxiv/early/2025/04/18/2025.04.12.648517.full.pdf)).
-- **Innovation mécaniste (multi-omique):**  
-  Des études de pointe révèlent pourquoi certaines personnes parviennent à une rémission, grâce au séquençage de nouvelle génération, à l'épigénétique et à l'analyse unicellulaire ([medRxiv May 2025](https://www.medrxiv.org/content/10.1101/2025.05.27.25328230v1.full.pdf) ; [medRxiv Jan 2025](https://www.medrxiv.org/content/10.1101/2025.01.27.25321143v1)). Ces travaux jettent les bases de nouvelles cibles thérapeutiques et d'interventions adaptées au patient (précision).
+Pour aborder l'hétérogénéité du lupus, les chercheurs utilisent également le séquençage d'ARN à cellule unique, qui mesure l'activité génétique cellule par cellule. Une grande étude a analysé plus de 1,2 million de cellules immunitaires sanguines chez 162 personnes atteintes de lupus et 99 témoins, identifiant une activité accrue des gènes stimulés par l'interféron de type I, des bascules dans les populations de lymphocytes T et de monocytes, et des sous-groupes moléculaires du lupus. [Single-cell lupus molecular atlas](https://pubmed.ncbi.nlm.nih.gov/35389781/) Les modèles animaux, y compris les souris prédisposées au lupus, restent importants pour tester des nanoparticules tolérisantes et d'autres systèmes de délivrance avant les études humaines. [Tolerogenic nanoparticles in lupus-prone mice](https://pubmed.ncbi.nlm.nih.gov/37176021/)
 
----
+## Institutions leaders et financement
 
-### Principales institutions et financement
+Les principaux responsables académiques incluent Friedrich-Alexander-Universität Erlangen–Nürnberg et l'University Hospital Erlangen, où les premières études modernes sur le lupus CAR-T CD19 ont été développées ; Charité–Universitätsmedizin Berlin, qui a mené l'essai daratumumab DARALUP ; et des centres participant à des études CAR-T multinationales. [Anti-CD19 CAR-T in refractory SLE](https://pubmed.ncbi.nlm.nih.gov/36109639/) [DARALUP phase 2 study](https://doi.org/10.1038/s41467-026-69112-w) Les principaux développeurs commerciaux incluent Cabaletta Bio, faisant progresser rese-cel dans RESET-SLE, et Kyverna Therapeutics, faisant progresser KYV-101 dans le lupus néphrite réfractaire. [RESET-SLE trial record](https://clinicaltrials.gov/study/NCT06121297) [KYSA-3 trial record](https://clinicaltrials.gov/study/NCT06342960)
 
-- **Institutions:** Université de Chicago, MD Anderson, UCSF, JW Therapeutics (Chine), Oxford, Wellcome Sanger, Imperial College, Chan Zuckerberg Initiative.
-- **Sources de financement:** National Institutes of Health (NIH), Lupus Research Alliance, biotechnologies (Cabaletta Bio, JW Therapeutics), consortiums philanthropiques et universitaires.
+Le financement public et à but non lucratif reste central car les études axées sur la guérison nécessitent une fabrication cellulaire spécialisée et un long suivi. NIH a rapporté un soutien estimé à la recherche sur le lupus de 148 millions de dollars pour l'exercice 2025, tout en notant que ses totaux catégoriels sont des estimations plutôt que des lignes budgétaires spécifiques à la maladie. [NIH categorical spending report](https://report.nih.gov/funding/categorical-spending) La Lupus Research Alliance a créé un programme ciblé pour les thérapies cellulaires conçues qui offre jusqu'à 300 000 dollars sur deux ans pour les travaux précliniques et jusqu'à 600 000 dollars sur deux ans pour des études auxiliaires liées à des essais cliniques ; son Global Team Science Award fournit jusqu'à 3 millions de dollars sur trois ans. [Lupus Research Alliance funding programs](https://www.lupusresearch.org/for-researchers/funded-research/)
 
----
+## Forces, limites et défis
 
-### Analyse critique : Points forts, limites et défis
+Les preuves les plus robustes récentes sont la cohérence des signaux de rémission profonde après une thérapie cellulaire dirigée CD19 chez des personnes dont le lupus n'avait pas répondu à plusieurs traitements standard. [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917) La capacité apparente de certains patients à rester bien après le retour des cellules B est particulièrement importante car elle suggère plus qu'une déplétion temporaire. [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917) La ciblage dual CD19/BCMA peut en outre traiter les plasmocytes à longue durée de vie, qui constituent une source plausible d'auto-anticorps persistants. [CD19/BCMA CAR-T phase 1 study](https://pubmed.ncbi.nlm.nih.gov/38777376/)
 
-#### Points forts
+Cependant, la base de preuves est encore petite, sélective et majoritairement non contrôlée. Le traitement CAR-T nécessite généralement une chimiothérapie déplétive immunitaire et peut provoquer le syndrome de libération de cytokines, des infections, une cytopénie et une toxicité neurologique ; les risques à long terme, les schémas de rechute, les implications sur la fertilité, les réponses vaccinales et la durabilité de la rémission restent mal définis dans le lupus. [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917) Le CAR-T autologue nécessite également une collecte et une fabrication cellulaires individualisées, tandis que les approches allogéniques doivent démontrer qu'elles peuvent éviter le rejet et d'autres complications immunitaires. [Allogeneic CD19/BCMA CAR-T trial](https://clinicaltrials.gov/study/NCT07274059) Enfin, le lupus est biologiquement diversifié, de sorte qu'un traitement qui paraît curatif pour une maladie guidée par les anticorps peut ne pas fonctionner aussi bien pour des sous-types moléculaires dominés par l'interféron, prédominants au niveau rénal, neurologiques, ou d'autres. [Single-cell lupus molecular atlas](https://pubmed.ncbi.nlm.nih.gov/35389781/)
 
-- **Véritable progrès vers la guérison:**  
-  L'arrivée de la thérapie cellulaire CAR-T dans le traitement du lupus a rapidement fait passer le domaine de la gestion des symptômes à de véritables discussions sur la guérison et la réinitialisation immunitaire.
-- **Médecine de précision:**  
-  L'essor des produits biologiques, de la multiomique et de la cartographie immunitaire permet une meilleure compréhension et une meilleure personnalisation, ce qui augmente les taux de réussite et réduit la toxicité.
+## Perspectives et directions futures
 
-#### Limites
+Au 8 août 2026, le lupus n'est pas curable dans la pratique clinique courante, mais le domaine s'est rapproché d'une thérapie de réinitialisation de la maladie plus plausible qu'à n'importe quel moment antérieur. Les jalons les plus importants à surveiller sont une rémission sans médicament reproductible dans des essais CAR-T multicentriques plus vastes; un suivi sur plusieurs années après la reconstitution des cellules B; des données de sécurité rigoureuses; des preuves que la thérapie cellulaire prévient les dommages rénaux et d'autres lésions irréversibles des organes; et des approches à grande échelle qui réduisent la dépendance à une fabrication individualisée et à une chimiothérapie intensive. [RESET-SLE trial record](https://clinicaltrials.gov/study/NCT06121297) [KYSA-3 trial record](https://clinicaltrials.gov/study/NCT06342960)
 
-- **Données de la première phase:**  
-  La plupart des thérapies cellulaires transformatrices font l'objet d'études précoces, de petite taille et non randomisées, et ne sont peut-être pas prêtes pour une utilisation générale.
-- **Complexité et accès:**  
-  Les interventions de type curatif (comme le CAR-T) sont complexes, coûteuses et actuellement réservées à des centres spécialisés.
-- **Pas de thérapie génique, d'édition de gènes ou de vaccins pour l'homme**  
-  D'autres thérapies "de base" n'ont pas quitté le laboratoire ou n'ont pas d'effet validé dans le lupus à ce jour.
+## References
 
-#### Défis en cours
-
-- **Sécurité à long terme et risque de rechute:**  
-  Quelle est la durée de la rémission induite par le CAR-T et peut-on prévenir les rechutes ?
-- **Rendre les traitements abordables et accessibles:**  
-  La charge technique et financière est actuellement élevée et peut limiter les bénéfices.
-- **Les thérapies de nouvelle génération sont en décalage par rapport à la traduction clinique:**  
-  Outre les CAR-T, les thérapies géniques et les vaccins tolérogènes pour le lupus en sont encore au stade de la preuve de concept ou de l'expérimentation animale.
-
----
-
-## Conclusion : Où va la recherche sur le lupus axée sur la guérison ?
-
-Au cours des deux dernières années, les premiers espoirs réels de guérison du lupus sont apparus, principalement grâce à la "réinitialisation" du système immunitaire par le biais de CAR-T. Les partenariats biotechnologiques/académiques et les consortiums mondiaux sont à l'origine de cette initiative Les partenariats biotechnologiques/universitaires et les consortiums mondiaux mènent la charge, et les principaux organismes de financement apportent un soutien considérable.
-
-Aucune thérapie, y compris les CAR-T, n'est encore un remède universel, et l'application dans le monde réel nécessitera davantage de données sur la sécurité, une étude plus large et des solutions en matière d'accès, de coût et de complexité. Entre-temps, la recherche préclinique et multi-omique innovante élargit les possibilités de la prochaine vague de percées.
-
-**Lectures complémentaires et sources clés:**
-- [Nature review 2025](https://www.nature.com/articles/s41392-025-02168-0)
-- [Enregistrement de l'essai RESET-SLE/CAR-T] (https://www.cancer.gov/clinicaltrials/NCI-2024-00563)
-- [JW Therapeutics relma-cel EULAR] (https://www.jwtherapeutics.com/en/media/press-release/20240530/)
-- [Méta-analyse des nouveaux médicaments] (https://arthritis-research.biomedcentral.com/articles/10.1186/s13075-024-03331-8)
-- [Innovation mécaniste (medRxiv 2025)](https://www.medrxiv.org/content/10.1101/2025.05.27.25328230v1.full.pdf)
-- [Cabaletta Bio progress] (https://www.cabalettabio.com/patients/phase-12-trial-in-lupus)
-- [Discovery of D2469079A, bioRxiv (2025)](https://www.biorxiv.org/content/biorxiv/early/2025/04/18/2025.04.12.648517.full.pdf)
-
----
-
-*La recherche sur la guérison du lupus entre dans un âge d'or grâce à l'ingénierie cellulaire et à une meilleure compréhension des molécules. Cependant, la transformation complète nécessitera du temps, de la persévérance et des changements systémiques pour que les traitements potentiels deviennent une réalité mondiale et équitable.*
+- [NIAMS lupus overview](https://www.niams.nih.gov/health-topics/lupus) — National Institute of Arthritis and Musculoskeletal and Skin Diseases, 2026.
+- [NIH Action Plan for Lupus Research](https://www.niams.nih.gov/about/working-groups/lupus-federal/action-plan) — National Institute of Arthritis and Musculoskeletal and Skin Diseases, 2026.
+- [EULAR 2023 management recommendations](https://pubmed.ncbi.nlm.nih.gov/37827694/) — Fanouriakis et al., 2023.
+- [Anti-CD19 CAR-T in refractory SLE](https://pubmed.ncbi.nlm.nih.gov/36109639/) — Mackensen et al., 2022.
+- [CD19 CAR-T case series](https://www.nejm.org/doi/full/10.1056/NEJMoa2308917) — Müller et al., 2024.
+- [CD19/BCMA CAR-T phase 1 study](https://pubmed.ncbi.nlm.nih.gov/38777376/) — Wang et al., 2024.
+- [DARALUP phase 2 study](https://doi.org/10.1038/s41467-026-69112-w) — Alexander et al., 2026.
+- [Tolerogenic nanoparticles in lupus-prone mice](https://pubmed.ncbi.nlm.nih.gov/37176021/) — Charoensuk et al., 2023.
+- [RESET-SLE trial record](https://clinicaltrials.gov/study/NCT06121297) — ClinicalTrials.gov, 2026.
+- [KYSA-3 trial record](https://clinicaltrials.gov/study/NCT06342960) — ClinicalTrials.gov, 2026.
+- [Allogeneic CD19/BCMA CAR-T trial](https://clinicaltrials.gov/study/NCT07274059) — ClinicalTrials.gov, 2026.
+- [Single-cell lupus molecular atlas](https://pubmed.ncbi.nlm.nih.gov/35389781/) — Perez et al., 2022.
+- [NIH categorical spending report](https://report.nih.gov/funding/categorical-spending) — National Institutes of Health, 2026.
+- [Lupus Research Alliance funding programs](https://www.lupusresearch.org/for-researchers/funded-research/) — Lupus Research Alliance, 2026.

@@ -1,132 +1,76 @@
+---
+title: Syndrome d'Alström
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir Alström Syndrome.
+input_tokens: 65446
+output_tokens: 6242
+search_calls: 10
+cost_usd: 0.3058
+---
 
 # Syndrome d'Alström
 
-## Introduction
+## Aperçu
 
-Le syndrome d'Alström est une maladie multisystémique rare, autosomique récessive, causée par des mutations du gène ALMS1. Depuis que sa base génétique a été élucidée, l'intérêt de la recherche s'est progressivement accru, même si, en 2025, cette maladie reste l'une des maladies rares les plus difficiles à traiter ou à guérir. La revue suivante synthétise les informations les plus fiables et les plus récentes concernant la pathogenèse du syndrome d'Alström et analyse de manière exhaustive tous les progrès récents (2022-2025) de la recherche en vue d'une guérison.
+Le syndrome d'Alström est une maladie ultra-rare, héréditaire, causée par des variants nocifs dans les deux copies du gène *ALMS1*. Il affecte de nombreux systèmes corporels : les enfants développent généralement une perte de vision précoce due à la dégénérescence rétinienne cône-bâton, et beaucoup développent par la suite une perte auditive, l'obésité, une résistance à l'insuline sévère et un diabète de type 2, une maladie du muscle cardiaque, une maladie du foie graisseux, une dysfonction rénale et une fibrose (cicatrisation) dans plusieurs organes. Les symptômes débutent généralement pendant l’enfance ou l’âge préscolaire, mais varient largement d’un individu à l’autre ; la progression des maladies cardiaques, rénales, hépatiques et métaboliques est le principal déterminant de la santé à long terme. [Consensus management guidelines](https://pubmed.ncbi.nlm.nih.gov/32958032/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32958032/))
 
----
+Il n’existe aucun traitement curatif ou approuvé qui rétablisse la fonction normale de *ALMS1*. Les soins standard actuels consistent en une prise en charge multidisciplinaire proactive et à vie : surveillance et traitement des cardiomyopathies, du diabète et de la dyslipidémie, des maladies rénales et hépatiques, du soutien auditif et visuel, de la nutrition et de la gestion du poids, et le traitement des complications endocriniennes ou respiratoires. Un diagnostic plus précoce et une prise en charge spécialisée coordonnée peuvent ralentir les complications et améliorer la qualité de vie. [Consensus management guidelines](https://pubmed.ncbi.nlm.nih.gov/32958032/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32958032/))
 
-## Qu'est-ce que le syndrome d'Alström ?
+## Portée des recherches récentes (2020–présent)
 
-Le syndrome d'Alström (OMIM #203800) est une maladie héréditaire causée par la transmission de deux variantes défectueuses (pathogènes) du gène ALMS1 [^1][^2]. Le gène muté affecte la fonction des cils primaires, structures microscopiques ressemblant à des cheveux, qui sont essentielles à une signalisation cellulaire saine, en particulier dans l'œil, l'oreille, le cœur et les tissus métaboliques.
+Les recherches depuis 2020 ont été actives mais restent modestes car le syndrome d'Alström touche environ une personne sur un million de naissances et dispose d’une population de patients limitée pour les essais. Le domaine avance sur deux volets : trouver des traitements qui réduisent dès maintenant les complications métaboliques et fibrosantes dangereuses, et développer des approches qui s’attaquent au défaut fondamental de *ALMS1*. Ce dernier reste à un stade précoce : aucune thérapie de remplacement génique, d’édition génique, d’ARN ou de thérapie cellulaire n’a encore entré dans un essai clinique spécifique à l’Alström, et la grande taille de *ALMS1* constitue un défi majeur de livraison pour les vecteurs de thérapie génique conventionnels. [Consensus management guidelines](https://pubmed.ncbi.nlm.nih.gov/32958032/) ([alstrom.org.uk](https://alstrom.org.uk/wp-content/uploads/2026/05/Clinical-Guidelines-2020.pdf?utm_source=openai))
 
-Les caractéristiques les plus notables du syndrome d'Alström sont les suivantes :
-- Perte de vision précoce et cécité légale (dystrophie de la tige conique, généralement au cours de la première décennie de vie)
-- Perte auditive progressive (neurosensorielle)
-- Perturbations métaboliques telles que l'obésité et le diabète sévère résistant à l'insuline
-- Cardiomyopathies potentiellement mortelles (maladies diverses et souvent graves du muscle cardiaque)
-- Dysfonctionnement du foie, des reins et parfois des poumons, de l'appareil génito-urinaire ou du système endocrinien
+## Grands progrès et thérapies émergentes
 
-Les études cliniques publiées en 2022-2023 continuent de décrire une diversité croissante des symptômes et de l'âge d'apparition de la maladie, souvent liée à des mutations spécifiques. Néanmoins, les revues médicales et la recherche génétique restent cohérentes en affirmant que l'ALMS1 est le seul gène responsable de la maladie identifié à ce jour [^1][^2]. 
+L’avancée la plus directement ciblée sur la maladie est **thérapie de lecture au-delà du codon lors de la traduction** pour les personnes porteuses de variantes sans sens — des changements d’ADN qui créent un signal d’arrêt prématuré et tronquent la protéine ALMS1. En 2021, des chercheurs ont traité des fibroblastes cutanés dérivés de patients avec l’ataluren (PTC124) et l’amlexanox. Les deux composés ont restauré une protéine ALMS1 complète détectable dans les cellules testées ; l’étude a également observé une localisation améliorée des protéines ciliaires et une correction d’un défaut de signalisation ciliaire dans les cellules portant une variante sans sens homozygote spécifique de *ALMS1*. C’est une preuve de principe importante, mais ce n’est pas encore une preuve de bénéfice pour les patients, et cela ne s’appliquerait qu’à la sous-population de patients dont les variantes permettent le readthrough. [Readthrough therapy in patient fibroblasts](https://pubmed.ncbi.nlm.nih.gov/34365092/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34365092/?utm_source=openai))
 
-&gt; Pour plus d'informations :
-&gt; - [Orphanet Journal of Rare Diseases, 2022](https://ojrd.biomedcentral.com/articles/10.1186/s13023-022-02483-7)
-&gt; - [Frontiers in Genetics, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861322/)
-&gt; - [OMIM #203800](https://omim.org/entry/203800)
-&gt; - [Résumé Orphanet](https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&amp;Expert=52)
+Une seconde stratégie émergente consiste à identifier les voies en aval de la perte de ALMS1 qui pourraient être ciblées par des médicaments même lorsque la correction directe du gène n’est pas encore faisable. Une étude de 2025 utilisant CRISPR-Cas9 en knockout et des phosphoprotéomiques a montré que la déficience en ALMS1 perturbait la signalisation du facteur de croissance transformant-bêta (TGF-β), une voie fortement associée à la fibrose, et a identifié CDC42 comme un régulateur candidat central dans les cellules déficientes en ALMS1. Ces résultats n’établissent pas un traitement, mais ils offrent une voie rationnelle pour tester des médicaments anti-fibrotiques ou des modulateurs de voie dans des modèles d’Alström. [ALMS1 phosphoproteomics and TGF-β signaling](https://pmc.ncbi.nlm.nih.gov/articles/PMC12589413/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC12589413/?utm_source=openai))
 
-Le syndrome d'Alström est officiellement classé parmi les "ciliopathies", un groupe de maladies génétiques causées par des anomalies primaires des cils. Depuis 2022, il n'y a pas eu de nouveaux gènes liés au syndrome d'Alström ni de changements majeurs dans sa classification.
+Des modèles humains « maladie en plat » sont également en train d’affiner les cibles thérapeutiques pour la cardiomyopathie. En 2024, des chercheurs ont utilisé des cardiomyocytes dérivés de cellules souches pluripotentes induites — des cellules cardiaques fabriquées à partir de cellules souches humaines modifiées dépourvues de *ALMS1* — et ont rapporté une altération de la gestion du calcium, une demande métabolique accrue et une sénescence cellulaire accrue. Ces anomalies offrent des résultats mesurables en laboratoire pour tester des médicaments visant à protéger le cœur avant que la fibrose irréversible ou l’insuffisance cardiaque ne se développe. [ALMS1-knockout cardiomyocyte model](https://www.sciencedirect.com/science/article/pii/S1096719224004591) ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1096719224004591?utm_source=openai))
 
----
+Les médicaments métaboliques ne constituent pas des cures, mais ils jouent un rôle de plus en plus important en tant que thérapies de soutien modifiant la maladie. Dans une cohorte du monde réel de 30 adultes atteints du syndrome d'Alström en 2024, six mois d'agonistes du récepteur GLP-1, le sémaglutide ou l’exénatide, ont été associés à une perte de poids moyenne de 5,4 kg et à une réduction de 1,1 point de pourcentage de l’HbA1c, une mesure de la glycémie moyenne. [GLP-1 receptor agonists in Alström syndrome](https://pubmed.ncbi.nlm.nih.gov/38151964/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38151964/?utm_source=openai)) Un rapport de 2025 sur deux personnes traitées par tirzepatide, qui active à la fois les récepteurs GIP et GLP-1, a décrit une perte de poids substantielle, des besoins en insuline réduits, une amélioration de l’hyperphagie et une diminution de la graisse hépatique ; cependant, il s’agissait d’une étude de cas non contrôlée sur deux personnes et elle ne peut établir l’efficacité ou la sécurité pour une population plus large. [Tirzepatide case series](https://academic.oup.com/jcem/article/110/12/3364/8122500) ([academic.oup.com](https://academic.oup.com/jcem/article/110/12/3364/8122500?utm_source=openai))
 
-## Le paysage actuel de la recherche en vue d'une guérison (2022-2025)
+## Essais cliniques et approches expérimentales
 
-### Constat clé
+Le principal essai d’intervention récent était l’achèvement de l’étude de phase 3 de l’agoniste du récepteur de la mélanocortine-4, le setmelanotide, sponsorisée par Rhythm Pharmaceuticals : [NCT03746522]. Il a recruté des participants atteints du syndrome de Bardet-Biedl ou du syndrome d'Alström et d’obésité. Bien que l’étude combinée ait atteint son objectif principal, tous les participants ayant perdu au moins 10 % de leur poids au terme d’un an appartenaient au syndrome de Bardet-Biedl ; les résultats dans le sous-groupe d'Alström n’étaient pas statistiquement significatifs. L’hyperpigmentation cutanée était l’événement indésirable le plus fréquemment rapporté. Ainsi, le setmelanotide n’est pas devenu un traitement spécifique à la maladie fondé sur des données probantes pour le syndrome d'Alström. [Phase 3 setmelanotide trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC9847480/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9847480/?utm_source=openai))
 
-**Il n'existe pas de publications récentes (2022-2025) évaluées par des pairs, d'essais cliniques, de rapports précliniques ou de thérapies expérimentales, ni de projets de recherche enregistrés publiquement, ciblant spécifiquement un remède ou une modification directe de la maladie dans le cas du syndrome d'Alström**
+L’étude observationnelle de l’hôpital universitaire de Strasbourg, [NCT02890550], a été conçue pour caractériser les manifestations génétiques, sensorielles, métaboliques, rénales, cardiaques, pulmonaires et reproductives et pour collecter des biospécimens pour la recherche. Le registre la classe comme terminée, sans résultats publiés. Son utilisation prévue de données cliniques, de sang, d’urine, de peau et d’échantillons adipeux illustre le besoin du domaine en données longitudinales de l’histoire naturelle et en biospécimens humains pour soutenir de futurs essais thérapeutiques. [Strasbourg natural-history study](https://clinicaltrials.gov/study/NCT02890550) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT02890550?utm_source=openai))
 
-Cette absence criante est en soi une conclusion majeure et est examinée en détail ci-dessous.
+## Méthodologies et approches scientifiques
 
-### Méthodologie de la recherche documentaire
+Les chercheurs associent des fibroblastes dérivés de patients, des lignées cellulaires modifiées par CRISPR, des cellules cardiaques dérivées de cellules souches pluripotentes induites et des modèles murins. Les fibroblastes de patients sont particulièrement utiles pour tester des approches spécifiques à des variantes telles que la lecture du codon sans sens (nonsense) lors de la traduction, tandis que les cellules modifiées génétiquement permettent une comparaison contrôlée entre les cellules dépourvues de ALMS1 et les cellules normales. Les protéomiques et phosphoprotéomiques sont utilisées pour décrire les réseaux de signalisation perturbés, y compris les voies liées au TGF-β, tandis que les modèles de cardiomyocytes fournissent des mesures fonctionnelles telles que la contraction, le cycle du calcium, l’utilisation d’énergie et la sénescence. [Readthrough therapy in patient fibroblasts] (https://pubmed.ncbi.nlm.nih.gov/34365092/) [ALMS1 phosphoproteomics and TGF-β signaling](https://pmc.ncbi.nlm.nih.gov/articles/PMC12589413/) [ALMS1-knockout cardiomyocyte model](https://www.sciencedirect.com/science/article/pii/S1096719224004591) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34365092/?utm_source=openai))
 
-De multiples stratégies de recherche actualisées ont été employées, couvrant :
-- Littérature évaluée par des pairs (y compris PubMed, les équivalents de Google Scholar et les principales revues médicales)
-- Registres d'essais cliniques (ClinicalTrials.gov, registre des essais cliniques de l'UE, ICTRP de l'OMS)
-- Référentiels de recherche préclinique et expérimentale
-- Principaux consortiums sur les maladies rares et traqueurs de pipelines
+La recherche clinique utilise de plus en plus des biomarqueurs spécifiques à un organe pour détecter la progression avant que les symptômes ne deviennent graves. Des exemples incluent HbA1c et le poids corporel pour les maladies métaboliques, l’imagerie par résonance magnétique pour la graisse hépatique, et les mesures par résonance magnétique cardiaque de la fibrose myocardique diffuse. Chez les adultes atteints du syndrome d'Alström, des imageries par résonance magnétique cardiaque successives ont montré une progression silencieuse de la fibrose interstitielle diffuse du cœur, soutenant son utilisation comme biomarqueur pour des études axées sur la prévention. [Cardiac MRI fibrosis study](https://pubmed.ncbi.nlm.nih.gov/32503575/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32503575/?utm_source=openai))
 
-Toutes les recherches ont porté sur des études, des essais ou des projets expérimentaux réalisés à partir de 2022 :
-- Interventions médicamenteuses modificatrices de la maladie
-- Thérapie génique, édition du génome, thérapie ciblée sur l'ARN
-- Stratégies de cellules souches ou médecine régénérative
-- Nouvelles approches biotechnologiques
-- Recherche à un stade précoce, y compris les prépublications, les projets financés par des subventions et les résumés de conférences
+## Institutions et financement principaux
 
-**Aucune étude, aucun projet, aucun essai répondant à ces critères n'a été retrouvé**, et ce, après plusieurs requêtes larges et étroites portant sur des syndromes spécifiques.
+Des centres de recherche importants incluent l’Institut d’ophtalmologie de l’University College London, le Great Ormond Street Hospital, le Moorfields Eye Hospital, l’Université de Birmingham et les University Hospitals Birmingham, l’Hôpital universitaire de Strasbourg, l’Université de Padoue, le Jackson Laboratory, et des chercheurs affiliés aux National Institutes of Health (États-Unis). L’étude de readthrough de 2021 a été dirigée par des institutions cliniques et de recherche affiliées à l’UCL et a annoncé un financement du Wellcome Trust grant 205174/Z/16/Z, du National Centre for the Replacement, Refinement and Reduction of Animals in Research, et de la Deutsche Forschungsgemeinschaft grant MA 6139/3-1. [Readthrough therapy in patient fibroblasts](https://pubmed.ncbi.nlm.nih.gov/34365092/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34365092/?utm_source=openai))
 
----
+Alström Syndrome International (ASI) est un important facilitateur de recherche dirigée par les patients. ASI indique qu’il conserve des informations cliniques sur plus de 900 personnes touchées et soutient des collaborations, la participation des patients, des rencontres scientifiques et des initiatives de recherche ; ce type d’infrastructure internationale coordonnée est particulièrement important pour une maladie ultra-rare dans laquelle les centres individuels voient peu de patients. [ASI researcher program](https://www.alstrom.org/for-researchers) ([alstrom.org](https://www.alstrom.org/for-researchers?utm_source=openai))
 
-## Analyse et implications
+## Points forts, limites et défis
 
-### Pourquoi n'y a-t-il pas d'efforts de recherche curative ?
+Les principaux atouts de ce domaine sont que le syndrome d'Alström est causé par un seul gène connu, que de nombreuses variantes pathogènes entraînent une perte de fonction et que des modèles cellulaires et animaux de patients peuvent reproduire des aspects significatifs des maladies ciliaires, métaboliques, rénales et cardiaques. Les expériences de readthrough montrent que certaines cellules mutantes peuvent retrouver une protéine ALMS1 longue et une fonction ciliaire, tandis que des modèles cellulaires plus récents révèlent des voies mesurables et des biomarqueurs pour tester des médicaments candidats. [Readthrough therapy in patient fibroblasts] (https://pubmed.ncbi.nlm.nih.gov/34365092/) [ALMS1 phosphoproteomics and TGF-β signaling](https://pmc.ncbi.nlm.nih.gov/articles/PMC12589413/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34365092/?utm_source=openai))
 
-Le syndrome d'Alström est extrêmement rare - moins de 1 000 cas ont été rapportés dans le monde. Son hétérogénéité, sa complexité et le nombre limité de personnes et de familles touchées constituent des obstacles importants pour :
-- Recrutement d'essais cliniques
-- Attirer d'importants fonds de recherche (publics et privés)
-- Participation à l'industrie biotechnologique/pharmaceutique
-- Justifier un investissement technologique préclinique ou de plate-forme à grande échelle
+Les limites sont considérables. ALMS1 est un gène très volumineux, rendant difficile la délivrance de l’ensemble du gène ; il est nécessaire dans de nombreux tissus ; et les complications de la vision, de l’audition, du cœur, du rein, du foie et du métabolisme peuvent déjà être en partie irréversibles lorsque le traitement commence. Les composés de readthrough sont mutation-spécifiques et doivent prouver une restauration protéique durable et une sécurité dans les organes pertinents. Pendant ce temps, les médicaments métaboliques peuvent réduire le poids, la glycémie, les besoins en insulin et la graisse hépatique, mais ils ne remplacent pas ALMS1 et ne préviennent pas de manière fiable la dégénérescence sensorielle et la fibrose. Des preuves pour des médicaments plus récents tels que tirzepatide restent limitées à des études très petites et non contrôlées. [Consensus management guidelines](https://pubmed.ncbi.nlm.nih.gov/32958032/) [Tirzepatide case series](https://academic.oup.com/jcem/article/110/12/3364/8122500) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32958032/))
 
-Même parmi les ciliopathies rares, le syndrome d'Alström pose des problèmes particuliers :
-- Il existe un chevauchement clinique important avec d'autres syndromes, ce qui fait du développement d'une thérapie unique un créneau peu rentable pour les acteurs du secteur privé.
-- La cible génétique (ALMS1) est énorme (le gène s'étend sur plus de 200 000 paires de bases), ce qui complique les approches de thérapie génique qui reposent sur des vecteurs viraux standard.
-- Ce trouble affecte plusieurs systèmes organiques, ce qui nécessite une stratégie thérapeutique globale plutôt qu'une intervention spécifique à un organe.
+## Perspectives et directions futures
 
-### Points forts de la recherche actuelle
+À la date du 8 août 2026, une véritable cure du syndrome d'Alström n'est pas proche d'une utilisation clinique, mais la voie menant à celle-ci devient plus claire. Les jalons les plus importants à suivre sont la reproduction des résultats de nonsense-readthrough dans des variantes de patients supplémentaires et des tissus pertinents pour la maladie ; la démonstration que des traitements anti-fibrotiques ou de restauration de la ciliopathie fonctionnent dans des modèles animaux ; le développement de systèmes de délivrance capables d’atteindre en toute sécurité plusieurs organes affectés par ALMS1 ; et des essais prospectifs utilisant des biomarqueurs sensibles du cœur, des reins, du foie, du métabolisme et des sens. À plus court terme, une meilleure utilisation des médicaments à base d’incrétines et des études rigoureuses sur les thérapies modifiant la fibrose pourraient réduire la morbidité pendant que les traitements des causes profondes mûrissent. [Readthrough therapy in patient fibroblasts](https://pubmed.ncbi.nlm.nih.gov/34365092/) [ALMS1 phosphoproteomics and TGF-β signaling](https://pmc.ncbi.nlm.nih.gov/articles/PMC12589413/) [GLP-1 receptor agonists in Alström syndrome](https://pubmed.ncbi.nlm.nih.gov/38151964/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34365092/?utm_source=openai))
 
-Bien qu'il n'y ait pas de filière de recherche curative active, des progrès ont été réalisés dans ce domaine :
-- Élargissement des variations connues de l'ALMS1, permettant d'améliorer le diagnostic génétique et le conseil familial [^1][^2].
-- Meilleure compréhension des corrélations génotype-phénotype, en particulier pour les différentes manifestations cardiaques [^1].
-- Lignes directrices pour une intervention précoce avec des soins multidisciplinaires basés sur les symptômes.
+## References
 
-Ces avancées scientifiques fondamentales jettent les bases d'une future recherche translationnelle, car elles permettent un diagnostic plus précoce et plus précis.
-
-### Limites et défis à relever
-
-- **En 2025, toutes les interventions médicales resteront symptomatiques, se concentrant sur l'aide à la vision, la gestion du diabète, la surveillance cardiaque et les soins de soutien. Il n'y a pas de médicaments modifiant la maladie, pas de thérapies géniques ou moléculaires, ni d'essais en cours ou terminés visant à guérir la maladie.
-- **Financement de la recherche et infrastructure:** Les maladies ultra-rare comme le syndrome d'Alström bénéficient d'un financement minimal de la recherche, ce qui rend difficile le lancement de projets internationaux ou à grande échelle.
-- **Complexité biologique:** La taille du gène ALMS1 et la nature multisystémique du syndrome compliquent les perspectives d'une thérapie traditionnelle de remplacement d'un seul gène.
-- **Limites de la cohorte de patients:** La rareté de la maladie rend les essais multisites ou multinationaux difficiles d'un point de vue logistique sans de nouveaux modèles de collaboration mondiale.
-
-### Opportunités et tendances émergentes
-
-**Bien qu'aucune recherche curative active ne soit visible, il existe des possibilités évidentes de progrès futurs:**
-- Les technologies de thérapie génique s'améliorent rapidement, notamment grâce au développement de vecteurs viraux extra-larges et de plates-formes d'administration non virales.
-- L'essor des thérapies basées sur l'ARN (oligonucléotides antisens, siRNA, édition de l'ARN) pourrait permettre de cibler l'ALMS1 au cours de la prochaine décennie.
-- Les groupes de défense des patients et les consortiums internationaux sur les maladies rares accordent de plus en plus d'importance aux syndromes négligés et pourraient catalyser un financement ciblé ou une infrastructure d'essai de plate-forme.
-
-### Principales institutions et financement
-
-À l'heure actuelle, aucune institution, société de biotechnologie ou agence de financement n'est publiquement reconnue comme étant à la tête de la recherche sur la modification de la maladie pour le syndrome d'Alström d'ici 2022-2025. Les progrès sont essentiellement progressifs et se limitent à des séries de cas, à des déclarations de consensus sur la gestion et à des registres mondiaux de patients.
-
-### Résumé critique
-
-Malgré des progrès significatifs dans la compréhension de la maladie au niveau génétique et clinique, **aucune recherche récente axée sur la guérison n'existe pour le syndrome d'Alström**. Des percées majeures dans la thérapie génique et l'administration de médicaments à base d'ARN dans des maladies rares voisines laissent entrevoir la possibilité d'un "débordement" technologique - mais, à ce jour, le syndrome d'Alström reste à la périphérie de l'innovation thérapeutique.
-
----
-
-## Recommandations pour les patients, les familles et les chercheurs
-
-- **Prise en charge** : L'accent reste mis sur un diagnostic précoce et précis et sur des soins multidisciplinaires adaptés aux symptômes. Pour plus d'informations : [Résumé de la maladie d'Orphanet] (https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&amp;Expert=52).
-- **Information et défense des droits** : Les familles doivent se rapprocher d'organisations de défense des droits telles que Alström Syndrome International ([alstrom.org](https://www.alstrom.org/)) et EURORDIS ([eurordis.org](https://www.eurordis.org/)) pour obtenir les dernières mises à jour et les possibilités de participer à des registres de patients ou à des réseaux de recherche.
-- **Pour les chercheurs** : Le domaine est mûr pour l'innovation ; les leçons tirées de l'édition de gènes, de la thérapie ARN et des approches de plateforme dans d'autres maladies rares pourraient être adaptées au syndrome d'Alström. La collaboration interinstitutionnelle et internationale sera essentielle.
-
----
-
-## Citations
-
-- [Expansion du spectre clinique et mutationnel du syndrome d'Alström : nouveaux variants ALMS1 et corrélations génotype-phénotype, Orphanet Journal of Rare Diseases, 2022] (https://ojrd.biomedcentral.com/articles/10.1186/s13023-022-02483-7)
-- [Série de cas et revue : Analyse clinique et génétique du syndrome d'Alström, Frontiers in Genetics, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861322/)
-- [Online Mendelian Inheritance in Man (OMIM), Alström Syndrome #203800](https://omim.org/entry/203800)
-- [Résumé Orphanet sur le syndrome d'Alström] (https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=EN&amp;Expert=52)
-- Alström Syndrome International, [alstrom.org](https://www.alstrom.org/)
-- EURORDIS Rare Disease Europe, [eurordis.org] (https://www.eurordis.org/)
-
----
-
-## Conclusion
-
-**Il n'existe actuellement aucun projet de recherche, essai ou thérapie publié ou enregistré publiquement (2022-2025) visant à guérir ou à modifier substantiellement l'évolution du syndrome d'Alström.** Alors que les connaissances fondamentales se sont développées et que les méthodes de diagnostic se sont améliorées, la recherche d'un remède n'a pas encore atteint le pipeline préclinique ou clinique. Cette lacune importante souligne le besoin urgent d'une collaboration entre plusieurs parties prenantes, d'un financement accru de la recherche et de l'adaptation de thérapies innovantes issues de maladies génétiques voisines.
-
-[^1] : [Orphanet Journal of Rare Diseases, 2022](https://ojrd.biomedcentral.com/articles/10.1186/s13023-022-02483-7)
-[^2] : [Frontiers in Genetics, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861322/)
+- [Consensus clinical management guidelines for Alström syndrome](https://pubmed.ncbi.nlm.nih.gov/32958032/) — Tahani et al., 2020.
+- [Translational readthrough of ciliopathy genes BBS2 and ALMS1 restores protein, ciliogenesis and function in patient fibroblasts](https://pubmed.ncbi.nlm.nih.gov/34365092/) — Eintracht et al., 2021.
+- [Efficacy and safety of setmelanotide in Bardet-Biedl syndrome and Alström syndrome](https://pmc.ncbi.nlm.nih.gov/articles/PMC9847480/) — Haqq et al., 2022.
+- [Setmelanotide in Bardet-Biedl syndrome and Alström syndrome participants with obesity: NCT03746522](https://clinicaltrials.gov/study/NCT03746522) — ClinicalTrials.gov, 2023.
+- [ALMS1 knockout induced pluripotent stem cell-derived cardiomyocyte model](https://www.sciencedirect.com/science/article/pii/S1096719224004591) — Molecular Genetics and Metabolism Reports, 2024.
+- [Glucagon-like peptide-1 analogues in monogenic syndromic obesity: real-world Alström syndrome cohort](https://pubmed.ncbi.nlm.nih.gov/38151964/) — Ali et al., 2024.
+- [Effectiveness of tirzepatide in two cases of Alström syndrome](https://academic.oup.com/jcem/article/110/12/3364/8122500) — Ferch et al., 2025.
+- [Phosphoproteomic profiling of ALMS1 and BBS1 knockout models](https://pmc.ncbi.nlm.nih.gov/articles/PMC12589413/) — Bea-Mascato et al., 2025.
+- [Clinical study of a single ciliopathy: Alström syndrome, NCT02890550](https://clinicaltrials.gov/study/NCT02890550) — University Hospital, Strasbourg, France, 2019.
+- [Prospective cardiovascular magnetic resonance imaging in adults with Alström syndrome](https://pubmed.ncbi.nlm.nih.gov/32503575/) — Baig et al., 2020.
+- [Alström Syndrome International researcher program](https://www.alstrom.org/for-researchers) — Alström Syndrome International, 2024.

@@ -1,85 +1,81 @@
+---
+title: Maladie de l'urine au sirop d'érable
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir Maple Syrup Urine Disease.
+input_tokens: 74402
+output_tokens: 6039
+search_calls: 10
+cost_usd: 0.3213
+---
 
-# Maladie urinaire due au sirop d'érable
+# Maladie de l'urine au sirop d'érable
 
-## Introduction
+## Vue d'ensemble
 
-La maladie urinaire du sirop d'érable (MSUD) est une maladie héréditaire rare, potentiellement mortelle, causée par des mutations dans le complexe de l'alpha-cétoacide déshydrogénase à chaîne ramifiée (BCKDH), ce qui entraîne l'accumulation d'acides aminés à chaîne ramifiée et de leurs sous-produits toxiques. La prise en charge traditionnelle repose sur une restriction alimentaire stricte, mais ne permet pas de guérir la maladie. Ces dernières années ont été marquées par une vague de recherches prometteuses visant à trouver des remèdes fondamentaux à la MSUD, notamment les thérapies géniques, le remplacement d'enzymes, les traitements basés sur l'ARNm et les innovations en matière de transplantation.
+La Maladie du sirop d'érable (MSUD) est une maladie métabolique héréditaire rare dans laquelle le corps ne parvient pas à décomposer suffisamment les acides aminés à chaîne ramifiée leucine, isoleucine et valine. Une accumulation toxique de leucine et des cétoacides connexes peut provoquer une mauvaise alimentation, de la léthargie, des convulsions, un œdème cérébral, un coma et la mort chez les nourrissons non traités présentant la forme sévère « classique » ; les formes intermédiaires et intermittentes plus légères peuvent se manifester plus tard ou pendant une maladie. La MSUD est généralement causée par des modifications responsables de la maladie dans les deux copies de *BCKDHA*, *BCKDHB*, ou *DBT*, qui codent pour des parties du complexe enzymatique déshydrogénase des cétoacides à chaîne ramifiée. [GeneReviews: Maple Syrup Urine Disease](https://www.ncbi.nlm.nih.gov/books/NBK1319/) ([ncbi.nlm.nih.gov](https://ncbi.nlm.nih.gov/books/NBK1319/?utm_source=openai))
 
-## Percées récentes et thérapies innovantes
+Les soins actuels visent à prévenir les élévations toxiques de leucine grâce à une restriction à vie des acides aminés à chaîne ramifiée dans l'alimentation, à une formule médicale spécialisée, à une supplémentation en valine et en isoleucine lorsque nécessaire, à une surveillance sanguine fréquente et à des traitements rapides et riches en calories lors des maladies ou des crises métaboliques. La transplantation du foie peut fournir une activité enzymatique suffisante pour permettre un régime sans restriction et prévenir la plupart des crises métaboliques, mais il s'agit d'une chirurgie majeure nécessitant une immunosuppression à vie et ne peut pas inverser les lésions cérébrales survenues avant la transplantation. [GeneReviews: Maple Syrup Urine Disease](https://www.ncbi.nlm.nih.gov/books/NBK1319/) [Liver transplantation review](https://pubmed.ncbi.nlm.nih.gov/37340513/) ([ncbi.nlm.nih.gov](https://ncbi.nlm.nih.gov/books/NBK1319/?utm_source=openai))
 
-### Thérapie génique
+## Portée des recherches récentes (2020–présent)
 
-#### Thérapie digénique (bi-gène) par AAV
-Une étude historique de l'école de médecine Chan de l'UMass a démontré que l'administration par virus adéno-associé (AAV) des gènes BCKDHA et BCKDHB a rétabli un métabolisme sain chez des souris et même des veaux atteints de MSUD classique. Cette approche à double gène a permis une correction métabolique à long terme et a empêché les complications neurologiques, offrant une voie réaliste vers une guérison humaine ([Science Translational Medicine, 2025](https://pubmed.ncbi.nlm.nih.gov/40009698/) ; [UMass News, 2025](https://www.umassmed.edu/news/news-archives/2025/02/gene-therapy-developed-for-maple-syrup-urine-disease-shows-promise-new-umass-chan-study-reports/)).
+Les recherches récentes sur la MSUD sont devenues plus actives et se concentrent de plus en plus sur le remplacement génique unique par des vecteurs adéno-associés (AAV), en particulier des approches qui rétablissent l'activité enzymatique dans le foie, les muscles, le cœur et le cerveau plutôt que dans le foie seul. Le domaine a également poursuivi des thérapies enzymatiques orales restreintes à l’intestin qui diminuent la leucine absorbée et améliorent les produits diététiques, mais ce sont des modifications de la maladie plutôt que curatives. Une cure moléculaire durable n’est pas encore entrée dans les essais cliniques humains ; toutefois, une restauration importante dans plusieurs modèles murins et chez un veau fait de la thérapie de remplacement génique par AAV la stratégie curative dominante. [Neonatal AAV8 gene therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/) [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) [Oral enzyme therapy](https://onlinelibrary.wiley.com/doi/abs/10.1002/jimd.12662) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/?utm_source=openai))
 
-#### Thérapie génique néonatale
-L'administration précoce d'une thérapie génique AAV à des souris nouveau-nées atteintes de MSUD a permis d'éviter l'apparition de symptômes et de lésions cérébrales, soulignant l'importance cruciale d'une intervention précoce pour les maladies génétiques ([Wiley, 2024](https://onlinelibrary.wiley.com/doi/10.1002/jimd.12604)).
+## Grandes avancées et thérapies émergentes
 
-### Remplacement de l'enzyme
+L’avance la plus importante est le remplacement systémique à double-gène pour les deux formes génétiques les plus courantes de MSUD classique, types 1A et 1B. En 2025, des chercheurs ont développé un vecteur AAV9 portant les gènes humains *BCKDHA* et *BCKDHB* optimisés par codon. Une seule dose postnatale a prévenu la mort précoce, restauré la croissance et l’activité de la déshydrogénase des cétoacides à chaîne ramifiée, et stabilisé les marqueurs biochimiques pendant une alimentation riche en protéines chez des souris déficientes en *Bckdha*, des souris déficientes en *Bckdhb*, et un veau nouveau-né atteint de MSUD classique. Le veau est resté en bonne santé avec un régime illimité et riche en protéines pendant plus de deux ans après le traitement, une preuve de concept importante chez un grand animal. [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/40009698/?utm_source=openai))
 
-Une étude réalisée en 2023 a montré que l'enzyme BCKDH bio-encapsulée administrée par voie orale pouvait réduire les acides aminés toxiques chez les souris et les primates non humains. Cela représente une avancée significative par rapport aux traitements enzymatiques injectables antérieurs et évite les problèmes immunitaires majeurs ([PubMed, 2023](https://pubmed.ncbi.nlm.nih.gov/37494004/)).
+La thérapie de remplacement génique AAV a également montré qu’une délivrance tissulaire large peut être plus efficace qu’un traitement ciblant le foie seul. Une étude de 2022 a utilisé l'AAV8 pour délivrer *BCKDHA* à des souris nouveau-nées knock-out pour *Bckdha* ; un promoteur largement actif a produit une survie à long terme, une croissance normale et la correction des anomalies biochimiques, alors que l’expression restreinte au foie n’a donné qu’un sauvetage partiel. Ces résultats sont biologiquement plausibles car le métabolisme des acides aminés à chaîne ramifiée se produit largement en dehors du foie, notamment dans le muscle et d’autres tissus. [Neonatal AAV8 gene therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/?utm_source=openai))
 
-### ARNm et thérapies par biologie synthétique
+Une étude complémentaire de 2021 a ciblé la forme *DBT* de MSUD chez des souris à maladie intermédiaire. L’expression AAV dans le foie uniquement était insuffisante, et le traitement musculaire seul était incomplet ; en revanche, une délivrance par AAV9 conçue pour exprimer le gène manquant *DBT* à la fois dans le muscle et le foie a considérablement amélioré la survie, maintenu des niveaux quasi normaux d’acides aminés à chaîne ramifiée à des doses efficaces, et protégé les souris d’un défi protéique létal. [Muscle-directed AAV therapy](https://pubmed.ncbi.nlm.nih.gov/34454844/) ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S1096719221007678?utm_source=openai))
 
-Les scientifiques de l'université de Pennsylvanie et de Moderna mettent au point un traitement dans lequel les instructions de l'ARNm pour les enzymes manquantes sont délivrées dans de minuscules nanoparticules lipidiques (la technologie qui sous-tend les vaccins ARNm modernes). Dans des modèles de souris, cela a permis de maintenir les animaux en bonne santé, démontrant ainsi le potentiel pratique d'un traitement des MSUD en fonction des besoins ([AZoNano, 2024](https://www.azonano.com/news.aspx?newsID=41025)).
+En 2026, la stratégie AAV9 à double gènes a été davantage testée avec une métabolomique sanguine et cérébrale associée chez des souris déficientes en *Bckdha*. Une dose intraveineuse unique a sauvé une encéphalopathie fatale et ramené les principaux paramètres neurochimiques cérébraux à la plage de type sauvage, même si certains cétoacides circulants restaient élevés. Cette découverte renforce l’argument en faveur des vecteurs qui atteignent le système nerveux central et met en garde contre le fait que les niveaux sanguins de leucine ou de cétoacides seuls peuvent ne pas refléter pleinement le traitement du cerveau. [Brain-metabolomics dual-gene study](https://www.sciencedirect.com/science/article/pii/S1525001626003953) ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1525001626003953?utm_source=openai))
 
-### Transplantation hépatique et transplantation en domino
+Une alternative non curative mais potentiellement importante est la thérapie enzymatique orale. Des chercheurs de Codexis ont mis au point une leucine décarboxylase, LDCv10, capable de survivre aux conditions gastriques et intestinales et de dégrader la leucine à l’intérieur du tractus gastro-intestinal avant l’absorption. Chez des souris atteintes de MSUD intermédiaire et chez des primates non humains en bonne santé nourris avec des repas protéinés, le LDCv10 oral a réduit la leucine plasmatique post-prandiale et le ketoisocaproate et a été associé à une leucine cérébrale plus faible chez les souris. [Oral enzyme therapy](https://onlinelibrary.wiley.com/doi/abs/10.1002/jimd.12662) ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/abs/10.1002/jimd.12662?utm_source=openai))
 
-La transplantation hépatique reste un traitement établi pour les cas graves de MSUD. Une nouvelle approche, la greffe de foie domino, permet à un seul foie donné d'aider deux patients : le patient atteint de MSUD reçoit un foie sain et son foie explanté (MSUD) est utilisé pour traiter un autre patient non atteint de MSUD, puisque la maladie ne se développe pas chez le second receveur. Cela a considérablement amélioré l'accès et les taux de survie ([Frontiers in Immunology, 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12078128/)).
+## Essais cliniques et approches expérimentales
 
-Les études pathologiques multiomiques et à long terme révèlent de nouvelles informations sur les résultats et les complications post-transplantation, telles que l'hyperplasie nodulaire régénérative, qui amélioreront la prise en charge future ([ACS, 2025](https://pubs.acs.org/doi/10.1021/acs.jproteome.5c00166) ; [SAGE Journals, 2025](https://journals.sagepub.com/doi/10.1177/10935266251333007)).
+À compter du 8 août 2026, les études publiées sur le remplacement génique AAV pour la MSUD restent précliniques ; leur efficacité signalée provient de modèles cellulaires, souris et veau plutôt que de patients traités. Le candidat principal est le programme AAV9 dual-*BCKDHA*/*BCKDHB* mené par des chercheurs de la University of Massachusetts Chan Medical School et de la Clinic for Special Children, qui vise les MSUD types 1A et 1B. [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/40009698/?utm_source=openai))
 
-## Tendances et méthodologies émergentes
+La plus récente étude humaine enregistrée et directement liée au traitement de la MSUD n'est pas un essai curatif : NCT06581991 a évalué des compléments liquides prêts à l'emploi de valine et d'isoleucine chez cinq enfants, sponsorisée par Meta Healthcare Ltd. Un rapport de 2026 a révélé que les produits étaient bien tolérés et plus faciles à utiliser ; les doses de compléments nécessaires ont diminué au cours de la courte étude, mais le petit essai non contrôlé n'a pas évalué la correction du défaut enzymatique sous-jacent. [NCT06581991 trial record](https://clinicaltrials.gov/study/NCT06581991) [Liquid supplement study](https://pmc.ncbi.nlm.nih.gov/articles/PMC13045159/) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT06581991?utm_source=openai))
 
-- **Technologies de l'ARNm:** Adaptation des plateformes des vaccins COVID-19 pour les maladies métaboliques rares.
-- **Thérapie à double vecteur/AAV:** Surmonter les restrictions des thérapies monogéniques pour les troubles métaboliques complexes.
-- **Remplacement des enzymes par voie orale:** L'abandon des produits injectables au profit d'une administration plus facile et plus conviviale pour le patient.
-- **Transplantation domino et hybride:** Élargir l'offre d'organes et améliorer l'accès à la transplantation.
-- **Comprehensive Multiomics:** Utilisation d'un profilage avancé pour guider les soins à long terme et approfondir la compréhension biologique.
+Par ailleurs, des travaux pharmacologiques antérieurs avec le phénylbutyrate de sodium restent exploratoires plutôt que curatifs. Dans une étude croisée randomisée terminée impliquant 20 participants, le phénylbutyrate n'a pas démontré une exposition à la leucine sur 24 heures inférieure à celle du placebo dans les résultats publiés et a été associé à des symptômes gastro-intestinaux non graves fréquents. [Phenylbutyrate trial results](https://clinicaltrials.gov/study/NCT01529060?cond=Maple+Syrup+Urine+Disease&rank=3&tab=results) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT01529060?cond=Maple+Syrup+Urine+Disease&rank=3&tab=results&utm_source=openai))
 
-## Institutions et bailleurs de fonds clés
+## Méthodologies et approches scientifiques
 
-- **UMass Chan Medical School** (Institut Li Weibo pour la recherche sur les maladies rares)
-- **Université de Pennsylvanie**
-- **Moderna, Inc.**
-- **Children's Hospital of Pittsburgh** (Hôpital pour enfants de Pittsburgh)
-- **King Fahad Specialist Hospital, Dammam, Arabie Saoudite**
+La recherche sur la cure MSUD repose sur des modèles de maladie génétiquement définis qui correspondent aux principaux sous-types humains, y compris des souris déficientes en *Bckdha*-, *Bckdhb*-, et *Dbt*-, ainsi que sur des cellules humaines cultivées et un veau naturellement affecté. Les chercheurs comparent des promoteurs à expression tissulaire spécifique et étendue, les capside AAV8 versus AAV9, les charges utiles à un seul gène versus à double gène, la dose du vecteur, la survie, la croissance, la tolérance à l’apport protéique et la restauration de l’activité enzymatique. [Neonatal AAV8 gene therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/) [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) [Muscle-directed AAV therapy](https://pubmed.ncbi.nlm.nih.gov/34454844/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/?utm_source=openai))
 
-Le financement principal provient des National Institutes of Health des États-Unis, des fondations pour les maladies rares, des hôpitaux de recherche et de l'industrie privée.
+Les biomarqueurs clés incluent la leucine plasmatique, l'alloisoleucine, la valine, l'isoleucine, les cétoacides à chaîne ramifiée, et les mesures d'activité enzymatique. Des travaux plus récents ajoutent des métabolomiques sérum-cerveau associées pour déterminer si un traitement corrige le système nerveux central plutôt que d'améliorer uniquement la chimie sanguine. [Brain-metabolomics dual-gene study](https://www.sciencedirect.com/science/article/pii/S1525001626003953) ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1525001626003953?utm_source=openai))
 
-## Points forts et limites
+## Principales institutions et financement
 
-**Strengths:**
-- Plusieurs modèles animaux robustes (y compris des animaux de grande taille) démontrant une correction métabolique durable.
-- Progrès translationnels, certaines thérapies étant en passe de faire l'objet d'essais cliniques chez l'homme ou s'y préparant.
-- La transplantation hépatique reste une option validée et curative.
+Le principal réseau de thérapie génique AAV comprend la University of Massachusetts Chan Medical School, la Clinic for Special Children en Pennsylvanie, le University of Texas Southwestern Medical Center, Tufts University, et des collaborateurs vétérinaires impliqués dans le modèle veau. L’étude à double gènes de 2025 a été dirigée par Jiaming Wang, Kevin A. Strauss, Dan Wang, Guangping Gao, et des collaborateurs au sein de ces institutions. [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) [Research-institution listing](https://www.nature.com/nature-index/article/10.1126/scitranslmed.ads0539) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/40009698/?utm_source=openai))
 
-**Limitations:**
-- La plupart des thérapies géniques et moléculaires en sont encore au stade préclinique ; la sécurité et les effets à long terme chez l'homme sont inconnus.
-- La transplantation hépatique est limitée par la disponibilité des organes, les risques d'immunosuppression à vie et les éventuelles pathologies hépatiques post-transplantation.
-- La thérapie enzymatique par voie orale n'a pas encore fait l'objet d'essais chez l'homme et pourrait être confrontée à des problèmes de réponse immunitaire ou d'efficacité à long terme.
+La recherche sur le remplacement enzymatique soutenue par l'industrie est également en pleine émergence. En 2025, Syntis Bio a reçu une subvention NIH SBIR (Small Business Innovation Research) de 343 635 dollars pour le développement de SYNT-213, un traitement oral quotidien restreint à l’intestin qui abaisse la leucine et combine une plateforme fictive de revêtement intestinal avec une décarboxylase de leucine stable à la protéase. [NIH SBIR award for SYNT-213](https://www.sbir.gov/awards/219354) ([sbir.gov](https://www.sbir.gov/awards/219354?utm_source=openai))
 
-**Défis restants:**
-- Assurer une délivrance sûre et efficace des gènes, en particulier chez les nourrissons.
-- Réglementation et mise à l'échelle des nouvelles thérapies en vue d'une accessibilité mondiale.
-- Gestion et suivi des complications post-transplantation et des résultats à long terme.
+## Points forts, limites et défis
 
-## Popular Science Résumé
+Les preuves les plus solides en faveur d’une cure future montrent que le remplacement basé sur AAV a permis de sauver des cas sévères de MSUD dans plusieurs modèles murins génétiques et, notably, chez un veau—un modèle Animal grand format particulièrement informatif pour une maladie métabolique rare. La conception à double gène offre également une manière pratique de traiter soit les maladies liées à *BCKDHA* soit celles liées à *BCKDHB* avec un seul vecteur, tandis que la délivrance systémique peut adresser les composants musculaire et cérébral que les approches dirigées vers le foie peuvent manquer. [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) [Brain-metabolomics dual-gene study](https://www.sciencedirect.com/science/article/pii/S1525001626003953) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/40009698/?utm_source=openai))
 
-En termes simples, les scientifiques progressent à grands pas vers un traitement de la MSUD en utilisant une thérapie génique de pointe (qui répare essentiellement l'erreur à la racine), des médicaments synthétiques à base d'ARNm "messagers" (comme le vaccin COVID, mais ciblant l'enzyme problématique) et de nouvelles façons intelligentes de procéder à des greffes de foie. Grâce aux succès obtenus chez l'animal et à l'amélioration des stratégies cliniques, ces efforts se rapprochent de plus en plus des essais sur l'homme et, en fin de compte, de la guérison.
+Les incertitudes majeures concernent la traduction, la sécurité et la durabilité chez les enfants. Les doses néonatales efficaces d'AAV chez la souris ont été élevées, la croissance du foie peut diluer les génomes AAV non intégrants au fil du temps, et les anticorps générés après une dose d'AAV peuvent rendre les redoses difficiles. Le programme actuel à double gène n'adresse pas directement la MSUD liée à *DBT*, et la survie animale ou l'amélioration des biomarqueurs sanguins n'établissent pas encore un bénéfice neurocognitif humain à long terme. [Neonatal AAV8 gene therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/) [Muscle-directed AAV therapy](https://pubmed.ncbi.nlm.nih.gov/34454844/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/?utm_source=openai))
 
-## Références
+## Outlook and Future Directions
 
-- [La thérapie génique digénique BCKDHA-BCKDHB rétablit l'homéostasie métabolique chez deux modèles de souris et un veau atteint de la maladie classique de l'urine de sirop d'érable. Science Translational Medicine (2025)] (https://pubmed.ncbi.nlm.nih.gov/40009698/)
-- [La thérapie génique développée pour la maladie de l'urine de sirop d'érable est prometteuse (UMass Chan News, 2025)](https://www.umassmed.edu/news/news-archives/2025/02/gene-therapy-developed-for-maple-syrup-urine-disease-shows-promise-new-umass-chan-study-reports/)
-- [Traitement réussi d'une MSUD sévère chez des souris Bckdhb-/- avec une thérapie génique AAV néonatale (Wiley, 2024)] (https://onlinelibrary.wiley.com/doi/10.1002/jimd.12604)
-- [La thérapie enzymatique orale pour la maladie de l'urine de sirop d'érable supprime les niveaux de leucine plasmatique chez les souris et les primates non humains en bonne santé (JIMD, 2023)](https://pubmed.ncbi.nlm.nih.gov/37494004/)
-- [Engineering Lipid Nanoparticles for Enhanced MSUD Treatment (AZoNano, 2024)] (https://www.azonano.com/news.aspx?newsID=41025)
-- [Une lueur d'espoir : la transplantation hépatique en domino pour le syndrome du sirop d'érable (Frontiers in Immunology, 2025)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC12078128/)
-- [Comprehensive Multiomic Analysis Highlights Metabolic and Proteomic Alterations in MSUD and Post-Liver Transplantation Patients (Journal of Proteome Research, 2025)](https://pubs.acs.org/doi/10.1021/acs.jproteome.5c00166)
-- [Nodular Regenerative Hyperplasia Is a Frequent Finding in Maple Syrup Urine Disease After Liver Transplantation (SAGE Journals, 2025)](https://journals.sagepub.com/doi/10.1177/10935266251333007)
-- [Lignes directrices iraniennes complètes pour le diagnostic et la prise en charge de la maladie urinaire du sirop d'érable : A consensus and review (Orphanet Journal of Rare Diseases, 2025)] (https://ojrd.biomedcentral.com/articles/10.1186/s13023-025-03533-6)
-- [Impact du diagnostic précoce, de la variante de la maladie et de la qualité du contrôle métabolique chez les patients atteints de la maladie de l'urine de sirop d'érable : une méta-analyse (Mol Genet Metab Reports, 2024)](https://www.sciencedirect.com/science/article/pii/S1098360024002375)
-- [Résultats d'un seul centre de transplantation pour 5 patients pédiatriques atteints de la maladie du sirop d'érable (Annals of Transplantation, 2023)] (https://annalsoftransplantation.com/abstract/full/idArt/939893)
+MSUD est plus proche d'une cure moléculaire plausible qu'en 2020, mais ce n'est pas encore proche d'une thérapie curative approuvée. Les prochaines étapes décisives sont des études formelles de toxicologie et de détermination de la dose pour des vecteurs AAV à double gène systémiques, la démonstration d'un bénéfice durable chez d'autres grands animaux, un plan de traitement des nourrissons identifiés par le dépistage néonatal, et l'initiation d'un essai chez l'humain mesurant la prévention des crises métaboliques, la liberté alimentaire, les biomarqueurs cérébraux et le neurodéveloppement. Parallèlement, des enzymes dégradants la leucine orales pourraient offrir une passerelle moins invasive ou un adjuvant qui améliore le contrôle métabolique pendant que la thérapie génique progresse. [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) [NIH SBIR award for SYNT-213](https://www.sbir.gov/awards/219354) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/40009698/?utm_source=openai))
 
-**Cette étude reflète l'état de la recherche sur la guérison des MSUD au 30 mai 2025
+## References
+
+- [GeneReviews: Maple Syrup Urine Disease](https://www.ncbi.nlm.nih.gov/books/NBK1319/) — Strauss, Puffenberger, and Carson; NCBI Bookshelf, 2020.
+- [Liver transplantation review](https://pubmed.ncbi.nlm.nih.gov/37340513/) — Deon et al.; *International Journal of Developmental Neuroscience*, 2023.
+- [Muscle-directed AAV therapy](https://pubmed.ncbi.nlm.nih.gov/34454844/) — Greig et al.; *Molecular Genetics and Metabolism*, 2021.
+- [Neonatal AAV8 gene therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9174284/) — Pontoizeau et al.; *Nature Communications*, 2022.
+- [Oral enzyme therapy](https://onlinelibrary.wiley.com/doi/abs/10.1002/jimd.12662) — Skvorak et al.; *Journal of Inherited Metabolic Disease*, 2023.
+- [Dual-gene AAV9 therapy](https://pubmed.ncbi.nlm.nih.gov/40009698/) — Wang et al.; * Science Translational Medicine*, 2025.
+- [Research-institution listing](https://www.nature.com/nature-index/article/10.1126/scitranslmed.ads0539) — Nature Index, 2025.
+- [NCT06581991 trial record](https://clinicaltrials.gov/study/NCT06581991) — Meta Healthcare Ltd and ClinicalTrials.gov, 2024.
+- [Liquid supplement study](https://pmc.ncbi.nlm.nih.gov/articles/PMC13045159/) — MacDonald et al.; *Journal of Inherited Metabolic Disease*, 2026.
+- [Phenylbutyrate trial results](https://clinicaltrials.gov/study/NCT01529060?cond=Maple+Syrup+Urine+Disease&rank=3&tab=results) — Baylor College of Medicine and ClinicalTrials.gov, 2019.
+- [NIH SBIR award for SYNT-213](https://www.sbir.gov/awards/219354) — National Institutes of Health Small Business Innovation Research Program, 2025.
+- [Brain-metabolomics dual-gene study](https://www.sciencedirect.com/science/article/pii/S1525001626003953) — Wang et al.; *Molecular Therapy*, 2026.

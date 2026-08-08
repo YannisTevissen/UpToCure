@@ -1,135 +1,76 @@
+---
+title: Sandhoff Disease
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Sandhoff Disease.
+input_tokens: 74475
+output_tokens: 5833
+search_calls: 9
+cost_usd: 0.3089
+---
 
 # Sandhoff Disease
 
 ## Overview
 
-Sandhoff Disease is a rare, inherited lysosomal storage disorder that results in the progressive destruction of nerve cells in the brain and spinal cord. Like its counterpart Tay-Sachs Disease, it is caused by insufficient activity of the enzyme beta-hexosaminidase, which leads to the toxic buildup of GM2 ganglioside. This review presents an exhaustive summary of all recent (2023–2025) research efforts aimed at curing Sandhoff Disease, with critical analysis, leading institutions, methodologies, and full citations to the original sources.
+Sandhoff disease is a rare inherited lysosomal storage disorder caused by disease-causing changes in both copies of the *HEXB* gene. The missing or severely reduced beta-hexosaminidase activity prevents cells from breaking down GM2 ganglioside, a fatty substance that then accumulates—especially in the brain and nervous system—causing progressive nerve-cell damage. The disease spans infantile, juvenile, and late-onset forms; the infantile form usually begins before 6 months of age with loss of developmental skills, low muscle tone, an exaggerated startle response, seizures, feeding difficulties, and progressive neurologic decline. [GeneReviews: Sandhoff Disease](https://www.ncbi.nlm.nih.gov/sites/books/NBK579484/)
 
----
+Prognosis depends strongly on residual enzyme activity. Infantile disease is usually fatal in early childhood, juvenile disease commonly progresses through childhood and adolescence, while some late-onset forms progress slowly over decades. There is still no approved therapy that corrects the underlying enzyme deficiency; current care is multidisciplinary and supportive, including seizure treatment, nutrition and hydration support, aspiration prevention, respiratory care, physical and occupational therapy, communication support, and palliative care when appropriate. [GeneReviews: Sandhoff Disease](https://www.ncbi.nlm.nih.gov/sites/books/NBK579484/)
 
-## Scope of Recent Research
+## Scope of Recent Research (2020–present)
 
-### 1. Gene Therapy
+Research since 2020 has become substantially more translational: investigators are testing whether restoring hexosaminidase activity through gene transfer can slow disease in children, while also developing simpler single-vector gene therapies, genome-editing strategies, enzyme-delivery technologies, and cell-based approaches. The field is not yet at a proven cure, but the 2025 first-in-human Phase I/II results for dual-vector gene therapy and FDA authorization in July 2026 for a second-generation trial mark a meaningful transition from animal proof-of-concept studies to iterative clinical development. [Dual-vector rAAVrh8 gene therapy trial](https://www.nature.com/articles/s41591-025-03822-4) [UMass Chan Phase I/II authorization](https://www.umassmed.edu/news/articles/2026/07/umass-chan-researchers-receive-fda-authorization-to-advance-gene-therapy-clinical-trial-for-tay-sachs-and-sandhoff-diseases/)
 
-**Gene therapy** is the most active and promising direction for a potential cure. Recent efforts have focused on delivering working copies of HEXA/HEXB genes using viral vectors—mainly adeno-associated virus (AAV).
+## Major Breakthroughs and Emerging Therapies
 
-- **Preclinical Advances:**
-    - **AAV9 Intrathecal Gene Therapy in Mice (2024):**  
-      Researchers demonstrated that an AAV9 vector expressing beta-hexosaminidase A, delivered directly into the spinal canal, significantly corrected biochemical defects in a mouse model.  
-      [Ryckman AE, et al. (2024) PubMed 38205442](https://pubmed.ncbi.nlm.nih.gov/38205442/)
+The leading curative strategy is adeno-associated virus (AAV) gene therapy. AAV is a modified, non-replicating virus used to deliver working gene copies to cells. In the first published Phase I/II GM2-gangliosidosis study, investigators delivered separate AAVrh8 vectors carrying *HEXA* and *HEXB* through bilateral thalamic brain infusion plus cerebrospinal-fluid routes. The nine participants included two children with Sandhoff disease and seven with Tay-Sachs disease. Across the combined cohort, enzyme activity and disease-related biochemical measures improved in a dose-related manner; the highest-dose group showed measurable central nervous system enzyme activity, increased serum total hexosaminidase activity, and imaging evidence consistent with improved white-matter tracts. [Dual-vector rAAVrh8 gene therapy trial](https://www.nature.com/articles/s41591-025-03822-4)
 
-    - **Genetically Engineered Mesenchymal Stem Cells (2023):**  
-      Engineered stem cells to increase enzyme activity could boost beta-hexosaminidase levels in animal models, suggesting a novel cell-based gene therapy approach.  
-      [Ang SY, Lin RY, et al. (2023) PubMed 37488869](https://pubmed.ncbi.nlm.nih.gov/37488869/)
+Large-animal work has helped define both the potential and the limits of this approach. In symptomatic Sandhoff cats, direct brain administration of AAVrh8 vectors carrying feline *HEXA* and *HEXB* distributed enzyme broadly in the central nervous system and delayed progression, with greater benefit when treatment began earlier in the symptomatic period. [Symptomatic feline AAV gene therapy](https://www.nature.com/articles/s41434-020-00190-1) A longer-term feline study found that effective brain correction substantially extended survival—treated cats lived an average of 19.1 months versus 4.4 months for untreated cats—but unmasked serious disease outside the brain, including gastrointestinal, urinary, and orthopedic complications. [Peripheral disease after CNS gene therapy](https://pubmed.ncbi.nlm.nih.gov/37526361/)
 
-    - **AAV Gene Therapy in Cats (Feline Model, 2023):**  
-      Delivery of gene therapy directly into the brain of Sandhoff-affected cats resulted in widespread correction of disease, supporting translation to larger brains than mice.  
-      [[Full text](https://onlinelibrary.wiley.com/doi/abs/10.1002/ana.26756)]
+A major engineering goal is to avoid needing two separate vectors, which complicates manufacturing and requires both vectors to reach the same cells. A 2026 preclinical study tested an AAV9-derived vector carrying a modified *HEXB* gene designed to produce an enzyme capable of performing the GM2-clearing role normally requiring the alpha and beta subunits together. In Sandhoff mice, the therapy reduced GM2 storage and neuroinflammation while improving motor function and survival; intrathecal dosing in rats and nonhuman primates showed broad distribution in preclinical safety studies. [Modified *HEXB* AAV therapy](https://www.sciencedirect.com/science/article/pii/S2666379126001795)
 
-- **Translational Initiatives and Partnerships:**
-    - **Industry-Academic Alliance (2023):**  
-      The New Hope Research Foundation teamed with Forge Biologics to manufacture gene therapy vectors under cGMP standards, moving toward clinical readiness for Sandhoff and Tay-Sachs.  
-      [[Press release](https://www.forgebiologics.com/new-hope-research-foundation-and-forge-biologics-announce-cgmp-manufacturing-partnership-to-accelerate-gene-therapy-for-patients-with-tay-sachs-disease/)]
+Genome editing remains earlier-stage but conceptually attractive. In a 2020 Sandhoff mouse study, AAV-delivered CRISPR editing inserted an engineered, GM2-clearing *HEXM* sequence into the liver albumin locus, turning liver cells into a long-term source of secreted corrective enzyme. The intervention increased enzyme activity, reduced storage in several tissues, and improved motor performance, although brain correction was incomplete. [CRISPR-*HEXM* editing in Sandhoff mice](https://www.nature.com/articles/s41434-019-0120-5) Cell-based research has also expanded: a 2025 mouse study showed that replacing diseased brain microglia—immune cells that normally supply beta-hexosaminidase—with enzyme-competent cells restored enzyme activity, reduced substrate accumulation, and improved behavior. [Microglial replacement in Sandhoff mice](https://www.nature.com/articles/s41467-025-63237-0)
 
-- **Clinical Reports:**
-    - A human trial was attempted, but, tragically, a young patient (Alissa Feldborg) died following participation, emphasizing the risk and experimental status of human gene therapy for Sandhoff Disease.  
-      [[USA Today, 2023](https://www.usatoday.com/in-depth/news/health/2023/11/09/gene-therapy-trial-alissa-feldborg-risks/71437445007/)]
-    - Leading researchers include Dr. Terry Flotte at UMass Chan Medical School, who is pursuing rAAV gene therapy approaches ([ASGCT 2023 Annual Meeting](https://www.asgct.org/global/documents/news/journals-2023/23am_final_pgm.aspx)).
+## Clinical Trials and Experimental Approaches
 
-### 2. Substrate Reduction Therapy
+The most important completed early clinical program is AXO-AAV-GM2, initially sponsored by Axovant/Sio Gene Therapies and subsequently completed under an investigator-sponsored IND after the corporate sponsor withdrew. The Phase I/II program, registered as [NCT04669535](https://clinicaltrials.gov/study/NCT04669535), used dual AAVrh8-*HEXA* and AAVrh8-*HEXB* vectors. Its published report found dose-related biochemical activity and suggested clinical stabilization or slower-than-expected regression in infantile participants, but outcomes were based on a very small, mixed Tay-Sachs/Sandhoff cohort with limited follow-up. Immune-related liver-enzyme elevations occurred and were managed with corticosteroids; juvenile participants experienced worsening dystonia and were excluded from further enrollment. [Dual-vector rAAVrh8 gene therapy trial](https://www.nature.com/articles/s41591-025-03822-4)
 
-**Substrate reduction** aims to slow disease progression by lowering the buildup of harmful lipids in the nervous system.
+N-acetyl-L-leucine (levacetylleucine) is not a cure because it does not restore *HEXB* function, but it is a notable disease-modifying symptomatic approach. In a multinational, open-label, rater-blinded Phase IIb study involving children and adults with GM2 gangliosidoses, participants improved on the primary blinded video-based endpoint during treatment and worsened during washout; the study reported no treatment-related serious adverse events. [N-acetyl-L-leucine Phase IIb study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9990862/) On July 21, 2026, UMass Chan announced FDA authorization to proceed with a new Phase I/II study of a second-generation AAV gene therapy designed to improve delivery at lower doses; as of August 8, 2026, this is an authorized investigational program rather than an established treatment. [UMass Chan Phase I/II authorization](https://www.umassmed.edu/news/articles/2026/07/umass-chan-researchers-receive-fda-authorization-to-advance-gene-therapy-clinical-trial-for-tay-sachs-and-sandhoff-diseases/)
 
-- **Venglustat (AMETHIST Phase 3 Trial):**
-    - This oral drug inhibits the synthesis of gangliosides and is being tested in late-onset GM2 gangliosidoses including Sandhoff Disease. The multinational phase 3 clinical trial began in 2023 and is ongoing.  
-      [[ScienceDirect Article](https://www.sciencedirect.com/science/article/abs/pii/S0960896623006508)]  
-      [[NIHR trial summary](https://io.nihr.ac.uk/techbriefings/venglustat-for-treating-late-onset-gm2-gangliosidosis-gm1-gangliosidosis-and-other-ultra-rare-disease/)]
+## Methodologies and Scientific Approaches
 
-- **Miglustat:**  
-  Previously studied but not considered curative; may modestly slow progression in milder or late-onset cases only.  
-  [Grosso S et al. 2023, PubMed 37209042](https://pubmed.ncbi.nlm.nih.gov/37209042/)
+Researchers use complementary disease models because no single model captures every feature of human Sandhoff disease. *Hexb*-deficient mice enable relatively rapid testing of enzyme activity, GM2 storage, inflammation, movement, survival, and new approaches such as CRISPR editing or microglial replacement. Sandhoff cats provide a much larger brain and a disease course useful for evaluating surgical delivery, vector distribution, magnetic resonance imaging, long-term survival, and complications outside the central nervous system. [Symptomatic feline AAV gene therapy](https://www.nature.com/articles/s41434-020-00190-1) [Peripheral disease after CNS gene therapy](https://pubmed.ncbi.nlm.nih.gov/37526361/)
 
-### 3. Enzyme Replacement and Emerging Modalities
+Clinical and preclinical studies increasingly combine biochemical, imaging, and functional measures. These include hexosaminidase activity in blood and cerebrospinal fluid, GM2 species measured by liquid chromatography–tandem mass spectrometry, magnetic resonance imaging, diffusion tensor imaging of white-matter tracts, developmental testing, seizure assessments, swallowing and oral-feeding status, and immune monitoring for AAV capsid responses. [Dual-vector rAAVrh8 gene therapy trial](https://www.nature.com/articles/s41591-025-03822-4)
 
-- **Enzyme replacement** has made less progress in Sandhoff—efforts are primarily preclinical, with challenges in delivering enzymes across the blood-brain barrier. Recent reviews summarize current progress.  
-    [[Frontiers review, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC9880060/)]
+## Leading Institutions and Funding
 
-- **CRISPR and Advanced Genome Editing:**  
-    - Investigation is in very early preclinical stages, with CRISPR-focused projects funded by the NIH (e.g., using induced pluripotent stem cells (iPSCs) and cerebral organoids derived from Sandhoff patients).  
-      [[NIH RePORTER project, 2023](https://reporter.nih.gov/project-details/11188577)]
-    - No Sandhoff-specific antisense oligonucleotide or RNA editing therapy has reached the clinic.
+UMass Chan Medical School, Massachusetts General Hospital, Auburn University, and collaborating centers including the NIH have driven much of the recent gene-therapy pipeline, spanning feline studies, neurosurgical delivery, biomarker development, and the initial clinical trial. The current second-generation effort is led at UMass Chan by Heather Gray-Edwards and Miguel Sena-Esteves. [UMass Chan Phase I/II authorization](https://www.umassmed.edu/news/articles/2026/07/umass-chan-researchers-receive-fda-authorization-to-advance-gene-therapy-clinical-trial-for-tay-sachs-and-sandhoff-diseases/) The first Phase I/II study was supported by the National Tay-Sachs & Allied Diseases Association (NTSAD), Cure Tay-Sachs Foundation, Blu Genes Foundation, Mathew Forbes Romer Foundation, and the UMass Chan Horae Gene Therapy Center. [Dual-vector rAAVrh8 gene therapy trial](https://www.nature.com/articles/s41591-025-03822-4)
 
-### 4. Reviews, Guidelines, and Synthesis Articles
+Patient-led funding is especially consequential in this ultra-rare field. In 2025, NTSAD awarded $365,000 to UMass Chan for second-generation GM2 gene-therapy work, within a collaborative $870,000 award involving NTSAD, Blu Genes Foundation, Cure Tay-Sachs Foundation, and Mathew Forbes Romer Foundation. NTSAD has also funded early work on nanoparticle-distributed intravenous enzyme replacement and hematopoietic stem-cell gene therapy concepts for GM2 disorders. [NTSAD research grants](https://ntsad.org/ntsad-research/ntsad-grant-opportunities/)
 
-- Several reviews and expert summaries (2023–2025) provide overviews of gene and cell therapy, substrate reduction, and new technologies, typically covering GM2 gangliosidosis as a group.
-    - [Gene therapy for lysosomal storage diseases – review, 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC9880060/)
-    - [NIH city review, PubMed 36835039](https://pubmed.ncbi.nlm.nih.gov/36835039/)
+## Strengths, Limitations, and Challenges
 
-- No newly published Sandhoff-specific clinical guidelines or consensus statements with actionable therapeutic recommendations as of May 2025.
+The central strength of gene therapy is that even partial, durable restoration of lysosomal enzyme activity could address the root cause rather than only relieving symptoms. The first human study demonstrated that the vectors reached biologically relevant targets and produced dose-related biochemical effects, while the animal literature shows that enzyme secreted from corrected cells can help nearby uncorrected cells—a phenomenon called cross-correction. [Dual-vector rAAVrh8 gene therapy trial](https://www.nature.com/articles/s41591-025-03822-4) [Modified *HEXB* AAV therapy](https://www.sciencedirect.com/science/article/pii/S2666379126001795)
 
----
+However, no current approach has shown that it can permanently halt or reverse Sandhoff disease in a sufficiently large human cohort. Key barriers include treating children after irreversible neuron loss has begun, reaching the full brain and spinal cord safely, sustaining enzyme expression, managing pre-existing or treatment-induced anti-AAV immunity, and treating peripheral organs as well as the central nervous system. The first trial showed declining enzyme activity after its 12-week peak and clinically important safety signals in juvenile participants, while feline work demonstrated that a brain-focused therapy can leave life-limiting disease elsewhere in the body. [Dual-vector rAAVrh8 gene therapy trial](https://www.nature.com/articles/s41591-025-03822-4) [Peripheral disease after CNS gene therapy](https://pubmed.ncbi.nlm.nih.gov/37526361/)
 
-## Emerging Trends, Funding, and Leading Institutions
+## Outlook and Future Directions
 
-### Methodologies and Breakthroughs
+Sandhoff disease research is closer to a root-cause treatment than it was in 2020, but it is not yet close to a confirmed cure. The milestones to watch are enrollment and early safety data from UMass Chan’s second-generation Phase I/II program, evidence that a single-vector or engineered-enzyme platform can produce broader and more durable correction, and proof that treatment improves meaningful outcomes such as developmental stability, seizure burden, swallowing, mobility, and survival without creating unacceptable immune or peripheral-organ risks. The most plausible future regimen may combine early gene therapy with improved CNS and systemic delivery, objective biomarkers, and adjunct treatments that reduce inflammation or residual substrate burden. [UMass Chan Phase I/II authorization](https://www.umassmed.edu/news/articles/2026/07/umass-chan-researchers-receive-fda-authorization-to-advance-gene-therapy-clinical-trial-for-tay-sachs-and-sandhoff-diseases/) [Microglial replacement in Sandhoff mice](https://www.nature.com/articles/s41467-025-63237-0)
 
-- **AAV9 and AAVrh.10 vectors** for gene delivery, often via intrathecal (spinal) or intracranial (brain) injection to bypass the blood-brain barrier, lead the field.
-- **Cell-based approaches** (like stem-cell modification) are gaining traction, primarily in animal studies.
-- **Substrate reduction** remains the only approach in advanced clinical trials.
-- **Partnerships** between academic centers, nonprofits (New Hope Research Foundation), and biotech (Forge Biologics) are driving translational progress.
+## References
 
-### Key Challenges
-
-- **Translating gene therapy to human patients remains risky**: The tragic loss of patients in experimental protocols (see Feldborg case) highlights urgent safety and immune response challenges.
-- **Blood-brain barrier**: Delivering treatments to the central nervous system effectively and safely is a universal bottleneck.
-- **Measuring lasting benefit:** The rarity and rapid progression of Sandhoff Disease make designing and interpreting clinical trials challenging.
-- **Disease heterogeneity:** Onset and severity vary; some approaches may only benefit late-onset or milder cases.
-- **Funding concentration:** NIH remains the dominant funder, with additional roles for nonprofits and emerging biotech.
-
-### Leading Institutions and Funding Sources
-
-- **NIH and US-based academic hospitals** (e.g., UMass Chan Medical School, indicated by consistent PubMed author affiliations).
-- **New Hope Research Foundation** and other rare-disease nonprofits.
-- **Forge Biologics** and similar contract manufacturers/biotech innovators.
-
----
-
-## Strengths, Limitations, and Remaining Challenges
-
-### Strengths of Current Approaches
-
-- **Gene therapy** is showing robust correction of disease markers in animal models.
-- **Industry-academic alliances** are accelerating the translation of basic research to clinical readiness.
-- Renewed **preclinical innovation** from next-generation vectors and cell-based modalities.
-
-### Limitations and Gaps
-
-- **Human application is high risk:** Human trials are still experimental, with immune, dosing, and safety risks.
-- **CNS delivery is difficult:** Reaching enough cells in the human brain, without causing toxicity, remains a key hurdle.
-- **No curative therapy is clinically validated yet:** Only substrate reduction trials exist in late-stage human studies, which slow—rather than halt or reverse—disease.
-
----
-
-## Popular Summary
-
-In simple terms, scientists are working hard to cure Sandhoff Disease, mainly by trying to "fix" the genes or enzymes that are missing or broken. Early tests in mice, cats, and cells are promising, but moving to human treatment has been dangerous and faces big obstacles. Some medicines can slow the disease, but none can yet stop or reverse it. Researchers and doctors around the world, with support from the NIH, patient families, and new biotech companies, are determined to keep moving forward—despite the setbacks and challenges.
-
----
-
-## References and Further Reading
-
-- [Intrathecal AAV9 gene therapy corrects Sandhoff disease in mice (Ryckman et al., 2024)](https://pubmed.ncbi.nlm.nih.gov/38205442/)
-- [Genetically modified stem cells for GM2, Ang et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37488869/)
-- [Widespread CNS correction in feline Sandhoff model, Wiley 2023](https://onlinelibrary.wiley.com/doi/abs/10.1002/ana.26756)
-- [AMETHIST Phase 3 Trial of venglustat (ScienceDirect, 2023)](https://www.sciencedirect.com/science/article/abs/pii/S0960896623006508)
-- [NIHR - venglustat trial summary](https://io.nihr.ac.uk/techbriefings/venglustat-for-treating-late-onset-gm2-gangliosidosis-gm1-gangliosidosis-and-other-ultra-rare-disease/)
-- [Miglustat in GM2 gangliosidoses (Grosso S et al., 2023)](https://pubmed.ncbi.nlm.nih.gov/37209042/)
-- [Sphingolipid Biology of Neurodegeneration, NIH RePORTER 2023](https://reporter.nih.gov/project-details/11188577)
-- [Forge Biologics/New Hope Foundation partnership, 2023](https://www.forgebiologics.com/new-hope-research-foundation-and-forge-biologics-announce-cgmp-manufacturing-partnership-to-accelerate-gene-therapy-for-patients-with-tay-sachs-disease/)
-- [Gene therapy for lysosomal storage diseases: A growing toolbox (Frontiers, 2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9880060/)
-- [Recent NIH/Frontiers review](https://pubmed.ncbi.nlm.nih.gov/36835039/)
-- [News coverage: Human gene therapy trial and safety (USA Today, 2023)](https://www.usatoday.com/in-depth/news/health/2023/11/09/gene-therapy-trial-alissa-feldborg-risks/71437445007/)
-
----
-
-For further details on a specific therapeutic modality, ongoing trial, or recent partnership, consult the cited articles or reach out to leading institutions such as UMass Chan, the New Hope Research Foundation, or the principal authors of the studies above.
+- [Sandhoff Disease](https://www.ncbi.nlm.nih.gov/sites/books/NBK579484/) — GeneReviews®, 2025.
+- [Dual-vector rAAVrh8 gene therapy for GM2 gangliosidosis: a phase 1/2 trial](https://www.nature.com/articles/s41591-025-03822-4) — Eichler et al., *Nature Medicine*, 2025.
+- [UMass Chan researchers receive FDA authorization to advance gene therapy clinical trial for Tay-Sachs and Sandhoff diseases](https://www.umassmed.edu/news/articles/2026/07/umass-chan-researchers-receive-fda-authorization-to-advance-gene-therapy-clinical-trial-for-tay-sachs-and-sandhoff-diseases/) — UMass Chan Medical School, 2026.
+- [Therapeutic benefit after intracranial gene therapy delivered during the symptomatic stage in a feline model of Sandhoff disease](https://www.nature.com/articles/s41434-020-00190-1) — McCurdy et al., *Gene Therapy*, 2021.
+- [Life-Limiting Peripheral Organ Dysfunction in Feline Sandhoff Disease Emerges after Effective CNS Gene Therapy](https://pubmed.ncbi.nlm.nih.gov/37526361/) — Johnson et al., *Annals of Neurology*, 2023.
+- [AAV-based gene therapy with modified HEXB confers lasting therapeutic benefits in GM2 gangliosidosis models](https://www.sciencedirect.com/science/article/pii/S2666379126001795) — Kitakaze et al., *Cell Reports Medicine*, 2026.
+- [A novel gene editing system to treat both Tay–Sachs and Sandhoff diseases](https://www.nature.com/articles/s41434-019-0120-5) — Ou et al., *Gene Therapy*, 2020.
+- [Microglial replacement in a Sandhoff disease mouse model reveals myeloid-derived β-hexosaminidase is necessary for neuronal health](https://www.nature.com/articles/s41467-025-63237-0) — Tsourmas et al., *Nature Communications*, 2025.
+- [A Dose-escalation and Safety & Efficacy Study of AXO-AAV-GM2 in Tay-Sachs or Sandhoff Disease](https://clinicaltrials.gov/study/NCT04669535) — ClinicalTrials.gov, 2026.
+- [Efficacy and Safety of N-Acetyl-l-Leucine in Children and Adults With GM2 Gangliosidoses](https://pmc.ncbi.nlm.nih.gov/articles/PMC9990862/) — Kaya et al., *Neurology: Clinical Practice*, 2023.
+- [NTSAD Grant Opportunities](https://ntsad.org/ntsad-research/ntsad-grant-opportunities/) — National Tay-Sachs & Allied Diseases Association, 2026.

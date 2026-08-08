@@ -1,95 +1,84 @@
+---
+title: Pantothenate Kinase-Associated Neurodegeneration (PKAN)
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Pantothenate Kinase-Associated Neurodegeneration
+  (PKAN).
+input_tokens: 60131
+output_tokens: 5333
+search_calls: 7
+cost_usd: 0.2543
+---
 
 # Pantothenate Kinase-Associated Neurodegeneration (PKAN)
 
-Pantothenate Kinase-Associated Neurodegeneration (PKAN) is a rare, inherited neurodegenerative disorder belonging to the group of Neurodegeneration with Brain Iron Accumulation (NBIA) syndromes. It is characterized by progressive movement disorders, dystonia, and iron accumulation in the basal ganglia of the brain. PKAN is caused by mutations in the PANK2 gene, which is critical for coenzyme A biosynthesis.
+## Overview
 
-## Current Landscape of Curative Research Efforts
+Pantothenate Kinase-Associated Neurodegeneration (PKAN) is an ultra-rare, inherited neurodegenerative disorder and the most common form of neurodegeneration with brain iron accumulation (NBIA). It results from two disease-causing copies of the *PANK2* gene, which normally encodes an enzyme needed for production of coenzyme A (CoA), a molecule essential to cellular energy and lipid metabolism. PKAN causes progressive movement problems—especially dystonia, or sustained involuntary muscle contractions—along with rigidity, speech and swallowing difficulty, and sometimes retinal degeneration and vision loss. The classic form generally begins in early childhood and progresses faster; a later-onset atypical form can progress more slowly. [GeneReviews: PKAN](https://www.ncbi.nlm.nih.gov/books/NBK1490/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1490/?report=reader))
 
-### The State of Recent Research (2023–2025)
+There is currently no approved treatment that corrects the underlying *PANK2* defect or stops PKAN progression. Standard care is therefore multidisciplinary and symptom-focused: medications, physical/occupational/speech therapy, nutritional and respiratory support when needed, and, for selected people with severe dystonia, deep-brain stimulation (DBS) of the internal globus pallidus. In early-onset disease, loss of independent walking commonly occurs during adolescence, although severity and rate of progression vary substantially between individuals. [GeneReviews: PKAN](https://www.ncbi.nlm.nih.gov/books/NBK1490/) [Long-term DBS outcomes](https://pmc.ncbi.nlm.nih.gov/articles/PMC9536911/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/sites/books/NBK1490/?utm_source=openai))
 
-Despite an exhaustive search using state-of-the-art querying tools, **no newly published (2023–2025) peer-reviewed articles, clinical trials, or major breakthrough therapeutic reports directly aimed at a cure for PKAN could be retrieved**. This lack of publically indexed content may be due to the ultra-rare nature of PKAN, the slow pace of rare disease research publication, and limits in the web search systems’ ability to query deeply specialized databases such as PubMed or clinical trial registries.
+## Scope of Recent Research (2020–present)
 
-*What does this mean for the field?*  
-PKAN research and drug development continue to progress, but at a measured pace, and new interventions may not reach publication or major trial phases each calendar year. It’s also possible that publications or trials exist in specialized databases behind institutional paywalls, or that results remain unpublished due to negative or inconclusive findings.
+Since 2020, PKAN research has become more mechanistically focused and more translational, concentrating on restoring CoA production downstream of defective PANK2, activating alternative pantothenate-kinase enzymes, replacing *PANK2* through gene therapy, and developing biomarkers that can make small rare-disease trials more informative. The field has credible disease-modifying hypotheses and one active preclinical gene-therapy program, but no approach has yet demonstrated reversal or prevention of human PKAN; a curative therapy remains preclinical. [PKAN treatment redesign](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861153/) [PKAN gene-therapy update](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861153/?utm_source=openai))
 
-### Background and Established Research Directions
+## Major Breakthroughs and Emerging Therapies
 
-Historically and through 2022, key avenues of PKAN research for disease-modifying or potentially curative therapies have included:
+The most advanced disease-targeted clinical strategy has been metabolic bypass therapy. PANK2 normally converts vitamin B5–derived compounds into phosphopantothenate, an early CoA-building-block; supplying a downstream metabolite could potentially bypass the blocked step. Fosmetpantotenate (RE-024) was designed for this purpose, but its randomized controlled trial did not improve the PKAN Activities of Daily Living score versus placebo at 24 weeks, and its development program was discontinued. This negative result was important because it showed that simply delivering a phosphopantothenate replacement candidate does not necessarily translate into measurable clinical benefit. [Fosmetpantotenate randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC8246547/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8246547/?utm_source=openai))
 
-1. **Pharmacological Treatments:**
-   - **Iron chelation therapies** (such as **deferiprone**) to attempt removal of iron buildup from brain tissue. These have shown partial, but not definitive, benefits [Zorzi, 2011](https://doi.org/10.1016/j.parkreldis.2011.03.008).
-   - **Pantothenate supplementation** and related metabolic interventions, with mixed or inconclusive outcomes.
+A related bypass approach uses 4′-phosphopantetheine, called CoA-Z in clinical development. In laboratory models, this metabolite can enter the CoA pathway downstream of PANK2; earlier work found correction of CoA, iron-handling, dopamine-related, and mitochondrial abnormalities in mammalian PKAN models. The North American CoA-Z study was designed primarily around safety, tolerability, laboratory measures, and CoASY messenger RNA, rather than demonstrating a cure or a definitive effect on long-term clinical progression. [4′-Phosphopantetheine in PKAN models](https://pubmed.ncbi.nlm.nih.gov/31660701/) [CoA-Z trial record](https://clinicaltrials.gov/study/NCT04182763) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/31660701/?utm_source=openai))
 
-2. **Gene Therapy:**
-   - Early preclinical efforts using viral vectors to replace PANK2 function, though clinical translation remains challenging due to blood-brain barrier and safety concerns.
+Researchers are also developing oral, cell-penetrant phosphopantothenate prodrugs. A 2020 preclinical study reported cyclic phosphopantothenic-acid prodrugs that regenerated CoA in a PANK-deficient cellular system and delivered the active metabolite to mouse brain after oral dosing. These compounds remain experimental: evidence of brain exposure and biochemical pathway engagement is encouraging, but human safety, dosing, and clinical efficacy have not been established. [Cyclic phosphopantothenate prodrugs](https://pubmed.ncbi.nlm.nih.gov/33320012/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33320012/?utm_source=openai))
 
-3. **Enzyme Replacement and Small-Molecule Approaches:**
-   - Seeking small molecules that can bypass or activate alternate metabolic pathways compensating for PANK2 deficiency.
+A second strategy is to compensate for missing PANK2 by activating PANK3, a related enzyme that can also support CoA synthesis. Virtus Therapeutics received a $796,801 NIH/NINDS Small Business Innovation Research award for PANK3 activators; its grant abstract reports nanomolar PANK3 activators with brain exposure in mice and planned testing in PANK2-deficient cells and mouse models. This is an attractive oral-drug concept, but it faces a key biological question: whether increasing CoA production through PANK3 outside mitochondria can adequately repair the brain-region-specific effects of mitochondrial PANK2 deficiency. [NIH SBIR award: PANK activators](https://www.sbir.gov/awards/202981) [PKAN treatment redesign](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861153/) ([sbir.gov](https://www.sbir.gov/awards/202981))
 
-4. **Patient-Derived Stem Cell and Model Systems:**
-   - Induced pluripotent stem cell (iPSC) models from PKAN patients are used to study disease mechanisms and screen candidate drugs.
+Gene replacement is the most explicitly curative-oriented program. Oregon Health & Science University (OHSU) and the Horae Gene Therapy Center at UMass Chan Medical School are developing an adeno-associated virus serotype 9 (AAV9) vector carrying full-length human *PANK2*. As of the March 18, 2026 project update, the team had completed proof-of-concept and durability studies in PKAN mice, refined the delivery vector, held an FDA INTERACT meeting, submitted a pre-investigational-new-drug package, and was planning toxicology studies and clinical-trial design. This is promising progress, but it is not yet a human trial, and no animal efficacy dataset sufficient to establish durable functional rescue has been publicly reported. [PKAN gene-therapy update](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/) ([nbiacure.org](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/))
 
-5. **Global Collaborative Networks:**
-   - Patient advocacy groups (e.g., NBIA Disorders Association), NIH, and European consortia foster collaboration and fund early-stage research.
+## Clinical Trials and Experimental Approaches
 
-### Methodologies
+The pivotal randomized fosmetpantotenate study, sponsored by Retrophin, was a placebo-controlled trial in genetically confirmed PKAN. It failed its primary 24-week efficacy comparison: the least-squares mean difference in PKAN Activities of Daily Living change was −0.09 points between fosmetpantotenate and placebo. The result underscores that biochemical rationale alone is not enough and that future trials need sensitive measures capable of distinguishing a true slowing of progression from day-to-day variation in severe dystonia and disability. [Fosmetpantotenate randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC8246547/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8246547/?utm_source=openai))
 
-Research methodologies in the space prominently feature:
-- Genetic sequencing to confirm diagnosis and study population genetics.
-- MRI and novel biomarkers to track iron levels and neurodegeneration.
-- In vitro and animal models for mechanistic and drug studies.
-- Early phase (I/II) clinical trials for safety and initial efficacy.
+CoA-Z is listed as a Phase 2 OHSU-led randomized, double-blind, placebo-controlled crossover study followed by an open-label treatment phase. The study enrolled people with PKAN from North America and evaluated adverse events, laboratory abnormalities, adherence, and CoASY messenger RNA expression; the initial blinded and open-label arms met enrollment goals. The public registry does not provide peer-reviewed efficacy outcomes, so CoA-Z should not yet be characterized as clinically disease-modifying or curative. [CoA-Z trial record](https://clinicaltrials.gov/study/NCT04182763) [CoA-Z trial protocol](https://cdn.clinicaltrials.gov/large-docs/63/NCT04182763/Prot_SAP_000.pdf) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT04182763?utm_source=openai))
 
-### Strengths and Limitations of Current Approaches
+No human *PANK2* gene-replacement, gene-editing, RNA-therapy, or cell-therapy trial was identified in the reviewed sources as of August 8, 2026. The leading gene-replacement effort remains in vector optimization, toxicology preparation, and regulatory planning. [PKAN gene-therapy update](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/) ([nbiacure.org](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/))
 
-**Strengths:**
-- Strong mechanistic understanding of PANK2 and its role in brain iron accumulation.
-- International research networks and strong advocacy.
-- Progress in gene therapies and CNS delivery technologies in related diseases offer hope for PKAN.
+## Methodologies and Scientific Approaches
 
-**Limitations & Challenges:**
-- Extreme rarity limits patient numbers for sufficiently powered clinical trials.
-- Blood-brain barrier hampers drug and gene therapy delivery.
-- Lack of robust biomarkers and slow disease progression make outcome measurement difficult.
-- Even promising approaches—such as iron chelation or metabolic bypass—have yielded only partial or limited efficacy in clinical studies.
-- Funding for ultra-rare neurodegenerative diseases is limited.
+PKAN investigators combine patient-derived cells, engineered mouse models, biochemical assays, and longitudinal natural-history studies. A 2020 conditional mouse model that removed neuronal *Pank2* together with systemic *Pank1* developed central-nervous-system CoA deficiency, abnormal movement, reduced short-chain acyl-CoAs, altered gene expression, and reduced brain heme, providing a platform for testing CoA-restoration and enzyme-activation treatments. [PANK-deficient mouse model](https://pmc.ncbi.nlm.nih.gov/articles/PMC7078592/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC7078592/?utm_source=openai))
 
-### Leading Institutions and Funding
+Biomarker development is increasingly important because PKAN trials enroll very few participants and progression is variable. Current approaches include MRI evidence of basal-ganglia iron, clinical dystonia and function scales, residual PANK2 activity in patient red blood cells, CoA-pathway metabolites, and serum metabolomics. A 2025 serum metabolomics and metallomics study reported patterns consistent with ferroptosis—iron-dependent lipid damage—in people with PKAN, supporting further investigation of oxidative lipid injury as both a disease mechanism and a possible pharmacodynamic biomarker. OHSU’s five-year PKANready natural-history study is intended to define symptom trajectories and improve endpoints for future interventional studies. [Residual PANK2 activity study](https://pubmed.ncbi.nlm.nih.gov/32705819/) [PKAN metabolomics study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11926261/) [PKANready](https://nbiacure.org/our-research/in-the-clinic/pkanready/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32705819/?utm_source=openai))
 
-Major research activity comes from:
-- Neurology and genetics departments at leading academic centers in Europe and North America (e.g., University of Oregon, University of Tübingen).
-- Patient foundations such as the [NBIA Disorders Association](https://www.nbiadisorders.org/).
-- National Institutes of Health (NIH) and European funding agencies.
+## Leading Institutions and Funding
 
-### Emerging and Early-Stage Directions (Pre-2023 Trends)
+OHSU’s NBIA research program, led by investigators including Susan Hayflick and colleagues, is a central driver of PKAN natural-history work, CoA-Z development, mouse-model research, and the emerging *PANK2* gene-therapy program. The CoA-Z Phase 2 protocol identifies NIH’s Eunice Kennedy Shriver National Institute of Child Health and Human Development as sponsor, with additional support from the Spoonbill Foundation; OHSU is the study center, with collaborators at Oregon State University and Washington State University. [CoA-Z trial protocol](https://cdn.clinicaltrials.gov/large-docs/63/NCT04182763/Prot_SAP_000.pdf) ([cdn.clinicaltrials.gov](https://cdn.clinicaltrials.gov/large-docs/63/NCT04182763/Prot_SAP_000.pdf?utm_source=openai))
 
-Researchers are actively exploring:
-- Next-generation gene editing and gene therapy platforms for single-gene disorders.
-- Enzyme prodrugs and BBB-penetrant therapeutics.
-- Repurposing of neuroprotective agents and metabolic modulators.
-- Digital biomarkers and AI-assisted trial designs to improve outcome detection in small populations.
+The gene-therapy program joins OHSU with UMass Chan Medical School’s Horae Gene Therapy Center and is supported through the OHSU Foundation, the Loving Loic Foundation, and collaboration with the NBIA Disorders Association. On the small-molecule side, Virtus Therapeutics received a $796,801 NIH/NINDS SBIR award for PANK3-activator development, reflecting federal investment in a potentially scalable oral treatment approach. [PKAN gene-therapy update](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/) [NIH SBIR award: PANK activators](https://www.sbir.gov/awards/202981) ([nbiacure.org](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/))
 
-### Critical Analysis
+## Strengths, Limitations, and Challenges
 
-While the variety of scientific avenues being pursued demonstrates perseverance and innovation, **a definitive cure for PKAN remains out of reach as of 2025**, with major obstacles in delivery methods, funding, rare patient cohorts, and translational challenges from bench to bedside. Early reports of gene therapy in related neurodegenerative conditions kindle hope, but confirmed translation to PKAN remains unreported in high-impact or recent literature.
+PKAN research has a major advantage: it is a single-gene disorder with a well-defined enzymatic defect and multiple plausible ways to intervene upstream of neurodegeneration. Metabolic bypass, PANK3 activation, and *PANK2* gene replacement address the cause more directly than symptomatic therapy does. Better disease models, biochemical readouts, and natural-history data are also making it more feasible to test whether a treatment changes biology before irreversible neuronal injury occurs. [PANK-deficient mouse model](https://pmc.ncbi.nlm.nih.gov/articles/PMC7078592/) [PKANready](https://nbiacure.org/our-research/in-the-clinic/pkanready/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC7078592/?utm_source=openai))
 
-### Conclusion and Outlook
+The limitations are substantial. The failed fosmetpantotenate trial demonstrates the difficulty of translating restoration of a metabolite into meaningful functional benefit. For gene therapy, critical unanswered questions include safe and sufficiently broad delivery to vulnerable brain cells, the required dose and distribution, durability, immune responses to AAV, and whether treatment can rescue neurons after established degeneration. Small-molecule activators must prove that they safely restore the right CoA pools in the right cells, not merely raise a laboratory measurement. Ultra-rare disease prevalence also makes recruitment, endpoint validation, long follow-up, manufacturing, and equitable access unusually challenging. [Fosmetpantotenate randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC8246547/) [PKAN treatment redesign](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861153/) [PKAN gene-therapy update](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8246547/?utm_source=openai))
 
-PKAN research is emblematic of the broader challenges in rare neurodegenerative diseases: slow progress, small patient numbers, and the need for sustained, collaborative, and often multinational efforts. **Continued advocacy, investment in translational research, and engagement with clinical trial innovation are essential for the field to achieve disease-changing breakthroughs in the coming years.**
+## Outlook and Future Directions
 
----
+PKAN is not close to a proven cure as of August 8, 2026, but the field is closer to cause-directed treatment than it was at the start of this decade. The most important milestones to watch are publication of the full CoA-Z clinical dataset; advancement of selective, brain-penetrant PANK3 activators into formal candidate selection and human testing; validation of metabolomic and functional biomarkers; and, most importantly, completion of gene-therapy toxicology studies and FDA clearance of a first-in-human *PANK2* gene-replacement trial. A durable cure will require evidence not only that a therapy reaches the brain and restores PANK2 or CoA biology, but also that it safely preserves function or changes the long-term course of disease. [CoA-Z trial record](https://clinicaltrials.gov/study/NCT04182763) [PKAN gene-therapy update](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/) [NIH SBIR award: PANK activators](https://www.sbir.gov/awards/202981) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT04182763?utm_source=openai))
 
-## Citations and Further Reading
+## References
 
-- Zorzi, G. et al. (2011). Iron chelation therapy with deferiprone in Pantothenate Kinase-Associated Neurodegeneration. [Parkinsonism & Related Disorders, 17(1), 9-12](https://doi.org/10.1016/j.parkreldis.2011.03.008).
-- NBIA Disorders Association. [https://www.nbiadisorders.org/](https://www.nbiadisorders.org/)
-- Hogarth, P. et al. (2017). Advances in the treatment of neurodegeneration with brain iron accumulation disorders. [Therapeutic Advances in Neurological Disorders, 10(4), 249-261](https://doi.org/10.1177/1756285617693580).
-- ClinicalTrials.gov: [PKAN studies listing](https://clinicaltrials.gov/ct2/results?cond=Pantothenate+Kinase-Associated+Neurodegeneration)
-- Gregory A et al. (2019). Therapeutic approaches to neurodegeneration with brain iron accumulation: A brief review. [Translational Neurodegeneration, 8, 19](https://doi.org/10.1186/s40035-019-0163-4)
-- [NBIA Scientific & Clinical Updates](https://www.nbiacure.org/news/)
-- [Orphanet: Pantothenate kinase-associated neurodegeneration](https://www.orpha.net/consor/cgi-bin/Disease_Search.php?lng=EN&data_id=240)
-
----
-
-*No peer-reviewed, breakthrough curative therapies published or reported during 2023–2025 for PKAN could be located using generic and specialized search tools as of May 2025. This review will be updated upon availability of new, citable therapeutic publications or trial results for PKAN.*
-
+- [GeneReviews: PKAN](https://www.ncbi.nlm.nih.gov/books/NBK1490/) — National Center for Biotechnology Information, 2017.
+- [Long-term DBS outcomes](https://pmc.ncbi.nlm.nih.gov/articles/PMC9536911/) — *Journal of Clinical Medicine*, 2022.
+- [PKAN treatment redesign](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861153/) — *Frontiers in Neuroscience*, 2022.
+- [PKAN gene-therapy update](https://nbiacure.org/our-research/in-the-lab/pkan-gene-therapy/) — NBIAcure, 2026.
+- [Fosmetpantotenate randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC8246547/) — *Movement Disorders*, 2021.
+- [4′-Phosphopantetheine in PKAN models](https://pubmed.ncbi.nlm.nih.gov/31660701/) — *EMBO Molecular Medicine*, 2019.
+- [CoA-Z trial record](https://clinicaltrials.gov/study/NCT04182763) — ClinicalTrials.gov, 2026.
+- [Cyclic phosphopantothenate prodrugs](https://pubmed.ncbi.nlm.nih.gov/33320012/) — *Journal of Medicinal Chemistry*, 2020.
+- [NIH SBIR award: PANK activators](https://www.sbir.gov/awards/202981) — National Institutes of Health / SBIR, 2023.
+- [CoA-Z trial protocol](https://cdn.clinicaltrials.gov/large-docs/63/NCT04182763/Prot_SAP_000.pdf) — Oregon Health & Science University and NIH/NICHD, 2024.
+- [PANK-deficient mouse model](https://pmc.ncbi.nlm.nih.gov/articles/PMC7078592/) — *Biochimica et Biophysica Acta: Molecular Basis of Disease*, 2020.
+- [Residual PANK2 activity study](https://pubmed.ncbi.nlm.nih.gov/32705819/) — *Annals of Clinical and Translational Neurology*, 2020.
+- [PKAN metabolomics study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11926261/) — *Scientific Reports*, 2025.
+- [PKANready](https://nbiacure.org/our-research/in-the-clinic/pkanready/) — NBIAcure, 2026.

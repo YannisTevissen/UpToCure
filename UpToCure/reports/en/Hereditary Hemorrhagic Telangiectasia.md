@@ -1,74 +1,81 @@
-
+---
+title: Hereditary Hemorrhagic Telangiectasia
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Hereditary Hemorrhagic Telangiectasia.
+input_tokens: 62517
+output_tokens: 6591
+search_calls: 7
+cost_usd: 0.2741
+---
 
 # Hereditary Hemorrhagic Telangiectasia
 
-## Introduction
-Hereditary Hemorrhagic Telangiectasia (HHT), also known as Osler–Weber–Rendu syndrome, is a genetic disorder in which patients develop fragile blood vessels prone to bleeding. Nosebleeds, mucocutaneous telangiectasias, and arteriovenous malformations (AVMs) in critical organs are hallmarks. Despite steady progress in understanding its underlying pathobiology, HHT remains frequently underdiagnosed and has no universally approved curative therapy. Recent research, particularly from 2020 to 2025, has helped clarify disease mechanisms, test potential treatments, and open new avenues for experimental therapies.
+## Overview
 
-## Scope of Recent Research (2020–2025)
-From 2020 to early 2025, investigators have turned to interdisciplinary approaches—ranging from advanced molecular biology and genetics to translational clinical studies—to address HHT. This includes:
-• Identifying and targeting specific molecular signaling pathways.
-• Exploring repurposed drugs, including antiangiogenic agents commonly used in oncology.
-• Investigating gene therapy advances in animal models.
-• Conducting clinical trials that evaluate novel therapies’ safety and efficacy.
+Hereditary Hemorrhagic Telangiectasia (HHT), also called Osler-Weber-Rendu syndrome, is an inherited disorder in which blood vessels develop abnormally. It commonly causes fragile surface vessels called telangiectasias, recurrent nosebleeds, iron-deficiency anemia, and larger abnormal artery-to-vein connections—arteriovenous malformations (AVMs)—in the lungs, brain, liver, or digestive tract. Most cases result from a harmful variant in one copy of genes in the BMP9–ALK1–endoglin signaling pathway, especially *ENG* or *ACVRL1*; severity varies widely even within families. [GeneReviews: HHT](https://www.ncbi.nlm.nih.gov/books/NBK1351/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1351/?utm_source=openai))
 
-These efforts aim not only to manage bleeding episodes but also to intervene early and prevent AVM development in affected patients.
+Prognosis is often good when HHT is recognized early and people receive organized screening for lung and brain AVMs, but untreated AVMs and chronic bleeding can cause stroke, brain abscess, heart failure, severe anemia, or life-threatening hemorrhage. Current care is therefore preventive and symptom-focused: surveillance and embolization of suitable pulmonary AVMs, individualized management of brain and liver disease, iron replacement or transfusion when needed, nasal moisturizing and local procedures for nosebleeds, and systemic drugs for refractory bleeding. These interventions can be highly effective, but they do not correct the underlying inherited vascular defect. [Second International HHT Guidelines](https://pubmed.ncbi.nlm.nih.gov/32894695/) [GeneReviews: HHT](https://www.ncbi.nlm.nih.gov/books/NBK1351/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1351/))
 
-## Major Breakthroughs and Emerging Trends
-Recent literature reveals several key areas of breakthrough:
+## Scope of Recent Research (2020–present)
 
-### Antiangiogenic and Immunomodulatory Therapies
-Multiple studies have focused on molecules inhibiting abnormal vessel formation associated with pro-angiogenic signals. Anti-VEGF drugs, initially developed for cancers, have shown promise for reducing bleeding and telangiectasia growth. Research also explores immunomodulatory agents like thalidomide analogs to stabilize fragile vasculature (see [The Role of Thalidomide and Its Analogs in Treatment (2024)](https://www.mdpi.com/2077-0383/13/18/5404)).
+Research from 2020 through August 8, 2026 has been increasingly active, with parallel efforts to control bleeding, prevent new AVMs, and restore the disrupted endothelial-cell signaling that causes HHT. The field has produced stronger randomized evidence for drug treatment of nosebleeds and has advanced genuine disease-correction concepts—particularly gene replacement for *ACVRL1*/ALK1 deficiency—but no therapy has yet demonstrated a durable cure in people. [Engasertib trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411) [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) ([nejm.org](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411?utm_source=openai))
 
-### Gene-Targeted Therapies
-Preclinical investigations center on advanced editing and silencing techniques (e.g., RNA interference and CRISPR-based approaches) to correct or compensate for the mutations underlying HHT. Though still at experimental stages, these methods might address disease pathophysiology more directly than conventional therapies (see [Hereditary hemorrhagic telangiectasia: from signaling insights to therapeutic advances (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10866657/)).
+## Major Breakthroughs and Emerging Therapies
 
-### Repurposing Cancer Drugs
-Some of the most prominent recent advances involve repurposing oncology medications that reduce angiogenic signaling (e.g., anti-VEGF therapies). A 2024 clinical trial at Mass General Brigham highlighted the potential of such strategies to decrease the frequency and severity of nosebleeds in HHT patients ([Clinical Trial Successfully Repurposes Cancer Drug (2024)](https://www.massgeneralbrigham.org/en/about/newsroom/press-releases/clinical-trial-successfully-repurposes-cancer-drug-for-hereditary-bleeding-disorder)).
+The clearest potentially curative strategy is gene replacement. In a 2025 mouse study, investigators at the University of California, San Francisco and Duke University tested an engineered adeno-associated virus (AAV) capsid, AAV.cc84, carrying a functional human *ACVRL1*/*ALK1* gene. Intravenous delivery targeted a high proportion of brain endothelial cells while limiting liver-cell transduction, and reduced the severity of brain AVMs in an endothelial *Alk1*-deficient mouse model. This is an important proof of principle for HHT type 2, but it remains preclinical and does not yet establish safety, dosing, durability, or applicability to people with *ENG*, *SMAD4*, or other genetic forms of HHT. [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38977637/?utm_source=openai))
 
-### Animal Models and Preclinical Studies
-Studies utilizing mice and zebrafish models help clarify the genetic basis of HHT and the formation of AVMs ([An update on preclinical models of hereditary hemorrhagic telangiectasia (2022)](https://www.frontiersin.org/articles/10.3389/fmed.2022.973964/full)). Progress in these models accelerates the translation of novel compounds into therapeutic trials, while also identifying key molecular targets that could be corrected early.
+Gene editing is also advancing as a research platform rather than a patient treatment. In 2020, researchers generated induced pluripotent stem cells (iPSCs) from a person with an *ACVRL1* mutation and used CRISPR-Cas9 to correct that mutation, creating matched corrected cell lines for studying disease biology. More recently, investigators used engineered human stem-cell models, endothelial cells, smooth-muscle cells, and three-dimensional vessel organoids to show that *ENG* haploinsufficiency can impair vessel structure, cell survival, and endothelial–smooth-muscle interactions. These approaches can identify which cell types and molecular changes must be repaired before gene editing can be considered for systemic treatment. [CRISPR-corrected HHT iPSCs](https://pubmed.ncbi.nlm.nih.gov/32485642/) [HHT vessel-organoid models](https://link.springer.com/article/10.1186/s13578-024-01247-z) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32485642/?utm_source=openai))
 
-## Key Methodologies and Approaches
-• Molecular and Genetic Analysis: New biomarkers, next-generation DNA sequencing, and transcriptome profiling pinpoint dysregulated pathways involved in abnormal blood-vessel formation.
-• Translational Research Integration: “Bench-to-bedside” models accelerate the path from discovery in animal models to pilot clinical trials (see [Translational medicine in hereditary hemorrhagic telangiectasia (2022)](https://www.ejinme.com/article/S0953-6205(21)00303-4/fulltext)).
-• Clinical Trial Design: Ongoing Phase II/III trials explicitly evaluate compound efficacy in alleviating hallmark symptoms like epistaxis (nosebleeds) and improving quality of life.
+Small-molecule pathway correction has become a prominent near-term strategy. HHT-related loss of BMP9–ALK1–endoglin signaling can leave endothelial cells with excessive PI3K–AKT activity, promoting abnormal vessel growth. Engasertib, an oral allosteric inhibitor of AKT, was tested in a placebo-controlled trial and reduced nosebleed frequency and duration over 12 weeks, with rash and reversible hyperglycemia as notable on-target adverse effects. This is a mechanistically targeted treatment and may prove disease-modifying, but it is not gene correction and has not yet shown that it eliminates existing AVMs or permanently prevents new ones. [Engasertib trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411) ([nejm.org](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411?utm_source=openai))
 
-## Strengths and Limitations of Current Approaches
-Research has unveiled critical molecular underpinnings of HHT and offered novel therapeutic targets:
+Other experimental approaches aim to normalize abnormal endothelial behavior. A 2024 study found that the approved CDK4/6 inhibitor palbociclib prevented AVM development in mouse models created by blocking BMP9/10 or deleting endothelial *Alk1*. The result links abnormal endothelial cell-cycle control to AVM formation and offers a repurposing lead, although cancer-drug toxicities and the distinction between preventing new lesions in mice and reversing established human AVMs remain substantial hurdles. [Palbociclib in HHT models](https://pubmed.ncbi.nlm.nih.gov/38126211/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38126211/?utm_source=openai))
 
-• Strengths:  
-  – Rapid translational cycle from lab to patient, especially for repurposed drugs.  
-  – Growing collaboration among European, American, and global networks, encouraged by interdisciplinary consortia.  
-  – Emergence of gene-based interventions that promise disease-modifying impacts rather than symptomatic relief alone.  
+## Clinical Trials and Experimental Approaches
 
-• Limitations:  
-  – HHT’s underlying mutations are diverse, and single-target solutions may not benefit all patients equally.  
-  – Rare-disease clinical trials feature small sample sizes and issues with robust trial design and funding.  
-  – Long-term safety of novel approaches (e.g., gene editing) remains uncertain until further validated in broader populations.
+The strongest recent clinical result is the PATH-HHT phase 2 randomized trial of pomalidomide, an oral immunomodulatory drug. In 144 participants with moderate-to-severe HHT nosebleeds, 24 weeks of pomalidomide produced a clinically meaningful improvement in Epistaxis Severity Score versus placebo, with a between-group difference of −0.94 points; quality-of-life scores also improved. Neutropenia, constipation, and rash were more common with pomalidomide. The trial was funded by the National Heart, Lung, and Blood Institute and completed enrollment early after meeting a prespecified efficacy threshold, but pomalidomide treats bleeding rather than correcting the inherited mutation. [PATH-HHT trial](https://www.nejm.org/doi/10.1056/NEJMoa2312749) [PATH-HHT registry record](https://clinicaltrials.gov/study/NCT03910244) ([nejm.org](https://www.nejm.org/doi/10.1056/NEJMoa2312749?utm_source=openai))
 
-## Challenges Remaining
-Despite promising results, several hurdles remain before establishing a definitive cure:
-1. Optimizing Delivery of Gene Therapies: Efficient targeting and minimal off-target effects in sensitive tissues have yet to be perfected.  
-2. Personalized Treatment: Identifying patient subgroups who benefit most from specific therapies remains an active research area.  
-3. Funding Constraints: Rare diseases typically face intensified competition for grant money. International partnerships are crucial to sustain large-scale trials.  
-4. Long-Term Safety Data: Antiangiogenic therapies and immunomodulators require comprehensive follow-up to evaluate potential adverse effects.
+Vaderis Therapeutics sponsored the multicenter, placebo-controlled engasertib trial, registered as NCT05406362. Seventy-five participants received engasertib 30 mg, engasertib 40 mg, or placebo daily for 12 weeks; both active-dose groups had larger mean reductions in nosebleed frequency and duration than placebo, while an open-label extension continued. [Engasertib trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411) ([nejm.org](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411?utm_source=openai))
 
-## Leading Institutions and Funding Sources
-Leading centers include French research units such as Grenoble Alpes University (INSERM, CEA) and the National HHT Reference Center (Hospices Civils de Lyon), as well as major U.S. hospitals under Mass General Brigham. National Institutes of Health (NIH) grants, European Union’s Horizon 2020, national funding agencies (e.g., INSERM in France, philanthropic foundations), and private donors have collectively propelled investigations in this field. Pan-European networks (e.g., Orphanet) and global nonprofits (e.g., HHT Foundation International) have also coordinated resources to enable more robust and collaborative projects.
+Several repurposed antiangiogenic or pathway-directed drugs remain important experimental options. A 2023 randomized phase 2 trial of intravenous bevacizumab in transfusion-dependent HHT did not meet its primary transfusion endpoint in a small, underpowered sample, but hemoglobin improved at six months and participants receiving higher drug exposure had fewer transfusions. Cure HHT’s low-dose pazopanib phase 2/3 study, NCT03850964, had completed its primary phase on November 21, 2025 and was listed as active but not recruiting in its March 19, 2026 registry update, with study completion then estimated for July 2026; because that estimate has passed as of August 8, 2026, updated results or status are needed before drawing conclusions. A small phase 2 tacrolimus study sponsored by Unity Health Toronto completed in October 2024 after enrolling 10 participants; it tested whether low-dose tacrolimus could reduce bleeding while restoring ALK1-related signaling. [Bevacizumab randomized trial](https://pubmed.ncbi.nlm.nih.gov/37592715/) [Pazopanib phase 2/3 registry record](https://clinicaltrials.gov/study/NCT03850964) [Tacrolimus phase 2 registry record](https://clinicaltrials.gov/study/NCT04646356) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37592715/?utm_source=openai))
 
-## Conclusion
-From novel gene-targeting methods to the repurposing of oncology drugs, research on HHT between 2020 and early 2025 has yielded significant milestones. Antiangiogenic therapies, immunomodulators, improved animal models, and gene therapy innovations foster hope for a truly curative option in the near future. While the path forward poses challenges—particularly in aligning funding, addressing genetic heterogeneity, and validating long-term safety—these collective efforts lay the groundwork for comprehensive, personalized HHT management and, ultimately, a cure.
+## Methodologies and Scientific Approaches
+
+HHT researchers combine genetically engineered mouse models with patient-derived cells and increasingly sophisticated human vascular models. Conditional deletion of endothelial *Alk1*, blockade of BMP9/10, and *Eng* or *Smad4* models allow investigators to trigger AVM formation and test whether a treatment prevents or reduces abnormal shunts. These systems have implicated excessive VEGF and PI3K–AKT–mTOR signaling, abnormal endothelial proliferation, altered vessel identity, and inflammatory influences in lesion formation. [Preclinical HHT-model update](https://pubmed.ncbi.nlm.nih.gov/36250069/) [Palbociclib in HHT models](https://pubmed.ncbi.nlm.nih.gov/38126211/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/36250069/?utm_source=openai))
+
+For translation toward a cure, investigators are testing delivery vehicles as carefully as therapeutic genes. The AAV.cc84 work compared engineered viral capsids, intravenous versus intranasal administration, endothelial-cell targeting, off-target liver exposure, organ function, and histologic AVM outcomes. In parallel, isogenic gene-corrected iPSCs and vessel organoids let researchers compare a patient’s mutation-bearing cells with genetically matched corrected cells, improving the ability to identify biomarkers and test therapies in human tissue before clinical trials. [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) [CRISPR-corrected HHT iPSCs](https://pubmed.ncbi.nlm.nih.gov/32485642/) [HHT vessel-organoid models](https://link.springer.com/article/10.1186/s13578-024-01247-z) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38977637/?utm_source=openai))
+
+## Leading Institutions and Funding
+
+Major contributors include Massachusetts General Hospital and its PATH-HHT collaborators; the Cleveland Clinic, Mayo Clinic, Johns Hopkins University, Stanford University, University of California, San Francisco, Duke University, University of Toronto/Unity Health Toronto, and European HHT centers. UCSF and Duke led the recent AAV gene-delivery work, while Massachusetts General Hospital coordinated the pivotal pomalidomide program and Vaderis Therapeutics funded engasertib’s proof-of-concept trial. [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) [PATH-HHT trial](https://www.nejm.org/doi/10.1056/NEJMoa2312749) [Engasertib trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/38977637/?utm_source=openai))
+
+Cure HHT has played a catalytic funding and infrastructure role, reporting $2.1 million in seed grants, young-investigator awards, and conferences leveraged into more than $51.3 million from NIH, Department of Defense, FDA, and European sources. Its funding portfolio lists $3.64 million in NIH support for PATH-HHT and, for the randomized pazopanib program, $5.24 million from the Department of Defense plus $877,824 from the FDA, alongside Cure HHT support. [Cure HHT funding portfolio](https://curehht.org/research/other-funding-opportunities/funding-portfolio/) ([curehht.org](https://curehht.org/research/other-funding-opportunities/funding-portfolio/))
+
+## Strengths, Limitations, and Challenges
+
+A major strength of current HHT research is that it now connects genetics, mechanism, animal models, and randomized clinical trials. Pomalidomide and engasertib provide evidence that systemic therapies can improve clinically meaningful bleeding outcomes, while AAV-mediated *ALK1* replacement offers a rational route toward treating the cause of at least one genetic subtype. The use of gene-corrected iPSCs and vascular organoids should also improve selection of targets and reduce reliance on any single model. [PATH-HHT trial](https://www.nejm.org/doi/10.1056/NEJMoa2312749) [Engasertib trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411) [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) [HHT vessel-organoid models](https://link.springer.com/article/10.1186/s13578-024-01247-z) ([nejm.org](https://www.nejm.org/doi/10.1056/NEJMoa2312749?utm_source=openai))
+
+The central limitation is that most clinical progress is still symptomatic, not curative. HHT is genetically and clinically heterogeneous, so replacing *ACVRL1* cannot by itself cure people with *ENG*, *SMAD4*, or other causal variants. A body-wide gene therapy must reach the relevant endothelial cells in organs such as the nose, lungs, brain, liver, and gastrointestinal tract while avoiding immune reactions, harmful off-target expression, dose-related toxicity, and uncertainty about whether established AVMs can regress. Small trials, variable bleeding measurements, rare-disease recruitment barriers, long-term drug safety, and unequal access to expert HHT centers also complicate the path to definitive evidence. [GeneReviews: HHT](https://www.ncbi.nlm.nih.gov/books/NBK1351/) [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) [Tacrolimus phase 2 registry record](https://clinicaltrials.gov/study/NCT04646356) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1351/))
+
+## Outlook and Future Directions
+
+HHT is not close to a proven human cure as of August 8, 2026, but the field has moved beyond purely local bleeding control. The most consequential milestones to watch are publication of the pazopanib phase 2/3 results; confirmation and longer-term follow-up of pomalidomide and engasertib benefits; evidence that targeted drugs can prevent or reverse AVMs rather than only reduce bleeding; and formal safety studies that move endothelial-targeted AAV gene replacement from mice toward people. A realistic first “functional cure” may be durable prevention of new lesions and major bleeding, while a true genetic cure will require safe, long-lasting correction or replacement across the vascular system and across HHT genotypes. [Pazopanib phase 2/3 registry record](https://clinicaltrials.gov/study/NCT03850964) [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) [Engasertib trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT03850964?utm_source=openai))
 
 ## References
-1. [Hereditary hemorrhagic telangiectasia: from signaling insights to therapeutic advances (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10866657/)  
-2. [Hereditary Haemorrhagic Telangiectasia, an Inherited … (2021)](https://www.mdpi.com/2073-4425/12/2/174)  
-3. [Hereditary Hemorrhagic Telangiectasia: On the Brink of a … (2024)](https://pubmed.ncbi.nlm.nih.gov/39694043)  
-4. [An update on preclinical models of hereditary hemorrhagic telangiectasia (2022)](https://www.frontiersin.org/articles/10.3389/fmed.2022.973964/full)  
-5. [The Role of Thalidomide and Its Analogs in the Treatment … (2024)](https://www.mdpi.com/2077-0383/13/18/5404)  
-6. [Translational medicine in hereditary hemorrhagic telangiectasia (2022)](https://www.ejinme.com/article/S0953-6205(21)00303-4/fulltext)  
-7. [Recent Advances in Hereditary Hemorrhagic Telangiectasia (2024)](https://www.preprints.org/manuscript/202404.0949/v1)  
-8. [Future treatments for hereditary hemorrhagic telangiectasia (2020)](https://ojrd.biomedcentral.com/articles/10.1186/s13023-019-1281-4)  
-9. [Clinical Trial Successfully Repurposes Cancer Drug for Hereditary Bleeding Disorder (2024)](https://www.massgeneralbrigham.org/en/about/newsroom/press-releases/clinical-trial-successfully-repurposes-cancer-drug-for-hereditary-bleeding-disorder)  
-10. [Induced Endothelial Cell Cycle Arrest Prevents … (2024)](https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.122.062952)
 
+- [GeneReviews: Hereditary Hemorrhagic Telangiectasia](https://www.ncbi.nlm.nih.gov/books/NBK1351/) — University of Washington, Seattle, 2026.
+- [Second International HHT Guidelines](https://pubmed.ncbi.nlm.nih.gov/32894695/) — Faughnan et al., 2020.
+- [AAV gene-therapy study](https://pubmed.ncbi.nlm.nih.gov/38977637/) — Yadav et al., 2025.
+- [CRISPR-corrected HHT iPSCs](https://pubmed.ncbi.nlm.nih.gov/32485642/) — Bouma et al., 2020.
+- [HHT vessel-organoid models](https://link.springer.com/article/10.1186/s13578-024-01247-z) — Kuroda et al., 2024.
+- [Palbociclib in HHT models](https://pubmed.ncbi.nlm.nih.gov/38126211/) — Genet et al., 2024.
+- [Engasertib trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2504411) — Al-Samkari et al., 2025.
+- [PATH-HHT trial](https://www.nejm.org/doi/10.1056/NEJMoa2312749) — Al-Samkari et al., 2024.
+- [PATH-HHT registry record](https://clinicaltrials.gov/study/NCT03910244) — ClinicalTrials.gov, 2026.
+- [Bevacizumab randomized trial](https://pubmed.ncbi.nlm.nih.gov/37592715/) — Dupuis-Girod et al., 2023.
+- [Pazopanib phase 2/3 registry record](https://clinicaltrials.gov/study/NCT03850964) — ClinicalTrials.gov, 2026.
+- [Tacrolimus phase 2 registry record](https://clinicaltrials.gov/study/NCT04646356) — ClinicalTrials.gov, 2025.
+- [Preclinical HHT-model update](https://pubmed.ncbi.nlm.nih.gov/36250069/) — Tual-Chalot et al., 2022.
+- [Cure HHT funding portfolio](https://curehht.org/research/other-funding-opportunities/funding-portfolio/) — Cure HHT, 2026.

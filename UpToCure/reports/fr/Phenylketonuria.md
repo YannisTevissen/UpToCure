@@ -1,80 +1,80 @@
+---
+title: Phénylcétonurie
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir la phénylcétonurie.
+input_tokens: 55591
+output_tokens: 6759
+search_calls: 6
+cost_usd: 0.2523
+---
+
 # Phénylcétonurie
 
-La phénylcétonurie (PCU) est une maladie génétique causée par des mutations du gène responsable de la production de la phénylalanine hydroxylase (PAH), l'enzyme nécessaire pour métaboliser l'acide aminé phénylalanine. Non traitée, la PCU entraîne une accumulation de phénylalanine dans l'organisme, provoquant de graves complications neurologiques. Au cours des dernières années, la recherche s'est concentrée sur des stratégies curatives qui vont au-delà des interventions diététiques restrictives. Vous trouverez ci-dessous une revue des efforts de recherche les plus récents et les plus significatifs, y compris des articles évalués par des pairs, des essais cliniques et des approches novatrices en phase de démarrage.
+## Vue d'ensemble
 
-## Progrès récents et orientations de la recherche
+Phénylcétonurie (PKU), aussi appelée déficience en PAH (phénylalanine hydroxylase), est une maladie héréditaire dans laquelle le foie ne peut pas convertir adéquatement l'acide aminé alimentaire phénylalanine (Phe) en tyrosine. Un excès de Phe peut atteindre des concentrations neurotoxiques, en particulier pendant le développement précoce du cerveau. Le dépistage néonatal et un traitement rapide ont transformé le pronostic : les personnes diagnostiquées précocement et maintenues dans les plages recommandées de Phe peuvent éviter la déficience intellectuelle sévère autrefois associée à la PKU non traitée. [GeneReviews: Phenylalanine Hydroxylase Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1504/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1504/?utm_source=openai))
 
-### Thérapie génique
-La recherche sur la thérapie génique de la PCU se concentre principalement sur la restauration d'une enzyme PAH fonctionnelle dans le foie ou sur l'introduction d'un gène correct pour compenser les mutations.
+Il n'existe pas encore de remède. La prise en charge standard est une restriction pérenne et individualisée de Phe, soutenue par des aliments médicaux exempts de Phe et une surveillance sanguine régulière. Certaines personnes bénéficient de sapropterine ou sépiapterine, qui peuvent améliorer l'activité résiduelle de la PAH, tandis que pegvaliase est un traitement injectable de substitution enzymatique pour des personnes sélectionnées présentant des niveaux de Phe constamment élevés ; ces traitements contrôlent le problème biochimique mais ne réparent pas le gène PAH sous-jacent. [GeneReviews: Phenylalanine Hydroxylase Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1504/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1504/?utm_source=openai))
 
-Une revue notable est la publication 2023/2024 des NIH qui examine *State-of-the-Art Gene Therapy for Phenylketonuria*, qui compare différentes approches, y compris des méthodes basées sur des vecteurs viraux (par exemple, les vecteurs AAV) et des techniques ex vivo. Cette source résume également les essais cliniques en cours et prévus :
-[PubMed link](https://pubmed.ncbi.nlm.nih.gov/37401651/) | [PMC link](https://pmc.ncbi.nlm.nih.gov/articles/PMC10764640/)
+## Portée des recherches récentes (2020–présent)
 
-#### Plateformes émergentes d'édition de gènes
-Des chercheurs de la Penn Medicine ont récemment présenté de nouvelles approches d'édition de bases et d'édition d'amorces lors de la réunion 2023 de l'American Society of Human Genetics (ASHG), mettant en avant des méthodes conçues pour corriger précisément les mutations sous-jacentes. Cette approche pourrait offrir une solution plus ciblée :
-[Communiqué de presse de la Penn Medicine] (https://www.pennmedicine.org/news/news-releases/2023/november/penn-researchers-develop-gene-editing-approaches-for-pku)
+Depuis 2020, la recherche est devenu nettement plus orientée vers la cure, avec des travaux axés sur la restauration de l'activité de PAH dans les cellules hépatiques par une addition génique unique, l’édition ciblée du gène ou le remplacement répété d’ARN messager (ARNm). Le domaine est passé des études précliniques chez l’animal vers les premiers essais chez l’humain de produits de transfert génique basés sur des virus adéno-associés (AAV), mais aucun traitement génique n’a encore rapporté des preuves cliniques suffisantes pour établir une cure chez les personnes. [SAR444836 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT05972629) [BMN 307 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT04480567) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT05972629?utm_source=openai))
 
-Plusieurs sociétés biopharmaceutiques travaillent également sur des produits expérimentaux. BioMarin a soumis une demande d'essai clinique (CTA) au Royaume-Uni pour sa thérapie génique BMN 307, poursuivant ainsi son leadership de longue date dans le développement de médicaments contre la PCU :
-[Communiqué de presse de BioMarin] (https://www.biomarin.com/news/press-releases/biomarin-pioneer-in-phenylketonuria-pku-therapies-submits-clinical-trial-application-cta-in-u-k-for-investigational-gene-therapy-for-pku/)
+## Principales avancées et thérapies émergentes
 
-### Essais cliniques et efforts institutionnels
-Sanofi mène actuellement un essai clinique de phase 1/2 visant à évaluer la sécurité et l'efficacité de la réduction des niveaux de phénylalanine (Phe) par une thérapie génique expérimentale :
-[Lien vers l'essai clinique de Sanofi] (https://www.sanofistudies.com/clinicaltrial/312855/a-phase-1phase-2/)
+**AAV gene addition** est la stratégie curative la plus avancée sur le plan clinique. Plutôt que de corriger la mutation de chaque personne, un vecteur AAV porte une séquence d’ADN PAH fonctionnelle dans les hépatocytes, les cellules du foie qui fabriquent normalement PAH. Cette approche insensible au type de mutation pourrait, en principe, restaurer le métabolisme du Phe après une dose intraveineuse unique. SAR444836 de Sanofi et BMN 307 de BioMarin sont deux programmes AAV-PAH en phase précoce chez l’adulte atteints de PKU. [SAR444836 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT05972629) [BMN 307 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT04480567) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT05972629?utm_source=openai))
 
-En outre, American Gene Technologies développe des thérapies géniques à base de vecteurs viraux pour la PCU au stade préclinique ou précoce :
-[Pipeline d'American Gene Technologies] (https://www.americangene.com/pipeline/phenylketonuria-pku/)
+**Base editing** a produit certaines des preuves précliniques les plus solides en faveur d'une véritable correction génétique. Les éditeurs de base utilisent un système CRISPR modifié pour changer une seule lettre d’ADN sans réaliser la cassure double brin complète utilisée par le CRISPR conventionnel. Dans un modèle murin humanisé portant la variante PAH P281L commune, des nanoparticules lipidiques ciblant le foie (LNP) portant de l’ARNm d’adenine-base-editor et de l’ARN guide ont normalisé le Phe sanguin en quelques jours. [Corrective base editing in P281L mice](https://www.nature.com/articles/s41467-023-39246-2) ([nature.com](https://www.nature.com/articles/s41467-023-39246-2?utm_source=openai)) Une étude connexe de 2024 a corrigé la variante R408W commune en utilisant une livraison mRNA-LNP et a rapporté une normalisation du Phe sanguin en moins de 48 heures chez des souris humanisées. [mRNA-LNP base editing for R408W PKU](https://pubmed.ncbi.nlm.nih.gov/37922902/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37922902/?utm_source=openai))
 
-### Thérapies de remplacement enzymatique
-La pegvaliase, une thérapie de substitution enzymatique qui métabolise la phénylalanine, s'est révélée prometteuse chez les adultes atteints de PCU. Une publication allemande à paraître en 2024 fait état de deux années d'expérience clinique et des meilleures pratiques pour l'utilisation de la pegvaliase :
-[Lien ResearchGate] (https://www.researchgate.net/publication/369740593_Two_years_of_pegvaliase_in_GermanyExperiences_and_best_practice_recommendations)
+La démonstration préclinique pour le base editing s’est renforcée en 2026 : la correction de P281L chez la souris a réduit le Phe dans le sang et le cerveau, amélioré les mesures d’acides aminés et de neurotransmetteurs cérébraux, et partiellement amélioré les performances motrices anormales. Ces résultats sont importants parce qu’ils relient la correction génique du foie non seulement à un biomarqueur de laboratoire, mais aussi à des effets neurologiques pertinents pour PKU. [Base editing rescues brain biochemistry in PKU mice](https://pubmed.ncbi.nlm.nih.gov/42290942/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42290942/?utm_source=openai)) Cependant, chaque conception de base-editing est spécifique à la variante, de sorte qu’un portefeuille d’éditeurs pourrait être nécessaire pour servir la population génétiquement diverse atteinte de PKU.
 
-### Approches innovantes et précoces
-Les probiotiques modifiés constituent une nouvelle voie d'exploration pour la PCU. Une thèse de doctorat publiée en 2023 par l'Université technique du Danemark (DTU) explique comment les souches probiotiques pourraient contribuer à réduire l'accumulation de phénylalanine ou à améliorer la production de métabolites :
-[Thèse de doctorat DTU (PDF)](https://orbit.dtu.dk/files/360806053/Phd_Thesis_Chrysoula_Dimopoulou_Nov23.pdf)
+**Prime editing** est une autre approche spécifique à la mutation qui peut effectuer des corrections plus flexibles de petites DNA. En 2023, les chercheurs ont corrigé la variante R408W PAH dans des modèles de cellules hépatiques humaines et des souris PKU humanisées ; la livraison par AAV a atteint une normalisation complète du Phe sanguin chez les souris, avec jusqu’à 52 % d’édition corrective mesurée dans le foie. [Prime editing of R408W PKU](https://pubmed.ncbi.nlm.nih.gov/37924808/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37924808/?utm_source=openai)) C’est une preuve de principe convaincante, bien que son système de livraison AAV, sa sécurité à long terme et son applicabilité au-delà d’un sous-ensembLe de variantes PAH nécessitent encore un développement substantiel.
 
-Ces thérapies expérimentales, bien qu'elles n'en soient qu'à leurs débuts, pourraient compléter les méthodes établies en modifiant le microbiome ou en proposant d'autres voies métaboliques.
+**mRNA replacement** ne modifie pas durablement l’ADN mais offre une voie potentiellement répétable pour faire produire temporairement PAH fonctionnel par les hépatocytes. Dans une étude de souris de 2022, de l’ARNm humain PAH encapsulé dans des LNP administrés par voie intraveineuse a généré la protéine PAH dans les hépatocytes et restauré le métabolisme du Phe dans un modèle PKU murin. [mRNA replacement therapy for PKU](https://pubmed.ncbi.nlm.nih.gov/35356682/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/35356682/?utm_source=openai)) Il est à considérer comme une passerelle modifiant la maladie ou une alternative à l’édition permanente, plutôt que comme une cure unique, car l’ARNm et son produit protéique sont temporaires.
 
-## Percées et institutions majeures
-- **BioMarin** : Un leader dans la recherche sur la PCU, avec deux médicaments approuvés contre la PCU et le développement en cours de thérapies géniques.
-- **Penn Medicine** : Pionnier des technologies d'édition basées sur CRISPR pour une correction précise des mutations.
-- **Sanofi** : Réalisation d'essais de phase 1/2 sur une thérapie génique expérimentale destinée à réduire les niveaux de phénylalanine.
-- **Instituts nationaux de la santé (NIH)** : Soutenir des projets de recherche à grande échelle par le biais de publications évaluées par les pairs et de financements de programmes.
+## Essais cliniques et approches expérimentales
 
-## Points forts et limites
+L’étude **SAR444836** de Sanofi, NCT05972629, est un essai ouvert de phase 1/2 d’une dose unique de transfert de gène PAH par AAV administrée par voie intraveineuse chez des adultes atteints de PKU. Ses objectifs déclarés incluent la réduction du Phe sanguin et la possibilité de supprimer la restriction alimentaire en Phe; le registre a classé l’étude comme active mais non recrutant et n’a pas publié les résultats. [SAR444836 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT05972629) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT05972629?utm_source=openai)) L’essai **BMN 307** de BioMarin, NCT04480567, est également une étude de Phase 1/2 avec escalade de dose d’un transfert de gène PAH par AAV5 unique chez l’adulte ; le registre l’a classé comme actif mais non recrutant, sans résultats publiés. [BMN 307 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT04480567) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT04480567?utm_source=openai))
 
-**Forces** :  
-- **La thérapie génique** présente un attrait significatif en raison de son potentiel de correction à long terme de la cause moléculaire de la PCU. Les premiers essais cliniques font état de profils de sécurité encourageants et d'une réduction plus ou moins importante du taux de phénylalanine.  
-- **La substitution enzymatique (Pegvaliase)** a permis à certains patients atteints de PCU de réduire les restrictions alimentaires, ce qui s'est traduit par des avantages concrets et une amélioration de la qualité de vie.  
-- les **méthodes d'édition de gènes** telles que l'édition de base et l'édition primaire peuvent permettre une approche de précision avec un minimum d'effets hors cible.
+Toutes les approches novatrices n’ont pas abouti. La bactérie ingénierée administrée par voie orale de Synlogic, **SYNB1934**, était destinée à consommer le Phe dans l’intestin plutôt qu’à réparer PAH. L’entreprise a mis fin à son étude pivot SYNPHENY-3 en février 2024 après qu’une analyse interne ait indiqué que l’essai était peu susceptible d’atteindre son critère primaire, bien que le produit ait été signalé comme sûr et bien toléré. [Synlogic discontinues SYNPHENY-3](https://investor.synlogictx.com/news-releases/news-release-details/synlogic-announces-decision-discontinue-synpheny-3-study-and) ([investor.synlogictx.com](https://investor.synlogictx.com/news-releases/news-release-details/synlogic-announces-decision-discontinue-synpheny-3-study-and?utm_source=openai)) Ce programme n’était pas une cure génétique, mais son issue illustre la difficulté d’obtenir un contrôle soutenu et cliniquement significatif du Phe en dehors du foie.
 
-**Limitations** :  
-- **La durabilité à long terme** reste incertaine. Bien que les résultats à court terme soient prometteurs, on ne sait pas encore combien de temps le foie ou l'intestin maintiendront des niveaux thérapeutiques d'enzymes efficaces ou de gènes corrigés.  
-- **Les réponses immunitaires** aux vecteurs viraux utilisés dans la thérapie génique sont préoccupantes. Des anticorps neutralisants peuvent entraver l'administration de doses répétées.  
-- **La complexité du dosage** de la pegvaliase peut être un défi, et les effets indésirables peuvent nécessiter une surveillance étroite.  
-- les **coûts élevés** associés aux traitements avancés (par exemple, la thérapie génique) peuvent limiter leur accessibilité s'ils ne sont pas pris en charge par les systèmes de soins de santé ou par des programmes de financement spéciaux.
+## Méthodologies et approches scientifiques
 
-## Défis et orientations futures
-Si les progrès sont considérables, plusieurs défis restent à relever :
+La recherche sur la cure de la PKU repose fortement sur des modèles d’hépatocytes humains spécifiques aux variants et des souris “humanisées” conçues pour porter des mutations PAH pertinentes chez les patients telles que P281L et R408W. Les chercheurs mesurent le Phe sanguin comme biomarqueur pharmacodynamique central, puis testent si l’édition PAH restaure le métabolisme hépatique, réduit le Phe dans le cerveau, corrige les anomalies des neurotransmetteurs et améliore les résultats comportementaux. [Corrective base editing in P281L mice](https://www.nature.com/articles/s41467-023-39246-2) [Prime editing of R408W PKU](https://pubmed.ncbi.nlm.nih.gov/37924808/) ([nature.com](https://www.nature.com/articles/s41467-023-39246-2))
 
-- **Efficacité sûre à long terme** : Des données supplémentaires sont nécessaires sur la persistance de la correction génétique et l'expression stable de l'HAP sans rejet immunitaire ni toxicité liée au vecteur.  
-- **La mise à l'échelle et l'accessibilité financière** : Le développement, la fabrication et la distribution de thérapies innovantes (en particulier les thérapies géniques) à grande échelle nécessiteront un financement important et une collaboration entre les agences gouvernementales, les organisations à but non lucratif et l'industrie.  
-- **Stratégies personnalisées** : Les mutations de la PCU sont diverses. Les thérapies pourraient avoir besoin d'être affinées ou personnalisées pour répondre à des présentations variables et à des sous-populations de patients.  
-- **Chemins réglementaires** : Au fur et à mesure que ces traitements progressent, des processus d'approbation rationalisés mais complets sont essentiels pour garantir la sécurité des patients et une mise sur le marché en temps voulu.
+La technologie de délivrance est une composante déterminante de la recherche. Les vecteurs AAV peuvent assurer une expression hépatique durable mais soulèvent des questions sur les réponses immunitaires et la sécurité à long terme du vecteur; les LNP peuvent délivrer un ARNm d’éditeur et un RNA guide à durée courte sans laisser de vecteur viral, mais doivent réaliser une délivrance efficace et sélective au foie. Les études d’édition modernes combinent donc des mesures de correction PAH ciblée avec un séquençage hors cible étendu, une pathologie hépatique et un suivi métabolique à long terme. [Corrective base editing in P281L mice](https://www.nature.com/articles/s41467-023-39246-2) [mRNA-LNP base editing for R408W PKU](https://pubmed.ncbi.nlm.nih.gov/37922902/) ([nature.com](https://www.nature.com/articles/s41467-023-39246-2))
 
-## Conclusion
-Des développements récents permettent d'espérer un traitement robuste de la phénylcétonurie. La thérapie génique est au premier plan, comme en témoignent plusieurs essais cliniques de phase 1/2 et les premiers résultats de l'édition de gènes. Les thérapies de remplacement enzymatique continuent de s'améliorer et des méthodes expérimentales, telles que les probiotiques modifiés, sont explorées par la communauté scientifique.
+## Principales institutions et financement
 
-Compte tenu de l'ampleur et de la complexité de la PCU, une combinaison d'interventions génétiques, de substitution enzymatique et de mesures diététiques de soutien pourrait en fin de compte produire les stratégies de traitement les plus efficaces. La collaboration continue entre les institutions universitaires, les sociétés pharmaceutiques et les organisations à but non lucratif jouera un rôle essentiel dans la définition de l'avenir de la recherche sur la PCU et dans la garantie que les traitements atteignent les patients qui en ont besoin.
+L’Université de Pennsylvanie et le Children’s Hospital of Philadelphia (CHOP) dirigent l’effort de précision de l’édition par des équipes qui ont développé les plateformes d’édition P281L et R408W. En 2024, le partenariat CHOP–Penn a reçu une subvention NIH de 26 millions de dollars sur cinq ans pour faire progresser les thérapies d’édition génique périnatales pour trois maladies rares, dont la PKU, avec l’édition de base LNP spécifiquement prévue pour la recherche PKU. [CHOP–Penn NIH gene-editing award](https://www.chop.edu/news/chop-and-penn-partnership-receives-nih-funds-enhance-investigations-perinatal-gene-editing) ([chop.edu](https://www.chop.edu/news/chop-and-penn-partnership-receives-nih-funds-enhance-investigations-perinatal-gene-editing?utm_source=openai))
 
-***
-**Citations et sources recommandées** :
-- [État de l'art 2023 sur la thérapie génique pour la phénylcétonurie (PubMed)] (https://pubmed.ncbi.nlm.nih.gov/37401651/)  
-- [Thérapie génique de pointe pour la phénylcétonurie (PMC)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10764640/)  
-- [Penn Medicine Gene Editing Approaches for PKU] (https://www.pennmedicine.org/news/news-releases/2023/november/penn-researchers-develop-gene-editing-approaches-for-pku)  
-- [Essai de thérapie génique de la PCU de Sanofi] (https://www.sanofistudies.com/clinicaltrial/312855/a-phase-1phase-2/)  
-- [Communiqué de presse sur la thérapie génique de la PCU de BioMarin] (https://www.biomarin.com/news/press-releases/biomarin-pioneer-in-phenylketonuria-pku-therapies-submits-clinical-trial-application-cta-in-u-k-for-investigational-gene-therapy-for-pku/)  
-- [L'expérience de Pegvaliase en Allemagne] (https://www.researchgate.net/publication/369740593_Two_years_of_pegvaliase_in_GermanyExperiences_and_best_practice_recommendations)  
-- [Probiotiques modifiés (Thèse de doctorat DTU)](https://orbit.dtu.dk/files/360806053/Phd_Thesis_Chrysoula_Dimopoulou_Nov23.pdf)  
-- [American Gene Technologies Pipeline for PKU] (https://www.americangene.com/pipeline/phenylketonuria-pku/)  
+Les sponsors industriels incluent Sanofi et BioMarin pour le développement clinique AAV-PAH, tandis que le financement dirigé par les patients est un complément important à l’investissement fédéral et commercial. L’Alliance nationale PKU annonce près de 6,5 millions de dollars attribués à plus de 85 subventions de recherche et a financé des travaux sur l’insertion pérenne du gène PAH chez des souris PKU, y compris un projet dirigé par Cary Harding à l’Oregon Health & Science University. [National PKU Alliance research program](https://www.npkua.org/research/) [National PKU Alliance funded research projects](https://www.npkua.org/resources/research/) ([npkua.org](https://www.npkua.org/research/?utm_source=openai))
 
-Ces références offrent aux lecteurs une exploration plus approfondie de la recherche de pointe sur la PCU. Avec les recherches en cours sur la thérapie génique, les nouvelles enzymes et les traitements à base de microbiome, l'avenir des soins et des traitements possibles de la PCU est très prometteur.
+## Forces, limites et défis
+
+La PKU est une cible attractive pour la médecine génétique parce que le mécanisme de la maladie est bien défini, l’organe thérapeutique est le foie, et le Phe sanguin fournit un indicateur direct et mesurable de l’efficacité du traitement. Les résultats chez la souris pour l’édition de base et l’édition Prime montrent que la correction d’une fraction d’hépatocytes peut normaliser le métabolisme du Phe dans certains modèles, tandis que l’ajout de gènes par AAV pourrait potentiellement traiter des personnes indépendamment de leurs mutations PAH spécifiques. [Corrective base editing in P281L mice](https://www.nature.com/articles/s41467-023-39246-2) [Prime editing of R408W PKU](https://pubmed.ncbi.nlm.nih.gov/37924808/) ([nature.com](https://www.nature.com/articles/s41467-023-39246-2))
+
+La limitation centrale est que ces résultats marquants restent précliniques. L’édition doit être suffisamment exacte pour éviter des mutations hors cible nocives ou des modifications par hasard, suffisamment durable pour profiter aux enfants en grandissant, et suffisamment sûre pour une maladie non mortelle qui peut déjà être gérée par le traitement. La sécurité des AAV reste sous surveillance : le programme BMN 307 de BioMarin a été mis en attente clinique en 2021 après que des souris traitées à forte dose aient développé des tumeurs hépatiques avec des preuves d’intégration partielle du vecteur ; la pertinence humaine était incertaine, mais cette constatation a souligné la nécessité d’une surveillance à long terme. [BioMarin BMN 307 clinical hold](https://www.biomarin.com/news/press-releases/u-s-fda-placed-a-clinical-hold-on-bmn-307-phearless-phase-1-2-gene-therapy-study-in-adults-with-pku-based-on-interim-pre-clinical-study-findings/) ([biomarin.com](https://www.biomarin.com/news/press-releases/u-s-fda-placed-a-clinical-hold-on-bmn-307-phearless-phase-1-2-gene-therapy-study-in-adults-with-pku-based-on-interim-pre-clinical-study-findings/?utm_source=openai)) L’accès, le coût, l’éligibilité, l’immunité préexistante à l’AAV, les considérations liées à la grossesse et la nécessité d’aborder de nombreuses variantes PAH influenceront également l’usage large d’un éventuel remède futur.
+
+## Perspectives et directions futures
+
+À la date du 8 août 2026, PKU n'est pas sur le point d'obtenir une cure clinique établie, mais elle dispose de candidats curatifs crédibles à deux étapes importantes : les essais humains précoces d'une addition génique AAV indépendante de la mutation et des preuves animales extrêmement convaincantes pour l'édition de base ou d'édition prime délivrée par des LNP. Les jalons à surveiller sont les premières données publiées chez l'homme montrant une diminution de Phe et une libéralisation du régime alimentaire, issues de SAR444836 et BMN 307, un suivi de sécurité AAV à plus long terme, et la traduction de l'édition non virale par LNP à partir de souris humanisées portant des variantes vers des études cliniques réglementées. [SAR444836 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT05972629) [BMN 307 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT04480567) [Base editing rescues brain biochemistry in PKU mice](https://pubmed.ncbi.nlm.nih.gov/42290942/) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT05972629?utm_source=openai))
+
+## Références
+
+- [Phenylalanine Hydroxylase Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1504/) — GeneReviews®, 2025.
+- [SAR444836 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT05972629) — ClinicalTrials.gov, 2025.
+- [BMN 307 Phase 1/2 trial](https://clinicaltrials.gov/study/NCT04480567) — ClinicalTrials.gov, 2024.
+- [Corrective base editing in P281L mice](https://www.nature.com/articles/s41467-023-39246-2) — Nature Communications, 2023.
+- [mRNA-LNP base editing for R408W PKU](https://pubmed.ncbi.nlm.nih.gov/37922902/) — Human Genetics and Genomics Advances, 2024.
+- [Base editing rescues brain biochemistry in PKU mice](https://pubmed.ncbi.nlm.nih.gov/42290942/) — Molecular Therapy Advances, 2026.
+- [Prime editing of R408W PKU](https://pubmed.ncbi.nlm.nih.gov/37924808/) — American Journal of Human Genetics, 2023.
+- [mRNA replacement therapy for PKU](https://pubmed.ncbi.nlm.nih.gov/35356682/) — Molecular Therapy Nucleic Acids, 2022.
+- [Synlogic discontinues SYNPHENY-3](https://investor.synlogictx.com/news-releases/news-release-details/synlogic-announces-decision-discontinue-synpheny-3-study-and) — Synlogic, 2024.
+- [BioMarin BMN 307 clinical hold](https://www.biomarin.com/news/press-releases/u-s-fda-placed-a-clinical-hold-on-bmn-307-phearless-phase-1-2-gene-therapy-study-in-adults-with-pku-based-on-interim-pre-clinical-study-findings/) — BioMarin, 2021.
+- [CHOP–Penn NIH gene-editing award](https://www.chop.edu/news/chop-and-penn-partnership-receives-nih-funds-enhance-investigations-perinatal-gene-editing) — Children’s Hospital of Philadelphia, 2024.
+- [National PKU Alliance research program](https://www.npkua.org/research/) — National PKU Alliance, 2026.
+- [National PKU Alliance funded research projects](https://www.npkua.org/resources/research/) — National PKU Alliance, 2026.

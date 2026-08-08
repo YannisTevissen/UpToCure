@@ -1,114 +1,82 @@
+---
+title: Batten Disease
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Batten Disease.
+input_tokens: 55587
+output_tokens: 6539
+search_calls: 7
+cost_usd: 0.2596
+---
 
 # Batten Disease
 
-Batten Disease (neuronal ceroid lipofuscinoses, NCLs) is a group of rare, fatal pediatric neurodegenerative disorders with complex genetic origins. Over the last three years, research has accelerated, offering renewed hope for curative therapies. This review translates the latest scientific developments for all audiences, balancing accessibility with technical accuracy, and is fully referenced with direct links to original research.
+## Overview
 
-## The Landscape of Recent Batten Disease Research (2022–2025)
+Batten disease, also called neuronal ceroid lipofuscinosis (NCL), is a group of inherited disorders in which cells—especially brain and retinal cells—cannot manage material inside lysosomes, the cell’s recycling compartments. Different disease genes cause different NCL subtypes, including CLN1, CLN2, CLN3, CLN5, CLN6, and CLN7. Most childhood-onset forms cause progressive loss of vision, seizures, worsening movement, thinking, speech, and swallowing, and ultimately early death; the age of onset and prognosis vary substantially by subtype. [NCL overview](https://www.ncbi.nlm.nih.gov/sites/books/NBK1428/)
 
-While historically untreatable, Batten Disease is now at the forefront of innovative biomedical science. Collaborative global efforts—uniting university labs, hospitals, patient-driven foundations, and biotech firms—have yielded tangible progress, especially in gene and enzyme therapies.
+Care remains largely multidisciplinary and supportive: seizure treatment, physical and occupational therapy, nutritional and swallowing support, vision services, communication support, and palliative care. The major exception is CLN2 disease, for which intraventricular enzyme replacement with cerliponase alfa can slow loss of walking ability and other neurological function but does not cure the disease or restore neurons already lost. [NCL overview](https://www.ncbi.nlm.nih.gov/sites/books/NBK1428/) [FDA approval record for Brineura](https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=391913)
 
----
+## Scope of Recent Research (2020–present)
 
-## Major Research Directions and Breakthroughs
+Research since 2020 has been active and increasingly subtype-specific, with the strongest curative rationale in gene replacement: supplying a functioning copy of the defective gene to the brain, spinal cord, and, where needed, retina. The field is also pursuing replacement enzymes for disorders caused by missing soluble lysosomal enzymes, targeted small molecules, RNA-based medicines, and earlier diagnosis through biomarkers. Several human gene-therapy studies are underway or in follow-up, but no therapy has yet shown that it permanently halts or reverses Batten disease in people; a broadly applicable cure is therefore not close. [Experimental gene therapies for NCLs](https://pubmed.ncbi.nlm.nih.gov/32220628/) [CLN3 gene-therapy trial](https://clinicaltrials.gov/study/NCT03770572) [CLN6 gene-therapy trial](https://clinicaltrials.gov/study/NCT07582484)
 
-### 1. Enzyme Replacement Therapy (ERT): From Lab to Clinic
+## Major Breakthroughs and Emerging Therapies
 
-- **CLN2 Batten Disease and Cerliponase Alfa (Brineura®):** The first approved ERT, Brineura, slows neurological decline in children with CLN2 when given early. Ongoing studies show that prompt diagnosis and treatment greatly increase benefits. ([NINDS overview](https://www.ninds.nih.gov/about-ninds/what-we-do/impact/ninds-contributions-approved-therapies/cerliponase-alfa-brineurar-ceroid-lipofuscinosis-2-cln2-disease))
+**Gene replacement** is the leading experimental strategy. These therapies commonly use adeno-associated virus 9 (AAV9), a modified virus that can deliver a healthy gene into nervous-system cells. In a CLN7 mouse model, one intrathecal dose of AAV9 carrying *MFSD8* improved behavior, reduced disease-related abnormalities, and doubled median survival when given early at a high dose. [AAV9/MFSD8 gene therapy for CLN7](https://pubmed.ncbi.nlm.nih.gov/35025759/) In naturally occurring CLN5 sheep, brain-directed AAV9-*CLN5* gene therapy delayed disease progression, slowed brain shrinkage, and extended survival; however, it did not preserve eyesight, showing why treatment of both brain and retina may be necessary. [CLN5 gene therapy in sheep](https://pubmed.ncbi.nlm.nih.gov/37614821/)
 
-- **CLN1 Disease ERT Advances:** Cross-species studies using recombinant enzyme (rhPPT1) have demonstrated that giving ERT directly delivers benefit across multiple animal models—a vital translation step toward human trials ([Nelvagal et al., 2022, J Clin Invest](https://pmc.ncbi.nlm.nih.gov/articles/PMC9566914/)). The research underscores the urgent need for blood-brain barrier–penetrating therapies.
+**Enzyme replacement** is most feasible when the missing protein is a soluble lysosomal enzyme that can be taken up by nearby cells. For CLN1 disease, monthly delivery of recombinant PPT1 enzyme into the brain improved motor function, reduced pathology, and decreased neuron loss in mice; testing in affected sheep was designed to address the challenge of scaling treatment to a larger brain. [PPT1 enzyme replacement for CLN1](https://pubmed.ncbi.nlm.nih.gov/36040802/) CLN2 provides the important clinical proof that restoring a lysosomal enzyme can materially slow disease progression, although repeated surgical access to cerebrospinal fluid is required and treatment is not curative. [NCL overview](https://www.ncbi.nlm.nih.gov/sites/books/NBK1428/)
 
-- **Trends & Strengths:** ERT is proven life-changing for some Batten subtypes (especially CLN2), with evidence now emerging for others.
-- **Limitations:** High treatment cost, need for frequent (often intracerebroventricular) injections, and variable efficiency in all brain regions remain issues. 
+**Gene correction and RNA-directed approaches** remain earlier-stage but could be especially valuable for particular mutations. In patient-derived CLN3 retinal organoids, correction of a disease-causing *CLN3* variant restored normal *CLN3* RNA and protein expression and prevented several cellular abnormalities. [CLN3 gene correction in retinal organoids](https://pubmed.ncbi.nlm.nih.gov/33497524/) This is laboratory evidence rather than a human treatment, but it supports the principle that mutation-specific correction could prevent pathology if delivered safely and early enough.
 
-### 2. Gene Therapy: Cutting-Edge Solutions for Multiple Batten Types
+**Small-molecule and cell-pathway approaches** aim to reduce downstream damage rather than replace the defective gene directly. Recent CLN3 work found that diseased microglia—brain immune cells—have impaired lysosomal lipid handling and myelin turnover; autophagy-inducing and cholesterol-lowering drugs corrected several of these cellular abnormalities in experimental systems. [CLN3 microglia and lipid metabolism](https://pubmed.ncbi.nlm.nih.gov/39438652/) Such approaches may ultimately be useful in combination with gene therapy, particularly for treating inflammation and dysfunction that persist after the primary genetic defect is addressed.
 
-Gene therapy dominates the current landscape, with several transformative efforts in recent years:
+## Clinical Trials and Experimental Approaches
 
-- **Tern Therapeutics’ Programs (CLN2):** New gene therapies (TTX-381, TTX-181) are being tested in humans and have safely transitioned from animal models, suggesting real promise for durable neurological rescue ([Tern Therapeutics Update, 2025](https://bdsrafoundation.org/clinical-update-tern-therapeutics-gives-cln2-batten-disease-update/)).
+The most mature gene-replacement study in this period is the Phase 1/2 CLN3 trial of intrathecal CLN-301, an AAV9-*CLN3* treatment sponsored by Alcyone Therapeutics. As of August 8, 2026, the study was active but not recruiting; it is an open-label, dose-escalation trial evaluating safety and changes in the Unified Batten Disease Rating Scale over 36 months, and the registry listed no posted results. [CLN3 gene-therapy trial](https://clinicaltrials.gov/study/NCT03770572) A separate Phase 1/2 CLN5 study, NGN-101, completed dosing of six children using combined intracerebroventricular and intravitreal AAV9-*CLN5* delivery. Neurogene stated that it did not expect to advance the program at that time because it could not align with the FDA on a streamlined registration pathway, while continuing follow-up and evaluating alternatives. [Neurogene CLN5 program update](https://ir.neurogene.com/static-files/f3e3a84e-fa6b-4292-8da0-66654acecd02)
 
-- **NGN-101 for CLN5 (Neurogene):** Phase 1/2 trials show gene therapy is not only safe but also stabilizes disease progression, bringing hope for CLN5 patients ([CGTLive, 2024](https://www.cgtlive.com/view/batten-disease-gene-therapy-continues-progress-despite-setbacks)).
+Newer efforts include a Phase 1/2b CLN6 trial sponsored by the Charlotte and Gwenyth Gray Foundation, planned to test a single intrathecal dose of self-complementary AAV9-*CLN6* in 12 participants, with two years of formal assessment and three additional years of follow-up. [CLN6 gene-therapy trial](https://clinicaltrials.gov/study/NCT07582484) For CLN2-related vision loss, TTX-381 is being tested in a first-in-human Phase 1/2 ocular AAV gene-therapy study. [TTX-381 CLN2 ocular trial](https://clinicaltrials.gov/study/NCT05791864) Disease-modifying small-molecule studies also continue: the oral drug PLX-200 was listed for a planned Phase 3 placebo-controlled CLN3 trial beginning November 1, 2026, while an open-label CLN3 miglustat study was listed as completed without publicly posted trial results. [PLX-200 CLN3 trial](https://clinicaltrials.gov/study/NCT04637282) [Miglustat CLN3 trial](https://clinicaltrials.gov/study/NCT05174039)
 
-- **Personalized “N-of-1” Therapies:** Ultra-rare Batten Disease variants, previously untreatable, are now targeted by tailored genetic treatments—custom-made, under compassionate NIH and FDA frameworks ([UNC Health, 2024](https://news.unchealthcare.org/2024/09/unc-fast-tracks-personalized-treatment-for-twins-with-ultra-rare-genetic-disorder/)).
+## Methodologies and Scientific Approaches
 
-- **Innovative Tools (CHOP, 2025):** The Children’s Hospital of Philadelphia has engineered viral “capsids” that allow safer, longer-lasting delivery of gene therapy into the brain—possibly overcoming a major hurdle in the field ([CHOP News, 2025](https://www.chop.edu/news/childrens-hospital-philadelphia-researchers-develop-promising-tools-enhance-gene-therapy)).
+Researchers combine genetically accurate mouse models with larger animal models that better approximate the size and anatomy of the human nervous system. CLN5 sheep have been particularly important for evaluating dose, timing, brain distribution, long-term safety, and the need for separate eye-directed treatment. [CLN5 gene therapy in sheep](https://pubmed.ncbi.nlm.nih.gov/37614821/) New CLN3 miniswine models reproduce retinal degeneration, brain pathology, and motor abnormalities, creating another platform for testing delivery methods and treatment effects before human trials. [CLN3 miniswine model](https://pubmed.ncbi.nlm.nih.gov/37305926/)
 
-- **First-in-Human Trials, CLN3 (AAV9/CLN-301):** Ongoing clinical trials for CLN3 subtype use high-precision vectors to restore missing genes, demonstrating initial safety and early efficacy ([Beyond Batten Disease Foundation](https://beyondbatten.org/research/state-of-science/)).
+Human induced pluripotent stem cells, retinal and brain organoids, zebrafish, and patient cerebrospinal-fluid samples are increasingly used to identify early disease changes and measure whether a treatment is working. In CLN3 models, glycerophosphodiesters and bis(monoacylglycero)phosphates emerged as possible early biomarkers, while cerebrospinal-fluid proteomics has identified candidate markers that may help shorten and strengthen future clinical trials. [Early CLN3 biomarkers](https://pubmed.ncbi.nlm.nih.gov/38195117/) [CLN3 cerebrospinal-fluid biomarkers](https://pubmed.ncbi.nlm.nih.gov/37338096/)
 
-- **Strengths:** Gene therapy offers the promise of long-term (maybe permanent) correction with a single treatment and can be tailored by disease gene.
-- **Limitations:** Technical complexity, cost, challenges with safe and widespread delivery to the brain, and regulatory hurdles, especially for ultra-rare subtypes.
+## Leading Institutions and Funding
 
-### 3. Small Molecules & Next-generation Technologies
+Important academic and clinical contributors include the University of Texas Southwestern Medical Center and Northwestern University for CLN7 gene therapy; Lincoln University and the University of Otago in New Zealand for CLN5 sheep studies; Nationwide Children’s Hospital and Alcyone Therapeutics for CLN3 clinical development; the University of California, San Diego and the Charlotte and Gwenyth Gray Foundation for CLN6 translation; and major specialty centers conducting natural-history and biomarker research. [AAV9/MFSD8 gene therapy for CLN7](https://pubmed.ncbi.nlm.nih.gov/35025759/) [CLN5 gene therapy in sheep](https://pubmed.ncbi.nlm.nih.gov/37614821/) [CLN3 gene-therapy trial](https://clinicaltrials.gov/study/NCT03770572) [CLN6 gene-therapy trial](https://clinicaltrials.gov/study/NCT07582484) Funding is a mix of government-supported rare-disease research, biotechnology investment, and unusually important patient-led philanthropy: the U.S. National Institute of Neurological Disorders and Stroke supports Batten disease research and clinical-trial capacity, while the Batten Disease Global Research Initiative, founded in 2024, coordinates international patient organizations to co-fund therapeutic, diagnostic, and care research. [NINDS Batten disease information](https://www.ninds.nih.gov/health-information/disorders/neuronal-ceroid-lipofuscinosis-batten-disease) [Batten Disease Global Research Initiative](https://bdsrafoundation.org/global-research-initiative/)
 
-- **Nanocarriers and Delivery Science:** Research into nanoparticles and “nanocarriers” is enabling drugs and genetic material to cross the blood-brain barrier—long a fundamental barrier to Batten Disease treatment ([ScienceDirect, 2024](https://www.sciencedirect.com/science/article/pii/S0378517324013280)).
+## Strengths, Limitations, and Challenges
 
-- **Emerging Modalities:** Scientists are also experimenting with microglial cell transplantation—using the brain’s own immune cells as genetically engineered “delivery vehicles” for missing enzymes ([Zhang et al., 2025, CNS Neurosci Ther](https://pmc.ncbi.nlm.nih.gov/articles/PMC11808193/)).
+The central strength of Batten disease research is that most forms are caused by defects in a single gene, creating a clear target for gene replacement or mutation-specific correction. Animal results in CLN5 and CLN7 show that a single intervention can alter survival and neurological decline, especially when delivered before severe degeneration. [CLN5 gene therapy in sheep](https://pubmed.ncbi.nlm.nih.gov/37614821/) [AAV9/MFSD8 gene therapy for CLN7](https://pubmed.ncbi.nlm.nih.gov/35025759/) The established benefit of cerliponase alfa in CLN2 also demonstrates that directly addressing lysosomal dysfunction can change the disease course. [FDA approval record for Brineura](https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=391913)
 
-- **Strengths:** Small molecules offer oral dosing and, if made to target underlying molecular defects, could provide accessible and rapid treatment.
-- **Limitations:** Most candidates remain in animal or cell models; none have yet matched the efficacy of enzyme or gene therapy in humans.
+The major limitations are biological and practical. Treatment must reach much of the brain, spinal cord, and often the retina; AAV doses must be high enough for broad delivery but safe enough to avoid immune toxicity. A one-time gene therapy cannot reliably replace neurons already lost, and preclinical success often depends on treatment before or near symptom onset. [PPT1 enzyme replacement for CLN1](https://pubmed.ncbi.nlm.nih.gov/36040802/) [CLN5 gene therapy in sheep](https://pubmed.ncbi.nlm.nih.gov/37614821/) Small patient populations make randomized trials, natural-history comparisons, biomarker validation, manufacturing, regulatory agreement, and equitable access difficult; the pause in NGN-101 development illustrates that promising biology alone may not be sufficient for a viable approval pathway. [Neurogene CLN5 program update](https://ir.neurogene.com/static-files/f3e3a84e-fa6b-4292-8da0-66654acecd02)
 
----
+## Outlook and Future Directions
 
-## Leading Institutions, Funding, and Collaborative Trends
+A cure for Batten disease is not imminent, but the outlook is more credible than it was at the start of the decade because multiple subtypes now have gene-replacement programs, clinically useful enzyme replacement exists for CLN2, and model systems are improving treatment timing and outcome measurement. The milestones most worth watching are durable safety and functional data from CLN3 and CLN6 AAV studies, resolution of a development path for the paused CLN5 program or a successor, evidence that retinal gene therapy preserves vision, and validation of biomarkers that can identify disease before irreversible neuron loss. [CLN3 gene-therapy trial](https://clinicaltrials.gov/study/NCT03770572) [CLN6 gene-therapy trial](https://clinicaltrials.gov/study/NCT07582484) [Early CLN3 biomarkers](https://pubmed.ncbi.nlm.nih.gov/38195117/)
 
-Research leadership is distributed globally:
-- **Institutional Leaders:** Washington University in St. Louis, Children’s Hospital of Philadelphia, University of North Carolina, University of Otago (NZ), Fudan University (China), and biotech companies such as Amicus, Tern, and Neurogene.
-- **Funding Sources:** NIH, European Union research funds, rare disease and family-led foundations (e.g., [BDSRA Foundation](https://bdsrafoundation.org/)), and private sector investment.
-- **Patient Advocacy:** Families and patient groups have a strong voice, accelerating trials, fundraising, and compassionate-use/“N-of-1” study design.
+## References
 
----
-
-## Methodologies in Batten Disease Research
-
-Recent and ongoing efforts rely on:
-- **Animal Models:** Mouse and sheep models (e.g., for CLN1 and CLN2) provide translational accuracy.
-- **Gene Editing:** Use of advanced viral vectors (AAV, AAV9), CRISPR/Cas9 editing, and stem cell techniques.
-- **Biomarker Discovery:** Early detection and robust outcome metrics, essential for rare disease trials.
-- **Personalized Medicine:** Individualized (N-of-1) treatment, especially in ultra-rare gene forms.
-
----
-
-## Challenges & Limitations
-
-Despite rapid progress, key hurdles persist:
-- **Delivery:** Consistent, brain-wide delivery of therapies is not fully solved, especially in older children and adults.
-- **Disease Heterogeneity:** Over a dozen NCL subtypes, each with unique genetic and clinical features, make a “one-size-fits-all” solution impossible.
-- **Regulatory and Funding Barriers:** Especially acute for ultra-rare forms and bespoke therapies.
-- **Access & Equity:** Expense and geographical limitations restrict treatment access even when therapies are technically available.
-- **Long-Term Outcomes:** The field awaits confirmation that early improvements translate into durable, lifelong cures.
-
----
-
-## Emerging & Early-Stage Research Directions
-
-- **Microglial Cell Therapies:** New work suggests replacing diseased brain immune cells could help slow or halt neurodegeneration ([Zhang et al., 2025, CNS Neurosci Ther](https://pmc.ncbi.nlm.nih.gov/articles/PMC11808193/)).
-- **Advanced Biomarkers:** AI-driven image analysis and “omics” screens are under development for earlier and more precise outcome prediction.
-- **Combination Therapies:** Multi-modal approaches (e.g., combining gene therapy and ERT) are in conceptual and preclinical pipeline stages.
-- **Next-gen Gene Therapy Vectors:** Researchers are refining delivery systems to target hard-to-reach brain areas and minimize immune responses ([CHOP, 2025](https://www.chop.edu/news/childrens-hospital-philadelphia-researchers-develop-promising-tools-enhance-gene-therapy)).
-
----
-
-## Conclusion and Outlook
-
-The field has shifted from incremental symptom management to bold, disease-modifying or potentially curative therapies. While gene and enzyme replacement therapies are beginning to change clinical outcomes for families with Batten Disease, the challenge ahead is to ensure these breakthroughs reach all subtypes, all patients, everywhere—and that long-term durability and safety follow first successes.
-
-Continuous innovation, global collaboration, and patient-driven advocacy now define the Batten Disease research environment. With multiple therapies in or approaching clinical testing, the path toward a cure is clearer than ever, yet demands unwavering commitment from scientists, clinicians, advocates, and funders alike.
-
----
-
-## Further Reading & Key Citations
-
-- [Cross-species efficacy of enzyme replacement therapy for CLN1 disease in mice and sheep (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9566914/)
-- [Neuronal Ceroid Lipofuscinosis—Concepts, Classification, and Avenues for Therapy (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11808193/)
-- [Cerliponase alfa (Brineura®) for CLN2 Batten Disease — NIH/NINDS Overview](https://www.ninds.nih.gov/about-ninds/what-we-do/impact/ninds-contributions-approved-therapies/cerliponase-alfa-brineurar-ceroid-lipofuscinosis-2-cln2-disease)
-- [Tern Therapeutics CLN2 Gene Therapy Update (2025)](https://bdsrafoundation.org/clinical-update-tern-therapeutics-gives-cln2-batten-disease-update/)
-- [Neurogene NGN-101 CLN5 Clinical Trial Update (2024)](https://www.cgtlive.com/view/batten-disease-gene-therapy-continues-progress-despite-setbacks)
-- [UNC “N-of-1” Personalized Therapy (2024)](https://news.unchealthcare.org/2024/09/unc-fast-tracks-personalized-treatment-for-twins-with-ultra-rare-genetic-disorder/)
-- [CHOP Gene Therapy Innovations (2025)](https://www.chop.edu/news/childrens-hospital-philadelphia-researchers-develop-promising-tools-enhance-gene-therapy)
-- [University of Otago, First Gene Therapy Clinical Trial (2022)](https://www.otago.ac.nz/news/newsroom/trial-of-world-first-gene-therapy-for-batten-disease)
-- [Beyond Batten Disease Foundation – CLN-301/AAV9 CLN3 Project](https://beyondbatten.org/research/state-of-science/)
-- [Nanocarriers for Drug Delivery in Batten Disease (2024)](https://www.sciencedirect.com/science/article/pii/S0378517324013280)
-- [BDSRA Foundation: January 2025 State-of-the-Field Updates](https://bdsrafoundation.org/batten-disease-research-updates-january-2025/)
-
-For comprehensive and regularly updated information, visit the [Batten Disease Support & Research Association (BDSRA)](https://bdsrafoundation.org/) and [Beyond Batten Disease Foundation](https://beyondbatten.org/).
-
-*This review is current as of May 2025.*
+- [Neuronal Ceroid Lipofuscinoses Overview](https://www.ncbi.nlm.nih.gov/sites/books/NBK1428/) — GeneReviews, 2025.
+- [FDA approval record for Brineura](https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=391913) — U.S. Food and Drug Administration, 2024.
+- [Experimental gene therapies for NCLs](https://pubmed.ncbi.nlm.nih.gov/32220628/) — Liu et al., 2020.
+- [AAV9/MFSD8 gene therapy for CLN7](https://pubmed.ncbi.nlm.nih.gov/35025759/) — Chen et al., 2022.
+- [CLN5 gene therapy in sheep](https://pubmed.ncbi.nlm.nih.gov/37614821/) — Mitchell et al., 2023.
+- [PPT1 enzyme replacement for CLN1](https://pubmed.ncbi.nlm.nih.gov/36040802/) — Nelvagal et al., 2022.
+- [CLN3 gene correction in retinal organoids](https://pubmed.ncbi.nlm.nih.gov/33497524/) — Matsumoto et al., 2021.
+- [CLN3 microglia and lipid metabolism](https://pubmed.ncbi.nlm.nih.gov/39438652/) — Lu et al., 2024.
+- [CLN3 gene-therapy trial](https://clinicaltrials.gov/study/NCT03770572) — ClinicalTrials.gov, 2025.
+- [Neurogene CLN5 program update](https://ir.neurogene.com/static-files/f3e3a84e-fa6b-4292-8da0-66654acecd02) — Neurogene, 2026.
+- [CLN6 gene-therapy trial](https://clinicaltrials.gov/study/NCT07582484) — ClinicalTrials.gov, 2026.
+- [TTX-381 CLN2 ocular trial](https://clinicaltrials.gov/study/NCT05791864) — ClinicalTrials.gov, 2025.
+- [PLX-200 CLN3 trial](https://clinicaltrials.gov/study/NCT04637282) — ClinicalTrials.gov, 2026.
+- [Miglustat CLN3 trial](https://clinicaltrials.gov/study/NCT05174039) — ClinicalTrials.gov, 2025.
+- [CLN3 miniswine model](https://pubmed.ncbi.nlm.nih.gov/37305926/) — Swier et al., 2023.
+- [Early CLN3 biomarkers](https://pubmed.ncbi.nlm.nih.gov/38195117/) — Heins-Marroquin et al., 2024.
+- [CLN3 cerebrospinal-fluid biomarkers](https://pubmed.ncbi.nlm.nih.gov/37338096/) — Davis et al., 2023.
+- [NINDS Batten disease information](https://www.ninds.nih.gov/health-information/disorders/neuronal-ceroid-lipofuscinosis-batten-disease) — National Institute of Neurological Disorders and Stroke, 2025.
+- [Batten Disease Global Research Initiative](https://bdsrafoundation.org/global-research-initiative/) — Batten Disease Support and Research Association Foundation, 2024.

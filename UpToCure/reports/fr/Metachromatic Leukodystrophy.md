@@ -1,85 +1,80 @@
+---
+title: Leucodystrophie métachromatique
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir la leucodystrophie métachromatique.
+input_tokens: 53493
+output_tokens: 6550
+search_calls: 6
+cost_usd: 0.2456
+---
 
 # Leucodystrophie métachromatique
 
-La leucodystrophie métachromatique (MLD) est une maladie génétique rare qui détruit la gaine de myéline protectrice du système nerveux. Ces dernières années, la recherche a fait des progrès sans précédent vers la guérison de cette maladie, avec en point d'orgue la première autorisation de thérapie génique et un pipeline expérimental actif. Cette revue couvre tous les efforts thérapeutiques récents, les percées, les tendances émergentes, les institutions de pointe et les défis sur la voie de la guérison, dans le but d'être claire pour un public de profanes et d'experts.
+## Vue d’ensemble
 
-## Contexte et défi de la maladie
+La leucodystrophie métachromatique (LDM) est une maladie héréditaire rare dans laquelle des modifications sur les deux copies du gène *ARSA* laissent l’organisme avec trop peu d’arylsulfatase A (ARSA), une enzyme nécessaire pour décomposer les lipides appelés sulfatides. Les sulfatides s’accumulent ensuite et endommagent progressivement la myéline — le matériau isolant autour des nerfs — dans le cerveau, la moelle épinière et les nerfs périphériques. La LDM peut débuter à la fin de l’enfance, dans l’enfance ou à l’âge adulte; les formes à début plus précoce progressent généralement le plus rapidement, entraînant une perte de marche, de parole, des capacités de raisonnement et, éventuellement, une mort prématurée. [U.S. MLD management guidelines]([https://pmc.ncbi.nlm.nih.gov/articles/PMC11348704/](https://pmc.ncbi.nlm.nih.gov/articles/PMC11348704/?utm_source=openai)) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11348704/?utm_source=openai))
 
-La MLD est causée par des mutations dans le **gène ARSA**, ce qui entraîne une accumulation toxique de sulfatides et un déclin neuronal et cognitif généralisé. Une thérapie curative doit restaurer la fonction ARSA dans l'ensemble du **système nerveux central (SNC)** - un défi, car la plupart des traitements ne peuvent pas traverser la barrière hémato-encéphalique ou stopper la maladie après l'apparition des symptômes.
+Les soins ont historiquement été centrés sur la prise en charge des symptômes, la réhabilitation, le soutien nutritionnel et respiratoire, et les soins neurologiques multidisciplinaires. La transplantation allogénique de cellules souches hématopoïétiques—transplantation de cellules souches hématopoïétiques provenant d’un donneur—peut aider certaines personnes atteintes d’une maladie à début tardif avant un déclin neurologique substantiel, mais elle n’est pas adaptée à une MLD tardive à progression rapide d’apparition infantile. Pour les enfants atteints de MLD tardive à début pré-symptomatique ou précoce juvénile et certains patients atteints d’une maladie juvénile précoce symptomatique, la thérapie génique autologue des cellules souches avec atidarsagene autotemcel est désormais une option modifiée de la maladie approuvée aux États-Unis et en Europe. [U.S. MLD management guidelines] [FDA approval announcement] [EMA Libmeldy overview] ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11348704/?utm_source=openai))
 
-## Principales approches curatives et avancées de la recherche
+## Portée des recherches récentes (2020–présent)
 
-### L'ère de la thérapie génique ex vivo : Libmeldy/OTL-200
+Les recherches depuis 2020 ont fait passer la LDM d’une maladie n’offrant qu’un soutien ou une gestion fondée sur la transplantation vers une restauration durable de l’enzyme par la thérapie génique. Les questions dominantes concernent la rapidité avec laquelle le traitement doit intervenir, si le traitement peut bénéficier aux enfants qui présentent déjà des symptômes, comment obtenir en toute sécurité des niveaux suffisants d’ARSA dans le système nerveux central et périphérique, et comment rendre le dépistage néonatal faisable. Le domaine dispose d’une thérapie approuvée highly effective pour une population pédiatrique précoce limitée, mais elle ne possède pas encore de remède éprouvé qui inverse les lésions neurologiques établies ou traite de manière fiable chaque groupe d’âge et chaque étape de la maladie. [Long-term arsa-cel study] [U.S. MLD management guidelines] ([nejm.org](https://www.nejm.org/doi/abs/10.1056/NEJMoa2405727?utm_source=openai))
 
-Le premier véritable traitement curatif de la MLD, **Libmeldy (OTL-200)**, utilise la thérapie génique lentivirale ex vivo. Les cellules souches sanguines du patient sont prélevées, modifiées génétiquement à l'extérieur du corps pour porter le gène ARSA, puis réinjectées après conditionnement. Les cellules se greffent et délivrent l'ARSA dans tout le corps et le SNC.
+## Grandes avancées et thérapies émergentes
 
-- **Résultats et approbation:** Dans les essais cliniques pivots, le Libmeldy a montré une préservation spectaculaire des fonctions motrices et cognitives, en particulier lorsqu'il est administré tôt ([Fumagalli et al., Science 2016](https://pubmed.ncbi.nlm.nih.gov/27365350/)). Il a été approuvé par l'UE en 2020 ([Évaluation de l'EMA](https://www.ema.europa.eu/en/documents/product-information/libmeldy-epar-product-information_en.pdf)), et des études à long terme sont en cours ([Ceravolo et al., 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10770198/)).
-- **Limites:** Efficacité maximale chez les enfants présymptomatiques ou présentant des symptômes précoces ; nécessité d'une infrastructure, d'un coût et d'un diagnostic précoce importants ([Bradbury &amp; Ream 2021](https://pubmed.ncbi.nlm.nih.gov/33892849/)).
+La avancée centrale est **atidarsagene autotemcel** (arsa-cel; commercialisé sous le nom Lenmeldy aux États-Unis et Libmeldy en Europe). Il s’agit d’une thérapie génique ex vivo utilisant des vecteurs lentiviraux: les cliniciens préparent les propres cellules souches du patient, ajoutent un gène *ARSA* fonctionnel en laboratoire, puis renvoient les cellules corrigées après un conditionnement par chimiothérapie. Les cellules corrigées produisent ARSA et donnent naissance à des cellules immunitaires qui peuvent pénétrer dans le système nerveux et fournir l’enzyme aux cellules voisines. Dans la comparaison déterminante à long terme avec des cohortes naturelles non traitées, 39 patients traités avaient un risque moindre d’atteinte motrice sévère ou de décès; chez les enfants traités avant les symptômes dans la forme tardive infantile, la survie estimée sans atteinte motrice grave à l’âge de six ans était de 100%, contre 0% dans le groupe témoin non traité. [Long-term arsa-cel study] ([nejm.org](https://www.nejm.org/doi/abs/10.1056/NEJMoa2405727?utm_source=openai))
 
-### Autres approches cliniques : Transplantation de cellules et thérapie enzymatique
+Cette preuve a conduit à d’importantes jalons réglementaires. La Commission européenne a autorisé Libmeldy le 17 décembre 2020, pour les enfants éligibles atteints de MLD pré-symptomatique à début tardif ou juvénile précoce et pour la MLD juvénile précoce symptomatique avant le déclin cognitif. La FDA a approuvé Lenmeldy le 18 mars 2024, pour la MLD pré-symptomatique à début tardif, pré-symptomatique à début juvénile précoce et juvénile précoce symptomatique. [EMA Libmeldy overview] [FDA approval announcement] ([ema.europa.eu](https://www.ema.europa.eu/en/medicines/human/EPAR/libmeldy) )
 
-- **Transplantation de cellules souches hématopoïétiques (HSCT):** Parfois utilisée pour les cas présymptomatiques, mais moins efficace et plus risquée que la thérapie génique.
-- **Traitement enzymatique substitutif (TES):** Des perfusions intrathécales (rachidiennes) d'ARSA ont été testées, mais ne peuvent pas corriger complètement la maladie du SNC ([Shaimardanova et al., Front Med 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7606900/)). Aucun ERT ou thérapie à base de petites molécules n'est curatif à l'heure actuelle (2025).
+**La thérapie de remplacement enzymatique** demeure une approche complémentaire importante. L’administration intrathécale d’ARSA humaine recombinante délivrée dans le liquide céphalo-rachidien a réduit les concentrations de sulfatide et de lysosulfatide du liquide céphalo-rachidien dans les groupes à dose la plus élevée d’une étude de phase 1/2. L’étude était principalement une étude de sécurité: la fonction motrice était généralement en déclin, bien que ce déclin ait été moins prononcé chez certains enfants recevant 100 mg. Cette approche peut être particulièrement pertinente pour les enfants qui ne peuvent pas recevoir une thérapie génique des cellules souches ou qui présentent déjà une maladie symptomatique, mais son efficacité clinique reste non démontrée. [Intrathecal recombinant ARSA phase 1/2 study] ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/32792226/?utm_source=openai))
 
----
+**Édition génétique** est encore en développement mais pourrait éventuellement offrir une alternative plus précisément contrôlée à l’insertion aléatoire par lentivirus. Une étude préclinique de 2022 a utilisé CRISPR-Cas9 et un modèle de réparation d’ADN AAV6 pour insérer *ARSA* dans les cellules souches hématopoïétiques au locus *ARSA* natif. Chez des cellules de deux personnes portant des variantes différentes causant la LDM, la stratégie a restauré l’activité d’ARSA de plus de 30 fois, à des niveaux comparables à ceux de témoins adultes en bonne santé; ce n’est pas encore une thérapie clinique humaine. [Mutation-agnostic CRISPR stem-cell therapy] ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/34882002/))
 
-## Le pipeline expérimental : Directions nouvelles et émergentes
+Les chercheurs poursuivent également des approches **delivery directes au cerveau et à l’ensemble du corps** utilisant des vecteurs adénovirus associés (AAV). Une étude sur primates non humains de 2021 a soutenu la logique de sécurité pour une délivrance directe dans la matière blanche avec AAVrh.10 portant *ARSA*, tandis que des travaux animaux plus récents testent des approches AAV intraveineuses conçues pour améliorer la distribution dans tout le cerveau et le système nerveux périphérique. Ces stratégies pourraient, en principe, traiter les cellules du système nerveux plus directement que la thérapie par cellules souches sanguines, mais la couverture de délivrance, les réponses immunitaires, la sécurité des doses et la durabilité restent des obstacles majeurs de traduction. [AAVrh.10 primate safety study] [Cross-species AAV-ARSA replacement study] ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33380277/?utm_source=openai))
 
-### 1. Thérapie génique lentivirale de nouvelle génération (EA1, CHOP/NIH)
+## Essais cliniques et approches expérimentales
 
-- **Cette plateforme fournit des niveaux d'ARSA beaucoup plus élevés par insertion, ce qui améliore la sécurité, l'évolutivité et l'accès potentiel pour les patients symptomatiques ou âgés. Correction robuste démontrée dans les études précliniques ([Tricoli et al., bioRxiv 2024](https://www.biorxiv.org/content/10.1101/2024.03.14.584404v1)).
-- **Institutions:** Hôpital pour enfants de Philadelphie (CHOP), financé par les NIH et des fondations.
+L’étude fondamentale de phase 1/2 arsa-cel, [NCT01560182], était sponsorisée par Orchard Therapeutics et a complété le suivi à long terme. Elle évaluait des cellules souches autologues CD34-positives modifiées par un vecteur lentiviral portant *ARSA*. Le rapport du *New England Journal of Medicine* de 2025 associe deux études prospectives et des données d’accès élargi, comparant 39 patients traités à 49 participants naïfs de nature-narrative sur une durée médiane de suivi de 6,76 années; il a trouvé un risque significativement plus faible d’atteinte motrice grave ou de décès dans les populations précoces approuvées et aucune preuve d’oncogenèse d’insertion lors du suivi rapporté. [NCT01560182 trial record] [Long-term arsa-cel study] ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT01560182?utm_source=openai))
 
-### 2. Thérapie génique par AAV optimisée pour le SNC (Sanofi AAV.GMU01)
+D’autres efforts importants incluent [NCT02559830], une étude chinoise de phase 1/2 sur des cellules souches hématopoïétiques autologues modifiées par lentivirus pour la LDM et l’adrenoléucodystrophie, sponsorisée par le Shenzhen Second People’s Hospital. Un rapport pilote à long terme sur la LDM juvénile symptomatique décrit une augmentation de l’activité ARSA et des données cliniques et IRM suggérant un bénéfice possible, mais le petit design ouvert ne peut établir l’efficacité de manière concluante. L’étude EMBOLDEN de Takeda en phase 2, [NCT03771898], reste active mais sans recrutement à la date de sa mise à jour du registre du 15 avril 2026 et teste l’ARSA recombinant SHP611/TAK-611 intrathécale chez les enfants atteints de MLD. [NCT02559830 trial record] [Chinese symptomatic juvenile MLD pilot study] [NCT03771898 trial record] ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT02559830?utm_source=openai))
 
-- **Innovation:** L'injection directe d'une nouvelle capside d'AAV portant l'ARSA dans le liquide céphalo-rachidien permet une diffusion large et durable dans le SNC chez des modèles animaux, avec des procédures moins invasives et une forte correction de la maladie ([Sanofi, bioRxiv 2025](https://www.biorxiv.org/content/10.1101/2025.03.12.642609v1)).
+## Méthodologies et approches scientifiques
 
-### 3. Thérapie cellulaire encapsulée (Release Therapeutics)
+Les chercheurs en LDM combinent des cohortes d’histoire naturelle avec des études d’intervention prospectives, en ouvert, car les essais randomisés contrôlés par placebo sont difficiles dans une maladie pédiatrique ultra-rare à progression rapide. Les mesures cliniques clés incluent la survie sans atteinte motrice sévère, la Gross Motor Function Measure, la classification motrice brute spécifique à la LDM, les tests cognitifs, les scores de lésion sur l’IRM cérébrale, les études de conduction nerveuse et l’activité ARSA dans les globules sanguins ou le liquide céphalo-rachidien. Les concentrations de sulfatide et de lysosulfatide dans le liquide céphalo-rachidien sont utilisées comme indicateurs biochimiques de l’élimination du substrat. [Long-term arsa-cel study] [Intrathecal recombinant ARSA phase 1/2 study] ([nejm.org](https://www.nejm.org/doi/abs/10.1056/NEJMoa2405727?utm_source=openai))
 
-- **Approche:** Des dispositifs implantables contenant des cellules productrices d'ARSA libèrent l'enzyme directement dans le SNC. Les premières données animales montrent une efficacité et une sécurité élevées ; cette approche pourrait convenir à un plus large éventail de patients atteints de MLD ([Release Tx, 2025](https://www.release-tx.com/post/28th-annual-meeting-of-the-asgct-13-17-may-2025) ; [BioWorld MedTech](https://www.bioworld.com/articles/720207-asgct-2025-gene-and-cell-therapies-transform-metabolic-diseases)).
+Les travaux précliniques utilisent des cellules souches sanguines dérivées des patients, des modèles murins déficients en ARSA et des primates non humains pour tester la production d’enzyme, la précision de l’édition génétique, la biodistribution des vecteurs, les effets immunitaires et la correction neurologique. Les plates-formes de délivrance comprennent des vecteurs lentiviraux pour une modification permanente des cellules souches prélevées, des vecteurs AAV pour une délivrance directe aux tissus du système nerveux et une infusion intrathécale d’enzyme pour contourner la barrière hémato-encéphalique. [Mutation-agnostic CRISPR stem-cell therapy] [AAVrh.10 primate safety study] ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33380277/?utm_source=openai))
 
-### Autres tendances et nouvelles technologies
+## Principales institutions et financement
 
-- **Thérapies CRISPR et ARN:** En 2025, aucun traitement CRISPR/ARN n'a été publié pour la MLD chez l'homme, mais cette technologie est en cours de développement préclinique actif.
-- **Institutions et financement:** NIH, EU Horizon, Fondation Telethon, et centres de pointe aux États-Unis, en Europe et dans l'industrie biotechnologique soutiennent la recherche.
-- **Les points forts de la conférence:** Le domaine évolue rapidement, avec des annonces clés à l'ASGCT, à l'ESGCT et à d'autres réunions importantes ([Programme ASGCT 2025] (https://annualmeeting.asgct.org/global/am25/print-program-1-31.aspx)).
+Le réseau de développement clinique de premier plan s’est construit autour du San Raffaele Telethon Institute for Gene Therapy et de l’IRCCS San Raffaele Scientific Institute à Milan, aux côtés de Fondazione Telethon, GlaxoSmithKline, et ensuite Orchard Therapeutics. Le programme arsa-cel a été conçu et financé à l’origine par San Raffaele et Fondazione Telethon; le financement a été transféré à GlaxoSmithKline en 2014 puis à Orchard Therapeutics en 2018. [Arsa-cel phase 1/2 and expanded-access study] [Long-term arsa-cel study] ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8795071/?utm_source=openai))
 
----
+D’autres contributeurs actifs incluent Takeda/Shire, qui développe l’ARSA recombinante intrathécale; Shenzhen Second People’s Hospital, Shenzhen University, Guangzhou Women and Children’s Medical Center, et des centres chinois collaborant étudiant la thérapie génique par lentivirus sur les cellules souches hématopoïétiques; et l’Université de Tübingen, où des chercheurs ont développé la plateforme d’édition CRISPR basée sur l’ARSA. L’infrastructure publique et caritative soutient également le domaine par des programmes tels que le NIH Common Fund et la recherche soutenue par le NINDS, les programmes de santé et de recherche nationaux européens et des fondations de maladies rares, y compris Fondazione Telethon. [NCT03771898 trial record] [NCT02559830 trial record] [Mutation-agnostic CRISPR stem-cell therapy] ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT03771898?aggFilters=ages%3Achild&distance=50&lat=40.7711317&limit=100&lng=-111.8387864&locStr=Primary+Children%27s+Medical+Center%2C+Mario+Capecchi+Drive%2C+Salt+Lake+City%2C+UT&page=6&rank=541&viewType=Table&utm_source=openai))
 
-## Analyse critique : Points forts, limites et défis
+## Points forts, limites et défis
 
-- **Points forts:** La thérapie génique (en particulier le Libmeldy/OTL-200) a inauguré un changement de paradigme en offrant un traitement durable et unique. Les vecteurs génétiques de nouvelle génération, l'AAV et les dispositifs cellulaires issus de la bio-ingénierie promettent une applicabilité encore plus large et un mode d'administration plus simple.
-- **Limites:** Toutes les options sont plus efficaces avant une dégénérescence majeure du SNC ; les retards de diagnostic sont fréquents. Les procédures sont complexes et coûteuses. Il existe peu de thérapies éprouvées pour les adultes ou les patients en phase avancée.
-- **Défis:** Parvenir à une correction enzymatique sûre, durable et à l'échelle du SNC pour tous les patients, y compris ceux qui présentent déjà des symptômes, reste l'objectif central de la recherche. L'élargissement du dépistage chez les nouveau-nés et de l'accès au monde réel est essentiel pour que les traitements deviennent une réalité pour un plus grand nombre de familles.
+Les preuves les plus solides en LDM soutiennent aujourd’hui une thérapie génique autologue des cellules souches, unique, administrée avant, ou dès les premiers signes de la maladie neurologique. La séparation durable par rapport à l’histoire naturelle non traitée, le bénéfice moteur soutenu et l’absence d’observation d’une oncogenèse d’insertion lors de la cohorte rapportée en 2025 représentent des avancées substantielles pour une maladie qui était auparavant presque uniformément dévastatrice dans ses formes à début précoce. [Long-term arsa-cel study] ([nejm.org](https://www.nejm.org/doi/abs/10.1056/NEJMoa2405727?utm_source=openai))
 
----
+Cependant, le traitement n’est pas simple ni universellement applicable. Arsa-cel exige une fabrication spécialisée, la collecte de cellules souches, une chimiothérapie myéloablatrice, une expertise en transplantation et une surveillance à long terme pour des malignités hématologiques; des toxicités graves peuvent résulter du conditionnement et de l’immunosuppression, y compris la neutropénie fébrile. Plus important encore, le traitement est le plus efficace avant les dommages irréversibles, laissant des enfants avec des symptômes avancés, beaucoup de personnes avec une MLD juvénile tardive ou adulte, et des familles sans diagnostic rapide avec moins d’options éprouvées. L’accès, le coût, la mise en œuvre du dépistage néonatal et le défi de traiter à la fois les lésions du système nerveux central et périphérique restent sans solution. [FDA approval announcement] [U.S. MLD management guidelines] ([fda.gov](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-children-metachromatic-leukodystrophy) [pmc.ncbi.nlm.nih.gov](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-children-metachromatic-leukodystrophy?utm_source=openai))
 
-## Institutions, financements et collaborations de premier plan
+## Perspectives et directions futures
 
-- **Libmeldy/OTL-200:** Orchard Therapeutics, Ospedale San Raffaele (Milan), Fondation Telethon.
-- **Thérapies lentivirales / AAV de nouvelle génération:** CHOP (Philadelphie), Sanofi, partenariats universitaires/industriels mondiaux.
-- **Thérapie cellulaire encapsulée:** Release Therapeutics, Europe.
-- **Financement:** National Institutes of Health (États-Unis), EU Horizon, fondations de lutte contre les maladies, investissements de l'industrie.
-- **Défense des patients:** Des groupes tels que la [MLD Foundation] (https://mldfoundation.org) et la [Global Leukodystrophy Initiative] (https://gliaconnect.com) encouragent la sensibilisation, le dépistage chez les nouveau-nés et le soutien à la recherche.
+MLD est plus proche d'une guérison fonctionnelle pour certains enfants pré-symptomatiques qu'elle ne l'était en 2020, car un seul traitement peut modifier sensiblement l'évolution attendue de la maladie à début précoce. Elle n'est pas encore guérie sur l'ensemble du spectre de la maladie : les prochaines étapes sont un dépistage néonatal plus vaste et un diagnostic confirmatoire rapide, un suivi en conditions réelles plus long de l'arsa-cel, des conditionnements plus sûrs ou des approches de cellules souches sans conditionnement, des preuves crédibles chez les patients symptomatiques et plus âgés, et la traduction clinique des stratégies d'édition génique ou d'AAV dirigées vers le SNC capables d'atteindre l'ensemble du système nerveux. [Long-term arsa-cel study](https://www.nejm.org/doi/abs/10.1056/NEJMoa2405727) [Mutation-agnostic CRISPR stem-cell therapy](https://pubmed.ncbi.nlm.nih.gov/34882002/) [Cross-species AAV-ARSA replacement study](https://pubmed.ncbi.nlm.nih.gov/40536808/) ([nejm.org](https://www.nejm.org/doi/abs/10.1056/NEJMoa2405727?utm_source=openai))
 
----
+## Références
 
-## Citations et lectures complémentaires
-
-- [Fumagalli F et al., Science 2016] (https://pubmed.ncbi.nlm.nih.gov/27365350/)
-- [NCT01560182 OTL-200 ClinicalTrials.gov] (https://clinicaltrials.gov/study/NCT01560182)
-- [EMA Libmeldy Assessment] (https://www.ema.europa.eu/en/documents/product-information/libmeldy-epar-product-information_en.pdf)
-- [Ceravolo G et al., J Neurol 2023] (https://pmc.ncbi.nlm.nih.gov/articles/PMC10770198/)
-- [Bradbury AM &amp; Ream MA, Semin Pediatr Neurol 2021] (https://pubmed.ncbi.nlm.nih.gov/33892849/)
-- [Tricoli L et al., bioRxiv 2024] (https://www.biorxiv.org/content/10.1101/2024.03.14.584404v1)
-- [Sanofi AAV.ARSA, bioRxiv 2025](https://www.biorxiv.org/content/10.1101/2025.03.12.642609v1)
-- [Annonce de Release Therapeutics 2025](https://www.release-tx.com/post/28th-annual-meeting-of-the-asgct-13-17-may-2025)
-- [BioWorld MedTech, mai 2025] (https://www.bioworld.com/articles/720207-asgct-2025-gene-and-cell-therapies-transform-metabolic-diseases)
-- [Programme de la conférence ASGCT 2025] (https://annualmeeting.asgct.org/global/am25/print-program-1-31.aspx)
-- [Shaimardanova AA et al., Front Med 2020] (https://pmc.ncbi.nlm.nih.gov/articles/PMC7606900/)
-
----
-
-## Conclusion
-
-À partir de 2025, la recherche sur la MLD se trouve à une nouvelle frontière : la thérapie génique curative est désormais une réalité pour une fraction croissante de patients grâce à Libmeldy, tandis que les stratégies précliniques telles que les vecteurs de gènes de nouvelle génération, les AAV optimisés et les dispositifs enzymatiques implantables font progresser la science vers des remèdes plus vastes, plus sûrs et plus durables. Le défi restant consiste à démocratiser pleinement ces avancées en développant le diagnostic précoce, l'accès et l'innovation continue, afin que toutes les familles touchées puissent bénéficier de cette révolution scientifique.
+- [U.S. MLD management guidelines](https://pmc.ncbi.nlm.nih.gov/articles/PMC11348704/) — International Society for Cell & Gene Therapy, 2024.
+- [FDA approval announcement](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-children-metachromatic-leukodystrophy) — U.S. Food and Drug Administration, 2024.
+- [EMA Libmeldy overview](https://www.ema.europa.eu/en/medicines/human/EPAR/libmeldy) — European Medicines Agency, 2020.
+- [Long-term arsa-cel study](https://www.nejm.org/doi/abs/10.1056/NEJMoa2405727) — Fumagalli et al., *New England Journal of Medicine*, 2025.
+- [Arsa-cel phase 1/2 and expanded-access study](https://pmc.ncbi.nlm.nih.gov/articles/PMC8795071/) — Fumagalli et al., *The Lancet*, 2022.
+- [Intrathecal recombinant ARSA phase 1/2 study](https://pubmed.ncbi.nlm.nih.gov/32792226/) — Dali et al., *Molecular Genetics and Metabolism*, 2020.
+- [Mutation-agnostic CRISPR stem-cell therapy](https://pubmed.ncbi.nlm.nih.gov/34882002/) — Antony et al., *The CRISPR Journal*, 2022.
+- [AAVrh.10 primate safety study](https://pubmed.ncbi.nlm.nih.gov/33380277/) — Rosenberg et al., *Human Gene Therapy*, 2021.
+- [Cross-species AAV-ARSA replacement study](https://pubmed.ncbi.nlm.nih.gov/40536808/) — Roussel et al., *Journal of Clinical Investigation*, 2025.
+- [NCT01560182 trial record](https://clinicaltrials.gov/study/NCT01560182) — ClinicalTrials.gov, 2025.
+- [NCT02559830 trial record](https://clinicaltrials.gov/study/NCT02559830) — ClinicalTrials.gov, 2026.
+- [Chinese symptomatic juvenile MLD pilot study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11700595/) — Lian et al., *Protein & Cell*, 2024.
+- [NCT03771898 trial record](https://clinicaltrials.gov/study/NCT03771898) — ClinicalTrials.gov, 2026.

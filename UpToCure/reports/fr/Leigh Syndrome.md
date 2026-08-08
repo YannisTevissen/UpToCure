@@ -1,118 +1,85 @@
+---
+title: Syndrome de Leigh
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir le syndrome de Leigh.
+input_tokens: 86371
+output_tokens: 6023
+search_calls: 11
+cost_usd: 0.355
+---
 
 # Syndrome de Leigh
 
-Le syndrome de Leigh (LS) est une maladie neurodégénérative rare, grave et précoce, qui touche principalement les enfants en raison de défauts dans la production d'énergie mitochondriale. Bien qu'un remède définitif reste hors de portée, les recherches menées entre 2023 et 2025 révèlent des développements remarquables, dont certains laissent entrevoir de nouveaux espoirs pour les personnes touchées par le LS.
+## Vue d'ensemble
 
----
+Leigh syndrome est un trouble grave et progressif de la production d'énergie mitochondriale — le processus que les cellules utilisent pour produire une énergie utilisable. Il commence habituellement dans la petite enfance ou au début de l'enfance et peut provoquer un retard de développement ou une perte de compétences, une hypotonie, des problèmes de mouvement, des convulsions, des troubles de l'alimentation, des anomalies respiratoires et des lésions caractéristiques des structures profondes du cerveau. Il est génétiquement diversifié : des mutations pathogènes dans l'ADN mitochondrial ou dans plus de 120 gènes nucléaires peuvent produire le spectre du syndrome de Leigh. [GeneReviews overview](https://www.ncbi.nlm.nih.gov/books/NBK320989/)
 
-## Portée des efforts de recherche récents
+Le pronostic varie sensiblement selon la cause génétique et l'âge d'apparition, mais il est souvent mauvais: des détériorations épisodiques et un déclin neurologique progressif sont fréquents, et jusqu'à la moitié des personnes atteintes du spectre de la maladie de Leigh codée par des gènes nucléaires meurent avant l'âge de trois ans. Les soins actuels sont essentiellement pluridisciplinaires et de soutien—la gestion des convulsions, de la dystonie, de la nutrition, de la respiration, des maladies cardiaques et des crises métaboliques—tandis qu'une minorité des formes génétiquement définies disposent de traitements ciblés, tels que la biotine et la thiamine pour les maladies liées à SLC19A3, la coenzyme Q10 pour une déficience primaire en coenzyme Q10, ou un régime cétogène pour certaines déficiences en pyruvate déshydrogénase. [GeneReviews overview](https://www.ncbi.nlm.nih.gov/books/NBK320989/)
 
-### Révision complète (2025)
-- **[Syndrome de Leigh : A Comprehensive Review of the Disease and Present and Future Treatments](https://pmc.ncbi.nlm.nih.gov/articles/PMC11940177/)**  
-  *Magro G, Laterza V, Tosto F. Biomedicines. 2025;13(3):733. doi:10.3390/biomedicines13030733.*  
-  Cette revue fait la synthèse des connaissances génétiques, cliniques et thérapeutiques, en mettant l'accent sur les points suivants :
-  - L'énorme diversité génétique et clinique du LS complique l'adoption d'une approche unique.
-  - Thérapies de première ligne en phases préclinique et clinique précoce : thérapie génique (en particulier les vecteurs AAV), édition de gènes CRISPR, petites molécules (précurseurs du NAD+, inhibiteurs de mTOR) et transplantation mitochondriale directe.
-  - Ces approches sont à l'avant-garde, mais elles se heurtent à des obstacles importants, notamment lorsqu'il s'agit de passer des modèles aux patients.
+## Portée des recherches récentes (2020–présent)
 
----
+L'activité de recherche a augmenté, mais le domaine en est encore à ses débuts sur le chemin vers une cure, car «syndrome de Leigh» représente de nombreuses maladies biologiquement distinctes plutôt qu'un seul défaut. Les questions dominantes sont de savoir comment remplacer en toute sécurité un gène nucléaire défectif dans le cerveau et dans le corps, comment corriger ou compenser le dysfonctionnement mitochondrial causé par des variants d'ADN mitochondrial, et si des approches indépendantes du gène — améliorant le métabolisme cellulaire, réduisant l'inflammation ou modifiant les réponses au stress — peuvent ralentir la progression à travers plusieurs causes. La preuve de guérison la plus solide se situe encore dans les modèles animaux, alors que les études chez l'humain testent principalement des médicaments modifiant l'évolution de la maladie ou stabilisant les symptômes. [NDUFS4 gene replacement in mice](https://academic.oup.com/brain/article/143/6/1686/5837612) [Leigh syndrome natural-history study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9534328/)
 
-## Principales avancées et approches actuelles
+## Grandes avancées et thérapies émergentes
 
-### 1. Thérapie génique et édition du génome
+Le remède potentiel le plus direct est **gene replacement** pour les formes causées par des défauts de l'ADN nucléaire. En 2020, des chercheurs ont utilisé un virus adéno-associé (AAV), un virus de délivrance modifié, pour restaurer l'expression de *Ndufs4* chez des souris adultes dépourvues de ce gène du complexe I. Les souris traitées ont présenté un retard du déclin neurologique et une extension marquée de leur survie ; la moitié des animaux traités a survécu jusqu'à 250 jours, bien au-delà des animaux non traités. [NDUFS4 gene replacement in mice](https://academic.oup.com/brain/article/143/6/1686/5837612) Une étude ultérieure a montré que deux doses systémiques d'AAV9 auto-complémentaire portant *NDUFS4* humain ont empêché le phénotype de maladie de Leigh sévère ressemblant chez des souris *Ndufs4*-knockout. [Dual-dose AAV9-NDUFS4 study](https://academic.oup.com/brain/article/145/10/3405/6639840) Ces études constituent une preuve de principe importante, mais elles ne sont pas encore des essais cliniques chez l'homme et ne s'appliquent directement qu'à la forme relativement rare liée à *NDUFS4*.
 
-- **Thérapie génique virale (AAV):**  
-  La recherche en est aujourd'hui à des stades précliniques avancés et à des stades cliniques précoces pour les thérapies géniques basées sur l'AAV9, en particulier pour des sous-types distincts tels que le LS déficient en SURF1. En délivrant des copies de gènes sains directement dans le tissu neural, les résultats précliniques indiquent une amélioration des résultats neurologiques dans les modèles animaux.
-  - **Chercheurs clés:** Dr Steven Gray (USA), Dr Michal Minczuk (UK ; édition mitochondriale, ZFN).
+Une autre stratégie émergente vise à modifier la biologie délétère en aval plutôt qu'à corriger la mutation causale. Des travaux chez la souris *Ndufs4*-knockout ont identifié la neuroinflammation comme un moteur de la maladie: en réduisant les leucocytes associés à la maladie, ou en inhibant l'enzyme de signalisation des cellules immunitaires PI3K-gamma, cela a empêché ou réduit considérablement les lésions cérébrales, les convulsions, le dysfonctionnement respiratoire, les anomalies métaboliques et la mort précoce dans ce modèle. [Leukocyte-targeting study](https://pmc.ncbi.nlm.nih.gov/articles/PMC8983133/) Cela a modifié la vision du champ du syndrome de Leigh, passant d'un trouble purement dû à une déficience énergétique à celui où les réponses immunitaires peuvent aussi amplifier les lésions cérébrales.
 
-- **Édition de gènes (CRISPR, ZFN):**  
-  L'édition précise du génome pour réparer les mutations pathogènes progresse, avec une preuve de concept solide dans les modèles cellulaires et animaux. L'apport d'outils d'édition aux mitochondries dans les cellules humaines reste un défi en raison des barrières membranaires mitochondriales.
-  - Pour une vue d'ensemble des progrès de la collaboration, voir :  
-    **[Le travail d'équipe permet de réaliser le rêve : collaborations fonctionnelles entre les familles, les scientifiques et les prestataires de soins de santé pour faire progresser le traitement du syndrome de Leigh] (https://ojrd.biomedcentral.com/articles/10.1186/s13023-023-02871-7)**  
-    *(Strubbe-Rivera JO et al., Orphanet J Rare Dis, 2023)*
+Les données les plus avancées récentes sur les médicaments proviennent du Japon pour **SPP-004**, une combinaison d'acide 5-aminolévulinique chlorhydrate et de citrate ferreux sodique destinée à soutenir le métabolisme mitochondrial lié à l'hème. Dans une étude de phase III à retrait randomisé, 54 personnes ont d'abord reçu un traitement en ouverture; 28 répondeurs initiaux ont ensuite intégré une comparaison en aveugle de 48 semaines. Dans le groupe randomisé évaluable, l'arrêt pour inefficacité était plus faible avec SPP-004 qu'avec le placebo — 15,4 % contre 50,0 % — et les réactions indésirables rapportées étaient légères. [SPP-004 Phase III trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC13379092/) Ceci est une preuve prometteuse d'un bénéfice clinique maintenu chez les répondeurs initiaux sélectionnés, mais cela n'établit pas la réversion de la maladie génétique sous-jacente ni une guérison.
 
-**Tendances émergentes:**  
-- L'expansion des registres de patients accélère la conception des essais thérapeutiques.
-- Les premières thérapies géniques cliniques sont principalement axées sur les mutations de l'ADN nucléaire (par exemple, SURF1) ; les approches concernant les mutations de l'ADN mitochondrial en sont encore à un stade précoce de la recherche.
+Le traitement de précision demeure important même avant l'arrivée de la thérapie génique. Pour certains troubles du spectre de Leigh, un diagnostic génétique précoce peut identifier des thérapies qui pourraient modifier de manière substantielle l'évolution de la maladie, y compris les affections sensibles aux vitamines et la carence primaire en coenzyme Q10. [GeneReviews overview](https://www.ncbi.nlm.nih.gov/books/NBK320989/) Pour les maladies mitochondriales liées à l’ADN mitochondrial, des nucléases mitochondriales programmables et des plates-formes d'édition de bases sont en cours de développement pour réduire la proportion de génomes mitochondriaux mutés dans les cellules, mais ces approches restent expérimentales et n'ont pas encore donné lieu à des traitements cliniques pour le syndrome de Leigh. [Mitochondrial DNA-associated Leigh syndrome overview](https://www.ncbi.nlm.nih.gov/books/NBK1173/)
 
----
+## Essais cliniques et approches expérimentales
 
-### 2. Transplantation de mitochondries
+SPP-004 est la réussite interventionnelle récente la plus claire, spécifiquement dans le syndrome de Leigh. Son étude exploratoire précédente a recruté dix enfants âgés de moins de deux ans, a utilisé une période randomisée et contrôlée par placebo de 12 semaines suivie d'un traitement en clair, et a poursuivi le traitement pendant jusqu'à 204 semaines; l'étude était trop petite pour démontrer une différence entre les groupes statistiquement significative pendant la période en aveugle, mais a fourni la justification pour l'essai de confirmation ultérieur. [SPP-004 exploratory and extension study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12387954/)
 
-- **Rupture préclinique (2024):**  
-  **[Les thérapies basées sur le transfert de mitochondries réduisent la morbidité et la mortalité du syndrome de Leigh](https://pubmed.ncbi.nlm.nih.gov/39223312/)** ([DOI](https://doi.org/10.1038/s42255-024-01125-5))  
-  *Nakai R, Varnum S, Field RL, et al. Nat Metab. 2024 Oct;6(10):1886-1896.*
-  - **Détails de l'étude:** Les chercheurs ont infusé des mitochondries saines - par greffe de moelle osseuse, injection de mitochondries purifiées provenant de souris de type sauvage, et même livraison directe de mitochondries humaines - dans des souris LS (Ndufs4-/-).
-  - **Principales conclusions:** Chaque approche a permis d'améliorer la fonction neurologique et la survie. En particulier, les mitochondries humaines ont sauvé des modèles de maladie chez la souris, démontrant ainsi une efficacité inter-espèces.
-  - **Principales implications:** Il s'agit d'une preuve de concept essentielle que le remplacement direct des mitochondries pourrait un jour traiter le LS et les maladies apparentées chez l'homme.
-  - **Centres de référence:** Université d'Osaka, Université de Washington à St. Louis, LUCA Science, Hôpital pour enfants de Seattle.
+Plusieurs études en cours ou prévues évaluent des traitements modificateurs de la maladie plus larges plutôt que la correction génétique. [TTI-0102 Phase 2a trial](https://clinicaltrials.gov/study/NCT06990984) À l’Hôpital pour enfants de Philadelphie, une étude pilote de Phase 2 avec extension à long terme évalue le sirolimus oral quotidien chez des personnes atteintes du syndrome de Leigh confirmé génétiquement, en utilisant des mesures de sécurité, de troubles du mouvement et de gravité de la maladie mitochondriale. [Sirolimus Phase 2 trial](https://clinicaltrials.gov/study/NCT06843811)
 
----
+Le dossier clinique illustre également la difficulté de traduire des résultats encourageants chez la souris. L'essai de phase 2a prévu par Aadi Bioscience pour nab-sirolimus administré par voie intraveineuse (ABI-009) a été retiré avant l'enrôlement après le retrait de sa demande IND; l'enrôlement réel était nul. [ABI-009 Phase 2a record](https://clinicaltrials.gov/study/NCT03747328) Vatiquinone, un médicament expérimental axé sur les antioxydants anciennement appelé EPI-743, a mené à terme un essai de phase 2/3 chez 68 personnes atteintes d'épilepsie réfractaire et de maladie mitochondriale, y compris le syndrome de Leigh, mais le registre ne rapporte pas les résultats de l'étude. [Vatiquinone refractory-epilepsy trial](https://clinicaltrials.gov/study/NCT04378075)
 
-### 3. Stratégies pharmacologiques et enzymatiques
+## Méthodologies et approches scientifiques
 
-- **Petites molécules:**  
-  Des agents expérimentaux tels que les inhibiteurs de mTOR, les précurseurs de NAD+ et les inhibiteurs de PARP sont testés dans des modèles animaux/cellulaires pour stimuler la fonction mitochondriale résiduelle ou réduire le stress cellulaire ([revue ici] (https://pmc.ncbi.nlm.nih.gov/articles/PMC11940177/)).
-- **Substitution enzymatique:**  
-  Malgré l'intérêt qu'elle suscite, aucune thérapie de remplacement enzymatique n'est en cours de traduction clinique pour le LS (au début de l'année 2025). La plupart des efforts restent au stade conceptuel ou préclinique en raison d'obstacles techniques.
+Les chercheurs associent des modèles animaux génétiquement précis à des systèmes dérivés de patients humains. La souris *Ndufs4*-knockout est largement utilisée pour tester le remplacement de gènes, les interventions métaboliques et les approches anti-inflammatoires, car elle développe des lésions cérébrales et une maladie neurologique progressive ressemblant à une forme définie du syndrome de Leigh. [NDUFS4 mouse-model review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8967107/) Des cellules souches pluripotentes induites humaines—des cellules issues de patients reprogrammées en cellules souches polyvalentes—sont en train d’être converties en neurones et en organoïdes cérébraux tridimensionnels pour étudier les premiers processus de la maladie et tester des médicaments candidats dans un cadre pertinent pour le patient. [Leigh syndrome cerebral-organoid model](https://pmc.ncbi.nlm.nih.gov/articles/PMC9357378/)
 
----
+La préparation des essais cliniques dépend de données sur l'histoire naturelle plus solides et de résultats mesurables. [SPP-004 Phase III trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC13379092/) Le Registre international du syndrome de Leigh et les initiatives associées sur l'histoire naturelle sont conçus pour assembler les données cliniques et de laboratoire longitudinales nécessaires pour identifier les facteurs pronostiques et créer des essais faisables dans une population rare et génétiquement hétérogène. [International Leigh syndrome registry](https://clinicaltrials.gov/study/NCT03137355)
 
-## Institutions clés, collaboration et financement
+## Institutions de premier plan et financement
 
-- **Accélération de la recherche:**  
-  Des consortiums internationaux, des organisations de patients (comme la [Cure Mito Foundation] (https://www.curemito.org/)) et de grands laboratoires universitaires (Magna Graecia University, Boston University iCAMP Lab, Washington University, Osaka University, Minczuk and Gray Labs) mènent la charge.
-- **Sources de financement:**  
-  Soutien notable des NIH, de l'Union européenne, de consortiums spécialisés, de fondations spécialisées dans les maladies rares et d'organisations de défense directe des patients.
+Des contributeurs académiques et cliniques importants comprennent le groupe de l’Université de Padoue dirigé par Massimo Zeviani, qui a fait progresser les études de remplacement génique par AAV ciblant *NDUFS4* ; Seattle Children’s Research Institute, qui a développé les travaux axés sur l’inflammation dans le modèle *Ndufs4* ; et le Children’s Hospital of Philadelphia, qui mène l’essai du sirolimus. [Dual-dose AAV9-NDUFS4 study](https://academic.oup.com/brain/article/145/10/3405/6639840) [Leukocyte-targeting study](https://pmc.ncbi.nlm.nih.gov/articles/PMC8983133/) [Sirolimus Phase 2 trial](https://clinicaltrials.gov/study/NCT06843811)
 
----
+Le financement dirigé par les patients et le financement public sont également importants. En 2021, le Consortium international du syndrome de Leigh a accordé US$150 000 répartis sur cinq équipes, dont US$50 000 à l'Université de Padoue pour la thérapie génique dans des modèles murins du syndrome de Leigh. [LSIC 2021 grant cycle](https://leighsyndrome.org/grant-cycle-2021/) Le consortium nord-américain des maladies mitochondriales soutenu par le NIH fournit une infrastructure pour les études et la formation sur les maladies mitochondriales dans le cadre de la subvention U54NS078059, tandis qu'une bourse du NIH à Washington University a commencé en 2024 avec US$596 783 pour des recherches sur les voies de transfert mitochondrial dans une maladie apparentée au Leigh. [NAMDC funding program](https://namdc.rarediseasesnetwork.org/funding-opportunities) [NIH mitochondrial-transfer award](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01NS134932&arg_ProgOfficeCode=137)
 
-## Analyse critique : Points forts et défis non relevés
+## Points forts, limites et défis
 
-**Strengths:**
-- Preuve évidente que les interventions radicales de "modification de la maladie" (transfert de gènes, transplantation de mitochondries) peuvent traiter le LS dans des modèles animaux.
-- Le renforcement de la collaboration, le partage des données au niveau mondial et l'engagement des patients permettent d'accélérer les progrès.
-- Les modèles animaux et cellulaires sont désormais suffisamment robustes pour servir de bancs d'essai à de nouvelles thérapies.
+Un point fort majeur est que les chercheurs disposent désormais de cibles biologiques crédibles plutôt que de simples soins de soutien généraux : un remplacement médié par AAV peut sauver un modèle de maladie à gène unique, et le ciblage des cellules inflammatoires peut prévenir une pathologie étendue dans un autre cadre préclinique. [NDUFS4 gene replacement in mice](https://academic.oup.com/brain/article/143/6/1686/5837612) [Leukocyte-targeting study](https://pmc.ncbi.nlm.nih.gov/articles/PMC8983133/) Des études humaines sur SPP-004 et le sirolimus montrent également que des essais rigoureusement conçus deviennent de plus en plus faisables, soutenus par de meilleures échelles d'évaluation, des registres et des données d'histoire naturelle. [SPP-004 Phase III trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC13379092/) [Sirolimus Phase 2 trial](https://clinicaltrials.gov/study/NCT06843811)
 
-**Limitations:**
-- La plupart des avancées restent précliniques - il n'existe pas encore de remède définitif pour aucun sous-type de LS.
-- La profonde hétérogénéité des LS signifie que même les approches efficaces ne peuvent aider que certains patients.
-- L'administration sûre et efficace de thérapies au cerveau humain est un défi de taille.
-- Pour l'édition de gènes, cibler l'ADN mitochondrial (et pas seulement l'ADN nucléaire) est un défi technique.
-- Les effets secondaires à long terme, les réactions immunitaires et l'extensibilité des thérapies basées sur les mitochondries et les cellules ne sont pas résolus.
+La limitation centrale est l'hétérogénéité : une thérapie qui corrige *NDUFS4* ne peut pas corriger les nombreuses autres causes nucléaires ou mitochondriales du syndrome de Leigh. [GeneReviews overview](https://www.ncbi.nlm.nih.gov/books/NBK320989/) La thérapie génique doit également atteindre suffisamment de tissus cérébraux et périphériques, éviter la toxicité immunitaire, assurer une expression durable et être administrée suffisamment tôt pour prévenir des lésions irréversibles. Les essais de médicaments doivent faire face à de petites populations, à une progression variable, à des différences développementales et à des critères d'évaluation qui peuvent ne pas refléter des changements significatifs de manière égale chez les enfants et les adultes. [Leigh syndrome natural-history study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9534328/)
 
----
+## Perspectives et directions futures
 
-## Directions de recherche nouvelles et émergentes
+Leigh syndrome n'est pas proche d'un remède largement applicable au 8 août 2026, mais le chemin devient plus clair. Les jalons à surveiller sont : des études de sécurité humaines sur le remplacement génique pour un sous-type nucléaire défini ; une confirmation reproductible du bénéfice de SPP-004 et de son parcours réglementaire ; les résultats des programmes sirolimus et TTI-0102 ; et si des modèles cellulaires dérivés de patients peuvent identifier des thérapies spécifiques au génotype assez rapidement pour les enfants avant qu'une atteinte neurologique grave ne survienne. Le but le plus réaliste à court terme est un diagnostic précoce, suivi d'une stabilisation de la maladie ou de la prévention de la progression dans certaines formes ; des remèdes durables nécessiteront probablement des stratégies de précision distinctes pour les causes d'ADN nucléaire et d'ADN mitochondrial. [TTI-0102 Phase 2a trial](https://clinicaltrials.gov/study/NCT06990984) [Mitochondrial DNA-associated Leigh syndrome overview](https://www.ncbi.nlm.nih.gov/books/NBK1173/)  
 
-- **Transplantation mitochondriale:** Progrès en cours vers d'éventuelles études cliniques chez l'homme, suite au succès du sauvetage inter-espèces chez la souris.
-- **Les grands registres internationaux de patients soutiennent les essais potentiels "n de 1" ou personnalisés.
-- **Stratégies universelles:** La recherche explore des options indépendantes de la mutation, comme la transplantation ou le soutien métabolique et énergétique général.
+## References
 
----
-
-## Ressources pour les non-experts
-
-- **[Cure Mito Foundation](https://www.curemito.org/)** : Plaidoyer, résumés vulgarisés, liens vers la recherche.
-- **[United Mitochondrial Disease Foundation - Leigh Syndrome](https://umdf.org/leigh-syndrome/)** : Informations éducatives, mises à jour.
-- **[MDA Quest : Research Updates in Leigh Syndrome](https://mdaquest.org/simply-stated-research-updates-in-leigh-syndrome/)** : Nouvelles de la recherche orientées vers les patients.
-
----
-
-## Références et lectures complémentaires
-
-- **Comprehensive Review:** [Leigh Syndrome : A Comprehensive Review of the Disease and Present and Future Treatments](https://pmc.ncbi.nlm.nih.gov/articles/PMC11940177/) (Magro G, Laterza V, Tosto F. Biomedicines. 2025)
-- **Preclinical Mitochondrial Transplantation:** [Mitochondria transfer-based therapies reduce the morbidity and mortality of Leigh syndrome](https://pubmed.ncbi.nlm.nih.gov/39223312/) ([DOI](https://doi.org/10.1038/s42255-024-01125-5)) (Nakai R, Varnum S, Field RL, et al. Nat Metab. 2024)
-- **Gene Therapy Symposium Review:** [Teamwork makes the dream work : functional collaborations between families, scientists, and healthcare providers to drive progress in the treatment of Leigh Syndrome] (https://ojrd.biomedcentral.com/articles/10.1186/s13023-023-02871-7) (Strubbe-Rivera JO, Vergara RC, Poczatek A, et al. Orphanet J Rare Dis. 2023)
-- **Informations complémentaires sur l'accessibilité:**  
-    - [Documents académiques, Cure Mito Foundation] (https://www.curemito.org/papers/)  
-    - [UMDF : Syndrome de Leigh] (https://umdf.org/leigh-syndrome/)  
-    - [MDA Quest : Research Updates in Leigh Syndrome] (https://mdaquest.org/simply-stated-research-updates-in-leigh-syndrome/)
-
----
-
-## Conclusion
-
-En résumé, la recherche entre 2023 et 2025 a permis des avancées précliniques décisives pour le syndrome de Leigh, en particulier dans le domaine de la thérapie génique et de la transplantation mitochondriale, mais la plupart d'entre elles restent au stade de l'expérimentation animale ou des essais préliminaires. La réalisation d'un traitement clinique robuste dépendra de la capacité à surmonter les obstacles à la mise en œuvre, à adapter les interventions aux sous-types génétiques et à tirer parti des efforts de recherche collaboratifs à l'échelle mondiale. Pour les patients et leurs familles, les perspectives sont plus prometteuses que jamais, mais la persévérance et l'innovation sont encore nécessaires pour parvenir à une guérison définitive.
-
-*Toutes les citations ci-dessus sont des liens directs pour une exploration et une référence plus approfondies.*
+- [ABI-009 Phase 2a record](https://clinicaltrials.gov/study/NCT03747328) — ClinicalTrials.gov, 2026.
+- [Dual-dose AAV9-NDUFS4 study](https://academic.oup.com/brain/article/145/10/3405/6639840) — Di Meo et al., 2022.
+- [GeneReviews overview](https://www.ncbi.nlm.nih.gov/books/NBK320989/) — Rahman, Thorburn, and Ball; GeneReviews, updated 2025.
+- [International Leigh syndrome registry](https://clinicaltrials.gov/study/NCT03137355) — University of Texas Health Science Center at Houston, 2023.
+- [Leigh syndrome cerebral-organoid model](https://pmc.ncbi.nlm.nih.gov/articles/PMC9357378/) — Romero-Morales et al., 2022.
+- [Leigh syndrome natural-history study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9534328/) — Stenton et al., 2022.
+- [Leukocyte-targeting study](https://pmc.ncbi.nlm.nih.gov/articles/PMC8983133/) — Stokes et al., 2022.
+- [LSIC 2021 grant cycle](https://leighsyndrome.org/grant-cycle-2021/) — Leigh Syndrome International Consortium, 2021.
+- [Mitochondrial DNA-associated Leigh syndrome overview](https://www.ncbi.nlm.nih.gov/books/NBK1173/) — GeneReviews, updated 2025.
+- [NAMDC funding program](https://namdc.rarediseasesnetwork.org/funding-opportunities) — North American Mitochondrial Disease Consortium, 2026.
+- [NDUFS4 gene replacement in mice](https://academic.oup.com/brain/article/143/6/1686/5837612) — Silva-Pinheiro et al., 2020.
+- [NDUFS4 mouse-model review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8967107/) — Bird et al., 2022.
+- [NIH mitochondrial-transfer award](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01NS134932&arg_ProgOfficeCode=137) — U.S. Department of Health and Human Services, 2024.
+- [Sirolimus Phase 2 trial](https://clinicaltrials.gov/study/NCT06843811) — Children’s Hospital of Philadelphia, 2026.
+- [SPP-004 exploratory and extension study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12387954/) — Abe et al., 2025.
+- [SPP-004 Phase III trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC13379092/) — Abe et al., 2025.
+- [TTI-0102 Phase 2a trial](https://clinicaltrials.gov/study/NCT06990984) — Thiogenesis Therapeutics, 2026.
+- [Vatiquinone refractory-epilepsy trial](https://clinicaltrials.gov/study/NCT04378075) — PTC Therapeutics, 2023.

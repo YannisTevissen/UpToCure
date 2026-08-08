@@ -1,151 +1,92 @@
+---
+title: Maladie de Niemann-Pick
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir la maladie de Niemann-Pick.
+input_tokens: 73240
+output_tokens: 6968
+search_calls: 9
+cost_usd: 0.3201
+---
 
-# La maladie de Niemann-Pick
+# Maladie de Niemann-Pick
 
 ## Aperçu
-La maladie de Niemann-Pick (NPD) englobe un groupe de maladies génétiques rares de stockage lysosomal divisées principalement en types A, B (également appelé déficit en sphingomyélinase acide, ASMD) et type C. Ces maladies sont progressives et souvent mortelles, en particulier dans leurs formes sévères. La NPD perturbe la capacité de l'organisme à traiter certains lipides, ce qui entraîne leur accumulation et des lésions dans des organes tels que le cerveau, le foie, les poumons et la rate.
 
-La recherche d'un traitement pour la NPD a longtemps été entravée par la diversité génétique et phénotypique, la lenteur des progrès dans le développement de médicaments pour les maladies rares et les obstacles techniques à la mise en œuvre de thérapies allant au-delà de la prise en charge des symptômes. Aujourd'hui, cependant, plusieurs avancées majeures, des thérapies approuvées et de nouveaux axes de recherche permettent d'espérer une véritable modification de la maladie, voire une guérison.
+“La maladie de Niemann-Pick” est un terme parapluie pour des maladies rares lysosomales de stockage héréditaires — des conditions dans lesquelles des matériaux s’accumulent dans les compartiments de recyclage des cellules. Le déficit en sphingomyélinase acide (ASMD), historiquement appelé Niemann-Pick types A, A/B et B, résulte de variantes dans *SMPD1* et peut provoquer une maladie cérébrale infantile sévère ou des problèmes pulmonaires, hépatiques, spléniques, sanguins et lipidiques chroniques. Niemann-Pick type C (NPC) est une maladie distincte causée par des variantes dans *NPC1* ou *NPC2*, qui perturbent le transport du cholestérol à l’intérieur des cellules et peuvent conduire à une maladie du foie dès l’enfance et des problèmes progressifs de mouvement, de déglutition, de parole, de pensée et de symptômes psychiatriques plus tard dans la vie. Le pronostic est extrêmement variable: les formes infantile sévères peuvent être fatales précocement, tandis que le NPC à début dans l’enfance évolue généralement vers le début de l’âge adulte. [ASMD GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1370/) [NPC GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1296/)
 
----
+Il n’existe pas encore de remède pour l’ASMD ni pour le NPC. Les soins actuels combinent la gestion multidisciplinaire des symptômes avec des médicaments modifiant la maladie lorsque cela est disponible. Aux États-Unis, l’olipudase alfa administré par voie intraveineuse est approuvé pour les manifestations de l’ASMD qui n’impliquent pas le système nerveux central, tandis que le NPC dispose désormais de traitements neurologiques approuvés par la FDA: l’arimoclomol associé au miglustat pour les personnes âgées de deux ans et plus, et la levacetylleucine pour les personnes pesant au moins 15 kg. Ces traitements peuvent ralentir ou améliorer certains aspects de la maladie mais ne réparent pas le défaut génétique héréditaire ni ne restaurent les lésions cérébrales établies. [ASMD GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1370/) [FDA: Miplyffa approval](https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-niemann-pick-disease-type-c) [FDA: Aqneursa approval](https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treat-niemann-pick-disease-type-c)
 
-## Principales avancées récentes de la recherche et thérapies (2023-2025)
+## Portée de la recherche récente (2020–présent)
 
-### Thérapies de remplacement enzymatique et de réduction des substrats
+La recherche depuis 2020 est active dans le domaine du remplacement enzymatique pour l’ASMD; des médicaments qui améliorent la gestion des lipides, le contrôle de la qualité des protéines, ou la fonction neurologique dans le NPC; et des approches précliniques de remplacement génique destinées à corriger la cause sous-jacente. Le domaine a fait des progrès significatifs vers la modification de la maladie — surtout avec trois approbations américaines pour l’ASMD et le NPC — mais reste nettement loin d’une thérapie curative, en particulier parce que le traitement durable doit atteindre le cerveau ainsi que les organes périphériques. [ASMD GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1370/) [NPC GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1296/)
 
-**1. Olipudase α (Xenpozyme) pour ASMD (NPD A/B)**
-L'approbation et le déploiement clinique de l'**olipudase α**, une thérapie de remplacement enzymatique (ERT) pour le déficit en sphingomyélinase acide (ASMD/NPD A/B), constituent une étape importante dans le traitement de la NPD. Elle remplace l'enzyme déficiente, éliminant la sphingomyéline accumulée et améliorant le fonctionnement des organes, en particulier dans les manifestations non neurologiques [Voir : Tirelli et al., 2024] (https://doi.org/10.3390/biom14020211).
+## Grandes avancées et thérapies émergentes
 
-**2. Le miglustat** a longtemps servi de thérapie de réduction du substrat (SRT) pour les symptômes neurologiques de la NPD de type C, ralentissant mais n'arrêtant pas la maladie [Tirelli et al., 2024] (https://doi.org/10.3390/biom14020211).
+Pour l’ASMD, l’avancée majeure a été la thérapie de remplacement enzymatique (ERT) avec l’olipudase alfa, une version recombinante de l’enzyme sphingomyélinase acide manquante. Dans l’essai randomisé ASCEND phase 2/3 chez les adultes, le traitement a amélioré le transfert de gaz pulmonaire et a réduit les volumes de rate et de foie augmentés sur 52 semaines par rapport au placebo. Ceci constitue une preuve que le remplacement de l’enzyme manquante peut modifier la maladie systémique, mais l’enzyme ne traverse pas la barrière hémato-encéphalique et n’est donc pas attendue pour traiter la neurodégénérescence des formes sévères A ou A/B ASMD. [ASCEND olipudase alfa trial](https://pubmed.ncbi.nlm.nih.gov/35471153/) [ASMD GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1370/)
 
-**3. Levacetylleucine (Aqneursa) : Approbation de la FDA en 2024**  
-Un agent oral récemment approuvé pour les symptômes neurologiques de la maladie de Niemann-Pick C, la lévacétyllleucine, cible le métabolisme cellulaire et la clairance des substrats. Il offre un bénéfice clinique significatif et une nouvelle norme de prise en charge pour les patients américains [annonce de la FDA, 2024] (https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treat-niemann-pick-disease-type-c).
+Dans le NPC, les cyclodextrines restent une stratégie principale de mobilisation du cholestérol. L’hydroxypropyl-beta-cyclodextrine (HPβCD) est conçue pour aider à éliminer le cholestérol piégé à l’intérieur des cellules. Une étude de phase 1 de 2022 de Trappsol Cyclo administrée par voie intraveineuse a montré des changements compatibles avec une activité biologique dans les tissus périphériques et le système nerveux central, notamment une réduction du stockage du cholestérol dans le tissu hépatique; cependant, les règles d’arrêt liées à la surdité ont conduit deux participants à se retirer. [Intravenous Trappsol Cyclo phase 1 trial](https://pubmed.ncbi.nlm.nih.gov/36279795/)
 
-**4. Arimoclomol (Miplyffa) : Approbation du traitement de fond dans la CPN**  
-La principale avancée mondiale de ces deux dernières années est l'approbation par la FDA américaine (septembre 2024) de l'arimoclomol (nom de marque **Miplyffa**) pour les patients atteints de NPD de type C âgés de ≥2 ans.  
-L'arimoclomol agit comme un "amplificateur de protéines de choc thermique", stimulant la machinerie cellulaire pour replier et éliminer les protéines mal repliées et les lysosomes dysfonctionnels, stabilisant ainsi la progression de la maladie.  
-- [Les résultats des essais cliniques de base et à long terme de l'Arimoclomol (https://zevra.com/medical-presentations/long-term-efficacy-and-safety-evaluation-of-arimoclomol-treatment-in-patients-with-niemann-pick-type-c-data-from-48-months-open-label-trial-2/) confirment l'efficacité sur plusieurs années, avec des preuves solides dans le monde réel.
-- [FDA PMC Publication, 2024] (https://pmc.ncbi.nlm.nih.gov/articles/PMC11848562/)  
-- [Labiotech News](https://www.labiotech.eu/trends-news/niemann-pick-disease-fda-approvals/)
+Les thérapies à petites molécules ont également modifié le paysage du traitement du NPC. L’arimoclomol amplifie la réponse au stress thermique, un système de maintenance des protéines cellulaires censé améliorer la fonction lysosomale. Dans son essai de phase 2/3 à 50 participants, l’arimoclomol a ralenti la progression clinique sur 12 mois par rapport au placebo, le résultat le plus fort du sous-groupe préspécifié étant observé chez les participants recevant le miglustat en traitement de fond; la FDA a approuvé l’arimoclomol en tant que Miplyffa en association avec le miglustat le 20 septembre 2024. [Arimoclomol phase 2/3 trial](https://pubmed.ncbi.nlm.nih.gov/34418116/) [FDA: Miplyffa approval](https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-niemann-pick-disease-type-c)
 
-**5. SRT de nouvelle génération : Nizubaglustat**  
-L'essai de phase 2 **RAINBOW** du **nizubaglustat** (Azafaros) - un nouveau médicament oral de réduction du substrat - a montré des tendances encourageantes en matière de sécurité et d'efficacité dans la NPD C, et d'autres essais pivots sont attendus [Nizubaglustat Results, Azafaros 2024] (https://www.azafaros.com/news/azafaros-announces-positive-topline-phase-2-study-data-with-nizubaglustat-in-gm2-gangliosidosis-and-niemann-pick-disease-type-c/l187c14).
+La levacetylleucine, également appelée N-acétyl-L-leucine, est un traitement neurologique plutôt qu’une correction génétique. Dans un essai croisé randomisé à 60 participants, elle a amélioré une mesure d’ataxie fonctionnelle sur 12 semaines par rapport au placebo, soutenant son approval par la FDA en tant que Aqneursa le 24 septembre 2024. Ces approbations sont importantes pour la fonction quotidienne, mais aucun des deux agents n’a démontré la restauration du transport normal des lipides cellulaires ni une interruption permanente de la progression de la maladie. [N-acetyl-L-leucine trial](https://pubmed.ncbi.nlm.nih.gov/38294974/) [FDA: Aqneursa approval](https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treat-niemann-pick-disease-type-c)
 
-**6. Cyclodextrine (Trappsol® Cyclo™) : Étude de phase 3 en cours**  
-**L'essai mondial de phase 3 Trappsol® Cyclo™ de Cyclo Therapeutics** explore l'hydroxypropylbétacyclodextrine intraveineuse, un composé facilitant l'exportation du cholestérol et des lipides hors des cellules - potentiellement en ralentissant ou en arrêtant la progression de la NPD C.  
-- [Étude/résultats de TransportNPC (NCT04860960)] (https://clinicaltrials.ucsf.edu/trial/NCT04860960)  
-- Les données intermédiaires montrent une stabilisation/amélioration de 86-87% chez les participants après 24 et 48 semaines [Cyclo Therapeutics PR, 2025] (https://cyclotherapeutics.com/cyclo-therapeutics-presents-positive-preliminary-data-from-ongoing-phase-3-transportnpc-open-label-sub-study-in-patients-3-years-old/).
+Nizubaglustat est une candidate orale émergente capable de pénétrer le cerveau pour NPC. Elle est destinée à agir sur le métabolisme des glycosphingolipides par un double mécanisme, réduisant la production et favorisant la dégradation des lipides stockés sélectionnés. Dans la petite étude de phase 2 RAINBOW, six participants atteints de NPC ont contribué à des résultats montrant des réductions dépendantes de la dose des glucosylcéramides plasmatiques; ces résultats biomarqueurs sont encourageants mais ne constituent pas la preuve d’un remède ni d’une efficacité clinique définitive. [RAINBOW nizubaglustat phase 2 study](https://pubmed.ncbi.nlm.nih.gov/42308595/)
 
----
+Le remplacement génétique demeure le concept le plus directement curatif car il vise à fournir une activité fonctionnelle de *NPC1*, *NPC2*, ou *SMPD1*. Il est encore préclinique pour Niemann-Pick disease. Dans une étude chez la souris en 2025 sur la maladie NPC2, un vecteur viral AAV-BR1 conçu délivrant *NPC2* a engagé les cellules endothéliales et neuronales cérébrales, a réduit le dépôt lipidique et a amélioré les signes neurologiques. Des travaux parallèles visent à optimiser des séquences de contrôle génétiques compactes de *NPC1* pour une délivrance par adeno-associated virus (AAV) dans des modèles murins. [AAV-BR1 NPC2 gene therapy](https://pubmed.ncbi.nlm.nih.gov/39891227/) [NPC1 AAV promoter study](https://pubmed.ncbi.nlm.nih.gov/37371089/)
 
-### Thérapies de réduction des substrats génétiques et génétiques
+## Essais cliniques et approches expérimentales
 
-**Avancées en matière de thérapie génique : AAV9-hNPC1 optimisé chez la souris**  
-Dans une étude préclinique récente, l'administration systémique d'une thérapie génique à l'aide de vecteurs AAV9 portant une copie saine du gène NPC1, lorsqu'elle est administrée tôt et à des doses plus élevées, a montré une amélioration spectaculaire de la durée de vie et de la fonction neurologique chez des modèles de souris [Mylvara et al., 2024 bioRxiv] (https://www.biorxiv.org/content/10.1101/2024.06.07.597901v1.full-text).  
-Ces résultats définissent des paramètres clés, tels que le moment et la dose, pour toute future application clinique de la thérapie génique chez l'homme. Bien qu'aucun essai clinique n'ait encore été enregistré pour la thérapie génique dans les NPD (à la mi-2025), une application imminente est probable si l'innocuité préclinique est confirmée.
+L’essai ASCEND, mené par Genzyme/Sanofi et clôturé, était une étude randomisée de phase 2/3 en double aveugle chez 36 adultes atteints d’ASMD. À la semaine 52, l’olipudase alfa a augmenté la capacité de diffusion pulmonaire prévue de 22% contre 3,0% avec le placebo et a réduit le volume de la rate de 39% contre une augmentation de 0,5% avec le placebo; l’essai a ensuite soutenu l’approbation américaine de Xenpozyme en 2022. Des études pédiatriques sur l’olipudase alfa ont également rapporté des améliorations dans les mesures non neurologiques de la maladie, mais cette ERT n’aborde pas la maladie du système nerveux central. [ASCEND olipudase alfa trial](https://pubmed.ncbi.nlm.nih.gov/35471153/) [FDA 2022 novel drug approvals](https://www.fda.gov/drugs/novel-drug-approvals-fda/new-drug-therapy-approvals-2022) [Pediatric olipudase alfa study](https://pubmed.ncbi.nlm.nih.gov/33875845/)
 
-**L'édition du génome et les thérapies à base d'acides nucléiques : Directions émergentes**  
-Les thérapies de réduction du substrat génétique utilisant l'ARNsi et l'édition de gènes CRISPR/Cas9 en sont aux premiers stades expérimentaux/précliniques pour les maladies de surcharge lysosomale, y compris la NPD. Bien que ces thérapies n'aient pas encore fait l'objet d'essais cliniques pour la NPD, elles sont considérées comme très prometteuses pour les années à venir [Beraza-Millor et al., 2024] (https://doi.org/10.1007/s40259-024-00674-1).
+Pour NPC, deux programmes de phase 3 notables testent des thérapies qui visent à ralentir le déclin neurologique plutôt qu’à guérir la maladie. L’étude TransportNPC de Cyclo Therapeutics évalue le Trappsol Cyclo intraveineux en plus des soins standard contre placebo en plus des soins standard sur 96 semaines chez les enfants et les adultes atteints de NPC1. L’étude NAVIGATE d’Azafaros recrute pour un essai de phase 3 randomisé et contrôlé par placebo de nizubaglustat oral chez NPC tardif et juvénile; elle a débuté le 30 juin 2025, prévoit d’inscrire 72 participants et une date de fin estimée au 4 novembre 2027. Plus tôt, les plans d’étude pédiatrique VTS-270 ont été retirés avant l’inscription des participants en raison d’une décision commerciale, illustrant la fragilité des programmes de développement pour les maladies rares. [TransportNPC trial record](https://clinicaltrials.gov/study/NCT04860960) [NAVIGATE nizubaglustat trial record](https://clinicaltrials.gov/study/NCT07082725) [Withdrawn VTS-270 pediatric study](https://clinicaltrials.gov/study/NCT03687476)
 
----
+## Méthodologies et approches scientifiques
 
-### Thérapies cellulaires et autres thérapies expérimentales
+Les chercheurs combinent des modèles murins génétiquement modifiés, des cellules dérivées de patients et des données d’histoire naturelle clinique pour tester si un traitement corrige le stockage des lipides et modifie de manière significative le déclin neurologique. Les cellules souches pluripotentes humaines — cellules des patients adultes reprogrammées en cellules souches puis différenciées en neurones ou autres types cellulaires affectés — sont particulièrement utiles pour tester des thérapies dans des cellules humaines pertinentes pour la maladie lorsque l’accès direct au tissu cérébral est impossible. [iPSC models for NPC1](https://pubmed.ncbi.nlm.nih.gov/33445799/) [AAV-BR1 NPC2 gene therapy](https://pubmed.ncbi.nlm.nih.gov/39891227/)
 
-Alors que les thérapies basées sur les cellules souches et les chaperons restent essentiellement précliniques, des revues majeures font état d'efforts actifs pour optimiser la transplantation de cellules, les chaperons moléculaires, les inhibiteurs d'HDAC et les petites molécules réaffectées pour la NPD de type C [Li &amp; Li, 2024] (https://doi.org/10.3389/fphar.2024.1465872).
+Le développement de biomarqueurs est tout aussi important. Des essais chromatographie liquide–spectrométrie de masse mesurent les molécules liées au NPC dans le sang ou l’urine, y compris les oxystérols, les dérivés des acides biliaires et le N-palmitoyl-O-phosphocholinesérine, anciennement appelés lyso-sphingomyéline-509. Ces mesures peuvent accélérer le diagnostic et indiquer une réponse biochimique périphérique, mais elles ne démontrent pas de manière fiable si un médicament prévient la neurodégénérescence dans le cerveau; les essais associent donc biomarqueurs à des échelles cliniques de marche, de parole, de déglutition, de contrôle moteur fin et d’ataxie. [NPC biomarker discovery](https://pubmed.ncbi.nlm.nih.gov/35356760/) [Mass-spectrometry biomarkers for NPC](https://pubmed.ncbi.nlm.nih.gov/36713801/)
 
----
+## Institutions leaders et financement
 
-## Essais cliniques : Les études les plus récentes et les plus importantes
+Le domaine est animé par des réseaux cliniques internationaux impliquant des institutions telles que l’University of California San Francisco, la Mayo Clinic, le Great Ormond Street Hospital/UCL, l’hôpital universitaire de Berne et le NIH, aux côtés d’entreprises telles que Sanofi, Zevra Therapeutics, Cyclo Therapeutics et Azafaros. Leurs rôles vont de la conduite d’essais pivots et du maintien de cohortes d’histoire naturelle à la conception de vecteurs qui peuvent atteindre le système nerveux. [Arimoclomol phase 2/3 trial](https://pubmed.ncbi.nlm.nih.gov/34418116/) [ASCEND olipudase alfa trial](https://pubmed.ncbi.nlm.nih.gov/35471153/) [NAVIGATE nizubaglustat trial record](https://clinicaltrials.gov/study/NCT07082725)
 
-### 1. TransportNPC-Trappsol® Cyclo™ (Cyclo Therapeutics, NCT04860960)
-- **Type:** Phase 3, en double aveugle, randomisée, contrôlée par placebo
-- **Modalité:** Cyclodextrine intraveineuse pour NPD C
-- **Statut:** En cours, achèvement en mai 2024
-- **Résultats préliminaires:** 86-87% de stabilisation/amélioration  
-  [Trial Registry &amp; Outcome](https://clinicaltrials.ucsf.edu/trial/NCT04860960) | [Cyclo PR](https://cyclotherapeutics.com/cyclo-therapeutics-presents-positive-preliminary-data-from-ongoing-phase-3-transportnpc-open-label-sub-study-in-patients-3-years-old/)
+Le financement dirigé par les patients demeure exceptionnellement important. Le Ara Parseghian Medical Research Fund à l’Université de Notre Dame rapporte soutenir 17 projets dans son programme 2025–26 et offre des subventions de recherche allant jusqu’à 125 000 USD pour une année dans son appel 2026. Il a également attribué au International Niemann-Pick Disease Registry une subvention de 200 000 USD sur deux ans pour renforcer l’infrastructure des registres dirigés par les patients et soutenir le travail de dépistage néonatal. [Ara Parseghian Medical Research Fund grants](https://parseghianfund.nd.edu/research/grants/) [Current APMRF funding](https://parseghianfund.nd.edu/research/grants/current-apmrf-funding/) [INPDR registry grant announcement](https://inpdr.org/wp-content/uploads/2024/08/Ara-Parseghian-Grant-Press-Release.pdf)
 
-### 2. Arimoclomol/Miplyffa (Zevra Therapeutics, NCT02612129)
-- **Type:** Phase 2/3 pivotale achevée et extensions à long terme, multicentriques
-- **Modalité:** Amplificateur de la protéine du choc thermique (voie orale)
-- **Approbation de la FDA:** septembre 2024
-- **Impact:** Première thérapie modificatrice de la maladie pour le NPD C, nouvelle norme de soins
-  [Détails de l'essai](https://zevra.com/medical-presentations/long-term-efficacy-and-safety-evaluation-of-arimoclomol-treatment-in-patients-with-niemann-pick-type-c-data-from-48-months-open-label-trial-2/) | [Nouvelles de la FDA](https://pmc.ncbi.nlm.nih.gov/articles/PMC11848562/)
+## Forces, limites et défis
 
-### 3. Nizubaglustat (étude RAINBOW, Azafaros)
-- **Type:** Phase 2, randomisée, en double aveugle, contrôlée par placebo (NPD C et GM2)
-- **État d'avancement : terminé au premier trimestre 2024 ; résultats préliminaires en juillet 2024
-- **Résultats:** Bonne tolérance, efficacité précoce positive
-  [Mise à jour du parrainage] (https://www.azafaros.com/news/azafaros-announces-positive-topline-phase-2-study-data-with-nizubaglustat-in-gm2-gangliosidosis-and-niemann-pick-disease-type-c/l187c14)
+Une force centrale est que le domaine dispose désormais de méthodes validées pour modifier les manifestations de la maladie: l’ERT peut améliorer de manière substantielle la maladie pulmonaire et les atteintes des organes associées à l’ASMD, tandis que des médicaments approuvés par la FDA pour le NPC peuvent améliorer ou ralentir certaines issues neurologiques. Des diagnostics basés sur le sang, des registres de patients et des échelles neurologiques cliniquement pertinentes facilitent également les essais de maladies rares par rapport à ce qu’ils étaient au début de la décennie. [ASCEND olipudase alfa trial](https://pubmed.ncbi.nlm.nih.gov/35471153/) [NPC biomarker discovery](https://pubmed.ncbi.nlm.nih.gov/35356760/) [FDA: Miplyffa approval](https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-niemann-pick-disease-type-c)
 
-#### Notamment, **aucun essai clinique de thérapie génique, d'ERT ou de thérapie cellulaire de phase 2+ pour les NPD A/B ou ASMD n'a été trouvé au cours de cette période ; la quasi-totalité de l'activité réglementaire/de financement se concentre sur les NPD de type C**
+Les principales limites sont biologiques et pratiques. Pour les formes sévères d’ASMD et NPC, le cerveau est difficile à atteindre en toute sécurité, et les dommages peuvent être irréversibles au moment où le traitement commence. HPβCD illustre pourquoi l’efficacité et la sécurité doivent être résolues ensemble: son étude intraveineuse de phase 1 a montré une activité biologique mais aussi des retraits liés à une perte auditive. Le coût et l’accès peuvent également restreindre le bénéfice réel; par exemple, l’évaluation NICE du Royaume-Uni a conclu en 2025 que l’olipudase alfa n’était pas rentable pour une utilisation routinière par le NHS malgré des preuves d’amélioration clinique. [Intravenous Trappsol Cyclo phase 1 trial](https://pubmed.ncbi.nlm.nih.gov/36279795/) [NICE assessment of olipudase alfa](https://www.nice.org.uk/guidance/hst32/chapter/1-Recommendations)
 
----
+## Perspectives et directions futures
 
-## Méthodologies, acteurs clés et financement
+À partir du 8 août 2026, la recherche sur Niemann-Pick se rapproche d'une modification durable de la maladie plutôt que d'un remède unique. Les jalons les plus importants à court terme sont les résultats cliniques de TransportNPC et l’essai de phase 3 NAVIGATE nizubaglustat, dont l’achèvement est prévu en novembre 2027, ainsi que des preuves que les plateformes de délivrance génique peuvent corriger la maladie de manière sûre et durable aussi bien dans le système nerveux central que dans les organes périphériques. [TransportNPC trial record](https://clinicaltrials.gov/study/NCT04860960) [NAVIGATE nizubaglustat trial record](https://clinicaltrials.gov/study/NCT07082725) [AAV-BR1 NPC2 gene therapy](https://pubmed.ncbi.nlm.nih.gov/39891227/)
 
-### Méthodologies et approches
-- Essais cliniques randomisés en double aveugle (mondiaux, multinationaux)
-- Études d'extension ouvertes pour l'efficacité et la sécurité à long terme
-- Modèles précliniques avancés (souris transgéniques, culture cellulaire)
-- Surveillance basée sur les biomarqueurs et amélioration des critères de diagnostic [Mancini et al., 2024] (https://doi.org/10.1016/j.ymthe.2024.06.003)
+## Références
 
-### Principales institutions et sponsors
-- Principaux centres universitaires : UCSF, NIH, Université de Milan, entre autres
-- Acteurs de l'industrie : Zevra Therapeutics, Cyclo Therapeutics, Azafaros BV
-- Financement : NIH/NINDS, programmes financés par la CE, fondations spécifiques à la maladie (par exemple, National Niemann-Pick Disease Foundation, NNPDF)
-
-### Tendances clés
-- Premières approbations de médicaments modificateurs de la maladie pour la NPD C (arimoclomol, levacetylleucine), ce qui permet d'orienter la prise en charge vers une stabilité clinique significative.
-- Les essais multinationaux hautement collaboratifs augmentent la puissance et la validité externe des essais.
-- L'accent est mis sur la thérapie génique et les nouvelles thérapies géniques spéciales en vue d'une éventuelle "guérison" à l'avenir
-
----
-
-## Analyse critique : Points forts, limites et défis restants
-
-### Points forts
-- L'apparition de médicaments modifiant la maladie pour la NPD C est une avancée scientifique et réglementaire qui donne de l'espoir aux patients qui n'avaient auparavant que peu de recours thérapeutiques.
-- Les innovations dans le domaine de la recherche génétique et moléculaire permettent de réaliser des progrès fulgurants en matière de thérapie génique, de TRS et de découverte de biomarqueurs.
-
-### Limitations
-- La plupart des avancées transformatrices (thérapie génique, édition de gènes) resteront précliniques en 2025 ; les études sur les souris sont prometteuses, mais la transposition à l'homme se heurte encore à des difficultés : réaction du système immunitaire, délivrance des gènes, pénétration du SNC, sélection précise des patients et diagnostic précoce.
-- La quasi-totalité des médicaments et des essais se concentrent sur la NPD de type C, laissant les NPD de types A et B avec des options extrêmement limitées, se limitant en grande partie à la substitution enzymatique et à la gestion des symptômes.
-- Les processus d'approbation réglementaire pour les maladies rares ("orphelines") sont lents ; certains médicaments se heurtent à des contraintes de financement et de fabrication ou ne parviennent pas à faire la preuve de leur efficacité dans des cohortes mondiales.
-- Le recrutement pour les essais cliniques est compliqué par la nature ultra rare des maladies.
-
-### Défis restants
-- Fournir une thérapie génique et une édition du génome sûres et efficaces, en particulier à travers la barrière hémato-encéphalique et chez les nourrissons/petits enfants.
-- Étendre les thérapies utiles (ou l'édition de gènes) aux sous-types non-C et aux patients adultes.
-- Financement, conception des essais et navigation réglementaire pour les maladies ultra rares et hétérogènes.
-- Gérer la sécurité à long terme, la toxicité potentielle et l'accès équitable aux thérapies coûteuses.
-- Nécessité d'un diagnostic amélioré ou plus précoce pour permettre une intervention en temps utile.
-
----
-
-## Regarder vers l'avenir : L'avenir de la recherche sur les cures de NPD
-
-- Les prochaines années verront probablement le lancement des **premiers essais de thérapie génique chez l'homme** pour la NPD C, sur la base des avancées précliniques de l'AAV.
-- Des travaux parallèles sur l'édition du génome, les chaperons moléculaires et les thérapies combinées sont en cours et se rapprochent des essais cliniques.
-- **Des diagnostics de précision** et des panels de biomarqueurs améliorés permettront d'adapter les thérapies et d'en contrôler l'efficacité.
-- **Les collaborations mondiales** entre les fondations de patients, les entreprises pharmaceutiques, les gouvernements et les universités accélèrent les efforts de recherche, de réglementation et de financement.
-
-Même si des progrès considérables ont été réalisés, un "remède" définitif reste à l'horizon - pour la NPD de type C tout d'abord, avec l'espoir que les connaissances et les méthodes s'étendent aux types A et B, beaucoup plus rares.
-
----
-
-## Références et lectures complémentaires
-
-- [Tirelli C et al, 2024. Biomolecules - genetic basis &amp; therapies review](https://doi.org/10.3390/biom14020211) ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10886890/))
-- [Beraza-Millor M et al, 2024. Biodrugs - genetic SRT and delivery review](https://doi.org/10.1007/s40259-024-00674-1) ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11358353/))
-- [Mancini C et al, 2024. Biomarqueurs pour la thérapie génique dans les LSD. Molecular Therapy] (https://doi.org/10.1016/j.ymthe.2024.06.003)
-- [Mylvara AV et al, 2024. Étude préclinique de thérapie génique AAV9 chez des souris NPC1. bioRxiv](https://www.biorxiv.org/content/10.1101/2024.06.07.597901v1.full-text)
-- [Li Y, Li K., 2024. Therapeutic approaches for NPC. Frontiers Pharmacol](https://doi.org/10.3389/fphar.2024.1465872)
-- [Communiqué de presse de la FDA : La FDA approuve un nouveau médicament contre la NPC (Aqneursa/levacetylleucine)] (https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treat-niemann-pick-disease-type-c)
-- [Miplyffa/Arimoclomol FDA et données d'essais cliniques] (https://pmc.ncbi.nlm.nih.gov/articles/PMC11848562/)
-- [Labiotech - La FDA approuve des thérapies pour la NPD] (https://www.labiotech.eu/trends-news/niemann-pick-disease-fda-approvals/)
-- [TransportNPC (Trappsol® Cyclo™) Essai clinique de phase 3 NCT04860960] (https://clinicaltrials.ucsf.edu/trial/NCT04860960)
-- [Essai de phase 2 du Nizubaglustat RAINBOW - Azafaros] (https://www.azafaros.com/news/azafaros-announces-positive-topline-phase-2-study-data-with-nizubaglustat-in-gm2-gangliosidosis-and-niemann-pick-disease-type-c/l187c14)
-- [Présentations des essais cliniques pivots/ext. de l'Arimoclomol (Zevra)] (https://zevra.com/medical-presentations/long-term-efficacy-and-safety-evaluation-of-arimoclomol-treatment-in-patients-with-niemann-pick-type-c-data-from-48-months-open-label-trial-2/)
-- [NNPDF - National Niemann-Pick Disease Foundation] (https://nnpdf.org/research-news/)
-
----
-dernière mise à jour : 30 mai 2025
+- [ASMD GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1370/) — GeneReviews, 2023.
+- [NPC GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1296/) — GeneReviews, 2025.
+- [FDA: Miplyffa approval](https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-niemann-pick-disease-type-c) — U.S. Food and Drug Administration, 2024.
+- [FDA: Aqneursa approval](https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treat-niemann-pick-disease-type-c) — U.S. Food and Drug Administration, 2024.
+- [ASCEND olipudase alfa trial](https://pubmed.ncbi.nlm.nih.gov/35471153/) — Wasserstein et al., 2022.
+- [Pediatric olipudase alfa study](https://pubmed.ncbi.nlm.nih.gov/33875845/) — Diaz et al., 2021.
+- [FDA 2022 novel drug approvals](https://www.fda.gov/drugs/novel-drug-approvals-fda/new-drug-therapy-approvals-2022) — U.S. Food and Drug Administration, 2022.
+- [Intravenous Trappsol Cyclo phase 1 trial](https://pubmed.ncbi.nlm.nih.gov/36279795/) — Hastings et al., 2022.
+- [Arimoclomol phase 2/3 trial](https://pubmed.ncbi.nlm.nih.gov/34418116/) — Mengel et al., 2021.
+- [N-acetyl-L-leucine trial](https://pubmed.ncbi.nlm.nih.gov/38294974/) — Bremova-Ertl et al., 2024.
+- [RAINBOW nizubaglustat phase 2 study](https://pubmed.ncbi.nlm.nih.gov/42308595/) — López de Frutos et al., 2026.
+- [AAV-BR1 NPC2 gene therapy](https://pubmed.ncbi.nlm.nih.gov/39891227/) — Rasmussen et al., 2025.
+- [NPC1 AAV promoter study](https://pubmed.ncbi.nlm.nih.gov/37371089/) — Hsu et al., 2023.
+- [TransportNPC trial record](https://clinicaltrials.gov/study/NCT04860960) — ClinicalTrials.gov, 2026.
+- [NAVIGATE nizubaglustat trial record](https://clinicaltrials.gov/study/NCT07082725) — ClinicalTrials.gov, 2026.
+- [Withdrawn VTS-270 pediatric study](https://clinicaltrials.gov/study/NCT03687476) — ClinicalTrials.gov, 2020.
+- [iPSC models for NPC1](https://pubmed.ncbi.nlm.nih.gov/33445799/) — Ory et al., 2021.
+- [NPC biomarker discovery](https://pubmed.ncbi.nlm.nih.gov/35356760/) — Giese et al., 2022.
+- [Mass-spectrometry biomarkers for NPC](https://pubmed.ncbi.nlm.nih.gov/36713801/) — Maekawa and Mano, 2022.
+- [Ara Parseghian Medical Research Fund grants](https://parseghianfund.nd.edu/research/grants/) — University of Notre Dame, 2026.
+- [Current APMRF funding](https://parseghianfund.nd.edu/research/grants/current-apmrf-funding/) — University of Notre Dame, 2025.
+- [INPDR registry grant announcement](https://inpdr.org/wp-content/uploads/2024/08/Ara-Parseghian-Grant-Press-Release.pdf) — International Niemann-Pick Disease Registry, 2024.
+- [NICE assessment of olipudase alfa](https://www.nice.org.uk/guidance/hst32/chapter/1-Recommendations) — Institut national pour la santé et l'excellence des soins, 2025.

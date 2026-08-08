@@ -46,3 +46,5 @@ UpToCure/disease_requests/processed/
 # Pipeline state (cost ledger, last run) and benchmark artifacts
 UpToCure/reports/.state/
 reports_generator/benchmark_output/
+reports_generator/backfill_summary.json
+reports_generator/backfill.log

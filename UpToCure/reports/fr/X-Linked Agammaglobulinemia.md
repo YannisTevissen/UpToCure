@@ -1,65 +1,76 @@
+---
+title: Agammaglobulinémie liée à l'X
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir l'agammaglobulinémie liée
+  à l'X.
+input_tokens: 71148
+output_tokens: 8331
+search_calls: 9
+cost_usd: 0.3323
+---
 
 # Agammaglobulinémie liée à l'X
 
-L'agammaglobulinémie liée à l'X (XLA) est un déficit immunitaire héréditaire rare qui se caractérise par une incapacité à produire des lymphocytes B matures, ce qui entraîne des infections graves et répétées. Ce déficit est dû à des anomalies du gène de la *tyrosine kinase de Bruton* (BTK). Historiquement, la seule thérapie disponible pour le XLA consistait à remplacer les immunoglobulines à vie, ce qui aidait les patients à lutter contre les infections mais ne s'attaquait pas à la cause profonde de la maladie.
+## Aperçu
 
-## Efforts de recherche récents en vue d'une guérison (2020-2025)
+L’agammaglobulinémie liée à l’X (XLA), aussi appelée déficience en *BTK*, est un trouble immunitaire héréditaire causé par des variantes pathogènes dans le gène *BTK*. Sans la tyrosine kinase Bruton (BTK) fonctionnelle, le corps ne peut pas développer des cellules B matures normales — les leucocytes qui produisent des anticorps —, de sorte que les personnes atteintes présentent des immunoglobulines très faibles ou absentes et sont vulnérables à des infections récurrentes ou graves, en particulier pendant la première enfance. L’XLA affecte principalement les hommes car *BTK* se situe sur le chromosome X ; les femmes symptomatiques sont exceptionnellement rares. [GeneReviews: X-Linked Agammaglobulinemia]
 
-### Principales avancées et tendances
+Le pronostic s’est substantiellement amélioré grâce à un diagnostic précoce, au remplacement des immunoglobulines, aux antibiotiques lorsque nécessaire, et à la surveillance des complications pulmonaires, gastro-intestinales et infectieuses. Le traitement standard actuel est un remplacement d’anticorps à vie par immunoglobulines intraveineuses (IVIG) toutes les deux à quatre semaines ou des immunoglobulines sous-cutanées hebdomadaires (SCIG), qui fournissent des anticorps provenant de dons mais ne rétablissent pas les propres cellules B du patient ni leur production d’anticorps. [GeneReviews: X-Linked Agammaglobulinemia] [Immune Deficiency Foundation: Immunoglobulin replacement therapy]
 
-Une nouvelle ère s'est ouverte dans la recherche sur l'XLA, avec une forte concentration sur les approches génétiques qui visent une **guérison** plutôt qu'une prise en charge tout au long de la vie :
+## Portée des recherches récentes (2020–présent)
 
-- **Thérapie génique avec des vecteurs lentiviraux:**  
-  Dans une avancée majeure, les chercheurs ont conçu des constructions lentivirales sûres contenant des éléments optimisés du promoteur BTK et les ont transmises à des cellules souches hématopoïétiques de souris. Ces cellules souches modifiées ont produit des cellules B saines qui ont restauré la fonction immunitaire et n'ont pas provoqué d'auto-immunité ou de silencieux génique ([Seymour et al., 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC7907679/)). Cette étude fournit le modèle le plus transposable à ce jour pour une thérapie génique unique et curative de l'XLA.
+Depuis 2020 jusqu’au 8 août 2026, la recherche curative sur XLA a été limitée mais techniquement axée: presque tous les efforts principaux visent à corriger ou remplacer *BTK* dans les propres cellules souches et progénitrices hématopoïétiques du patient, puis à réintroduire ces cellules par transplantation. Les questions centrales sont de savoir si les cellules corrigées peuvent produire un *BTK* durable et correctement régulé; s’enraciner suffisamment en sécurité pour reconstruire une immunité des cellules B fonctionnelle; et ce faire avec un profil risque-bénéfice supérieur au remplacement immunoglobulinique à vie. Le domaine reste préclinique plutôt que curatif sur le plan clinique: des travaux récents montrent de forts résultats chez la souris et sur des cellules de patients, tandis que le programme translationnel leader préparait des étapes de fabrication et de pré-dossier IND plutôt que de rendre compte des résultats de traitements chez l’humain. [Hematopoietic stem cell gene editing rescues B-cell development](https://discovery.ucl.ac.uk/id/eprint/10189377/1/1-s2.0-S0091674924002409-main.pdf) [CIRM translational award summary](https://www.cirm.ca.gov/wp-content/uploads/2023/10/2023-OCT-ICOC-TRAN-Summaries-1.pdf)
 
-- **Édition de gènes et CRISPR/Cas9:**  
-  Des travaux de pointe ont démontré pour la première fois que la correction de la mutation BTK dans des cellules souches dérivées de patients à l'aide de CRISPR/Cas9 et d'AAV6 (pour la recombinaison homologue) permettait le développement de cellules B saines et la production d'immunoglobulines. Cette approche s'est avérée efficace à la fois en laboratoire et dans des modèles de souris transplantés avec des cellules humaines modifiées génétiquement ([Bahal et al., 2024] (https://pmc.ncbi.nlm.nih.gov/articles/PMC11752842/)). Il est important de noter que les tests d'innocuité ont révélé des effets hors cible minimes, ce qui laisse penser qu'une traduction clinique pourrait bientôt être possible.
+## Progrès majeurs et thérapies émergentes
 
-- **HSCT et autres thérapies:**  
-  La greffe de cellules souches hématopoïétiques (GCSH) n'est toujours pas utilisée en routine pour l'XLA en raison des risques qu'elle comporte par rapport à l'efficacité relative de la thérapie par immunoglobulines. Seuls des cas sélectionnés et compliqués (par exemple en cas de tumeur maligne ou de complications graves) sont candidats ([NCBI StatPearls] (https://www.ncbi.nlm.nih.gov/books/NBK549865/)).  
-  Aucune thérapie à base de petites molécules, d'ARNm ou de protéines n'a permis de guérir la maladie en 2025 ; ces thérapies restent à l'étude ou ne sont utilisées qu'à titre symptomatique.
+Une approche est **l’ajout de gènes lentiviraux**: les chercheurs modifient des cellules souches hématopoïétiques en dehors du corps avec un vecteur lentiviral portant une copie fonctionnelle de *BTK*. En 2021, une équipe dirigée par le Seattle Children’s Research Institute a rapporté un vecteur optimisé combinant un élément d’ouverture de chromatine ubiquititaire tronqué, le promoteur humain naturel de *BTK*, et un *BTK* codon-optimisé. Dans un modèle murin semblable à XLA, le traitement a produit une expression de *BTK* stable et adaptée au lignage et a restauré la fonction des cellules B. L’accent sur une expression physiologique est important, car trop peu de BTK peut ne pas corriger la maladie, tandis qu’une expression dans des types cellulaires inappropriés pourrait créer des préoccupations de sécurité ou de fonctionnalité. [UCOE-BTK lentiviral correction in murine XLA]
 
-### Avancées méthodologiques
+Une deuxième stratégie, de plus en plus proéminente, est l’**édition génique ciblée au site**. Plutôt que d’ajouter *BTK* à un emplacement génomique largement imprévisible, le CRISPR-Cas9 est utilisé pour insérer une séquence d’ADN thérapeutique de *BTK* dans le locus natif *BTK*. Une étude de UCLA de 2021 a optimisé les conceptions de donneur à cette fin, montrant que des éléments introniques et de traitement de l’ARN sélectionnés amélioraient la production de BTK et que l’approche pouvait atteindre des niveaux d’intégration ciblée potentiellement thérapeutiques dans les cellules souches et progénitrices hématopoïétiques humaines. [Optimizing BTK integration and expression](https://journals.sagepub.com/doi/abs/10.1089/crispr.2020.0080)
 
-- Les cellules souches hématopoïétiques autologues (autodérivées) sont prélevées, corrigées génétiquement à l'extérieur du corps, puis réinjectées au patient.  
-- Les vecteurs lentiviraux sont affinés pour une expression plus sûre et plus précise en incorporant des éléments d'ouverture de la chromatine (UCOE) et l'ADN régulateur endogène de la BTK, ce qui garantit que le gène agit dans les bons types de cellules et au bon moment.  
-- L'édition de gènes basée sur CRISPR répare le gène BTK natif du patient avec une grande spécificité.
+Une avancée majeure en 2024 est venue d’une collaboration associant University College London et le Great Ormond Street Hospital, utilisant CRISPR-Cas9 à haute fidélité et un donneur par adénovirus AAV6 pour insérer *BTK* codon-optimisé dans l’exon 2 du locus génétique naturel. Dans des cellules souches issues de trois personnes atteintes de XLA, les cellules éditées ont restauré l’expression de *BTK*, levé le blocage de la maturation des cellules B dans des cultures de laboratoire et généré le développement des cellules B après la transplantation chez des souris immunodéficientes. C’est une avancée significative au-delà des souris modèles de la maladie, car elle a testé des cellules provenant de personnes atteintes de XLA, mais ce n’était pas encore un essai thérapeutique chez l’humain. [Hematopoietic stem cell gene editing rescues B-cell development]
 
-### Financement et institutions chefs de file
+En 2025, une équipe de UCLA a également rapporté une correction ciblée du *Btk* dans un modèle murin XLA. Après la transplantation de cellules sanguines éditées, les souris traitées ont montré une amélioration du développement des cellules B, de la production d’immunoglobulines, de la diversité des récepteurs des cellules B et des réponses anticorps spécifiques après immunisation. Ces résultats soutiennent le postulat central de la cure: un nombre relativement limité de cellules souches à long terme corrigées pourrait repeupler le système immunitaire avec des cellules B capables de fabriquer des anticorps. [Hematopoietic stem cell gene therapy for XLA]
 
-- La recherche innovante sur l'XLA est menée par des institutions telles que le Seattle Children's Research Institute et l'University College London, avec le financement d'agences publiques (comme le NIH et le MRC) et de fondations spécialisées dans les maladies rares.
+## Essais cliniques et approches expérimentales
 
-### Points forts et limites
+À la date du 8 août 2026, aucune étude clinique interventionnelle enregistrée de thérapie génique ou d’édition génique pour *BTK* dans XLA, et aucun résultat d’efficacité chez l’humain issu d’un tel essai, n’a été identifié dans les sources examinées pour ce rapport. L’enregistrement XLA spécifique sur ClinicalTrials.gov identifié lors de la recherche est un registre chinois observationnel génotype–phénotype, NCT02234791, sponsorisé par le Shanghai Children’s Medical Center; il ne s’agit pas d’une étude de correction génique et ne rapporte aucun résultat curatif. [NCT02234791: BTK genotype–phenotype registry](https://clinicaltrials.gov/study/NCT02234791?cond=AGAMMAGLOBULINEMIA%2C+X-LINKED&rank=1)
 
-**Strengths:**
-- Restauration durable de l'immunité humorale dans des modèles précliniques de XLA
-- Risque réduit de complications grâce à l'utilisation des propres cellules du patient (thérapies autologues)
-- Possibilité prometteuse d'extension à d'autres troubles immunitaires présentant des défauts génétiques similaires
+La candidate translationnelle décrite publiquement la plus proche est le produit autologue à cellules CD34-positives proposé par UCLA pour l’insertion ciblée de *BTK* dans les cellules souches hématopoïétiques. Son plan de développement du California Institute for Regenerative Medicine (CIRM) incluait l’établissement d’un protocole de fabrication clinique, la démonstration d’une activité dans des cellules issues de patients, la préparation de documents cliniques et la tenue d’une réunion pré-IND avec la U.S. Food and Drug Administration. Le CIRM a caractérisé ce travail comme une voie vers une thérapie autologue unique, mais cela ne doit pas être interprété comme une preuve qu’un essai de Phase I a commencé ou qu’une cure a été démontrée chez l’homme. [CIRM translational award summary]
 
-**Limitations et défis restants:**
-- La plupart des résultats sont encore précliniques : aucune cure humaine n'a été publiée à la mi-2025
-- Des obstacles réglementaires, de sécurité et de fabrication à long terme subsistent avant que les thérapies ne deviennent des soins standard
-- Aucune preuve d'une correction permanente à l'aide d'ARNm, de protéines de remplacement ou de petites molécules
+## Méthodologies et approches scientifiques
 
-### Le chemin à parcourir
+La plateforme principale est l’**opération ex vivo autologue des cellules souches hématopoïétiques**: les cellules formant le sang CD34-positives sont prélevées chez une personne atteinte de XLA, corrigées génétiquement en laboratoire, testées et réadministrées après qu’un traitement de conditionnement crée un espace dans la moelle osseuse. Les études d’ajout de gènes utilisent des vecteurs lentiviraux intégrants conçus pour approcher l’expression normale de *BTK*, tandis que les études d’édition ciblée délivrent un complexe ribonucléoprotéique CRISPR-Cas9 et un donneur d’ADN AAV6 afin que la séquence thérapeutique puisse être insérée au site endogène *BTK* via la réparation dirigée par homologie. [UCOE-BTK lentiviral correction in murine XLA] [Hematopoietic stem cell gene editing rescues B-cell development]
 
-- La prochaine étape clé est le lancement des premiers essais cliniques sur l'homme de cellules souches autologues génétiquement modifiées et corrigées pour l'XLA.
-- Les équipes de recherche s'efforcent également de généraliser ces approches à d'autres déficits immunitaires héréditaires en affinant les techniques et les méthodes d'administration.
-- De nouvelles améliorations dans l'ingénierie des vecteurs, l'efficacité de l'édition et la sécurité des patients seront cruciales pour passer du laboratoire à la pratique clinique quotidienne.
+Les chercheurs évaluent les cures potentielles par plusieurs mesures complémentaires: la fréquence d’insertion ciblée par PCR numérique, l’expression de la protéine *BTK*, la capacité de formation de colonies, les marqueurs de télomération par cytométrie en flux de développement des cellules B, la commutation des classes d’anticorps, la transplantation dans des modèles murins et les réponses anticorps après immunisation. Les essais de sécurité comprennent l’analyse des sites hors cible CRISPR prédits et des grandes anomalies chromosomiques, tandis que les études de transplantation testent si les cellules souches éditées conservent suffisamment de fonctionnalité pour s’engager et persister. [Hematopoietic stem cell gene editing rescues B-cell development] [Hematopoietic stem cell gene therapy for XLA]
 
-## Déclaration d'accessibilité
+## Institutions et financements principaux
 
-Cette revue a mis l'accent sur des explications accessibles à tous les lecteurs, tout en fournissant des références scientifiques détaillées et des commentaires pour les experts.
+La recherche de cure XLA récente a été dirigée principalement par des groupes académiques. Le Seattle Children’s Research Institute, l’Université de Washington et le Fred Hutchinson Cancer Center ont contribué aux travaux d’**ajout lentiviral de *BTK***; University College London, Great Ormond Street Hospital, et des collaborateurs associés ont dirigé l’étude CRISPR sur les cellules des patients de 2024; et le groupe dirigé par Donald Kohn de l’UCLA a fait avancer l’édition ciblée de cellules souches et les études de transplantation chez la souris. [UCOE-BTK lentiviral correction in murine XLA] [Hematopoietic stem cell gene editing rescues B-cell development] [Hematopoietic stem cell gene therapy for XLA]
 
-### Références et lectures complémentaires
+Le CIRM est un financeur translationnel notable. En 2023, il a accordé environ 4,82 millions de dollars à l’UCLA pour « Hematopoietic Stem Cell Gene Editing for X-linked Agammaglobulinemia », soutenant un produit autologue à cellules CD34-positives avec insertion de *BTK* et un travail destiné à soutenir une réunion pré-IND. [CIRM translational-stage funding announcement] L’étude d’édition des cellules des patients de 2024 a également reçu un soutien du Medical Research Council du Royaume-Uni, de Wellcome et du Biomedical Research Centre for Health and Care Research du National Institute for Health and Care Research au Great Ormond Street Hospital et à l’UCL. [Hematopoietic stem cell gene editing rescues B-cell development]
 
-- [Correction efficace, sûre et durable de l'XLA murine à l'aide d'un vecteur lentiviral basé sur le promoteur UCOE-BTK (Seymour et al., 2021)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC7907679/)
-- [L'édition de gènes de cellules souches hématopoïétiques sauve le développement des cellules B dans l'agammaglobulinémie liée à l'X (Bahal et al., 2024)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC11752842/)
-- [Agammaglobulinémie liée à l'X - StatPearls, NCBI Bookshelf] (https://www.ncbi.nlm.nih.gov/books/NBK549865/)
-- [L'avenir de l'édition génétique ex vivo de cellules souches hématopoïétiques (2025 commentaires)] (https://pmc.ncbi.nlm.nih.gov/articles/PMC11951688/)
-- [Résultats pour les patients atteints d'agammaglobulinémie liée à l'X (2024)] (https://link.springer.com/article/10.1007/s10875-024-01829-z)
+## Points forts, limites et défis
 
-## En résumé
+Le cas scientifique en faveur d’une cure est exceptionnellement clair car XLA est causée par des défauts dans un seul gène et parce que rétablir le BTK dans les cellules souches hématopoïétiques pourrait, en principe, générer continuellement des cellules B corrigées. Des études récentes ont démontré la restauration du développement des cellules B et des fonctions liées aux anticorps dans des modèles murins et dans des cellules dérivées de patients éditées. Il est important de noter que l’étude 2024 n’a pas détecté de perturbation substantielle au-delà de 1 % sur les sites hors cible prédits, bien qu’elle ait détecté des modifications hors cible à faible fréquence et des suppressions importantes sur cible — des résultats nécessitant une évaluation de sécurité plus approfondie avant l’administration humaine. [Hematopoietic stem cell gene editing rescues B-cell development]
 
-Une véritable guérison de l'XLA est désormais un objectif réaliste. De nouvelles thérapies géniques et stratégies d'édition de gènes ont permis d'obtenir une fonction immunitaire robuste et durable dans des modèles animaux et de laboratoire utilisant les propres cellules souches du patient. Les premiers essais cliniques chez l'homme se profilent à l'horizon, avec la promesse que les patients atteints de XLA pourront un jour dire adieu aux traitements à vie et vivre avec un système immunitaire pleinement fonctionnel. 
+Les principales limites sont translationnelles. Des doses élevées de donneurs AAV6 ont réduit la viabilité cellulaire et la capacité de formation de colonies dans l’étude 2024 des cellules des patients, et les cellules éditées ont montré un engouement plus faible que les cellules non éditées chez les receveurs murins. Un produit réussi doit donc préserver suffisamment de fonction des cellules souches à long terme tout en réalisant une correction suffisante, éviter des changements génomiques nuisibles, utiliser un conditionnement avec une toxicité acceptable et démontrer une protection durable contre les infections après réduction ou arrêt du remplacement des immunoglobulines. Il faut peser ces obstacles par rapport à un standard de soins existant qui est lourd mais efficace pour de nombreuses personnes atteintes de XLA. [Hematopoietic stem cell gene editing rescues B-cell development] [GeneReviews: X-Linked Agammaglobulinemia]
 
+## Perspectives et directions futures
+
+L’XLA n’est pas encore proche d’une cure humaine prouvée, mais elle est passée d’une thérapie génique conceptuelle à des résultats d’édition de cellules souches convaincants dans des cellules issues de patients et chez des souris modèles de maladie. Les jalons à surveiller comprennent l’achèvement de la fabrication clinique, la preuve que les cellules corrigées des patients s’engagent et persistent en sécurité, l’obtention d’un aval réglementaire pour un IND et une première étude de Phase I chez l’humain mesurant la sécurité, la récupération des cellules B, les réponses vaccinales ou anti-gènes spécifiques, les infections et l’absence de recours à un remplacement des immunoglobulines à vie. Jusqu’à ce que ces jalons soient atteints, la thérapie autologue par cellules souches corrigées géniquement doit être considérée comme une stratégie préclinique prometteuse — et non comme un traitement curatif disponible. [CIRM translational award summary] [Hematopoietic stem cell gene therapy for XLA]
+
+## Références
+
+- [X-Linked Agammaglobulinemia](https://www.ncbi.nlm.nih.gov/sites/books/NBK1453/) — GeneReviews®, 2024.
+- [Immunoglobulin replacement therapy](https://primaryimmune.org/understanding-primary-immunodeficiency/treatment/immunoglobulin-replacement-therapy) — Immune Deficiency Foundation, 2025.
+- [Effective, safe, and sustained correction of murine XLA using a UCOE-BTK promoter-based lentiviral vector](https://pubmed.ncbi.nlm.nih.gov/33718514/) — Seymour et al., 2021.
+- [Optimizing Integration and Expression of Transgenic Bruton’s Tyrosine Kinase for CRISPR-Cas9-Mediated Gene Editing of X-Linked Agammaglobulinemia](https://journals.sagepub.com/doi/abs/10.1089/crispr.2020.0080) — Gray et al., 2021.
+- [Hematopoietic stem cell gene editing rescues B-cell development in X-linked agammaglobulinemia](https://discovery.ucl.ac.uk/id/eprint/10189377/1/1-s2.0-S0091674924002409-main.pdf) — Bahal et al., 2024.
+- [thérapie génique des cellules souches hématopoïétiques pour le traitement de l'agammaglobulinémie liée à l'X](https://pmc.ncbi.nlm.nih.gov/articles/PMC12410350/) — Luthers et al., 2025.
+- [NCT02234791: Mutation of the BTK Gene and Genotype-phenotype Correlation of Chinese Patients With X-Linked Agammaglobulinemia](https://clinicaltrials.gov/study/NCT02234791?cond=AGAMMAGLOBULINEMIA%2C+X-LINKED&rank=1) — ClinicalTrials.gov, 2014.
+- [2023 CIRM translational award summaries](https://www.cirm.ca.gov/wp-content/uploads/2023/10/2023-OCT-ICOC-TRAN-Summaries-1.pdf) — California Institute for Regenerative Medicine, 2023.
+- [CIRM investit plus de 42 millions de dollars dans la recherche translationnelle](https://blog.cirm.ca.gov/2023/10/27/cirm-invests-more-than-42-million-in-translational-stage-research/) — Institut californien de la médecine régénérative, 2023.
+- [Hematopoietic stem cell gene editing rescues B-cell development in X-linked agammaglobulinemia](https://www.sciencedirect.com/science/article/pii/S0091674924002409) — Journal of Allergy and Clinical Immunology, 2024.

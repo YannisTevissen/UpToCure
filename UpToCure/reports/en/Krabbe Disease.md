@@ -1,105 +1,88 @@
+---
+title: Krabbe Disease
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Krabbe Disease.
+input_tokens: 83074
+output_tokens: 7166
+search_calls: 10
+cost_usd: 0.3521
+---
 
 # Krabbe Disease
 
 ## Overview
 
-Krabbe Disease (globoid cell leukodystrophy) is a rare and devastating neurodegenerative disorder caused by mutations in the *GALC* gene, resulting in deficiency of the enzyme galactocerebrosidase and accumulation of toxic compounds in nerve cells. Most affected individuals, especially infants, experience rapid decline in motor and cognitive function, with current treatments offering limited benefit unless initiated presymptomatically.
+Krabbe disease, also called globoid cell leukodystrophy, is a rare inherited disorder caused by harmful variants in the *GALC* gene. The resulting shortage of the GALC enzyme allows the toxic lipid psychosine to accumulate, damaging the cells that make myelin—the protective insulation around nerves—in the brain, spinal cord, and peripheral nerves. The most severe and most common form begins in infancy, causing irritability, feeding problems, stiffness, loss of developmental skills, and rapidly progressive neurologic decline; without treatment, it usually leads to death in early childhood. Later-onset forms can begin in childhood or adulthood and progress more variably. [Evidence and Recommendation for Infantile Krabbe Disease Newborn Screening](https://pmc.ncbi.nlm.nih.gov/articles/PMC12010248/) [Efficacy and Safety of a Krabbe Disease Gene Therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9142772/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC12010248/?utm_source=openai))
 
-## Recent Efforts Toward a Cure (2023–2025)
+There is no approved curative treatment. The current disease-modifying standard for infants identified before symptoms is allogeneic hematopoietic stem-cell transplantation (HSCT), often using donated umbilical-cord blood. HSCT supplies donor-derived enzyme-producing cells and can improve survival, but it must be performed extremely early—ideally within the first month of life—and many survivors still develop substantial motor disability and peripheral-nerve disease. In a 2022 report of six newborn-screened infants transplanted at 24–40 days old, all were alive at 30–58 months, although developmental progress remained slower than in unaffected children. [Benefits of newborn screening and hematopoietic cell transplant](https://pubmed.ncbi.nlm.nih.gov/35042231/) [Evidence and Recommendation for Infantile Krabbe Disease Newborn Screening](https://pmc.ncbi.nlm.nih.gov/articles/PMC12010248/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/35042231/))
 
-### Gene Therapy
+## Scope of Recent Research (2020–present)
 
-**Breakthroughs:**  
-A leading research direction is gene therapy—delivering a correct copy of the *GALC* gene using viral vectors. Recent high-profile preclinical work has shown that combining gene therapy (delivered via intravenous adeno-associated virus, or AAV) with hematopoietic stem cell transplantation (HSCT) leads to robust correction of symptoms in animal models. Notably, Bradbury et al. (2024) demonstrated that this combination produced significant, translation-ready improvements in a canine model, supporting clinical application ([Bradbury et al., 2024](https://doi.org/10.1016/j.ymthe.2023.11.014)).
+The field is active but small, and recent research has focused chiefly on replacing or repairing *GALC* early enough to prevent irreversible injury, while also reaching both the central nervous system and peripheral nerves. The leading approach is one-time gene therapy using adeno-associated virus (AAV) vectors, often paired with HSCT; researchers are also evaluating direct delivery into cerebrospinal fluid, enzyme-replacement and nanoparticle concepts, and—in preclinical work—precise gene editing. These advances make a disease-modifying or potentially near-complete preventive treatment biologically plausible, but no human therapy has yet demonstrated that it can durably cure Krabbe disease. [Preclinical studies in Krabbe disease](https://pubmed.ncbi.nlm.nih.gov/36196048/) [REKLAIM clinical trial](https://clinicaltrials.gov/study/NCT05739643) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT04693598?utm_source=openai))
 
-Emerging studies also highlight progress in customizing vectors to enhance delivery across the blood-brain barrier, and improving long-term safety ([Shaimardanova et al., 2023](https://doi.org/10.3390/ijms24043627)). However, gene therapy for Krabbe remains largely preclinical, with some clinical translation anticipated in the coming years.
+## Major Breakthroughs and Emerging Therapies
 
-**Strengths and Limitations:**  
-- *Strengths:* Provides potential for one-time correction, early intervention may halt disease progression.
-- *Limitations:* Delivery to the brain remains a challenge; immune responses and long-term effects are unknown; clinical trials are still awaited.
+**AAV gene replacement is the most clinically advanced strategy.** AAV vectors are modified viruses used to deliver a functioning *GALC* gene to cells. In a 2020 canine study, a single high-dose injection of AAV9 carrying canine *GALC* into cerebrospinal fluid before symptoms delayed neurologic disease and extended survival to more than seven times that of untreated Krabbe-affected dogs; treated dogs remained neurologically normal beyond 1.5 years in the reported follow-up. [Intrathecal AAV9 gene therapy in canine Krabbe disease](https://www.jci.org/articles/view/133953) ([jci.org](https://www.jci.org/articles/view/133953))
 
-**Leading Institutions:**  
-- University of Pennsylvania, Duke University, and others involved in canine/human translation.
-- Supported by the NIH and disease foundations.
+A separate translational program tested the AAVhu68 capsid delivered into the cisterna magna, a fluid-filled space at the base of the skull. In newborn twitcher mice—a commonly used *Galc*-deficient model—the highest tested dose extended median survival from 40.5 to 130 days. In a small study of presymptomatic Krabbe dogs, this approach prevented cerebrospinal-fluid psychosine accumulation, preserved walking and peripheral-nerve myelination, and extended survival to as long as 85 weeks versus about 12 weeks in controls; nonhuman-primate toxicology studies found no dose-limiting toxicity, although minimal dorsal-root-ganglion degeneration was observed. [Efficacy and Safety of a Krabbe Disease Gene Therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9142772/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9142772/))
 
-### Hematopoietic Stem Cell Transplantation (HSCT)
+Other preclinical AAV studies reinforce both the promise and the delivery challenge. A 2023 mouse study of brain-directed AAV1-*GALC* reduced psychosine in the posterior brain by an average of 77% and increased median lifespan from 43 to 78 days, but did not fully correct disease. A 2024 study in the naturally affected canine model evaluated intravenous AAV-mediated gene therapy combined with HSCT, supporting the rationale that gene replacement may complement transplantation by improving enzyme delivery across tissues that HSCT alone does not adequately protect. [Brain-targeted AAV1-*GALC* therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC10454254/) [Combination HSCT and intravenous AAV gene therapy in canine Krabbe disease](https://pubmed.ncbi.nlm.nih.gov/37952085/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC10454254/?utm_source=openai))
 
-**Current Status:**  
-HSCT is the only established treatment offering potential benefit—mainly in infants identified before symptoms emerge. Early HSCT can slow or halt progression, as shown in multiple population studies and reflected in newborn screening recommendations ([Ream et al., 2024](https://doi.org/10.1542/peds.2024-069152)).
+**Gene editing has recently become a credible, though very early-stage, option.** In a 2026 study, investigators packaged an adenine base editor into two AAV9 vectors to correct the disease-causing premature-stop mutation in twitcher mice. Three weeks after treatment, approximately 0.5% of genomic DNA and 5% of *Galc* messenger RNA were corrected; GALC activity reached about 5% of normal, psychosine was reduced by approximately 47%, and myelin, motor measures, body weight, and lifespan improved. This is an important proof of principle, but it is not yet a human-ready therapy: editing efficiency was modest, the model represents one mutation, and long-term off-target and immune risks require extensive study. [In vivo adenine base editing of mutant *Galc*](https://pmc.ncbi.nlm.nih.gov/articles/PMC13104551/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42026681/?utm_source=openai))
 
-Recent reviews emphasize the growing practice of combining HSCT with gene therapy or other experimental interventions for synergistic effects ([Sevin & Mochel, 2024](https://doi.org/10.1016/B978-0-323-99209-1.00017-X)).
+**Enzyme and nanomedicine approaches remain exploratory.** Researchers are investigating whether recombinant GALC enzyme, potentially protected or delivered by nanoparticles, could restore lysosomal function without permanent gene transfer. A 2025 cell-based study in twitcher-mouse fibroblasts found that recombinant GALC could restore enzyme activity and affect lysosomal and autophagy-related measures in a dose-dependent manner, underscoring that the amount and cell targeting of GALC matter. This work is useful for therapy design, but it is not evidence of efficacy in people or of a standalone cure. [GALC dosing and nanomedicine study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12447118/) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC12447118/?utm_source=openai))
 
-**Strengths and Limitations:**  
-- *Strengths:* Clinically validated, improves outcomes if delivered very early.
-- *Limitations:* High-risk, requires a matched donor, incomplete efficacy especially for later or advanced disease, and limited neurological benefit due to slow donor cell migration.
+## Clinical Trials and Experimental Approaches
 
-**Institutions and Funding:**  
-- Major pediatric transplant centers in the US (Duke, UNM, University of Minnesota, etc.).
-- Funding from state newborn screening programs, NIH, and research grants.
+The principal human gene-therapy program has been Forge Biologics’ FBX-101, an intravenous AAVrh10-*GALC* treatment given after HSCT. The Phase 1/2 REKLAIM study, NCT05739643, is listed as active but not recruiting, with an estimated primary-completion date of November 2026 and planned enrollment of nine participants. The protocol combines transplantation with gene therapy because the immune suppression surrounding transplantation may reduce immune reactions to the AAV vector and its newly expressed enzyme. [REKLAIM clinical trial](https://clinicaltrials.gov/study/NCT05739643) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT05739643?aggFilters=status%3Aact%2Cages%3Achild&cond=leukodystrophy+OR+adrenoleukodystrophy+OR+ald+OR+mld&rank=9&viewType=Table&utm_source=openai))
 
-### Experimental and Combination Therapies
+Preliminary sponsor-reported data presented for the first five newborn-screened children who received low-dose FBX-101 after cord-blood transplantation described no serious adverse events attributed to treatment, increases in GALC activity, reductions in psychosine, and favorable early motor and brain-white-matter observations. These results are encouraging but must be interpreted cautiously: they are from a very small, non-randomized early-phase cohort and have not yet been published as a full peer-reviewed clinical-outcomes paper. In addition, a Wisconsin state newborn-screening nomination report stated that Forge’s clinical program had been discontinued for financial reasons, creating uncertainty about completion despite the registry’s active-not-recruiting listing. [Forge’s five-patient clinical update](https://www.forgebiologics.com/forge-biologics-announces-positive-fbx-101-clinical-trial-update-in-patients-with-krabbe-disease-identified-by-newborn-screening-ahead-of-rusp-vote/) [Wisconsin Krabbe screening nomination](https://www.dhs.wisconsin.gov/document/krabbe-condition-nomination-2025.pdf) [REKLAIM clinical trial](https://clinicaltrials.gov/study/NCT05739643) ([forgebiologics.com](https://www.forgebiologics.com/forge-biologics-announces-positive-fbx-101-clinical-trial-update-in-patients-with-krabbe-disease-identified-by-newborn-screening-ahead-of-rusp-vote/?utm_source=openai))
 
-#### **Nanomedicine & Novel Delivery Systems**
+A second Phase 1/2 program, PBKR03 (GALax-C; NCT04771416), tested one-time intracisterna-magna delivery of an AAVhu68 vector carrying human *GALC* in infants aged 1–9 months. The registry lists the study as suspended because of changes in company strategy, with no results posted. Passage Bio’s 2023 annual report similarly stated that it had terminated further development of PBKR03 to reduce operating expenses while seeking a potential out-licensing partner. [PBKR03/GALax-C clinical trial](https://clinicaltrials.gov/study/NCT04771416) [Passage Bio 2023 annual report](https://www.annualreports.com/HostedData/AnnualReportArchive/p/NASDAQ_PASG_2023.pdf) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT04771416?utm_source=openai))
 
-Recent reviews have highlighted the role of nanotechnology in engineering new delivery systems to target the brain more effectively. These methods aim to overcome the blood-brain barrier, enhance enzyme replacement, and permit more precise drug delivery ([Moore et al., 2023](https://doi.org/10.1016/j.addr.2023.115132)). While largely preclinical, the application of nanomedicine represents an innovative direction that could support other therapies.
+## Methodologies and Scientific Approaches
 
-**Strengths and Limitations:**  
-- *Strengths:* Potential to increase delivery efficiency and safety.
-- *Limitations:* Largely experimental, human safety and clinical effectiveness remain untested.
+Krabbe researchers use complementary models to test whether a treatment reaches the right cells and corrects disease across the body. The twitcher mouse permits rapid testing of survival, enzyme activity, psychosine, inflammation, and myelin pathology, while naturally occurring canine Krabbe disease provides a larger-animal model with clinically relevant brain, peripheral-nerve, imaging, and delivery features. Nonhuman-primate studies are used mainly to assess AAV distribution and toxicity before human trials. Common outcome measures include GALC activity; psychosine in blood or cerebrospinal fluid; magnetic-resonance imaging, including diffusion-tensor imaging; nerve-conduction studies; hearing responses; motor testing; and survival. [Efficacy and Safety of a Krabbe Disease Gene Therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9142772/) [Intrathecal AAV9 gene therapy in canine Krabbe disease](https://www.jci.org/articles/view/133953) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9142772/))
 
-#### **Enzyme Replacement and Small Molecule Therapies**
+Human cell systems are improving the ability to test treatments in patient-relevant tissue. Recent studies have generated induced pluripotent stem-cell-derived myelinating brain organoids, microglia, astrocytes, and neural stem cells from people with Krabbe disease. These models reproduce low GALC activity, elevated psychosine, early myelination abnormalities, and formation of globoid-like inflammatory cells; they are being used to compare AAV capsids and investigate how neurons, myelin-producing cells, and immune cells contribute to disease. [Human iPSC-derived myelinating organoids](https://pubmed.ncbi.nlm.nih.gov/39091729/) [AAV serotypes in Krabbe brain organoids](https://pmc.ncbi.nlm.nih.gov/articles/PMC11555342/) [AAV2 restoration of GALC in patient-derived neural stem cells](https://pubmed.ncbi.nlm.nih.gov/37111381/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/39091729/?utm_source=openai))
 
-Traditional enzyme replacement therapy for Krabbe Disease faces barriers due to delivery challenges; nonetheless, new molecules and nanoformulations are under preclinical development to resolve these issues ([Moore et al., 2023](https://doi.org/10.1016/j.addr.2023.115132)). To date, no enzyme therapy has proven effective in clinical trials, but the field remains active in developing and testing improved strategies.
+## Leading Institutions and Funding
 
-Repurposing of existing drugs and screening for new small molecules remain ongoing, though major breakthroughs have not yet been published in recent years.
+Major contributors include the University of Pennsylvania and Nationwide Children’s Hospital teams that developed and tested AAV approaches in canine Krabbe disease; Duke University and participating transplant centers involved in FBX-101 studies; Forge Biologics, developer of FBX-101; and University of Pennsylvania-originated AAVhu68 work previously advanced by Passage Bio and later Gemma Biotherapeutics. The 2026 base-editing study was led by investigators affiliated with Yonsei University and Seoul National University, with participation from AAVATAR Therapeutics. [Intrathecal AAV9 gene therapy in canine Krabbe disease](https://www.jci.org/articles/view/133953) [REKLAIM clinical trial](https://clinicaltrials.gov/study/NCT05739643) [In vivo adenine base editing of mutant *Galc*](https://pmc.ncbi.nlm.nih.gov/articles/PMC13104551/) ([jci.org](https://www.jci.org/articles/view/133953))
 
-### Research Trends and Future Directions
+Public-health infrastructure is also increasingly important because effective treatment depends on diagnosis before symptoms. Infantile Krabbe disease was included on the U.S. Recommended Uniform Screening Panel in July 2024, defined by low GALC activity plus psychosine of at least 10 nM. Patient organizations provide targeted research support: the United Leukodystrophy Foundation reported a $33,000 Krabbe grant to Daniel Segal at Tel Aviv University in 2023 and more than $715,000 distributed across 28 leukodystrophy projects over 14 years. [HRSA Recommended Uniform Screening Panel](https://www.hrsa.gov/advisory-committees/heritable-disorders/rusp) [United Leukodystrophy Foundation research grants](https://ulf.org/wp-content/uploads/2024/02/ULF_Newsletter_Winter24.pdf) ([hrsa.gov](https://www.hrsa.gov/advisory-committees/heritable-disorders/rusp))
 
-A key emerging trend is the development of **combination therapies**—for example, integrating gene therapy with HSCT, and supplementing both with pharmacological or nanomedicine strategies. The rationale is to use HSCT to supply donor-derived enzyme and modulate immune responses, while gene therapy directly restores enzyme function at the cellular level ([Heller et al., 2023](https://doi.org/10.1016/j.ymthe.2022.09.017)).
+## Strengths, Limitations, and Challenges
 
-Advances in newborn screening are now providing a window for very early intervention, which is critical for successful treatment ([Ream et al., 2024](https://doi.org/10.1542/peds.2024-069152)).
+The strongest evidence is that restoring GALC early can substantially alter Krabbe biology in animal models, and early transplantation already improves survival in newborn-screened infants. AAV gene therapy has the potential to provide faster, broader, and more durable enzyme delivery than HSCT alone, particularly to peripheral nerves. The emergence of psychosine as a measurable disease and treatment-response biomarker, together with newborn screening, gives clinical studies a practical way to identify infants in time and monitor biological effects. [Benefits of newborn screening and hematopoietic cell transplant](https://pubmed.ncbi.nlm.nih.gov/35042231/) [Efficacy and Safety of a Krabbe Disease Gene Therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9142772/) [HRSA Recommended Uniform Screening Panel](https://www.hrsa.gov/advisory-committees/heritable-disorders/rusp) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/35042231/))
 
-### Critical Analysis: Strengths, Limitations, and Challenges
+The central limitation is timing: by the time infantile Krabbe symptoms are visible, substantial injury may already be permanent. Scientific challenges include safely delivering enough therapy throughout the brain and peripheral nerves; managing immune responses to AAV or GALC; determining whether one dose remains effective as a child grows; avoiding AAV-related toxicity; and proving meaningful developmental benefit in very small, non-randomized trials. Financial and organizational fragility is another major obstacle: both FBX-101 and PBKR03 programs have faced reported discontinuation, suspension, or strategic uncertainty despite positive preclinical and preliminary clinical signals. [Intrathecal AAV9 gene therapy in canine Krabbe disease](https://www.jci.org/articles/view/133953) [PBKR03/GALax-C clinical trial](https://clinicaltrials.gov/study/NCT04771416) [Wisconsin Krabbe screening nomination](https://www.dhs.wisconsin.gov/document/krabbe-condition-nomination-2025.pdf) ([jci.org](https://www.jci.org/articles/view/133953))
 
-#### **Strengths:**
-- Recent studies are marking real technical and translational advances, especially for combination therapy approaches.
-- Improved preclinical models are enabling more accurate testing of candidate therapies before clinical translation.
-- Consensus is growing on the importance of very early intervention and the need for newborn screening.
+## Outlook and Future Directions
 
-#### **Limitations:**
-- Most promising therapies remain at the preclinical stage or early clinical translation.
-- Barriers include safe, efficient delivery to the brain, immune complications, and long-term effects.
-- The rarity of the disease and variability in progression complicate clinical trial design.
+Krabbe disease is not yet close to a proven human cure, but the field has moved beyond purely supportive care: newborn screening can identify infants during the narrow intervention window, HSCT provides a current foundation, and gene replacement has produced striking results in dogs and encouraging preliminary observations in five treated children. The milestones to watch are publication of durable, independently assessed FBX-101 outcomes; clarification of whether its program will be completed or transferred; renewed development of cerebrospinal-fluid AAV programs; demonstration that psychosine reduction predicts long-term function; and replication of base-editing results with higher correction rates, broader mutation coverage, and long-term safety data. [Forge’s five-patient clinical update](https://www.forgebiologics.com/forge-biologics-announces-positive-fbx-101-clinical-trial-update-in-patients-with-krabbe-disease-identified-by-newborn-screening-ahead-of-rusp-vote/) [In vivo adenine base editing of mutant *Galc*](https://pmc.ncbi.nlm.nih.gov/articles/PMC13104551/) [REKLAIM clinical trial](https://clinicaltrials.gov/study/NCT05739643) ([forgebiologics.com](https://www.forgebiologics.com/forge-biologics-announces-positive-fbx-101-clinical-trial-update-in-patients-with-krabbe-disease-identified-by-newborn-screening-ahead-of-rusp-vote/?utm_source=openai))
 
-#### **Ongoing Challenges:**
-- Achieving reliable, widespread delivery of enzyme/gene therapy across the nervous system.
-- Ensuring safety—minimizing immunogenicity and off-target effects.
-- Scaling therapies for broad clinical use and ensuring access.
-- Funding for large-scale trials in a rare disease population.
+## References
 
-### Major Institutions and Funding Sources
-
-**Leading Centers:**  
-- University of Pennsylvania, Duke University, University of Minnesota, and leading European leukodystrophy centers.
-
-**Funding:**  
-- NIH, national newborn screening programs, philanthropic foundations (e.g., Legacy of Angels Foundation, Hunter's Hope), and pharmaceutical/biotech companies involved in AAV and enzyme therapy development.
-
----
-
-## Conclusion and Public Perspective
-
-While a definitive cure for Krabbe Disease remains elusive, the path is clearer than ever. Advances in gene therapy, stem cell transplantation, and delivery technologies are yielding hope—especially when used together. The most important factor for a child’s outcome continues to be early diagnosis, highlighting the necessity and benefit of newborn screening programs.
-
-Most research is still in the transition from animal models to human trials, but the rapid pace of innovation—powered by dedicated researchers, collaborative networks, and funding agencies—makes meaningful progress toward a cure likely in the near future.
-
-## Key Recent References
-
-- Bradbury AM, Bagel J, Swain G, et al. (2024). Combination HSCT and intravenous AAV-mediated gene therapy in a canine model proves pivotal for translation of Krabbe disease therapy. *Molecular Therapy*. [doi:10.1016/j.ymthe.2023.11.014](https://doi.org/10.1016/j.ymthe.2023.11.014)
-- Heller G, Bradbury AM, Sands MS, Bongarzone ER. (2023). Preclinical studies in Krabbe disease: A model for investigation of novel combination therapies for lysosomal storage diseases. *Molecular Therapy*. [doi:10.1016/j.ymthe.2022.09.017](https://doi.org/10.1016/j.ymthe.2022.09.017)
-- Maghazachi AA. (2023). Globoid Cell Leukodystrophy (Krabbe Disease): An Update. *International Journal of Tryptophan Research*. [doi:10.2147/ITT.S424622](https://doi.org/10.2147/ITT.S424622)
-- Ream MA, Lam WK, Kemper AR. (2024). Evidence and Recommendation for Infantile Krabbe Disease Newborn Screening. *Pediatrics*. [doi:10.1542/peds.2024-069152](https://doi.org/10.1542/peds.2024-069152)
-- Moore TL, Pannuzzo G, Cardile V. (2023). Nanomedicines to treat rare neurological disorders: The case of Krabbe disease. *Advanced Drug Delivery Reviews*. [doi:10.1016/j.addr.2023.115132](https://doi.org/10.1016/j.addr.2023.115132)
-- Shaimardanova AA, Solovyeva VV, Rizvanov AA. (2023). Gene Therapy of Sphingolipid Metabolic Disorders. *International Journal of Molecular Sciences*. [doi:10.3390/ijms24043627](https://doi.org/10.3390/ijms24043627)
-- Sevin C, Mochel F. (2024). Hematopoietic stem cell transplantation in leukodystrophies. In: *Progress in Brain Research*. [doi:10.1016/B978-0-323-99209-1.00017-X](https://doi.org/10.1016/B978-0-323-99209-1.00017-X)
-
+- [Evidence and Recommendation for Infantile Krabbe Disease Newborn Screening](https://pmc.ncbi.nlm.nih.gov/articles/PMC12010248/) — Ream et al., *Pediatrics*, 2025.
+- [Efficacy and Safety of a Krabbe Disease Gene Therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9142772/) — Hordeaux et al., *Human Gene Therapy*, 2022.
+- [Benefits of newborn screening and hematopoietic cell transplant](https://pubmed.ncbi.nlm.nih.gov/35042231/) — Wasserstein et al., *Orphanet Journal of Rare Diseases*, 2022.
+- [Preclinical studies in Krabbe disease](https://pubmed.ncbi.nlm.nih.gov/36196048/) — Heller et al., *Molecular Therapy*, 2023.
+- [REKLAIM clinical trial](https://clinicaltrials.gov/study/NCT05739643) — Forge Biologics and ClinicalTrials.gov, updated 2025.
+- [Intrathecal AAV9 gene therapy in canine Krabbe disease](https://www.jci.org/articles/view/133953) — Bradbury et al., *Journal of Clinical Investigation*, 2020.
+- [Brain-targeted AAV1-*GALC* therapy](https://pmc.ncbi.nlm.nih.gov/articles/PMC10454254/) — Han et al., *Genes*, 2023.
+- [Combination HSCT and intravenous AAV gene therapy in canine Krabbe disease](https://pubmed.ncbi.nlm.nih.gov/37952085/) — Bradbury et al., *Molecular Therapy*, 2024.
+- [In vivo adenine base editing of mutant *Galc*](https://pmc.ncbi.nlm.nih.gov/articles/PMC13104551/) — Nam et al., *Genome Medicine*, 2026.
+- [GALC dosing and nanomedicine study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12447118/) — Del Grosso et al., *Advanced Biology*, 2025.
+- [Forge’s five-patient clinical update](https://www.forgebiologics.com/forge-biologics-announces-positive-fbx-101-clinical-trial-update-in-patients-with-krabbe-disease-identified-by-newborn-screening-ahead-of-rusp-vote/) — Forge Biologics, 2024.
+- [Wisconsin Krabbe screening nomination](https://www.dhs.wisconsin.gov/document/krabbe-condition-nomination-2025.pdf) — Wisconsin Department of Health Services, 2025.
+- [PBKR03/GALax-C clinical trial](https://clinicaltrials.gov/study/NCT04771416) — Gemma Biotherapeutics and ClinicalTrials.gov, updated 2025.
+- [Passage Bio 2023 annual report](https://www.annualreports.com/HostedData/AnnualReportArchive/p/NASDAQ_PASG_2023.pdf) — Passage Bio, 2024.
+- [Human iPSC-derived myelinating organoids](https://pubmed.ncbi.nlm.nih.gov/39091729/) — Evans et al., *PLOS ONE*, 2024.
+- [AAV serotypes in Krabbe brain organoids](https://pmc.ncbi.nlm.nih.gov/articles/PMC11555342/) — Wang et al., *Genes & Diseases*, 2024.
+- [AAV2 restoration of GALC in patient-derived neural stem cells](https://pubmed.ncbi.nlm.nih.gov/37111381/) — Lin et al., *International Journal of Molecular Sciences*, 2023.
+- [HRSA Recommended Uniform Screening Panel](https://www.hrsa.gov/advisory-committees/heritable-disorders/rusp) — Health Resources and Services Administration, 2024.
+- [United Leukodystrophy Foundation research grants](https://ulf.org/wp-content/uploads/2024/02/ULF_Newsletter_Winter24.pdf) — United Leukodystrophy Foundation, 2024.

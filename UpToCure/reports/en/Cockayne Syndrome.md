@@ -1,119 +1,78 @@
+---
+title: Cockayne Syndrome
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Cockayne Syndrome.
+input_tokens: 78229
+output_tokens: 6631
+search_calls: 10
+cost_usd: 0.336
+---
 
 # Cockayne Syndrome
 
-Cockayne Syndrome (CS) is a rare, genetic, and currently incurable disease caused by mutations in DNA repair genes (ERCC6/CSB or ERCC8/CSA). It leads to progressive neurodegeneration, growth failure, premature aging, and often early death. Historically, care for CS patients has been entirely supportive. This review presents a comprehensive and accessible synthesis of all major research efforts from June 2023 to May 2025 aimed at curing Cockayne Syndrome, highlighting breakthroughs, research directions, methodologies, institutional leadership, funding, and the remaining challenges, with accessible explanations and direct references to all sources.
+## Overview
 
----
+Cockayne syndrome (CS) is an ultra-rare, inherited condition caused mainly by harmful variants in **ERCC6** or **ERCC8**, genes needed for transcription-coupled DNA repair—the process that helps cells resume reading active genes after DNA damage blocks them. It causes progressive problems with growth, brain and nerve function, hearing, vision, feeding, teeth, kidneys, and sensitivity to sunlight. Severity varies widely: classic CS usually begins in early childhood and is often life-limiting in the first or second decade, while severe congenital CS may lead to death in early childhood. [GeneReviews: Cockayne Syndrome](https://www.ncbi.nlm.nih.gov/sites/books/NBK1342/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/sites/books/NBK1342/))
 
-## The Search for a Cure: Recent and Emerging Research Directions
+There is no approved curative or disease-modifying treatment. Current care is multidisciplinary and supportive: nutritional and feeding support, physical and developmental therapies, management of spasticity and tremor, eye and hearing care, dental care, sun protection, and surveillance for kidney, liver, blood-pressure, neurologic, and sensory complications. [GeneReviews: Management of Cockayne Syndrome](https://www.ncbi.nlm.nih.gov/sites/books/NBK1342/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/sites/books/NBK1342/))
 
-### 1. Gene Therapy Breakthroughs
+## Scope of Recent Research (2020–present)
 
-The most advanced and promising curative efforts focus on delivering functional copies of the defective gene using viral vectors, particularly adeno-associated virus (AAV) platforms.
+Research activity has remained small relative to more common genetic diseases, but it has become notably more translational since 2020. The central questions are whether restoring the missing **CSA/ERCC8** or **CSB/ERCC6** function can halt disease early enough, how to deliver treatment broadly to the brain and body, and whether mitochondrial, oxidative-stress, inflammatory, or metabolic abnormalities can be reduced while definitive genetic treatments mature. As of August 8, 2026, the field has reached a first human gene-replacement exposure, but it is not yet close to an established cure because human safety, dosing, durability, and clinical-benefit data remain unavailable. [UMass Chan gene-therapy update](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome) [First patient treated announcement](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html) ([umassmed.edu](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome))
 
-- **Key Milestone (2023–2024):**  
-  Researchers at [UMass Chan Medical School](https://www.umassmed.edu/news/news-archives/2023/01/umass-chan-researchers-achieve-gene-therapy-milestone-for-potential-cockayne-syndrome-treatment/) achieved a crucial step by effectively using an AAV vector to deliver the healthy ERCC6/CSB gene into a mouse model of Cockayne Syndrome. This restored key molecular functions and improved disease symptoms in the animals, a necessary proof of concept before moving to human trials.  
-  - _Funding:_ This work is buoyed by more than $2 million in recent funds, including from the [Riaan Research Initiative](https://www.umassmed.edu/news/news-archives/2024/06/umass-chan-receives-$2.2-million-to-fund-gene-therapy-for-cockayne-syndrome).
-  - _Status:_ Researchers are now focused on manufacturing optimization and safety testing, the step before requesting approval to try the approach in people.
+## Major Breakthroughs and Emerging Therapies
 
-- **Technical Innovations:**  
-  The field’s maturity is underscored by work on improved gene delivery systems, such as the patent for novel AAV vector mini-promoters ([WO2025019358A2](https://patents.google.com/patent/WO2025019358A2/en)), which facilitate targeted and effective gene expression.
+**Gene replacement is the leading potentially curative strategy.** A collaboration among UMass Chan Medical School, the Riaan Research Initiative, and manufacturing partner Andelyn Biosciences developed an adeno-associated virus serotype 9 (**AAV9**) vector carrying a working **CSA/ERCC8** gene. AAV9 is a disabled viral delivery vehicle commonly used to carry genetic instructions into cells. UMass Chan reported that the vector improved survival and restored growth in a severe mouse model, then advanced into toxicology and clinical-grade manufacturing. [UMass Chan preclinical milestone](https://www.umassmed.edu/news/articles/archives/2023/01/umass-chan-researchers-achieve-gene-therapy-milestone-for-potential-cockayne-syndrome-treatment/) [UMass Chan manufacturing update](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome) ([umassmed.edu](https://www.umassmed.edu/news/articles/archives/2023/01/umass-chan-researchers-achieve-gene-therapy-milestone-for-potential-cockayne-syndrome-treatment/))
 
-### 2. Genetic Prevention
+The program crossed an important but preliminary threshold in 2026. According to the developer’s June 22, 2026 announcement, a child with CSA/ERCC8-related CS received an experimental AAV9-CSA therapy through an intracerebroventricular procedure on April 21, 2026. This is the first reported human dosing of a CS gene therapy; however, the announcement reported only short-term clinical stability and explicitly stated that the full effect was unknown. It therefore cannot yet be considered evidence of efficacy or a cure. [First patient treated announcement](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html) ([prnewswire.com](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html))
 
-While not a cure for existing patients, preimplantation genetic testing for monogenic disorders (PGT-M) now allows families carrying CS gene mutations to have unaffected children by screening embryos prior to implantation.  
-- _First Clinical Application:_ A major [2024 study](https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2024.1435622/full) in China reports the successful use of PGT-M in at-risk families, preventing CS in offspring.
+**Metabolic therapies are a complementary, not curative, approach.** Multiple studies have linked CS to low levels of nicotinamide adenine dinucleotide (**NAD+**), a molecule essential for cellular energy metabolism and stress responses. In CS model organisms, NAD+ supplementation improved mitochondrial function, lifespan, and health measures; in CS mouse models, ten days of the NAD+ precursor nicotinamide riboside prevented or improved progressive high-frequency hearing loss and restored several cochlear abnormalities. These findings are compelling preclinical evidence, but they do not demonstrate that NAD+ supplements reverse CS in people. [CSA and CSB maintain mitochondrial homeostasis through NAD+ signaling](https://pubmed.ncbi.nlm.nih.gov/33166073/) [NAD+ supplementation and hearing loss in CS mice](https://www.nature.com/articles/s41514-019-0040-z) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/33166073/?utm_source=openai))
 
-### 3. Model Systems and Mechanistic Advances
+**Drug repurposing and mitochondrial-rescue strategies are expanding.** A 2026 study of CSB-deficient patient fibroblasts found profound loss of cellular resilience under combined metabolic and oxidative stress, then identified five compounds—N-acetylcysteine, coenzyme Q10, rapamycin, taurine, and epicatechin—that improved ATP-based cell survival in both patient cell lines. The compounds appeared to act through several mechanisms, including reduced mitochondrial oxidative stress and improved autophagy, the cell’s recycling process. This is an early cell-based screen, not clinical evidence that any of these agents slows disease in patients. [Pharmacologic rescue in Cockayne syndrome patient cells](https://pubmed.ncbi.nlm.nih.gov/42232504/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42232504/?utm_source=openai))
 
-- **Patient-Derived Models:**  
-  In 2024, several groups published studies using induced pluripotent stem cell (iPSC)-derived neural organoids (miniature 3D "brains in a dish") from CS patient tissue ([Springer 2024](https://link.springer.com/article/10.1007/s00018-024-05406-w), [Nature 2024](https://www.nature.com/articles/s41467-024-50298-w), [MDPI 2024](https://www.mdpi.com/2073-4425/15/4/508)).  
-  - _Importance:_ These models are platforms for understanding disease mechanisms and testing therapies.
+Recent work has also strengthened the rationale for targeting organ-specific metabolic injury. A 2025 study found kidney damage and impaired de novo NAD+ production in CSA- and CSB-deficient mice, linking loss of CS proteins to disrupted regulation of the NAD+-biosynthesis gene **QPRT** in kidney cells. This creates potential biomarkers and therapeutic targets for renal disease, but the work has not yet established a treatment. [Kidney disease and NAD+ biosynthesis in CS mice](https://www.nature.com/articles/s41418-025-01522-7) ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC12572305/?utm_source=openai))
 
-- **Animal Models:**  
-  Enhanced mouse models, developed with international and NIH-funded collaborations ([NIH RePORTER](https://reporter.nih.gov/search/xHobiVLiPU68u-6wSogmsA/project-details/10973290)), bridge laboratory work and future human treatments, although they don't fully replicate human symptoms.
+## Clinical Trials and Experimental Approaches
 
-### 4. Pharmacologic and RNA-Based Approaches
+The most consequential experimental intervention is the single reported AAV9-CSA gene-replacement dosing described above. It was sponsored through a parent-led development effort involving the Riaan Research Initiative and clinical collaborators; no formal phase designation, peer-reviewed outcome report, or controlled efficacy data had been publicly reported by August 8, 2026. The key near-term questions are adverse effects, immune responses to AAV9, distribution of the vector in the nervous system, durability of CSA expression, and whether disease progression changes relative to the natural history of severe CS. [First patient treated announcement](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html) ([prnewswire.com](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html))
 
-While gene therapy dominates current focus, researchers still explore small-molecule drugs and RNA-based interventions to compensate for faulty gene function or counteract downstream effects ([Oxford NAR, 2023](https://academic.oup.com/nar/article/52/16/9596/7716200)). No curative drugs have yet entered clinical trials as of mid-2025.
+Registered CS studies have otherwise largely been observational rather than therapeutic. For example, the University Hospital of Strasbourg’s METABO-CS study, NCT03044210, examines metabolic abnormalities in people with CS and unaffected siblings; the registry listed no posted results. Such studies are important for defining biomarkers and trial endpoints but do not test a cure. [METABO-CS study record](https://clinicaltrials.gov/study/NCT03044210?cond=Cockayne+syndrome&rank=1) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT03044210?cond=Cockayne+syndrome&rank=1&utm_source=openai))
 
----
+## Methodologies and Scientific Approaches
 
-## Breakthroughs, Trends, and Emerging Strategies
+CS researchers combine patient-derived fibroblasts and induced pluripotent stem-cell models with nematodes, zebrafish, rats, and several mouse models. Severe double-knockout models, such as CSA/XPA-deficient mice, are particularly useful because single-gene CS mouse models can have milder disease than human CS. These models are being used to test AAV distribution, gene-expression restoration, survival, growth, neurodegeneration, and organ-specific pathology. [Riaan Research Initiative research program](https://riaanresearch.org/research/) [Neurovascular dysfunction and neuroinflammation in a CS mouse model](https://pubmed.ncbi.nlm.nih.gov/34628368/) ([riaanresearch.org](https://riaanresearch.org/research/))
 
-### From Mouse to Human
+Researchers are also developing biomarkers that could make ultra-rare-disease trials more informative. Recent studies measure mitochondrial respiration, NAD+ biology, reactive oxygen species, autophagic flux, ATP-dependent cell survival, kidney-injury markers, inflammatory signaling, and blood-brain-barrier changes. These approaches may help determine whether a treatment reaches the intended biological target before waiting years for clinical outcomes such as preserved hearing, mobility, cognition, or survival. [Pharmacologic rescue in Cockayne syndrome patient cells](https://pubmed.ncbi.nlm.nih.gov/42232504/) [Kidney disease and NAD+ biosynthesis in CS mice](https://www.nature.com/articles/s41418-025-01522-7) [Neurovascular dysfunction and neuroinflammation in a CS mouse model](https://pubmed.ncbi.nlm.nih.gov/34628368/) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42232504/?utm_source=openai))
 
-- **Proof of "Rescue":**  
-  The UMass Chan/preclinical gene therapy achievement is the first robust demonstration that genetic correction can restore lost functions in a living model, a prerequisite for human therapy.
-- **On the Horizon:**  
-  Patent filings and new funding mean human safety trials for gene therapy may start within 1–2 years, provided preclinical results are continually positive.
+## Leading Institutions and Funding
 
-### Prevention vs. Cure
+UMass Chan Medical School has become the principal gene-therapy center for CSA/ERCC8-related CS, led by Ana Rita Batista, PhD, and Miguel Sena-Esteves, PhD, with involvement from the institution’s translational gene-therapy infrastructure. The Riaan Research Initiative funded preclinical work beginning in 2021 and provided **$2.2 million** in 2024 to support clinical-grade AAV9-CSA manufacturing through Andelyn Biosciences, as well as toxicology and process-development work needed for human use. [UMass Chan preclinical milestone](https://www.umassmed.edu/news/articles/archives/2023/01/umass-chan-researchers-achieve-gene-therapy-milestone-for-potential-cockayne-syndrome-treatment/) [UMass Chan manufacturing update](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome) ([umassmed.edu](https://www.umassmed.edu/news/articles/archives/2023/01/umass-chan-researchers-achieve-gene-therapy-milestone-for-potential-cockayne-syndrome-treatment/))
 
-- Gene correction can help those living with CS, while PGT-M allows at-risk families to avoid having affected children, gradually lowering disease prevalence.
+The Riaan Research Initiative also reports partnerships with Leiden University Medical Center and Charles River Laboratories for patient-fibroblast drug-repurposing screens, and with Rarebase for cellular disease-model work. These efforts illustrate the unusually large role of family-led philanthropy and academic–nonprofit collaboration in an ultra-rare disease with limited commercial incentives. [Riaan Research Initiative research program](https://riaanresearch.org/research/) ([riaanresearch.org](https://riaanresearch.org/research/))
 
-### Enabling Technologies
+## Strengths, Limitations, and Challenges
 
-- Neural organoids and advanced animal models let scientists rapidly test therapies and unravel precisely how CS damages cells (“disease mechanism mapping”).
+The strongest recent development is that CS gene replacement has progressed from concept to animal proof of concept, clinical manufacturing, and a first reported human exposure. A one-time therapy that restores the missing gene could, in principle, address the root cause in CSA/ERCC8-related disease rather than treating isolated symptoms. Metabolic and mitochondrial studies also offer more immediate possibilities for combination treatments that might protect vulnerable tissues while gene therapy is evaluated. [UMass Chan manufacturing update](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome) [NAD+ supplementation and hearing loss in CS mice](https://www.nature.com/articles/s41514-019-0040-z) ([umassmed.edu](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome))
 
-### Funding and Institutional Leadership
+The limitations are substantial. The current AAV9 program is designed for CSA/ERCC8-related CS, whereas many people have ERCC6/CSB-related disease; it remains unknown whether gene transfer reaches enough brain, sensory, kidney, and other target cells; and established developmental or neurodegenerative injury may not be reversible after treatment. AAV-based treatment can also raise immunologic, dose-related, manufacturing, redosing, and access challenges. Meanwhile, the promising small-molecule findings come from animals or cultured cells, where effects frequently fail to translate into meaningful clinical benefit. [GeneReviews: Cockayne Syndrome](https://www.ncbi.nlm.nih.gov/sites/books/NBK1342/) [Pharmacologic rescue in Cockayne syndrome patient cells](https://pubmed.ncbi.nlm.nih.gov/42232504/) [First patient treated announcement](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/sites/books/NBK1342/))
 
-- **UMass Chan Medical School**, the [Riaan Research Initiative](https://www.umassmed.edu/news/news-archives/2024/06/umass-chan-receives-$2.2-million-to-fund-gene-therapy-for-cockayne-syndrome), [Alex TLC](https://alextlc.org/news/gene-therapy-research-for-cockayne-syndrome/), the **NIH**, and leading European and Chinese academic centers drive the field.
+## Outlook and Future Directions
 
----
+Cockayne syndrome is no longer a disease with no path toward a root-cause treatment: the April 21, 2026 first reported AAV9-CSA dosing is a genuine milestone. Nevertheless, a cure remains unproven and should not be assumed from a single experimental treatment. The most important milestones to watch are independently reported long-term safety and functional outcomes from the treated patient; a registered, appropriately monitored early-phase program; extension of gene-replacement strategies to ERCC6/CSB-related CS; and human testing of biomarker-guided metabolic or mitochondrial therapies that may be used alone or alongside gene replacement. [First patient treated announcement](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html) [UMass Chan manufacturing update](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome) ([prnewswire.com](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html))
 
-## Critical Analysis: Strengths, Limitations, and Challenges
+## References
 
-### Strengths
-
-- **Scientific Maturity:** Gene therapy is at an advanced preclinical stage, with robust proof in animal models.
-- **Funding Model:** Philanthropy and patient advocacy are accelerating rare disease research.
-- **Advanced Models:** New cell and animal tools increase confidence in translational potential.
-- **Prevention:** PGT-M provides a proven method to eliminate new family cases (“genetic prevention”).
-
-### Limitations
-
-- **No Human Therapy Yet:** As of May 2025, no clinical (human) trials exist for curative therapies ([ClinicalTrials.gov](https://clinicaltrials.gov), [NIH RePORTER](https://reporter.nih.gov/search/xHobiVLiPU68u-6wSogmsA/project-details/10973290)).
-- **Technical Barriers:** Delivering a gene to all relevant brain and body cells, and ensuring long-term safety, are unproven.
-- **Rarity:** Very small patient numbers hinder clinical trial design and reduce commercial incentive—most momentum comes from nonprofits.
-- **Knowledge Gaps:** Natural history, outcome measures, and disease variation are still not fully understood.
-- **Regulatory Hurdles:** First-in-human gene therapy for a severe and untreatable childhood syndrome attracts extra ethical and technical scrutiny.
-
----
-
-## What's Next? The Road to a Cure
-
-- **Manufacturing and Regulation:** Large-scale vector production is underway, bolstered by new patents and funding ([WO2025019358A2](https://patents.google.com/patent/WO2025019358A2/en), [UMass Chan](https://www.umassmed.edu/news/news-archives/2024/06/umass-chan-receives-$2.2-million-to-fund-gene-therapy-for-cockayne-syndrome)).
-- **First Human Trials:** Anticipate clinical trials if regulatory approvals are granted and animal safety/efficacy continues to look favorable.
-- **Collaboration:** International teamwork—especially rare disease organizations and hospitals—is crucial.
-- **Model Refinement:** Even more accurate models are expected to guide both curative and supportive approaches.
-
----
-
-## Accessible Explanation: Why Is This So Hard?
-
-Imagine CS as a child’s library where every book is vital to learning, but the librarian's tools for repairing books are broken. Gene therapy is like replacing or repairing those tools for the whole library. But making sure every single book is fixed and that new tools don't cause new problems is immensely complex, especially when every child's library is unique.
-
----
-
-## Comprehensive Citations and Links
-
-- [UMass Chan achieves gene therapy milestone for potential Cockayne Syndrome treatment (2023)](https://www.umassmed.edu/news/news-archives/2023/01/umass-chan-researchers-achieve-gene-therapy-milestone-for-potential-cockayne-syndrome-treatment/)
-- [UMass Chan receives $2.2M for gene therapy scale-up (2024)](https://www.umassmed.edu/news/news-archives/2024/06/umass-chan-receives-$2.2-million-to-fund-gene-therapy-for-cockayne-syndrome)
-- [Frontiers Genetics (2024): First PGT-M for Cockayne Syndrome](https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2024.1435622/full)
-- [Springer 2024: Patient-derived 3D neural models for CS](https://link.springer.com/article/10.1007/s00018-024-05406-w)
-- [Nature 2024: R-loops and DNA repair in CS](https://www.nature.com/articles/s41467-024-50298-w)
-- [MDPI 2024: Model and molecular work in CS](https://www.mdpi.com/2073-4425/15/4/508)
-- [WO2025019358A2 Patent: Gene therapy compositions for ERCC6/CSB](https://patents.google.com/patent/WO2025019358A2/en)
-- [NIH RePORTER: XP-CS Gene Therapy Project](https://reporter.nih.gov/search/xHobiVLiPU68u-6wSogmsA/project-details/10973290)
-- [Alex TLC (2024): Advocacy and research updates](https://alextlc.org/news/gene-therapy-research-for-cockayne-syndrome/)
-- [MedlinePlus: Cockayne Syndrome overview](https://medlineplus.gov/genetics/condition/cockayne-syndrome/)
-- [NIH/GeneReviews: Cockayne Syndrome](https://www.ncbi.nlm.nih.gov/books/NBK1342/)
-- [Oxford NAR, 2023: DNA repair advances](https://academic.oup.com/nar/article/52/16/9596/7716200)
-- [Life Science Alliance, 2024: DNA repair mechanistic work](https://www.life-science-alliance.org/content/7/11/e202402745)
-
----
-
-## Conclusion
-
-The quest to cure Cockayne Syndrome has entered its most promising period, with animal rescue data, major funding, scalable vector manufacturing, and unprecedented collaboration. Gene therapy has not yet reached patients, but trials may begin soon, and prevention using PGT-M is real for at-risk families. Barriers remain—technical, biological, and ethical—but thanks to families, advocates, researchers, and funders, the path to a true cure is clearer than ever.
+- [GeneReviews: Cockayne Syndrome](https://www.ncbi.nlm.nih.gov/sites/books/NBK1342/) — Vincent Laugel and University of Washington, 2024.
+- [UMass Chan preclinical milestone](https://www.umassmed.edu/news/articles/archives/2023/01/umass-chan-researchers-achieve-gene-therapy-milestone-for-potential-cockayne-syndrome-treatment/) — UMass Chan Medical School, 2023.
+- [UMass Chan manufacturing update](https://www.umassmed.edu/news/articles/archives/2024/06/umass-chan-receives-%242.2-million-to-fund-gene-therapy-for-cockayne-syndrome) — UMass Chan Medical School, 2024.
+- [First patient treated announcement](https://www.prnewswire.com/news-releases/first-patient-in-the-world-treated-with-gene-therapy-for-cockayne-syndrome-302805839.html) — Riaan Research Initiative via PR Newswire, 2026.
+- [CSA and CSB maintain mitochondrial homeostasis through NAD+ signaling](https://pubmed.ncbi.nlm.nih.gov/33166073/) — eLife, 2020.
+- [NAD+ supplementation and hearing loss in CS mice](https://www.nature.com/articles/s41514-019-0040-z) — npj Aging and Mechanisms of Disease, 2020.
+- [Pharmacologic rescue in Cockayne syndrome patient cells](https://pubmed.ncbi.nlm.nih.gov/42232504/) — PubMed, 2026.
+- [Kidney disease and NAD+ biosynthesis in CS mice](https://www.nature.com/articles/s41418-025-01522-7) — Cell Death & Differentiation, 2025.
+- [Neurovascular dysfunction and neuroinflammation in a CS mouse model](https://pubmed.ncbi.nlm.nih.gov/34628368/) — Aging, 2021.
+- [METABO-CS study record](https://clinicaltrials.gov/study/NCT03044210?cond=Cockayne+syndrome&rank=1) — ClinicalTrials.gov, 2025.
+- [Riaan Research Initiative research program](https://riaanresearch.org/research/) — Riaan Research Initiative, 2026.

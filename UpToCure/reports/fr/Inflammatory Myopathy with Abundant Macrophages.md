@@ -1,89 +1,70 @@
+---
+title: Myopathie inflammatoire avec macrophages abondants
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Des efforts de recherche récents visant à guérir la myopathie inflammatoire
+  à macrophages abondants.
+input_tokens: 44398
+output_tokens: 4426
+search_calls: 9
+cost_usd: 0.2319
+---
 
 # Myopathie inflammatoire avec macrophages abondants
 
-## Définition et contexte
+## Vue d'ensemble
 
-La myopathie inflammatoire à macrophages abondants (IMAM) est une myopathie inflammatoire idiopathique rare. Elle se caractérise par une infiltration diffuse et destructrice du muscle ou du fascia par des macrophages CD68+, des cellules immunitaires qui jouent généralement un rôle dans la réparation et l'inflammation des tissus. L'IMAM est considérée comme un sous-ensemble pathologique distinct des myopathies inflammatoires idiopathiques (IIM), très proche de la dermatomyosite, mais elle n'est pas synonyme de dermatomyosite, de myopathie auto-immune nécrosante ou de myofasciite macrophagique ([Orphanet](https://www.orpha.net/en/disease/detail/247718), [NORD](https://rarediseases.org/mondo-disease/inflammatory-myopathy-with-abundant-macrophages/), [PubMed review 2025](https://pubmed.ncbi.nlm.nih.gov/39973451/)). Le diagnostic repose généralement sur une biopsie musculaire, qui révèle une infiltration macrophagique caractéristique. Sur le plan clinique, l'IMAM peut ressembler à d'autres myopathies inflammatoires, mais la pathologie reste le critère définitif.
+Inflammatory Myopathy with Abundant Macrophages (IMAM) is an exceptionally rare inflammatory muscle disease in which immune cells called macrophages accumulate extensively in muscle connective tissue and fascia, the tissue surrounding muscles. It causes mainly weakness and pain in muscles near the shoulders and hips, sometimes with rash-like features resembling dermatomyositis, elevated creatine kinase (CK, a blood marker of muscle injury), and—in severe cases—hemophagocytic syndrome or macrophage activation syndrome, dangerous states of excessive immune activation. IMAM has been reported in adults and children, with no established sex predominance. [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/) [Original IMAM case series](https://pubmed.ncbi.nlm.nih.gov/12769186/)
 
-## Portée de la recherche récente (2022-2025)
+The prognosis is uncertain because the published literature remains limited to small case series and reports. Current care is not curative and is individualized: physicians generally use high-dose corticosteroids to suppress inflammation, then add conventional immune-suppressing medicines such as azathioprine, methotrexate, tacrolimus, cyclosporine, cyclophosphamide, intravenous immunoglobulin, or intensive supportive treatment when macrophage activation or hemophagocytosis occurs. [Genetic and treatment case series](https://pmc.ncbi.nlm.nih.gov/articles/PMC4233371/) [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-### Vue d'ensemble et principales conclusions
+## Portée des recherches récentes (2020–présent)
 
-Malgré une reconnaissance accrue, l'IMAM reste extrêmement rare et le paysage de la recherche est dominé par des rapports de cas et de petites séries de cas. **Aucun essai clinique spécifique à la maladie, aucune étude systématique, ni aucune thérapie innovante n'ont été enregistrés dans la littérature évaluée par les pairs entre 2022 et 2025.** La stratégie principale reste l'utilisation de régimes immunosuppresseurs standard extrapolés à partir de la dermatomyosite et des soins de la myopathie inflammatoire au sens large.
+Les recherches de 2020 jusqu'au 8 août 2026 ont été très limitées. La contribution principale récente est une analyse clinicopathologique systématique de 2025 qui n'a identifié que huit études publiées sur l'IMAM et 49 patients rapportés au total ; sa base de preuves était principalement composée de rapports de cas plus anciens et de petites séries observationnelles plutôt que d'essais prospectifs. Les questions dominantes sont de savoir si l'IMAM est une maladie distincte de la dermatomyosite, ce qui conduit à l'accumulation de macrophages et à la lésion musculaire, et comment la diagnostiquer de manière fiable. Il n'existe actuellement aucun remède modificateur de la maladie validé, ni thérapie génique, ni thérapie cellulaire, ni thérapie à l'ARN, ni programme médicamenteux ciblé spécifiquement établi pour l'IMAM. [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-#### Publications clés et rapports évalués par les pairs
+## Réalisations majeures et thérapies émergentes
 
-- La publication contemporaine la plus remarquable est un rapport de cas d'IMAM en 2022 après la vaccination COVID-19 ([Kim et al., Journal of Korean Medical Science, 2022] (https://pmc.ncbi.nlm.nih.gov/articles/PMC8938612/)). Dans ce cas, le patient a répondu favorablement aux glucocorticoïdes et à l'azathioprine (remplacé plus tard par le tacrolimus). Cela illustre la confiance dans les thérapies immunosuppressives établies.
-- D'autres revues générales et manuscrits basés sur des cas concrets fournissent un contexte supplémentaire sur la fonction des macrophages dans la réparation des muscles squelettiques et la pathogenèse des myopathies inflammatoires idiopathiques ([Ferrara et al., J Appl Physiol 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9550586/) ; [revue, PMC9030619](https://pmc.ncbi.nlm.nih.gov/articles/PMC9030619/)).
+**Avancées diagnostiques et de définition de la maladie.** La avancée la plus significative récente a été la consolidation de l'IMAM en une entité clinicopathologique potentiellement distincte plutôt que d'être automatiquement étiqueté comme dermatomyosite. La biopsie musculaire montre typiquement des macrophages CD68 positifs répandus dans le tissu périmysial et fascial, une nécrose et régénération des fibres musculaires, peu de T cells, une atrophie périfasciculaire absente, et une coloration du complexe d'attaque membranaire du complément largement confinée aux fibres nécrotiques. Ce motif aide à distinguer l'IMAM de la dermatomyosite et de la myofasciite macrophagique, une lésion associée à l'aluminium avec une pathologie différente. [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/) [Original IMAM case series](https://pubmed.ncbi.nlm.nih.gov/12769186/)
 
-#### Essais cliniques
+**Hypothèses de traitements ciblés sur l'immunité.** Les observations existantes pointent vers une inflammation centrée sur les macrophages impliquant le facteur de nécrose tumorale alpha (TNF-α), l'interféron gamma (IFN-γ), et des signaux de polarisation macrophagique mixtes. Ces résultats rendent le traitement dirigé contre les cytokines ou les macrophages biologiquement plausible, mais ce ne sont que des hypothèses plutôt que des thérapies IMAM démontrées : aucune étude IMAM contrôlée n'a établi que l'inhibition du TNF, le blocage de la voie de l'interféron, ou le traitement d'épuration des macrophages soit sûr ou efficace. [IMAM immunology study](https://pubmed.ncbi.nlm.nih.gov/24314585/) [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-- **Aucun essai enregistré ou publié** dans ClinicalTrials.gov, EU Clinical Trials Register ou WHO ICTRP ne cible spécifiquement l'IMAM ou les myopathies définies par l'abondance des macrophages chez l'homme (à la date de mai 2025).
-- Les essais interventionnels disponibles pour les myopathies inflammatoires idiopathiques se concentrent généralement sur les sous-types classiques (comme la dermatomyosite, la polymyosite et la myosite à corps d'inclusion), et non sur la pathologie distincte dominée par les macrophages.
+**Approches classiques d'immunosuppression et de sauvetage.** L'expérience publiée soutient les corticostéroïdes et l'immunosuppression combinée comme fondement pratique du traitement, avec des immunoglobulines intraveineuses, la plasmaphérèse, la leucocytaphérèse et d'autres approches intensives rapportées dans des cas graves sélectionnés. Ces interventions visent à contrôler l'inflammation et à prévenir une activation macrophagique menaçant les organes ; elles n'éliminent pas une cause sous-jacente connue ni ne constituent une cure. [Genetic and treatment case series](https://pmc.ncbi.nlm.nih.gov/articles/PMC4233371/) [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-#### Recherche préclinique et expérimentale
+**Thérapies génétiques, à l'ARN et cellulaires.** Aucun gène causal n'a été confirmé pour l'IMAM, bien qu'une petite série plus ancienne ait signalé des polymorphismes MEFV et une variante TNFRSF1A qui pourraient modifier la susceptibilité ou le comportement inflammatoire. Par conséquent, il n'existe pas de thérapies IMAM spécifiques de remplacement génétique, d'édition génétique, de silencing de l'ARN, de thérapies par cellules souches ou par des cellules génétiquement modifiées en développement clinique. [Genetic and treatment case series](https://pmc.ncbi.nlm.nih.gov/articles/PMC4233371/) [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-- **Des approches innovantes - thérapies ciblées sur les macrophages, interventions basées sur les gènes/cellules, nouveaux produits biologiques, etc. - n'ont pas encore été directement testées dans les études cliniques ou les modèles précliniques de l'IMAM**
-- Des études animales portant sur des maladies plus larges des muscles squelettiques ont démontré que la modulation du phénotype des macrophages pouvait favoriser la récupération musculaire ([Ferrara et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9550586/)), ce qui laisse entrevoir de futures orientations thérapeutiques. Cependant, ces idées ne sont pas spécifiques à l'IMAM et n'ont pas encore été testées dans la maladie humaine.
+## Essais cliniques et approches expérimentales
 
-#### Directions émergentes
+À partir du 8 août 2026, aucun essai clinique d'intervention spécifique à l'IMAM, aucune désignation de phase, aucun programme thérapeutique dirigé par un sponsor ni aucun résultat d'essai n'ont pu être identifiés dans la base de preuves publiée sur l'IMAM ou via une recherche ciblée dans le registre ClinicalTrials.gov. Les preuves de traitement disponibles ne sont donc pas contrôlées et proviennent de rapports de cas et d'une série de neuf patients, et non d'essais thérapeutiques randomisés ou prospectifs. Dans cette série, six patients sont entrés en rémission et trois se sont améliorés après des combinaisons variées de corticostéroïdes, de médicaments immunosuppresseurs, d'immunothérapie ou de chimiothérapie ; comme les traitements différaient entre les patients et qu'il n'y avait pas de groupe de comparaison, ces résultats ne permettent pas d'établir quelle intervention était responsable. [Genetic and treatment case series](https://pmc.ncbi.nlm.nih.gov/articles/PMC4233371/) [ClinicalTrials.gov API information](https://clinicaltrials.gov/data-about-studies/learn-about-api)
 
-- La recherche sur la **modulation des cellules immunitaires** (macrophages, cellules T, cellules B régulatrices) dans la myopathie se développe. Ces explorations jettent les bases conceptuelles d'éventuelles thérapies IMAM futures, en se concentrant sur des outils tels que les inhibiteurs de l'inflammasome, les petites molécules ou les greffes de cellules modifiées.
-- Il n'existe pas encore de filière clinique ou préclinique dédiée à la transposition directe dans les soins aux patients IMAM.
+## Méthodologies et approches scientifiques
 
-## Percées, tendances et institutions
+Les chercheurs étudient l'IMAM principalement au moyen de biopsies détaillées des muscles et de la fascia utilisant l'histologie et l'immunomarquage pour les marqueurs des macrophages et des cellules immunitaires, y compris CD68, MRP14/S100A9, CD4, CD8, CD20, CD206 et les composants du complément. L'IRM peut identifier un épaississement fascial, un œdème et l'atteinte musculaire, tandis que l'électromyographie et le dosage de CK aident à documenter une lésion musculaire mais ne permettent pas de diagnostiquer l'IMAM à eux seuls. [Japanese clinical and MRI case series](https://pubmed.ncbi.nlm.nih.gov/21125282/) [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-### Principales avancées et tendances
+L'approche scientifique dominante est la pathologie comparative : les chercheurs contrasting les biopsies d'IMAM avec la dermatomyosite, la myofasciite macrophagique, la panniculite histiocytose cytophagique et les troubles d'activation des macrophages pour identifier des motifs spécifiques à la maladie. Les biomarqueurs candidats incluent la ferritine, le TNF-α, l'IFN-γ, les récepteurs solubles du TNF, les marqueurs de polarisation des macrophages et les variantes génétiques dans les voies inflammatoires, mais aucun n'a été validé comme test diagnostique, outil de sélection du traitement ou marqueur substitutif de guérison. [IMAM immunology study](https://pubmed.ncbi.nlm.nih.gov/24314585/) [Genetic and treatment case series](https://pmc.ncbi.nlm.nih.gov/articles/PMC4233371/)
 
-- La **principale "avancée" est l'amélioration de la compréhension pathologique et la reconnaissance de l'IMAM** comme une entité clinique rare.
-- Tous les traitements décrits à ce jour font appel aux immunosuppresseurs classiques : glucocorticoïdes, azathioprine, méthotrexate, mycophénolate mofétil, inhibiteurs de la calcineurine, immunoglobulines intraveineuses (IgIV) et rituximab. Ils sont tirés des protocoles pour la dermatomyosite et les IIM apparentées ([Kim et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938612/)).
-- La modulation de la fonction des macrophages dans la réparation musculaire et l'inflammation** fait l'objet d'un intérêt scientifique croissant, bien qu'elle n'ait pas encore atteint le stade de la thérapie axée sur l'IMAM.
+## Institutions et financements de premier plan
 
-### Méthodologies
+La petite littérature sur l'IMAM a été principalement alimentée par des équipes hospitalières de neuropathologie, de rhumatologie et de neuromusculaire plutôt que par des programmes biotechnologiques dédiés. Des travaux fondamentaux provenaient des chercheurs de l'INSERM, de l'Université Paris XII–Val de Marne et de l'Hôpital Henri-Mondor en France ; des rapports cliniques et pathologiques ultérieurs provenaient de Nagasaki University au Japon et de Charité–Universitätsmedizin Berlin en Allemagne. [Original IMAM case series](https://pubmed.ncbi.nlm.nih.gov/12769186/) [Japanese clinical and MRI case series](https://pubmed.ncbi.nlm.nih.gov/21125282/) [IMAM immunology study](https://pubmed.ncbi.nlm.nih.gov/24314585/)
 
-- Le diagnostic et le suivi des cas reposent sur l'examen histologique et l'immunocoloration (pour des marqueurs tels que le CD68 sur les macrophages) d'échantillons de biopsie de muscle ou de fascia.
-- Les méthodologies de recherche thérapeutique (pour les myopathies au sens large) comprennent des modèles animaux d'inflammation musculaire, le dépistage d'agents immunomodulateurs et des approches régénératives à base de cellules, comme illustré dans [Ferrara et al., 2022] (https://pmc.ncbi.nlm.nih.gov/articles/PMC9550586/).
+Aucun pipeline industriel spécifique à l'IMAM, aucun programme de fondation axé sur la maladie, ni aucune récompense de financement dédiée représentative n'a été identifiée dans la littérature récente. L'analyse systématique de 2025 a explicitement signalé l'absence de financement de recherche, soulignant que la recherche sur l'IMAM reste fragmentée et sous-financée. [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-### Financement et institutions chefs de file
+## Forces, limites et défis
 
-- **L'hôpital de l'université nationale de Chungbuk, à Cheongju, en Corée**, est le principal centre clinique publiant des cas récents d'IMAM ([Kim et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938612/)).
-- **L'université de l'Utah** étudie l'immunomodulation des macrophages dans les modèles d'atrophie musculaire ([Ferrara et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9550586/)), apportant des connaissances fondamentales, mais ne se concentrant pas directement sur l'IMAM.
-- En 2025, il n'existe **aucun programme de subvention important, aucun partenariat de développement industriel, ni aucun consortium d'essai** axé sur l'IMAM.
+Un atout majeur est que l'IMAM présente une signature tissulaire reconnaissable qui peut prévenir les erreurs de classification lorsque les cliniciens obtiennent une biopsie ciblée de muscle et de fascia. L'attention croissante portée à la biologie des macrophages et aux cytokines inflammatoires offre des cibles rationnelles pour le développement futur de traitements, et l'amélioration rapportée avec une suppression immunitaire agressive démontre que l'inflammation peut parfois être maîtrisée. [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/) [Genetic and treatment case series](https://pmc.ncbi.nlm.nih.gov/articles/PMC4233371/)
 
-## Points forts, limites et défis
+Les limites sont substantielles : la population de patients connue est minuscule, les critères diagnostiques ne sont pas universellement standardisés, la relation avec la dermatomyosite demeure non résolue, et presque tous les résultats proviennent de rapports de cas rétrospectifs avec des traitements et un suivi différant. Les stéroïdes et une immunosuppression large peuvent provoquer des infections et d'autres toxicités, tandis que la reconnaissance tardive de l'activation des macrophages ou de l'hémophagocytose peut être potentiellement mortelle. Ces obstacles compliquent la détermination de l'efficacité réelle d'une thérapie ciblée, pour qui elle fonctionne, et si elle peut produire en toute sécurité une rémission sans médicament durable. [Original IMAM case series](https://pubmed.ncbi.nlm.nih.gov/12769186/) [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-### Points forts
+## Perspectives et directions futures
 
-- Le principal atout est une meilleure connaissance des pathologies et des conditions cliniques, ce qui permet un diagnostic plus précis et aide à différencier l'IMAM des affections qui l'imitent.
-- Une certaine amélioration des résultats est observée avec l'instauration rapide de régimes immunosuppresseurs reconnus.
+L'IMAM n'est pas proche d'un remède démontré. Les prochains jalons décisifs sont un consensus diagnostique international, un registre prospectif des patients avec des biopsies et des mesures de résultats standardisés, la validation des biomarqueurs des macrophages et des cytokines, et le premier petit essai multicentrique d'une thérapie immunitaire ciblée rationnelle. Un objectif réaliste à court terme est un diagnostic plus précoce et un contrôle plus sûr et durable de l'inflammation musculaire ; une cure nécessitera des preuves qu'IMAM possède un moteur biologique clairement défini et que le cibler peut restaurer la santé musculaire sans immunosuppression large à long terme. [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/)
 
-### Limitations
+## Références
 
-- **Il n'existe pas d'études systématiques, d'essais contrôlés ou de cohortes d'observation spécifiques à une maladie
-- La prévalence réelle est inconnue et il n'existe pas de lignes directrices diagnostiques ou thérapeutiques universellement acceptées spécifiques à l'IMAM.
-- Comme pour les myopathies idiopathiques plus larges, le traitement est largement empirique et dérivé des pathologies apparentées.
-
-### Défis à relever
-
-- **L'extrême rareté** entraîne un manque de rigueur dans la recherche et entrave l'établissement de lignes directrices de soins fondées sur des preuves et spécifiques à la maladie.
-- **Il n'y a pas d'essais cliniques ou de médicaments en cours de développement ; tous les progrès expérimentaux se limitent à des modèles animaux d'inflammation musculaire.
-- Il n'existe **aucun biomarqueur** validé pour l'activité de la maladie ou la réponse thérapeutique dans l'IMAM.
-- **Le pronostic à long terme, la durée optimale de l'immunosuppression et le risque de rechute** restent mal définis.
-- Il existe un **besoin critique d'études plus approfondies** et d'une collaboration internationale dédiée afin d'initier de futures avancées cliniques.
-
-## Directions futures (Résumé populaire)
-
-Alors que le traitement actuel de l'IMAM est adapté à d'autres maladies d'inflammation musculaire et implique principalement la suppression du système immunitaire, les chercheurs sont enthousiasmés par les approches de nouvelle génération qui pourraient affiner l'action des cellules immunitaires - en particulier les macrophages - pour protéger et reconstruire les muscles. Des études animales montrent que l'"entraînement" des macrophages peut améliorer la réparation musculaire, mais ces découvertes ne sont pas encore prêtes pour les soins aux patients. Pour les patients et les cliniciens, l'étape la plus importante est le dépistage précoce et la biopsie musculaire pour le diagnostic.
-
-À mesure que l'IMAM sera mieux connue, la mise en place de réseaux de recherche et de registres cliniques sera essentielle pour mettre au point de nouveaux traitements ciblés.
-
-## Citations et sources clés
-
-- [Orphanet - Entrée dans la base de données des maladies rares : Myopathie inflammatoire avec macrophages abondants] (https://www.orpha.net/en/disease/detail/247718)
-- [NORD - Vue d'ensemble de l'IMAM] (https://rarediseases.org/mondo-disease/inflammatory-myopathy-with-abundant-macrophages/)
-- [2022 Rapport de cas détaillé et revue : Kim et al., J Korean Med Sci] (https://pmc.ncbi.nlm.nih.gov/articles/PMC8938612/)
-- [Recherche préclinique sur la modulation des macrophages : Ferrara et al, J Appl Physiol 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9550586/)
-- [Large revue des myopathies inflammatoires idiopathiques, 2022 : PMC9030619](https://pmc.ncbi.nlm.nih.gov/articles/PMC9030619/)
-- [2025 Revue de presse sur IMAM : PMID 39973451](https://pubmed.ncbi.nlm.nih.gov/39973451/)
-- [Journal of Neuropathology &amp; Experimental Neurology - IMAM pathology] (https://academic.oup.com/jnen/article/62/5/464/2916418)
-- [Base de données MalaCards sur les maladies rares, aperçu de l'IMAM] (https://www.malacards.org/card/inflammatory_myopathy_with_abundant_macrophages)
+- [Systematic analysis of IMAM](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949305/) — Bamaga et al., 2025.
+- [Original IMAM case series](https://pubmed.ncbi.nlm.nih.gov/12769186/) — Bassez et al., 2003.
+- [Genetic and treatment case series](https://pmc.ncbi.nlm.nih.gov/articles/PMC4233371/) — Fujikawa et al., 2014.
+- [Japanese clinical and MRI case series](https://pubmed.ncbi.nlm.nih.gov/21125282/) — Hara et al., 2013.
+- [IMAM immunology study](https://pubmed.ncbi.nlm.nih.gov/24314585/) — Rinnenthal et al., 2014.
+- [ClinicalTrials.gov API information](https://clinicaltrials.gov/data-about-studies/learn-about-api) — ClinicalTrials.gov, 2025.

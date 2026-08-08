@@ -1,89 +1,80 @@
+---
+title: Kartagener Syndrome
+date: '2026-08-08'
+model: gpt-5.6-terra
+backend: openai-responses
+generator: uptocure-reports-generator
+summary: Recent research efforts aimed at curing Kartagener Syndrome.
+input_tokens: 90125
+output_tokens: 7426
+search_calls: 11
+cost_usd: 0.3794
+---
 
 # Kartagener Syndrome
 
-## What Is Kartagener Syndrome?
+## Overview
 
-Kartagener Syndrome (KS) is a rare, inherited disorder affecting the tiny hair-like structures, called cilia, that line the airways and other parts of the body. Because cilia are essential for moving mucus and keeping airways clear, their dysfunction in KS leads to chronic respiratory issues, and the syndrome often includes a characteristic reversal of organ positioning (situs inversus). KS is part of the broader category called Primary Ciliary Dyskinesia (PCD).
+Kartagener syndrome is a form of primary ciliary dyskinesia (PCD), an inherited disorder in which microscopic, hair-like structures called motile cilia do not work normally. In the airways, cilia normally move mucus and germs out of the lungs; when they fail, people commonly develop lifelong wet cough, recurrent chest and sinus infections, ear disease and hearing problems, and progressive bronchiectasis (permanent widening and damage of airways). The name Kartagener syndrome is often used for PCD associated with situs inversus, in which internal organs are arranged as a mirror image of usual anatomy. Fertility can also be reduced because sperm tails and fallopian-tube cilia share related motility machinery. [GeneReviews: Primary Ciliary Dyskinesia](https://www.ncbi.nlm.nih.gov/books/NBK1122/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1122/?cmd=HTOff))
 
-## Recent Research Efforts Toward a Cure (2022–2025)
+Prognosis is highly variable: many people live into adulthood, but repeated infection and inflammation can lead to substantial lung damage, and some develop end-stage lung disease requiring transplantation. Current care is not curative. It focuses on daily airway-clearance techniques, exercise, vaccination, culture-guided antibiotics for infections, selected long-term macrolide antibiotics for frequent exacerbations, and management of sinus, ear, hearing, fertility, and congenital-heart issues when present. [GeneReviews: Primary Ciliary Dyskinesia](https://www.ncbi.nlm.nih.gov/books/NBK1122/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1122/?cmd=HTOff))
 
-### Overview
+## Scope of Recent Research (2020–present)
 
-In the past three years, the search for a cure for Kartagener Syndrome has moved beyond managing symptoms to directly targeting the genetic and molecular roots of the disease. The central aim is to restore normal ciliary function—either by correcting the underlying genetic defects or by replacing affected cells. While no definitive cure or approved therapy yet exists, several important advances signal real progress.
+Research since 2020 has shifted from treating the consequences of poor mucus clearance toward correcting the underlying genetic defect in airway cells. The field remains small but is becoming more trial-ready through international networks, better genetic diagnosis, patient-derived airway models, and the first human studies of inhaled messenger RNA (mRNA) replacement. A broadly applicable cure is not close: PCD/Kartagener syndrome is caused by pathogenic variants across more than 50 genes, and no approved therapy yet restores ciliary function. However, the DNAI1-targeted mRNA program has provided the first clinical test of a therapy designed to replace a missing ciliary protein rather than merely manage symptoms. [GeneReviews: Primary Ciliary Dyskinesia](https://www.ncbi.nlm.nih.gov/books/NBK1122/) [PCD clinical-trial network](https://pmc.ncbi.nlm.nih.gov/articles/PMC9379353/) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1122/?cmd=HTOff))
 
-### Major Breakthroughs & Trends
+## Major Breakthroughs and Emerging Therapies
 
-#### Inhaled mRNA Therapy
+The leading disease-modifying approach is **inhaled mRNA replacement**. ReCode Therapeutics’ RCT1100 packages mRNA encoding the ciliary protein DNAI1 inside lipid nanoparticles—tiny fat-based delivery particles—and administers it by nebulizer. In 2022, researchers showed that aerosolized DNAI1 mRNA reached multiciliated airway cells in mice. In 2025, a follow-up study reported delivery and protein production in human airway-cell cultures and non-human primate airways, supporting the rationale for replacing DNAI1 in people whose PCD is caused by DNAI1 variants. This approach does not edit a person’s DNA; it aims to repeatedly supply a functional protein blueprint to airway cells. [Inhaled DNAI1 mRNA in mice](https://pubmed.ncbi.nlm.nih.gov/35613658/) [DNAI1 mRNA preclinical study](https://doi.org/10.1073/pnas.2421915122) ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/35613658/?utm_source=openai))
 
-In a **2025 preclinical and early clinical study**, researchers showed that inhaled mRNA could supply a working copy of the DNAI1 gene (one commonly mutated in KS), restoring ciliary movement in animal models and patient tissue samples. This disease-modifying approach could become a platform for future in-human trials.
+This strategy reached first-in-human testing. A June 2026 conference report of RCT1100 Phase 1a single-dose and Phase 1b multiple-dose studies found that the treatment was generally tolerated at 3 mg and 5 mg doses in adults with DNAI1-related PCD, with no serious adverse events or grade 3-or-higher treatment-emergent adverse events reported. Crucially, the small Phase 1b study did **not** find a post-treatment improvement in measured outer-dynein-arm number, ciliary movement, or DNAI1 staining in bronchial samples. These early data therefore establish initial safety, not clinical efficacy or a cure. [RCT1100 Phase 1a/1b results](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415) ([academic.oup.com](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415))
 
-> **Reference:**  
-> [Hennig M et al., "Inhaled DNAI1 mRNA therapy for treatment of primary ciliary dyskinesia," PNAS, 2025](https://pubmed.ncbi.nlm.nih.gov/40294271/)
+Other precision approaches remain preclinical. **Readthrough therapy** attempts to help cells ignore certain premature “stop” signals in mRNA so that a full-length ciliary protein can be made. In a 2021 patient-derived model of MCIDAS-related PCD, readthrough compounds, combined with inhibition of nonsense-mediated mRNA decay, restored basal-body formation in nasal epithelial cells in vitro. That is an important proof of principle, but it is relevant only to selected nonsense variants and has not yet become a clinical treatment. [Readthrough screening in patient airway cells](https://pmc.ncbi.nlm.nih.gov/articles/PMC8514977/) ([discovery.ucl.ac.uk](https://discovery.ucl.ac.uk/id/eprint/10126062/1/13993003.00455-2020.full.pdf))
 
-#### Gene Therapy & Editing
+**Gene editing and cell-based replacement** are earlier still. CRISPR-Cas9 has been used to create precise PCD mutations in mice and to show that disease severity can depend on the specific variant and the affected tissue, information needed to design personalized genetic therapies. Investigators have also described corrected induced pluripotent stem-cell airway progenitors as a possible future route to restoring ciliated epithelium, but no gene-editing or cell-replacement therapy has entered human trials for Kartagener syndrome. [Dnaaf5 CRISPR disease models](https://insight.jci.org/articles/view/168836) [Corrected iPSC airway-progenitor project](https://www.sciencedirect.com/science/article/abs/pii/S0761842524000329) ([insight.jci.org](https://insight.jci.org/articles/view/168836/sd/1))
 
-Recent review work in **2023** summarizes early progress using gene replacement (delivering healthy versions of defective genes using viral or novel non-viral vectors) and gene editing technologies like CRISPR. Leading targets include the DNAH5, DNAI1, and DNAH11 genes, which account for many KS cases. Some labs are also working on approaches combining gene therapy with cellular therapies—like transplanting repaired cells back into the patient.
+## Clinical Trials and Experimental Approaches
 
-> **Reference:**  
-> [Restoring Ciliary Function: Gene Therapeutics for Primary Ciliary Dyskinesia, Human Gene Therapy, 2023](https://www.liebertpub.com/doi/10.1089/hum.2023.102)  
-> [Combined cellular and gene therapy to treat primary ciliary dyskinesia, 2025 (ResearchGate)](https://www.researchgate.net/publication/390612735_Combined_cellular_and_gene_therapy_to_treat_primary_ciliary_dyskinesia)
+The principal root-cause clinical program is ReCode’s RCT1100. The completed RCT1100-101 study, registered as NCT05737485, evaluated single ascending inhaled doses in healthy volunteers and adults with DNAI1-related PCD. A subsequent multiple-dose study evaluated dosing three times weekly for 12 weeks, while a further open-label study, NCT06633757, is designed to measure changes in mucociliary clearance—the movement of inhaled radiotracer out of the lungs—through Week 12. These studies are limited to people with pathogenic DNAI1 variants, not all people with Kartagener syndrome. [RCT1100-101 trial record](https://clinicaltrials.gov/study/NCT05737485) [RCT1100 mucociliary-clearance study](https://clinicaltrials.gov/study/NCT06633757) [RCT1100 Phase 1a/1b results](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT05737485?utm_source=openai))
 
-#### Organoid & Cell-based Models
+The most important recent non-genetic trial publication was CLEAN-PCD, a completed multinational Phase 2 crossover study of the epithelial sodium-channel blocker idrevloride, formerly VX-371, with or without hypertonic saline and ivacaftor. The trial enrolled 123 participants and reported that the idrevloride-plus-hypertonic-saline combination improved lung function relative to hypertonic saline alone. This is a potentially useful mucus-hydration strategy, but it does not restore defective cilia or correct the inherited cause of PCD. [CLEAN-PCD trial record](https://clinicaltrials.gov/study/NCT02871778) [CLEAN-PCD Phase 2 publication](https://pubmed.ncbi.nlm.nih.gov/37660715/) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT02871778?utm_source=openai))
 
-Lab-grown airway organoids (miniaturized models of human lungs) and patient-derived stem cells are being used to test therapies before moving to animals or people. These models make it possible to quickly check if a new gene or mRNA therapy will restore healthy ciliary movement.
+## Methodologies and Scientific Approaches
 
-Read more in this review:  
-[Current and Future Treatments in Primary Ciliary Dyskinesia, MDPI](https://www.mdpi.com/1422-0067/22/18/9834)
+Researchers increasingly use nasal-brush samples from people with PCD to grow their own basal airway cells at an air–liquid interface, where the cells mature into mucus-producing and ciliated airway tissue. Miniaturized 96-well versions of these cultures retain many patient-specific ciliary defects and permit screening of many candidate drugs or RNA formulations. Researchers assess rescue using ciliary-protein staining, electron microscopy of ciliary structure, and high-speed video microscopy to measure beat frequency and pattern. [Readthrough screening in patient airway cells](https://pmc.ncbi.nlm.nih.gov/articles/PMC8514977/) [GeneReviews: Primary Ciliary Dyskinesia](https://www.ncbi.nlm.nih.gov/books/NBK1122/) ([discovery.ucl.ac.uk](https://discovery.ucl.ac.uk/id/eprint/10126062/1/13993003.00455-2020.full.pdf))
 
-### Clinical Trials
+For genetic therapies, the technical challenge is delivery to the right cells: existing ciliated cells, but also basal and club cells that can replenish the airway lining. The DNAI1 program uses inhaled, lung-directed lipid nanoparticles and measures whether mRNA reaches these target cells, produces protein, and improves mucociliary clearance. Complementary systems—including CRISPR-engineered mice, Xenopus ciliated epithelium, and genotype-specific patient cells—help define which mutations are most suitable for replacement, readthrough, or future editing strategies. [DNAI1 mRNA preclinical study](https://doi.org/10.1073/pnas.2421915122) [Dnaaf5 CRISPR disease models](https://insight.jci.org/articles/view/168836) [NIH PCD gene-discovery award](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01HL173147&arg_ProgOfficeCode=130) ([doi.org](https://doi.org/10.1073%2Fpnas.2421915122?utm_source=openai))
 
-So far, there are no completed late-stage clinical trials of curative gene or mRNA therapies for KS/PCD, but several studies are at the preclinical or early clinical evaluation stage. Some clinical trials now include KS/PCD patients as eligible for innovative genetic therapies. Much of the recent work is funded and coordinated through rare-disease international consortia, notably the [EU Clinical Trials Register](https://www.clinicaltrialsregister.eu/ctr-search/search?query=Kartagener+gene+therapy).
+## Leading Institutions and Funding
 
-### Defining a “Cure” in KS Research
+ReCode Therapeutics is the only organization with a reported human clinical program specifically intended to restore ciliary function in DNAI1-related PCD. Its studies involve clinical investigators and sites in the United Kingdom, United States, and Australia, including Royal Brompton Hospital, University Hospital Münster, the University of Dundee, and the University of Sydney. [RCT1100 Phase 1a/1b results](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415) [RCT1100-101 trial record](https://clinicaltrials.gov/study/NCT05737485) ([academic.oup.com](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415))
 
-In this field, “cure” usually means _restoring normal or near-normal motile ciliary activity_ by either correcting the genetic mutation or supplying a working gene/molecule so that affected cells behave as they should. This is often measured as restored ciliary beating in the lab, improvement in organoid models, or improvements in animal disease models. So far, a full cure in humans is the goal—not yet reality—but these results show that true disease modification is moving closer.
+Academic and charitable investment is expanding the pipeline beyond DNAI1. PCD Research and the Nucleic Acid Therapy Accelerator jointly awarded University College London a £250,000, two-year grant to develop CCDC39 mRNA therapy; CCDC39 is a clinically severe PCD subtype. In the United States, the NIH-funded Genetic Disorders of Mucociliary Clearance Consortium supports PCD research, while a Northwestern University NIH award for discovery and characterization of PCD genes totals $1,467,980 across fiscal years 2025 and 2026. European coordination is strengthened by the ERS BEAT-PCD collaboration and the PCD Clinical Trial Network, founded in 2020 to standardize studies and support recruitment across specialist sites. [CCDC39 mRNA grant](https://pcdresearch.org/latest-news/) [NIH PCD gene-discovery award](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01HL173147&arg_ProgOfficeCode=130) [BEAT-PCD](https://www.ersnet.org/science-and-research/clinical-research-collaboration-application-programme/beat-pcd/) [PCD clinical-trial network](https://pmc.ncbi.nlm.nih.gov/articles/PMC9379353/) ([pcdresearch.org](https://pcdresearch.org/latest-news/))
 
----
+## Strengths, Limitations, and Challenges
 
-## Methodologies: How Are Scientists Approaching the Cure?
+The major strength of current research is that it has crossed an important threshold: a treatment intended to replace a missing ciliary protein has been inhaled by people with PCD. mRNA also avoids permanently altering the genome and can be tailored to a specific defective gene. The early RCT1100 safety findings, patient-derived airway models, and coordinated trial networks create a credible foundation for testing whether restored protein expression can translate into improved mucus clearance, fewer infections, and preservation of lung function. [RCT1100 Phase 1a/1b results](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415) [PCD clinical-trial network](https://pmc.ncbi.nlm.nih.gov/articles/PMC9379353/) ([academic.oup.com](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415))
 
-- **Gene Therapy and Editing:** Delivering healthy genes or editing malfunctioning ones using viral or nanoparticle-based vectors (often inhaled for direct airway delivery).  
-- **mRNA Therapeutics:** Using lipid nanoparticle “packages” to deliver synthetic mRNA that cells use to make the missing or defective protein.
-- **Cell Therapy:** Correcting patient-derived stem cells or airway cells outside the body, then reintroducing them to repopulate airway linings with healthy cilia.
-- **Organoids and Ex Vivo Models:** Testing therapies in miniaturized “lab-grown lungs” made from patient cells to prove efficacy and safety.
+The limitations are substantial. Kartagener syndrome is genetically diverse, so a DNAI1 medicine can help only the subgroup with DNAI1-related disease; 20%–30% of well-characterized PCD cases still lack an identifiable disease-causing variant. In the reported seven-person multiple-dose RCT1100 study, bronchial tests did not show structural or motion rescue after treatment, and there are not yet published data showing better symptoms, fewer exacerbations, or slowed bronchiectasis. Repeated inhaled dosing, effective delivery through mucus and inflamed airways, durable uptake by the right airway-cell populations, pediatric testing, manufacturing cost, and equitable access remain unresolved challenges. [GeneReviews: Primary Ciliary Dyskinesia](https://www.ncbi.nlm.nih.gov/books/NBK1122/) [RCT1100 Phase 1a/1b results](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415) [DNAI1 mRNA preclinical study](https://doi.org/10.1073/pnas.2421915122) ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/books/NBK1122/?cmd=HTOff))
 
-## Leading Institutions, Researchers, and Funding Sources
+## Outlook and Future Directions
 
-Significant efforts come from academic research hospitals and universities in Europe, the United States, and China. Lead researcher names from recent breakthroughs include Hennig, Bhattacharjee, Agarwal, Alfaifi, Wustman, Lockhart, and Bourdais. Funding is provided by national medical research councils, the EU's Horizon initiative, the US NIH, and private biotech/pharma (especially those active in mRNA and gene editing platforms).
+As of August 8, 2026, Kartagener syndrome does not have a curative therapy, but the field has moved from theoretical gene therapy toward early human testing of inhaled mRNA replacement. The next decisive milestones are reproducible evidence that RCT1100 improves mucociliary clearance and meaningful clinical outcomes, longer-term safety data with repeat dosing, and extension of the platform to additional high-impact genes such as CCDC39. A true cure will likely require a family of gene- and variant-specific treatments rather than one universal medicine; for now, the realistic near-term objective is a disease-modifying treatment that restores enough airway ciliary function to prevent infections and irreversible lung damage. [RCT1100 mucociliary-clearance study](https://clinicaltrials.gov/study/NCT06633757) [CCDC39 mRNA grant](https://pcdresearch.org/latest-news/) [GeneReviews: Primary Ciliary Dyskinesia](https://www.ncbi.nlm.nih.gov/books/NBK1122/) ([clinicaltrials.gov](https://clinicaltrials.gov/study/NCT06633757?utm_source=openai))
 
-International collaboration (especially via rare disease consortia and EU/NIH-funded projects) is vital to move these therapies to human trials, given KS’s rarity.
+## References
 
-## Strengths and Limitations of Current Research
-
-**Strengths:**  
-- Research is now focused on root-cause, not just symptom management.
-- New genetic tools—gene therapy, mRNA delivery—have advanced from mere concepts to working proof-of-principle in animals and patient cells.
-- Organoid and stem-cell models accelerate testing and reduce risk before patient trials.
-
-**Limitations and Challenges:**  
-- Kartagener Syndrome is caused by many different mutations, so one therapy rarely fits all patients.
-- Safely and efficiently delivering genes/mRNA to all affected tissues, especially in the lungs, is challenging.
-- No current therapy has proven safe and fully effective in humans; research is ongoing.
-- Regulatory hurdles and the rarity of KS/PCD can make it hard to run large, robust clinical trials.
-- Long-term effects and durability of gene/mRNA therapies are not yet known.
-
-## The Road Ahead
-
-If progress continues, early-stage human trials of inhaled mRNA or gene therapy for KS/PCD are possible within the next few years. The field’s main challenges are making these therapies safe, scalable, and effective for a wide range of genetic mutations—and proving long-term benefits in people. For families and clinicians, these technical advances offer real hope for a future where Kartagener Syndrome can move from chronic management to real, lifelong cure.
-
-## Citations and Further Reading
-
-- [Inhaled DNAI1 mRNA therapy for treatment of primary ciliary dyskinesia (PNAS 2025)](https://pubmed.ncbi.nlm.nih.gov/40294271/)
-- [Restoring Ciliary Function: Gene Therapeutics for Primary Ciliary Dyskinesia (Human Gene Therapy, 2023)](https://www.liebertpub.com/doi/10.1089/hum.2023.102)
-- [Combined cellular and gene therapy to treat primary ciliary dyskinesia (ResearchGate, 2025)](https://www.researchgate.net/publication/390612735_Combined_cellular_and_gene_therapy_to_treat_primary_ciliary_dyskinesia)
-- [Current and Future Treatments in Primary Ciliary Dyskinesia (MDPI)](https://www.mdpi.com/1422-0067/22/18/9834)
-- [EU Clinical Trials Register: Kartagener/gene therapy](https://www.clinicaltrialsregister.eu/ctr-search/search?query=Kartagener+gene+therapy)
-
----
-
-_Last updated: May 30, 2025_
+- [Primary Ciliary Dyskinesia](https://www.ncbi.nlm.nih.gov/books/NBK1122/) — Zariwala, Despotes, and Davis; GeneReviews, 2025.
+- [Inhaled DNAI1 mRNA in mice](https://pubmed.ncbi.nlm.nih.gov/35613658/) — Woo et al., 2022.
+- [DNAI1 mRNA preclinical study](https://doi.org/10.1073/pnas.2421915122) — Hennig et al.; Proceedings of the National Academy of Sciences, 2025.
+- [RCT1100 Phase 1a/1b results](https://academic.oup.com/ajrccm/article/212/Supplement_2/aamag286.098/8712415) — Loebinger et al.; American Journal of Respiratory and Critical Care Medicine, 2026.
+- [RCT1100-101 trial record](https://clinicaltrials.gov/study/NCT05737485) — ClinicalTrials.gov, 2026.
+- [RCT1100 mucociliary-clearance study](https://clinicaltrials.gov/study/NCT06633757) — ClinicalTrials.gov, 2026.
+- [CLEAN-PCD trial record](https://clinicaltrials.gov/study/NCT02871778) — ClinicalTrials.gov, 2021.
+- [CLEAN-PCD Phase 2 publication](https://pubmed.ncbi.nlm.nih.gov/37660715/) — Ringshausen et al.; The Lancet Respiratory Medicine, 2024.
+- [Readthrough screening in patient airway cells](https://pmc.ncbi.nlm.nih.gov/articles/PMC8514977/) — Lee et al.; European Respiratory Journal, 2021.
+- [Dnaaf5 CRISPR disease models](https://insight.jci.org/articles/view/168836) — Horani et al.; JCI Insight, 2023.
+- [Corrected iPSC airway-progenitor project](https://www.sciencedirect.com/science/article/abs/pii/S0761842524000329) — Revue des Maladies Respiratoires, 2024.
+- [PCD clinical-trial network](https://pmc.ncbi.nlm.nih.gov/articles/PMC9379353/) — Werner et al.; European Respiratory Journal, 2022.
+- [BEAT-PCD](https://www.ersnet.org/science-and-research/clinical-research-collaboration-application-programme/beat-pcd/) — European Respiratory Society, 2026.
+- [CCDC39 mRNA grant](https://pcdresearch.org/latest-news/) — PCD Research, 2026.
+- [NIH PCD gene-discovery award](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01HL173147&arg_ProgOfficeCode=130) — U.S. Department of Health and Human Services TAGGS, 2026.
