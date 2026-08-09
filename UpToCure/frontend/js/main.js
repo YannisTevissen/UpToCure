@@ -1,12 +1,11 @@
-import { Carousel } from './carousel.js';
 import { initLanguageSwitcher } from './i18n.js';
 import { initInfoDialog, initRequestDialog } from './request.js';
+import { initBrowseFilter, initSearchPickers } from './search-picker.js';
 
 function boot() {
     initLanguageSwitcher();
-    if (document.getElementById('carousel')) {
-        new Carousel();
-    }
+    initSearchPickers();
+    initBrowseFilter();
     initRequestDialog();
     initInfoDialog();
 }

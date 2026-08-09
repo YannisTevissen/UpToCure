@@ -27,6 +27,11 @@
     </ol>
 </nav>
 
+<p class="trust-banner" role="note">
+    {{ t('trust_banner') }}
+    <a href="{{ '/methodology' if lang == 'en' else '/fr/methodology' }}">{{ t('methodology_link') }}</a>
+</p>
+
 <a class="back-button" href="{{ home_url }}">{{ t('report_back') }}</a>
 
 <form class="content-search" action="/search" method="get" role="search"
@@ -43,9 +48,6 @@
         {% if report.summary_html %}<p class="report-summary">{{ report.summary_html|safe }}</p>{% endif %}
         <dl class="report-meta">
             <div><dt>{{ t('report_meta_published') }}</dt><dd><time datetime="{{ published_iso }}">{{ report.date }}</time></dd></div>
-            {% if report.metadata.get('model') %}
-            <div><dt>{{ t('report_meta_model') }}</dt><dd>{{ report.metadata['model'] }}</dd></div>
-            {% endif %}
             {% if other_language_url %}
             <div>
               <dt>{{ t('report_language_alt') }}</dt>

@@ -141,12 +141,43 @@ def _recent_slugs(reports) -> set[str]:
     return {r.slug for r in reports if (seo._iso_date(r.date) or "") >= cutoff}
 
 
+def _featured_reports(reports, recent_slugs: set[str], limit: int = 5):
+    """Prefer recently updated reports; fill from the alpha list if needed."""
+    recent = [r for r in reports if r.slug in recent_slugs]
+    recent.sort(key=lambda r: seo._iso_date(r.date) or "", reverse=True)
+    featured = recent[:limit]
+    if len(featured) < limit:
+        seen = {r.slug for r in featured}
+        for report in reports:
+            if report.slug in seen:
+                continue
+            featured.append(report)
+            if len(featured) >= limit:
+                break
+    return featured
+
+
+def _index_letters(reports) -> list[str]:
+    letters: list[str] = []
+    seen: set[str] = set()
+    for report in reports:
+        title = (report.title or "").strip()
+        letter = title[0].upper() if title else "#"
+        if letter not in seen:
+            seen.add(letter)
+            letters.append(letter)
+    return letters
+
+
 def _render_home(lang: str):
     reports = report_parser.list_reports(str(REPORTS_DIR), lang)
+    recent = _recent_slugs(reports)
     ctx = _base_context(lang)
     ctx.update(
         reports=reports,
-        recent_slugs=_recent_slugs(reports),
+        recent_slugs=recent,
+        featured_reports=_featured_reports(reports, recent),
+        index_letters=_index_letters(reports),
         jsonld_list=seo.jsonld_item_list(reports, lang),
     )
     response = Response(render_template("home.html", **ctx))

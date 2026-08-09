@@ -12,14 +12,16 @@
 <script type="module" src="/js/main.js"></script>
 {% endblock %}
 
-{% block content %}
-<header class="home-header">
-    <h1>{{ t('home_h1') }}</h1>
-    <p class="home-intro">{{ t('home_intro', count=reports|length) }}</p>
-</header>
+{% block body_class %}home-page{% endblock %}
 
-<section class="carousel-container" aria-label="Featured report">
+{% block content %}
+<section class="home-hero" aria-labelledby="homeBrand">
+    <p class="home-brand" id="homeBrand">{{ site_name }}</p>
+    <h1 class="home-headline">{{ t('home_h1') }}</h1>
+    <p class="home-intro">{{ t('home_intro', count=reports|length) }}</p>
+
     <form class="report-picker" action="/search" method="get" role="search"
+          data-search-picker
           aria-label="{{ t('search_placeholder') }}">
         <label class="visually-hidden" for="reportPicker">{{ t('search_placeholder') }}</label>
         <input
@@ -27,6 +29,7 @@
             type="search"
             name="q"
             class="report-picker-input"
+            data-report-picker
             placeholder="{{ t('search_placeholder') }}"
             autocomplete="off"
             role="combobox"
@@ -39,20 +42,57 @@
             <span aria-hidden="true">→</span>
         </button>
     </form>
-    <div class="carousel" id="carousel" aria-live="polite" aria-busy="true">
-        <p class="status-message">{{ t('search_placeholder') }}</p>
-    </div>
-    <div class="carousel-nav">
-        <button type="button" class="nav-arrow prev" id="navPrev" aria-label="Previous report">‹</button>
-        <button type="button" class="nav-arrow next" id="navNext" aria-label="Next report">›</button>
-    </div>
 </section>
 
-<section class="report-index" aria-labelledby="allReportsHeading">
-    <h2 id="allReportsHeading">{{ t('all_reports_heading') }}</h2>
-    <ul class="report-index-list">
-        {% for report in reports %}
+<p class="trust-banner" role="note">
+    {{ t('trust_banner') }}
+    <a href="{{ '/methodology' if lang == 'en' else '/fr/methodology' }}">{{ t('methodology_link') }}</a>
+</p>
+
+{% if featured_reports %}
+<section class="featured-section" aria-labelledby="featuredHeading">
+    <h2 id="featuredHeading">{{ t('featured_heading') }}</h2>
+    <ul class="featured-list">
+        {% for report in featured_reports %}
         <li>
+            <a href="/reports/{{ lang }}/{{ report.slug }}">
+                <span class="featured-title">{{ report.title }}
+                    {%- if report.slug in recent_slugs %} <span class="badge-updated">{{ t('badge_updated') }}</span>{% endif %}</span>
+                {% if report.summary %}<span class="featured-summary">{{ report.summary }}</span>{% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+
+<section class="report-index" id="all-reports" aria-labelledby="allReportsHeading">
+    <div class="report-index-header">
+        <h2 id="allReportsHeading">{{ t('browse_heading') }}</h2>
+        <label class="visually-hidden" for="browseFilter">{{ t('browse_filter_placeholder') }}</label>
+        <input
+            id="browseFilter"
+            type="search"
+            class="browse-filter"
+            placeholder="{{ t('browse_filter_placeholder') }}"
+            autocomplete="off">
+    </div>
+
+    <nav class="letter-jump" aria-label="{{ t('browse_jump_label') }}">
+        {% for letter in index_letters %}
+        <a href="#letter-{{ letter }}" data-letter-jump="{{ letter }}">{{ letter }}</a>
+        {% endfor %}
+    </nav>
+
+    <ul class="report-index-list" id="reportIndexList">
+        {% for report in reports %}
+        {% set letter = (report.title[0]|upper) if report.title else '#' %}
+        {% set prev_letter = (loop.previtem.title[0]|upper) if not loop.first and loop.previtem.title else '' %}
+        <li data-browse-item data-title="{{ report.title }}" data-letter="{{ letter }}"
+            {% if loop.first or letter != prev_letter %}id="letter-{{ letter }}"{% endif %}>
+            {% if loop.first or letter != prev_letter %}
+            <span class="letter-marker" aria-hidden="true">{{ letter }}</span>
+            {% endif %}
             <a href="/reports/{{ lang }}/{{ report.slug }}">
                 <span class="report-index-title">{{ report.title }}
                     {%- if report.slug in recent_slugs %} <span class="badge-updated">{{ t('badge_updated') }}</span>{% endif %}</span>
@@ -63,7 +103,7 @@
     </ul>
 </section>
 
-<section class="request-report-container">
+<section class="request-report-container" id="request">
     <button type="button" id="requestReportBtn" class="request-report-btn">{{ t('request_report_cta') }}</button>
 </section>
 {% endblock %}
@@ -73,6 +113,7 @@
     <form id="diseaseRequestForm" class="dialog-content" method="dialog">
         <button type="button" class="dialog-close" data-close aria-label="Close">×</button>
         <h2>{{ t('request_report_cta') }}</h2>
+        <label class="visually-hidden" for="diseaseName">{{ t('search_placeholder') }}</label>
         <input type="text" id="diseaseName" name="diseaseName" required minlength="2" maxlength="120" autocomplete="off">
         <button type="submit">Submit</button>
         <p id="requestStatus" class="request-status" role="status" aria-live="polite"></p>

@@ -33,20 +33,48 @@ STRINGS: dict[str, dict[str, str]] = {
         "fr": "UpToCure — Centre d'information sur la recherche sur les maladies rares",
     },
     "home_h1": {
-        "en": "Rare disease research summaries",
-        "fr": "Synthèses de recherche sur les maladies rares",
+        "en": "Source-linked research on rare diseases",
+        "fr": "La recherche sur les maladies rares, avec ses sources",
     },
     "home_intro": {
-        "en": "Browse {count} rare disease research reports — each one synthesises the latest peer-reviewed publications, clinical trials and emerging therapies, with full citations to the original sources.",
-        "fr": "Parcourez {count} rapports de recherche sur les maladies rares. Chaque rapport synthétise les publications évaluées par les pairs, les essais cliniques et les thérapies émergentes les plus récents, en citant toutes les sources originales.",
+        "en": "{count} living summaries of peer-reviewed research, clinical trials, and emerging therapies — written to be read, and always linked back to the original papers.",
+        "fr": "{count} synthèses vivantes de la recherche évaluée par les pairs, des essais cliniques et des thérapies émergentes — à lire, et toujours reliées aux publications d’origine.",
+    },
+    "featured_heading": {
+        "en": "Recently updated",
+        "fr": "Mis à jour récemment",
+    },
+    "browse_heading": {
+        "en": "Browse all reports",
+        "fr": "Parcourir tous les rapports",
+    },
+    "browse_filter_placeholder": {
+        "en": "Filter by disease name…",
+        "fr": "Filtrer par nom de maladie…",
+    },
+    "browse_jump_label": {
+        "en": "Jump to letter",
+        "fr": "Aller à la lettre",
+    },
+    "trust_banner": {
+        "en": "AI-generated summaries. Verify every claim with the cited sources before acting on them.",
+        "fr": "Synthèses générées par IA. Vérifiez chaque affirmation auprès des sources citées avant d’agir.",
     },
     "all_reports_heading": {
         "en": "All disease reports",
         "fr": "Tous les rapports",
     },
     "search_placeholder": {
-        "en": "Search reports…",
-        "fr": "Rechercher un rapport…",
+        "en": "Search by disease name…",
+        "fr": "Rechercher une maladie…",
+    },
+    "nav_methodology": {
+        "en": "Methodology",
+        "fr": "Méthodologie",
+    },
+    "skip_to_content": {
+        "en": "Skip to content",
+        "fr": "Aller au contenu",
     },
     "search_title": {
         "en": "Search rare disease reports",
